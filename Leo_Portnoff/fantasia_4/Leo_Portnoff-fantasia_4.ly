@@ -1,0 +1,280 @@
+%%% -*- coding: utf-8 -*-
+%%%
+%%% Copyright © 2019 Philipp Büttgenbach
+%%%
+%%% This work is licensed under the Creative Commons
+%%% Attribution-ShareAlike 4.0 International License.  To view a copy of
+%%% this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
+%%%
+
+\version "2.18.2"
+
+\include "lily-snippets.ily"
+
+adLib = \markup {\italic "ad lib."}
+allargando = \markup {\italic "allargando"}
+cadenzaAdLib = \markup {\italic #"Cadenza ad lib."}
+espressivoTxt = \markup {\italic "espressivo"}
+marcatoTxt = \markup {\italic "marcato"}
+pMaEspressivo = \markup {\dynamic "p" \italic "ma espressivo"}
+pocoRit = \markup {\italic #"poco rit."}
+simile = \markup {\italic #"simile"}
+tenutoTxt = \markup {\italic "tenuto"}
+
+titleMovementI = #""
+
+globalMovementI = {
+  \time 4/4
+  \tempo "Andante" 4=72
+  \key e \minor
+}
+
+violinMovementI = \relative g'' {
+  R1 | \cadenzaOn g8_\adLib([ e a e]) g([ e d b]) e2_2\fermata \bar "|"
+  \cadenzaOff R1 |
+  \cadenzaOn g8([ e ais-4 e]) g([ e d c]) e2_2\fermata \bar "|" \cadenzaOff
+  b4( e_4^2) d8( e16 d c4-2) |
+  b( ais8. fis'16-3) fis2 \fermata \bar "||"
+  b,4.-1(\glissando dis8-1) e4--( e--) | b8-1( a d c) b2 |
+  b4.-1\<( dis8-1\!) e4--( e--) | b8-1( a) d--( c--) b2\<
+  \repeat volta 2 {
+    b'2-2\f a8-3\>( g fis e\!) | d8( b fis'4-3) e2 |
+    b2-3\f a8\>( g fis-2 e) | d\p( b fis'8.-4 e16) e2
+  }
+  \time 2/4 \tempo "Allegro" 4=116
+  R2 | dis8-.\p\< dis-. dis->( fis) | a8-.\> a-. a->^\rit( cis\!) | b2 |
+  R2 | dis8 dis8 dis8->( fis) | a-1 a_\rit a->( c-4) | b2-4 \bar "||"
+  e,8-._\markup{\dynamic "p" \italic "con grazia"} e-. e->( g) |
+  b-. b-. b->( g) | a-. a-. a( e) | g-. g-. g( e) |
+  a4_\dolce\flageolet( fis8.-3 e16) | d2 | b'4( g8.-2 fis16) | e2 |
+  a4-1( fis8. e16) | d2 | g4^\rit g8.( fis16) | e2 \bar "||"
+  b4.-1_\espressivoTxt( c8) | b4( e-4) | c4( e-4) | b2 | d4.( a8\open) |
+  b-1( g'-4) fis8-- e-- | dis4.( a'8\flageolet) | g-2( fis e g) |
+  a,4.\open( g'8-2) | fis8( c'^3_4) b--_4 a-- | b8( b,-1 dis^\rit fis-3) |
+  e2 \bar "||"
+  e,8-.-1\p\downbow e16( fis g8-.) g16( a | b8) g'( fis e) | e-4 c( b a) |
+  b g( fis e) | a-4\>( g fis e\!) | d-4( c b) d'-.\upbow |
+  b'\>( a g fis\!) | g( fis e) e,-.\upbow | a-4\>(  g fis e\!) |
+  fis( e d) a''-.\upbow | g( fis e^\rit dis) | e2 |
+  e8-.^\marcatoTxt b-. e,-. g'-.-> | b-.-> b,-. e,-. g'-.-> |
+  a-.-> c,-. e,-. e'-.->\open | g-.-> b,-. e,-. e'-.->\open |
+  a-.-> c,-. d,-. e'-.->-4 | d-.-> b-. d,-. d'-.-> |
+  b'8-.-> dis,-. b-. fis'-.-> | e-.-> g,-. c,-. e'-.-> |
+  a-.-> cis,-. a-. e'-.->-4 | d-.-> a-. d,-. d'-.-> |
+  g-.-> c,-. b-. fis'-.-> | e8-. b-.-> e,4-> \bar "||"
+  e'4->\f^\markup {\italic "energico"} g16-- fis-- e-- g-- |
+  b4-> b16-- a-- g-- b-- | a4-> a16-- g-- fis-- a-- |
+  g4-> g16-- fis-- e-- g-- | a4-> a16-- g-- fis-- e-- |
+  d4-> e16-- fis-- g-- a-- | b4-> b16-- a-- g-- fis-- |
+  e4-> dis16-- e-- fis-- g-- | a4-> a16-- g-- fis-- e-- |
+  d4-> e16-- fis-- g-- a-- | b4-> b16-- a-- g--^\rit fis-- |
+  e16 e,-- fis-- g-- a-- b-- cis-- dis-- \bar "||"
+  e8-4\p e,16( fis e8-.) g'16( a | b8-.->) e,,16( fis e8-.) fis'16( g |
+  a8-.->) e,16( fis e8-.) e'16( fis |
+  g8-.->) e,16( fis e8-.) fis'16( g | a8-.) d,,16( e d8-.) b'16( c |
+  d8-.->) g,,16( a g8) g''16( a | b8-.->) b,,16( c b8) e'16( fis |
+  g8-.->) c,,16( d c8) fis'16( g |
+  a8-.->) a,,16( b a8) fis''16--^\pocoRit\cresc e-- |
+  d8-.-> d,16( e d8) d'16-- c-- | b8-. b'16-- a-- g16( fis) e-- dis-- |
+  e8-.\f b-. e,4-> \bar "|."
+}
+
+violinMovementIViolin = \new Voice \violinMovementI
+violinMovementIPiano = \new Voice \violinMovementI
+
+pianoUpMovementI = \new Voice \relative g {
+  \change Staff = "down" \voiceOne g8^\p( e a4 e2\fermata) |
+  \cadenzaOn s4*6 \cadenzaOff
+  g8^\< e ais4\! e2\fermata | \cadenzaOn s4*6 \cadenzaOff
+  \change Staff = "up" \oneVoice <g' d>4 <c g> <b g> <a e> |
+  e8 e << {\voiceOne fis8 e}
+          \new Voice {\voiceTwo cis4} >> \oneVoice <dis b>2\fermata \bar "||"
+   \clef "alto"
+  r8 g,8( <b e> g) r8 g( <c e> g) |
+  r fis( <c' d> fis,) r8 <g b d>4--( <a b dis>8--) |
+  r8 g8( <b e> g) r g( <c e> g) |
+  r fis( <a c d fis> <fis ais e'> <b d>) fis'8( g) a | \clef "violin" 
+  \repeat volta 2 {
+    \tuplet 3/2 4 {
+      r8\f <b g e> <b g e> <b g e>4.:8 r8 <a g e>\> <a g e> <a g e>4.:8\! |
+    }
+    <b fis>2 <b g e> |
+    \tuplet 3/2 4 {
+      r8 \repeat unfold 2 <e, b g> <e b g>4.:8
+      r8 \repeat unfold 2 <g e a,> <g e a,>4.:8
+    } | r8 fis,( <a fis'> <ais e'> <b e>2)
+  } \time 2/4
+  b8-.\p b-. b->( c) | R2*3 | b8-. b-. b->( c) | R2*3 \bar "||"
+  r8\p \repeat unfold 3 <g' e b>8-. | r8 \repeat unfold 3 <g e b>8 |
+  r8 \repeat unfold 3 <a e c> | r8 \repeat unfold 3 <g e b>8 |
+  \repeat unfold 2 {r8 <a d, c>} | r8 <g d b>4 <g d b>8 |
+  r8 <fis b,> r <fis dis a> | r8\< <e c g>4 <e c g>8\! |
+  r8 <g e a,>4 <g e a,>8 | \repeat unfold 2 {r8 <fis d a>} |
+  r8_\rit <fis dis b> r <a fis b,> | <g e b>2 \bar "||"
+  e8-. e-. e->( g) | b-. b-. b( g) | a-. a-. a->( e) |
+  g-. g-. g->( e) | a4( fis8. e16) | d2 b'4 g8.( fis16) | e2 |
+  a4( fis8. e16) | d2 |
+  <g e>4 << {\voiceOne g8.^\rit fis16}
+            \new Voice {\voiceTwo dis4} >> \oneVoice e2 \bar "||"
+  r8 <b' g> r <b g e> | r <b g> <a fis> <g e> | r8 a( g fis |
+  <g e>8) r r4 | r8 e( d c | b a g) r | r8 fis'( e dis | e b g) r |
+  r8 e'( d cis | d a fis) r | r8 a'(g_\rit fis | e2) |
+  <e b g>8\f r r <g e b> | <b g e> r r <g e b> | <a e c> r r <e b g> |
+  <g e b> r r <e b g> | <a d, c> r r <e c> | <d b> r r d |
+  <dis b'> r r <fis dis> | e r r e | <e a> r r <e cis> | d r r d |
+  g r r <fis dis> | e4. r8 \bar "||"
+  \repeat percent 2 {<g e>4\f r} | <a e> r | <g e> r |
+  << {\voiceOne d'8( c)} \new Voice {\voiceTwo fis,4} >> \oneVoice r4 |
+  << {\voiceOne c'8( b)} \new Voice {\voiceTwo <g d>4} >> \oneVoice r4 |
+  << {\voiceOne g8( fis)} \new Voice {\voiceTwo dis4} >> \oneVoice r4 |
+  <g e>4 r | <a g e> r |
+  << {\voiceOne g8( fis)} \new Voice {\voiceTwo <d a>4} >> \oneVoice r4 |
+  <dis a' b>4 r | <g e b>8 r r4 \bar "||"
+  b4.\p( c8) | b4( e) | c( e) | b2 | d4.( a8) | b8( g' fis e |
+  dis4.) a'8( | g fis e g | a,4.->) g'8^\pocoRit\cresc( | fis c' b a |
+  g4) <g b,>8. fis16 | <e b g>2\f \bar "|."
+}
+
+pianoDownMovementI = \new Voice \relative g, {
+  \voiceTwo g8 e a4 e2\fermata | \cadenzaOn s4*6 \cadenzaOff |
+  g8 e ais4 e2\fermata | \cadenzaOn s4*6 \cadenzaOff |
+  << {\voiceOne b''4 e d c} \new Voice {\voiceTwo g1} >> \oneVoice |
+  <b g>4 <ais fis> <fis b,>2\fermata \bar "||"
+  e2 c | d g,4( fis) | e2 c' | d2~ <d g,>
+  \repeat volta 2 {
+    \tuplet 3/2 4 {
+      r8 c'8\sustainOn c c4.:8\sustainOff r8 cis\sustainOn cis cis4.:8\sustainOff |
+    }
+    d4~ <d b> r8. e,16 \tuplet 3/2 4 {g8^\< a b\!} |
+    << {c,2 cis} {s4\sustainOn s4\sustainOff s4\sustainOn s4\sustainOff} >> |
+    << {d4 b~ <b e,>2}
+       {s8\sustainOn s4 s8\sustainOff s4\sustainOn s4\sustainOff} >> |
+  } \time 2/4
+  \repeat unfold 2 <dis fis>8 <dis fis>->( <e g>) | R2*3
+  \clef "violin" \repeat unfold 2 <dis' fis>8-. <dis fis>->( <e g>) |
+  R2*3 \clef "bass" \bar "||"
+  \repeat percent 4 {<e, e,>8 r r4} | fis4( e | g2) | dis4( b |
+  c b8 c) | cis4( a | d c) | b4( b, | e2) \bar "||"
+  \repeat percent 2 { e'8-. \repeat unfold 3 <g b>-. } |
+  e8-. \repeat unfold 3 <a c>-. | e8-. \repeat unfold 3 <g b>-. |
+  fis8( c' d, c') | g( b d, b') | fis( a b, a') | c,( g' b,^\< c\! |
+  cis a' a, a') | d,( a' c, a' | b, b' a b~) | <b g e>8 b, e,4-> \bar "||"
+  e''4 d | cis2( | c8) fis,( g a | e) r8 r4 | d2 | g,4. r8 | b'2 |
+  e,4. r8 | a2 | d,4. r8 | b4~ <b a'> | <e g>2 |
+  \repeat percent 2 {e,8 r r e'} | e, r r e | e' r r e | fis r r d |
+  g r r <g b> | <b fis> r r <a b,> | <g c,> r r <g c,> |
+  <g cis,> r r <g a,> | <fis d> r r <a fis c> |
+  <g e b> r r <a dis, b> | <g e>4. r8 \bar "||"
+  \repeat percent 2 {
+    << {\voiceOne c8( b)} \new Voice {\voiceTwo e,4} >> \oneVoice r4
+  }
+  << {\voiceOne d'8( c)} \new Voice {\voiceTwo e,4} >> \oneVoice r4 |
+  << {\voiceOne c'8( b)} \new Voice {\voiceTwo e,4} >> \oneVoice r4 |
+  <a d,>4 r | <d, g,> r | <a' b,>4 r |
+  << {\voiceOne c8( b)} \new Voice {\voiceTwo e,4} >> \oneVoice r4 |
+  << {\voiceOne d'8( cis)} \new Voice {\voiceTwo a4} >> \oneVoice r4 |
+  <a d,>4 r |
+  << {\voiceOne g8( fis)} \new Voice {\voiceTwo b,4} >> \oneVoice r4 |
+  <e b e,>8 r r4 \bar "||"
+  \repeat percent 2 {e8 b' g b} | e, c' a c | e, b' g b | fis c' d, c' |
+  g b d, b' | fis b b, b' | c, e g, e' | cis a' a, a' | d, a' fis e |
+  dis b' b, a' | <g e> b, e,4 \bar "|."
+}
+
+
+%%% ------------
+
+\header {
+  arranger = ##f
+  composer = "Leo Portnoff"
+  copyright = \copyrightText
+  tagline = ##f
+  enteredby = "Philipp Büttgenbach"
+  opus = "Fantasia 4"
+  source = "http://imslp.org/"
+  title = "Russian Fantasia No. 4"
+}
+
+\include "paper.ily"
+
+#(define fileBaseName "Leo_Portnoff-fantasia_4")
+
+define(`PianoMovement', `\score {
+    <<
+      \new Staff \with {
+        fontSize = #-3
+        \override StaffSymbol.staff-space = #(magstep -3)
+      } { \globalMovement$1 \violinMovement$1Piano }
+      \new PianoStaff <<
+        \new Staff = "up" \with {
+          \accidentalStyle modern-cautionary
+        } {
+          \globalMovement$1 \pianoUpMovement$1
+        }
+        \new Staff = "down" \with {
+          \accidentalStyle modern-cautionary
+        } {
+          \globalMovement$1 \clef bass \pianoDownMovement$1
+        }
+      >>
+    >>
+    \layout {
+%%      indent = #0
+    }
+    \header {
+      piece = \titleMovement$1
+    }
+  }')
+
+\book {
+  \bookOutputName #(string-append fileBaseName "-piano")
+
+  PianoMovement(`I')
+}
+
+define(`ViolinMovement', `
+  \score {
+    \new Staff \with {
+      \accidentalStyle modern-cautionary
+    } {
+      \compressFullBarRests
+      \globalMovement$1 \violinMovement$1Violin
+    }
+    \layout {
+%%      indent = #0
+    }
+    \header {
+      piece = \titleMovement$1
+    }
+  }')
+
+\book {
+  \bookOutputName #(string-append fileBaseName "-violin")
+  ViolinMovement(`I')
+}
+
+\include "articulate.ly"
+
+\book {
+  \bookOutputName \fileBaseName
+  \score {
+    \articulate \unfoldRepeats
+    \new StaffGroup <<
+      \new Staff \with {
+        midiInstrument = #"violin"
+      } { \globalMovementI   \violinMovementIPiano
+        }
+      \new PianoStaff \with {
+        midiInstrument = #"acoustic grand"
+      } <<
+        \new Staff = "up" {
+          \globalMovementI \pianoUpMovementI
+        }
+        \new Staff = "down" {
+          \globalMovementI \pianoDownMovementI
+        }
+      >>
+    >>
+    \midi{}
+  }
+}
