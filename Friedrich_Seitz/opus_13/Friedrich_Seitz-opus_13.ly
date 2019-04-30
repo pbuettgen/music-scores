@@ -26,8 +26,8 @@ globalMovementI = {
   \key g \major
 }
 
-violinMovementI = \new Voice \relative f'' {
-  R1*10 | g2->\f d4.->( d8-.) | b2~ b8 d,-.\> g-. b-. |
+violinMovementI = \relative f'' {
+  g2->\f d4.->( d8-.) | b2~ b8 d,-.\> g-. b-. |
   %% 13
   d4\mf d8.\upbow d16\downbow e4.-4\upbow( b8) |
   %% 14
@@ -142,7 +142,27 @@ violinMovementI = \new Voice \relative f'' {
   a8:16-. gis8:16-. g8:16-. fis8:16-. e8:16-. d8:16-. cis8:16-. b8:16-. |
   a4\ff^\tenutoTxt <a e' a>->\downbow a\upbow <a e' a e'>\downbow |
   a\upbow <a e' cis' a'>\downbow r8 a->\downbow b->\downbow cis->\downbow |
-  d4 r r2 | R1*20 \bar "|."
+  d4 
+}
+
+violinMovementIViolin = \new Voice {
+  \cueDuring #"pianoUpMovementI" #DOWN R1*3 |
+  \cueDuring #"pianoUpMovementI" #UP   R1*4 |
+  \cueDuring #"pianoUpMovementI" #DOWN R1*3 |
+  \violinMovementI
+  \cueDuring #"pianoUpMovementI" #DOWN {r4 r2} |
+  \cueDuring #"pianoUpMovementI" #UP   {R1*7}  |
+  \cueDuring #"pianoUpMovementI" #DOWN {R1*3}  |
+  \cueDuring #"pianoUpMovementI" #UP   {R1*4}  |
+  \cueDuring #"pianoUpMovementI" #DOWN {R1*6}
+  \bar "|."
+}
+
+violinMovementIPiano = \new Voice {
+  R1*10 |
+  \violinMovementI
+  r4 r2 | R1*20
+  \bar "|."
 }
 
 pianoUpMovementI = \new Voice \relative b' {
@@ -287,6 +307,8 @@ pianoUpMovementI = \new Voice \relative b' {
   <fis cis ais>4-> << {r r2} {s4\> s s\!} >> | <cis fis, e>2.\f <bis fis dis>4 | <cis fis, e> <b fis d> <ais e cis> <gis d b> | \repeat percent 2 { <fis cis ais>2. <g d b>4-> } | <fis cis ais>1~ | <fis cis ais> \bar "|."
 }
 
+\addQuote #"pianoUpMovementI" \pianoUpMovementI
+
 pianoDownMovementI = \new Voice \relative g, {
   \repeat tremolo 8 { g32\p g' } \repeat tremolo 8 {g, g'} |
   g,4 r r2 |
@@ -371,8 +393,8 @@ globalMovementII = {
   \key d \major
 }
 
-violinMovementII = \new Voice \relative f' {
-  R2. | r4. r4 fis8\p^\sostenuto |
+violinMovementII = \relative f' {
+  r4 fis8\p^\sostenuto |
   d'4( b8) fis4--( fis8-.) | g16-- a-- b8-- a16-- g-- fis4--( fis8--) |
   e8.\< g16( fis e) d4--\! d16(\< d')\! |
   d8\>( cis b) ais4 fis8\p\upbow | d'4( b8) fis4--( fis8--) |
@@ -401,6 +423,16 @@ violinMovementII = \new Voice \relative f' {
   fis8->^\rit e-> d-> d-4-> d16( cis) cis8-- |
   \once \override Hairpin.to-barline = ##f
   b2.~\mf\>^\aTempo | b\!\fermata \bar "|."
+}
+
+violinMovementIIViolin = \new Voice {
+  \cueDuring #"pianoUpMovementII" #DOWN {R2. | r4.}
+  \violinMovementII
+}
+
+violinMovementIIPiano = \new Voice {
+  R2. | r4.
+  \violinMovementII
 }
 
 pianoUpMovementII = \new Voice \relative f' {
@@ -463,6 +495,8 @@ pianoUpMovementII = \new Voice \relative f' {
   <dis b fis>2.\fermata \bar "|."
 }
 
+\addQuote #"pianoUpMovementII" \pianoUpMovementII
+
 pianoDownMovementII = \new Voice \relative f {
   \repeat unfold 4 {<fis b,>8-. <fis b,>4--} |
   %% 3
@@ -517,9 +551,8 @@ globalMovementIII = {
   \key g \major
 }
 
-violinMovementIII = \new Voice \relative d'' {
-  \partial 8 r8 | R2.*7 |
-  r4. r4\fermata \once \override Hairpin.to-barline = ##f d8\upbow\p\<( |
+violinMovementIIIpI = \relative d'' {
+  r4\fermata \once \override Hairpin.to-barline = ##f d8\upbow\p\<( |
   %% 9
   g8\!)^\grazioso r8 b,\upbow d4--\downbow d8\upbow( |
   c) r \acciaccatura d8 e-.\upbow a,4\downbow( g8) |
@@ -537,7 +570,11 @@ violinMovementIII = \new Voice \relative d'' {
   %% 21
   a4( a'8) a(\( g) e-.\) | fis4.~ fis8 e-.( d-.) |
   %% 23
-  cis4( b8) a g( e) | d4.~\> d8\! r r | R2. | r4. r8 r d'8-.\f\upbow |
+  cis4( b8) a g( e) | d4.~\> d8\! r8
+}
+
+violinMovementIIIpII = \relative d' {
+  r8 d'8-.\f\upbow |
   %% 27
   d,8-.\downbow r d'-.\upbow d,-.\downbow r \once \override Hairpin.to-barline = ##f d'-.\>\upbow |
   %% 28
@@ -549,9 +586,12 @@ violinMovementIII = \new Voice \relative d'' {
   %% 34
   a-.) r e-.\upbow\< a4( g8)\! | fis( e) d-. c-. b-. a-. |
   %% 36
-  g4.~ g8 r r | R2.*11 |
+  g4.~ g8 r 
+}
+
+violinMovementIIIpIII = \relative g' {
   %% 48
-  r4. r8 b8\downbow\mf^\markup{\italic "espressione e tranquillo."} b\upbow |
+  r8 b8\downbow\mf^\markup{\italic "espressione e tranquillo."} b\upbow |
   %% 49
   b4-- e8---4~( e d c) | b4( g8) e4( g8) | fis4\<( g8) a-4( g fis) |
   %% 52
@@ -619,6 +659,31 @@ violinMovementIII = \new Voice \relative d'' {
   g:-. b:-. e:-. d:-. c:-. a:-. | g:-. b:-. d:-. b':-. a:-. g:-. |
   d:-. b:-. g:-. e:-. d:-. b:-. | g4 r8 <d' b' g'>4-> r8 |
   g,4-. r8 <d' b' b'>4-> r8 | g,2.~\ff | g8 r r r4 \bar "|."
+}
+
+violinMovementIIIViolin = \new Voice {
+  \partial 8 r8 |
+  \cueDuring #"pianoUpMovementIII" #DOWN {R2.*3}
+  \cueDuring #"pianoUpMovementIII" #UP   {R2.*4 | r4.}
+  \violinMovementIIIpI
+  \cueDuring #"pianoUpMovementIII" #DOWN {r8 | R2.}
+  \cueDuring #"pianoUpMovementIII" #UP   {r4. r8}
+  \violinMovementIIIpII
+  \cueDuring #"pianoUpMovementIII" #DOWN {r8 | R2.}
+  \cueDuring #"pianoUpMovementIII" #UP   {R2.*3}
+  \cueDuring #"pianoUpMovementIII" #DOWN {R2.}
+  \cueDuring #"pianoUpMovementIII" #UP   {R2.*3}
+  \cueDuring #"pianoUpMovementIII" #DOWN {R2.*3 | r4.}
+  \violinMovementIIIpIII
+}
+
+violinMovementIIIPiano = \new Voice {
+  \partial 8 r8 | R2.*7 | r4.
+  \violinMovementIIIpI
+  r8 | R2. | r4. r8
+  \violinMovementIIIpII
+  r8 | R2.*11 | r4.
+  \violinMovementIIIpIII
 }
 
 pianoUpMovementIII = \new Voice \relative b {
@@ -747,6 +812,8 @@ pianoUpMovementIII = \new Voice \relative b {
   \repeat tremolo 12 {<g' d>32\ff b,} | <g' d b>8 r r r4 \bar "|."
 }
 
+\addQuote #"pianoUpMovementIII" \pianoUpMovementIII
+
 pianoDownMovementIII = \new Voice \relative b, {
   \partial 8 b8-. | fis'4.~ fis4 b,8-. | fis'8-. b,-. b'-. r4. |
   %% 3 - 7
@@ -836,14 +903,16 @@ define(`PianoMovement', `\score {
       \new Staff \with {
         fontSize = #-3
         \override StaffSymbol.staff-space = #(magstep -3)
-      } { \globalMovement$1 \violinMovement$1 }
+      } { \globalMovement$1 \violinMovement$1Piano }
       \new PianoStaff <<
-        \new Staff = "up" {
+        \new Staff = "up" \with {
           \accidentalStyle modern-cautionary
+        } {
           \globalMovement$1 \pianoUpMovement$1
         }
-        \new Staff = "down" {
+        \new Staff = "down" \with {
           \accidentalStyle modern-cautionary
+        } {
           \globalMovement$1 \clef bass \pianoDownMovement$1
         }
       >>
@@ -862,8 +931,10 @@ define(`PianoMovement', `\score {
 
 define(`ViolinMovement', `
   \score {
-    \new Staff {
-      \compressFullBarRests \globalMovement$1 \violinMovement$1
+    \new Staff \with {
+      \accidentalStyle modern-cautionary
+    } {
+      \compressFullBarRests \globalMovement$1 \violinMovement$1Violin
     }
     \layout {
       %% indent = #0
@@ -886,9 +957,9 @@ define(`ViolinMovement', `
     \new StaffGroup <<
       \new Staff \with {
         midiInstrument = #"violin"
-      } { \globalMovementI   \violinMovementI
-          \globalMovementII  \violinMovementII
-          \globalMovementIII \violinMovementIII
+      } { \globalMovementI   \violinMovementIPiano
+          \globalMovementII  \violinMovementIIPiano
+          \globalMovementIII \violinMovementIIIPiano
         }
       \new PianoStaff \with {
         midiInstrument = #"acoustic grand"
