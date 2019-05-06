@@ -9,7 +9,12 @@
 
 \paper {
   #(set-paper-size "c4")
-  binding-offset = 11\mm
+  binding-offset = 8\mm
   page-breaking = #ly:page-turn-breaking
   two-sided = ##t
+  auto-first-page-number = ##t
 }
+
+%%% Local Variables:
+%%% eval: (LilyPond-mode)
+%%% End:
