@@ -163,7 +163,7 @@ pianoUpMovementI = \new Voice \relative d' {
   r8 <g e> <a fis> <b g> <b g>2 | r8 <g e> <a fis> <b g> <b g e>2 |
   <a g e>4 <a fis d> <cis a g> <d a d,> |
   <ais e> <a d,> <e d> <eis d> |
-  r8 <fis d> <g e> <a fis> <a fis>4 <eis d>_\allargando |
+  r8 <fis d> <g e> <a fis> <a fis>4 <eis d>_\markup{\whiteout \pad-around #.5 \allargando} |
   r8 <fis d> <g e> <a fis> <a fis>4 <b eis, d> |
   <a fis d>2_\tenutoTxt r2 | << R1 s8_\aTempo >> | r4 cis,\cresc( d e |
   fis) <a fis>( <g e> <fis d> | <e cis>) <d b> <cis a> <d b> |
@@ -210,7 +210,7 @@ pianoDownMovementI = \new Voice \relative d, {
 titleMovementII = #""
 
 globalMovementII = {
-  \tempo "Andante moderato" 8 = 98
+  \tempo "Andante moderato" 8 = 102
   \time 6/8
   \key g \major
 }
@@ -230,7 +230,7 @@ violinMovementIIpII = \relative g' {
   f( g f) a( g f) | e( f^\rit e) g-- f-- d--  c4.~ c8 r^\aTempo r |
 }
 violinMovementIIpIII = \relative c'' {
-  \bar "||" \key g \major b4._\pMaEspressivo d8( c a) | g4. d |
+  \bar "||" \key g \major \tempo "Tempo 1°" b4._\pMaEspressivo d8( c a) | g4. d |
   e fis | g8( a b) a4. | c4. e8( c a) | fis4. d | g a8( b d) |
   a4. r | b d8( c a) | g4. d | c8( d e) fis( e fis) | a4.-4 g |
   e\< a4-0( c8) | e4\f( d8) c4. | b4.\> a8( c b\!) |
