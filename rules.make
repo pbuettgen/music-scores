@@ -7,8 +7,11 @@
 # this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 #
 
+# Open liliypond library
+OLL_INCLUDE_DIR = ${HOME}/.local/share/lilypond/oll/
+
 # The command to run lilypond
-LILY_CMD = lilypond -dno-point-and-click -I../../
+LILY_CMD = lilypond -dno-point-and-click -I../../ -I$(OLL_INCLUDE_DIR)
 M4_CMD = m4 -I /usr/share/doc/m4/examples -I ../..
 LN_S_CMD = ln -s
 RM_F = rm -f
