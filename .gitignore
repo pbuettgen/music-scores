@@ -1,7 +1,8 @@
+*.log
+*.mid
+*.midi
+*.ogg
 *.pdf
 *.ps
-*.midi
-*.mid
-*.log
 *.zip
 *~
