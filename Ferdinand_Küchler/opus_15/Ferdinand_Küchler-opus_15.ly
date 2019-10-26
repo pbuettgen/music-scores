@@ -517,7 +517,7 @@ define(`ViolinMovement', `
           \globalMovementII  \violinMovementIIPiano
         }
       \new PianoStaff \with {
-        midiInstrument = #"acoustic grand"
+        midiInstrument = #"harpsichord"
       } <<
         \new Staff = "up" {
           \globalMovementI \pianoUpMovementI
