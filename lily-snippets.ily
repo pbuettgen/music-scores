@@ -36,6 +36,18 @@ ritSpan = {
   \override TextSpanner.bound-details.left.text = \rit
   \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
 }
+
+ffWhiteOutTxt = \markup \whiteout \pad-x #.7 \dynamic #"ff"
+ffWhiteOut = #(make-dynamic-script ffWhiteOutTxt)
+fWhiteOutTxt = \markup {\whiteout \pad-x #.7 \dynamic "f"}
+fWhiteOut = #(make-dynamic-script fWhiteOutTxt)
+mfWhiteOutTxt = \markup \whiteout \pad-x #.7 \dynamic "mf"
+mfWhiteOut = #(make-dynamic-script mfWhiteOutTxt)
+ppWhiteOutTxt = \markup {\whiteout \pad-x #.7 \dynamic "pp"}
+ppWhiteOut = #(make-dynamic-script ppWhiteOutTxt)
+pWhiteOutTxt = \markup \whiteout \pad-x #.7 \dynamic "p"
+pWhiteOut = #(make-dynamic-script pWhiteOutTxt)
+
 trillFlat = \markup { \musicglyph #"scripts.trill" \super \flat }
 trillSharp =  \markup{\musicglyph #"scripts.trill" \super \sharp}
 trillNatural = \markup{\musicglyph #"scripts.trill" \super \natural}
@@ -152,8 +164,8 @@ fingerNumberSpanner =
   #})
 
 copyrightText = \markup \center-column {
-  {\small #(string-append "Copyright © " (
-    strftime "%Y" (localtime (current-time))) " Philipp Büttgenbach")}
+  {\small #(strftime "Copyright © %Y Philipp Büttgenbach"
+            (localtime (current-time)))}
   \with-url #"http://creativecommons.org/licenses/by-sa/4.0/"
   {\small "Creative Commons Attribution-ShareAlike 4.0"}
 }
