@@ -1,0 +1,404 @@
+%%% -*- coding: utf-8 -*-
+%%%
+%%% Copyright © 2019 Philipp Büttgenbach
+%%%
+%%% This work is licensed under the Creative Commons
+%%% Attribution-ShareAlike 4.0 International License.  To view a copy of
+%%% this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
+%%%
+
+\version "2.18.2"
+
+\include "lily-snippets.ily"
+
+lento = \markup\italic "lento"
+pesante = \markup\italic "pesante"
+
+global = {
+  \tempo "Moderato." 8 = 111
+  \time 6/8
+  \key g \major
+}
+
+violin = \relative d'' {
+  d8.\p\downbow( e16-4 d8) b4. | d8.( e16-4 d8) b4. |
+  b8.\mf\<( c16 b8) b8.( c16 b8) |
+  %% 4
+  << {s8*2 s\!} \repeat unfold 2 {d8.( e16-4 d8)} >> |
+  g8\f\>( fis e\open) d( c b\!) | a8.( b16 a8) g'4 r8 |
+  %% 7
+  b,8.\p( c16 b8) d8( c a) \bar "||"
+  %% 8
+  \tempo "Allegretto." 4=112 \time 4/4 g4 r r2
+  \repeat volta 2 {
+    %% 9
+    g4\downbow\mf^\markup\smaller "Morgen kommt der Weihnachtsmann." g d' d |
+    %% 10
+    e---4( e--) d2 | c4 c b b | a2-4 g4 r
+  }
+  %% 13
+  d'\downbow d c c | b b a2\open | d4 d c c | b b a2 | g4 g d' d |
+  %% 18
+  e-.-4( e-.) d2 | c4 c b b | a2-4 g4 r |
+  \cueDuring #"pianoUp" #UP   R1*3
+  \cueDuring #"pianoUp" #DOWN R1*2 \bar "||"
+  \key c \major \time 3/4 \tempo "Andante." 4=99
+  %% 26
+  e'4--\open\downbow\p_\markup\italic "espressivo, dolce" e-- e-- |
+  g2( g4--) |
+  %% 28
+  \fingerNumberSpanner "3" \textSpannerDown a2 \startTextSpan c8-4( a8-3) \stopTextSpan |
+  %% 29
+  g2 g4 | f2 a8( f) | e2\open e4 | d2\< e8\open( fis) | g2.\> |
+  e4--\open\upbow\! e-- e-- | g2 g4 |
+  %% 36
+  a2 \startTextSpan c8-4( a8-3) \stopTextSpan | g2 g4 | f2 a8( f) |
+  %% 39
+  e2\open a8( f) | e4. d8\flageolet\>( b c\!) | a2 a4\upbow |
+  %% 42
+  bes8\mf( c) cis4\upbow d4~\downbow\<( | d8 e\open) a4\! g4~( |
+  %% 44
+  g8 f) a,4\open e'-4~\>( | e8 d) c4( a-.\open\!) | bes8( c) cis4 d~\<( |
+  %% 47
+  d8 e\open) a4\! g~( | g8 f) a,4\open e'-4\<~( | e8\> d) c4( a--\!) |
+  %% 50
+  cis4 cis b8\cresc( cis) | d2 d4 | e-4 e\! d8( e\open) | f2 f4 |
+  %% 54
+  a4.\f  f8_\pesante\<( e\open f) |
+  %% 55
+  c'2-4\ff a4-3\> | a2( g4\!) | << {s4\> s s\!} f2.^\rit >> \bar "||"
+  \key bes \major \time 4/4 \tempo "Moderato." 4=111
+  %% 58
+  \mark \markup \normalsize \fermata
+  f4.\p\downbow^\markup\smaller "Alle Jahre wieder." g8 f4 ees | d2 c |
+  bes4 c8( d) ees4 d |
+  %% 61
+  c2. r4 | d4\downbow\< f g f\! | bes2( a4\>) g\! | f4 ees8( d) ees4 f |
+  %% 65
+  d2. r4 | d4\downbow\mf\< f g f\! | bes2( a4) g |
+  %% 68
+  f ees8\>( d) ees4--( f--\!) | d1^\rit_\lento \bar "||"
+  \key g \major \time 4/4 \tempo "Andantino." 4 = 88
+  %% 70
+  \mark \markup \normalsize \fermata
+  d2\p\downbow^\markup\smaller "O du fröhliche." e-4 | d4.( c8) b4( c) |
+  %% 72
+  d2 e-4 | d4.( c8) b4( c) | d2\< d | e\open fis4--( g--) |
+  \once \override Hairpin.to-barline = ##f fis2\> e |
+  %% 77
+  d2.\! r4 | a4.\open\downbow( b8) a4\open( b) | c4.( d8) c2 |
+  %% 80
+  b4.( c8) b4( c) | d4.( e8-4) d2 | g4\mf\>( fis) e( d)\! |
+  g4\> e\open d c\! |
+  %% 84
+  \once \override Hairpin.to-barline = ##f b2\> a\open | g2.\! r4 |
+  \tuplet 3/2 4 {
+    %% 86
+    d'8\p\downbow( cis d) e-4\<( d e\open) fis( e fis) g( fis g) |
+    a\>( gis a) b-. a-. g-. fis-. e-.\open d-.\! c-. b-. a-. |
+    %% 88
+    g-.\p fis-. e-. d-._\open e-. fis-. g-.\< a-._\open b-. d-. e-.\open fis-. |
+    g( fis g\!) a( g a) b-.\> a-. g-. fis-. e-. d-.\! |
+    %% 90
+    c( e\open) g-. fis( g) g-. a( g) g-. fis( g) g-. |
+    c,( e\open) g-. fis( g) g-. gis\<( fis) gis-. a( gis) a-.\! |
+    %% 92
+    b-. a-. g-. fis-.\> e-. d-. fis-. e-. d-. c-. b-. a-.\! \bar "||"
+  }
+  \tempo "Andante." 4=90 \time 6/8
+  g4^\markup\smaller "Stille Nacht." r8 r4. | d'8.\p( e16-4 d8) b4. |
+  d8.( e16-4 d8) b4. \bar "||" \time 3/2 \tempo "Choral." 2=86
+  << {
+    d2\f^\pesante e2\open fis\< |
+    g a b\! | \once \override Hairpin.to-barline = ##f a1.\> | g\! \bar "|."
+  }
+     \addlyrics {
+       Las- set den Lob- ge- sang hö- ren.
+     }
+   >>
+}
+
+pianoUp = \relative b' {
+  b8.\p( c16 b8) g4. | b8.( c16 b8) g4. |
+  %% 3
+  r16\mf\< b,( <fis' a> b, <fis' a> b,) r b( <e g> b <e g> b) |
+  %% 4
+  r c( <d a'> c <d a'> c\!) r b( <d g> b <d g> b) |
+  %% 5
+  e'8\f( d c) b\>( a g~ | g4\! a8 ais4) r8 |
+  %% 7
+  g8.\pWhiteOut( a16 g8) b( a <f c>) \bar "||" \time 4/4
+  %% 8
+  <g b,>4 r r2
+  \repeat volta 2 {
+    %%9
+    << s4\mf \repeat unfold 4 g4 >> | g4( c) b2 |
+    %% 11
+    a4 a g g | g8( e fis4) g r
+  }
+  %% 13
+  b4 b a a | g g fis2 | b4 b a a | g\< g fis2\> | g4\! g g g | g c b2 |
+  %% 19
+  a4 a g g | g8( e fis4 g) g | <g c e>2 <fis c' d>\< |
+  %% 22
+  <g b d>\! a'8->( g fis e) | d( c b a) g4( fis) |
+  %% 24
+  << {\voiceOne fis4.\>( \tuplet 3/2 {g16 fis e} fis4. g8\!) | g2.}
+     \new Voice {\voiceTwo d1 | d2.} >> \oneVoice r4 \bar "||"
+  \time 3/4 \key c \major
+  %% 26
+  r8 g,( <c e> g <c e> g) | r8 g( <c g'> g <c g'> g) |
+  %% 28
+  r8 a( <c f> a <c f> a) | r8 g( <c g'> g <c g'> g) |
+  %% 30
+  r8 a( <d f> a <d f> a) | r8 a( <c e> a <c e> a) |
+  %% 32
+  r8 a( <c d> a\< c d) | b\>( <f' a>-> <e g> <d f> <cis ais> <b d>\!) |
+  %% 34
+  r8 g( <c e> g <c e> g) | r8 g( <c g'> g <c g'> g) |
+  %% 36
+  r8 a( <c f> a <c f> a) | r8 g( <c g'> g <c g'> g) |
+  %% 38
+  r8 a( <d f> a <d f> a) | r8 a( <c e> a <c e> a) |
+  %% 40
+  r8 gis( <b d e> gis <b d e>\> gis) |
+  %% 41
+  r8 <a c e>-.( <a c e>-. <a c e>-.\!) r8 <c e>8\mfWhiteOut |
+  %% 42
+  <<
+    \repeat unfold 2 {
+      r8 <bes c e>-.( \repeat unfold 3 <bes c e>-. <bes c e>-.)
+    }
+    { s8*4 s8\< s | s8*5 s8\! }
+  >> |
+  %% 44
+  <<
+    \repeat unfold 2 {
+      r8 <a c f>-.( \repeat unfold 3 <a c f>-. <a c f>-.)
+    }
+    { s2. | s8 s\> s8*3 s8\!}
+  >> |
+  %% 46
+  <<
+    \repeat unfold 2 {
+      r8 <b ces e>-.( \repeat unfold 3 <b ces e>-. <b ces e>-.)
+    }
+    { s8*4 s8\< s | s8*5 s8\! }
+  >> |
+  %% 48
+  r8 <c f>-.( \repeat unfold 3 <c f>-. <c f>-.) |
+  r8 <a c f>-.\>( \repeat unfold 3 <a c f>-. <a c f>-.\!) |
+  %% 50
+  r8 <a cis g'>-.( \repeat unfold 3 <a cis g'>-. <a cis g'>-.) |
+  r8 <a d f>-.\cresc( \repeat unfold 3 <a d f>-. <a d f>-.) |
+  %% 52
+  r8 <a e' g a>-.( \repeat unfold 3 <a e' g a>-. <a e' g a>-.) |
+  r8 <a d f a>-.( \repeat unfold 3 <a d f a>-. <a d f a>-.) |
+  %% 54
+  r8\f\< <b d f a>--^\pesante \repeat unfold 2 <b d f a>4:8-- |
+  %% 55
+  r8\ffWhiteOut <c fis a c>8-- <c fis a c>4:8--
+  \once \override Hairpin.to-barline = ##f <c fis a>4:8--\> |
+  %% 56
+  <b d fis a>2:8 <bes c e g>4:8 |
+  <a c fis>8\!^\rit gis'(\>( a bes c cis\!) \bar "||" \key bes \major \time 4/4
+  %% 58
+  d4.\p ees8 d4 c | << {bes2 a} {s4 s\<} >> | bes4\> a8( bes) c4\! bes |
+  %% 61
+  a2. r4 | << s4\< \repeat unfold 4 bes4 >> |
+  %% 63
+  << {\voiceOne g'2\>( f4) ees\!}
+     \new Voice {\voiceTwo bes2. bes4} >> \oneVoice |
+  <bes d>4 c8( bes) c4 a | bes2. r4 |
+  %% 66
+  <<s4\mfWhiteOut\< \repeat unfold 2 <bes f> >> <bes g> <bes f>\! |
+  << {\voiceOne bes2 s4 <bes g>}
+     \new Voice {\voiceThree e,4\<( f8 g <f a>4\!)}
+     \new Voice {\voiceTwo c2. bes4} >> \oneVoice |
+  <bes f' bes>2 \once \override Hairpin.to-barline = ##f
+  <bes ees g bes>4--\>( <c ees f a>--) |
+  << {\voiceOne <f bes>4\!^\rit c'8_\lento( bes) a4 <ais fis d>}
+     \new Voice {\voiceTwo d,2.} >> \oneVoice \bar "||" \key g \major
+  << \new Voice {\voiceTwo g1} {\voiceOne b2\p c} >> \oneVoice |
+  <b g>4.( a8) g4( a) |
+  << \new Voice {\voiceTwo g1} {\voiceOne b2 c} >> \oneVoice |
+  <b g>4.( a8) g4( a) |
+  <b g>2\< a | a a4--( b--) | a4\>( <b gis>) <a g>2 | <a fis>2. r4\! |
+  fis4.( g8) fis4( g) | a4.( b8) a2 | g4.( a8) g4( a) | b4.( c8) b2 |
+  %% 82
+  g1\mfWhiteOut\> | g2\> e | \once \override Hairpin.to-barline = ##f g\> fis |
+  g2.\! r4 |
+  %% 86
+  <a fis>4.\mfWhiteOut( <b g>8) <a fis>4( <b g>) | <c a>4.( <d b>8) <c a>2 |
+  <b g>4.( <c a>8) <b g>4( <c a>) | <d b>4.( <e c>8) <d b>2 |
+  << {\voiceOne g4\>( fis) e( d\!) | g4 e\> d}
+     \new Voice {\voiceTwo g,1 | g2 <gis e>4 } >> \oneVoice <c a e>4 |
+  <b g d>2\> <a fis d c>\! \bar "||" \time 6/8
+  %% 93
+  <g d b>4 r8 r4. | b8.\p( c16 b8) g4. | b8.( c16 b8) g4. \bar "||"
+  \time 3/2 \clef "alto"
+  <d a fis>2\f^\pesante <e a, g> <fis d a>\< |
+  <g d g,>2 <a fis d a> <b g d b>\! |
+  << { \voiceTwo <g e>2
+       \once \override Hairpin.to-barline = ##f fis4\> e <fis d c>2}
+     \new Voice {\voiceOne << a1. c,1 >> } >> \oneVoice |
+  <b d g>1.\! \bar "|."
+}
+
+\addQuote "pianoUp" \pianoUp
+
+pianoDown = \relative d' {
+  \clef "tenor"
+  << {\voiceOne d4. e8.->( d16 cis8) }
+     \new Voice {\voiceTwo g2} >> |
+  %% 2
+  << \new Voice {\voiceOne d'2.}
+     {\voiceTwo g,4.~ g8.^\< cis,16( d8\!} >> \oneVoice |
+  %% 3
+  dis4.)( e | fis g) | c8.\<( d16 e fis \!) g8 r r |
+  %% 6
+  <e c>4.( <e cis>4) r8 | d4. d, \bar "||" \time 4/4
+  %% 8
+  \repeat unfold 2 {g8( d' b d)}
+  \repeat volta 2 {
+    g,( d' b d) b,( g' d g) | c,( d e fis) g( d' b d) |
+    fis,( d' c d) g,( d' b d) | c4( d8 c b d g,4)
+  }
+  %% 13
+  g8( d' b d) fis,( d' c d) | g,( d' b d) d,( d' a d) |
+  g,( d' b d) fis,( d' c d) | g,( a b cis d c b a) |
+  g( d' b d) b,( g' d g) | c,( d e fis g d b g) |
+  c( a' e a) d,( b' g b) | d( cis c d,) g( d' b d) |
+  c,( c' g c) d,( c' a c) | g( d' b d) b,( g' d g) |
+  c,( a' e a) << {\voiceOne <b g>4( <c a>) | <c a>1 | b2.}
+                 \new Voice {\voiceTwo d,2 | d1 | g2. } >> \oneVoice r4 \bar "||"
+  \time 3/4 \key c \major \clef "bass"
+  c,2. | e | f | e | d | e | fis2( d4) | g,2. | c | e | f | e | d | e |
+  e, | a2 a'4 | g4 r r | c, r r | f r r | c r r | g' r r | c, r r |
+  a' r r | f r r | e2.( | d) | cis( | d2 c4) | b2.( | c2 c,4) | g'2( c4) |
+  << \new Voice {\voiceOne f2.}
+     {\voiceTwo f8 b( c d ees e) } >> \oneVoice \bar "||" \key bes \major
+  %% 58
+  \clef "tenor"
+  << \new Voice {\voiceOne f4}
+     {\voiceTwo bes,2. f4} >> \oneVoice |
+  bes4( d) f( fis) |
+  %% 60
+  g4.( f8) << {\voiceOne g2} \new Voice {\voiceTwo ees4 e} >> \oneVoice |
+  f4 e8( f) f,4 r | bes4 d ees d | ees2. ees4 | f2. f,4 | bes bes f d |
+  %% 66
+  \clef "bass"
+  bes d ees d | c( d8 e f4) ees4 | d c8( bes) c4 <f f,> |
+  <bes bes,> a8( g) fis4 d \bar "||" \key g \major \clef "tenor"
+  %% 70
+  g1 | g | g4 g,2 g'4~ |
+  << {\voiceTwo g1} \new Voice {\voiceOne r4 d'2 d4} >> \oneVoice |
+  <d g,>2 <d fis,> | <cis e,> <d d,>4--( <d g,>--) | <d a>2 <cis a> |
+  d2 a4 fis | d1 | d2. e8( fis) | g1 | g2. g4 |
+  << {\voiceOne e'4( d) c( b) | e c b a}
+     \new Voice {\voiceTwo g1 | g2 gis4 a} >> \oneVoice |
+  d( cis) d( c) | b d g, r4 |
+  %% 86
+  d1 | d2. e8( fis) | g1 | g2. g4 |
+  << {\voiceOne e'4( d) c( b) | e c b a}
+     \new Voice {\voiceTwo g1 | g2 e4 a} >> \oneVoice |
+  \clef "bass" d,2 <d d,> \bar "||" \time 6/8
+  %% 93
+  \tuplet 3/2 4. {
+    <cis g>16->\f^\markup\smaller "Weihnachtsglocken."( d g,)
+    \repeat unfold 5 {cis->( d g,)} |
+    \repeat percent 2 \repeat percent 2 << s8\f \repeat unfold 3 {cis16->( d g,)} >>  |
+  }
+  \bar "||" \time 3/2
+  <d' d,>2 <cis cis,> <c c,> | <b b,> <a a,> <g g,> |
+  <c c,>1( <d d,>2) | <g g,>1( g,,2->) \bar "|."
+}
+
+%%% ------------
+
+\header {
+  arranger = ##f
+  composer = "Arthur Seybold"
+  copyright = \copyrightText
+  tagline = ##f % \taglineText
+  enteredby = "Philipp Büttgenbach"
+  opus = "Opus 89"
+  source = "http://imslp.org/"
+  title = "Weihnachtsfantasie."
+}
+
+\include "paper.ily"
+
+
+\book {
+  \bookOutputName #"Arthur_Seybold-opus_89"
+  \bookOutputSuffix #"piano"
+
+  \score {
+    <<
+      \new Staff \with {
+        fontSize = #-3
+        \override StaffSymbol.staff-space = #(magstep -3)
+        instrumentName = "Violine."
+      } {
+        \global \killCues\violin
+      }
+      \new PianoStaff \with {
+          instrumentName = "Piano."
+      } <<
+        \new Staff = "up" \with {
+          \accidentalStyle modern-cautionary
+        } {
+          \global \pianoUp
+        }
+        \new Staff = "down" \with {
+          \accidentalStyle modern-cautionary
+        } {
+          \clef #"bass"
+          \global \pianoDown
+        }
+      >>
+    >>
+  }
+}
+
+\book {
+  \bookOutputName #"Arthur_Seybold-opus_89"
+  \bookOutputSuffix #"violin"
+
+  \score {
+    \new Staff \with {
+      \accidentalStyle modern-cautionary
+    } {
+      \compressFullBarRests
+      \global \violin
+    }  
+  }
+}
+
+\include "articulate.ly"
+
+\book {
+  \bookOutputName #"Arthur_Seybold-opus_89"
+  \score {
+    \articulate \unfoldRepeats
+    \new StaffGroup <<
+      \new Staff \with {
+        midiInstrument = #"violin"
+      } {
+        \global \killCues\violin
+      }
+      \new PianoStaff \with {
+        midiInstrument = #"acoustic grand"
+      } <<
+        \new Staff = "up" {
+          \global \pianoUp
+        }
+        \new Staff = "down" {
+          \global \pianoDown
+        }
+      >>
+    >>
+    \midi{}
+  }
+}
