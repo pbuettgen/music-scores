@@ -1,13 +1,13 @@
 %%% -*- coding: utf-8 -*-
 %%%
-%%% Copyright © 2016 Philipp Büttgenbach
+%%% Copyright © 2016-2020 Philipp Büttgenbach
 %%%
 %%% This work is licensed under the Creative Commons
 %%% Attribution-ShareAlike 4.0 International License.  To view a copy of
 %%% this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 %%%
 
-\version "2.18.2"
+\version "2.20"
 
 violinVoiceSettings = {
   \set Staff.midiInstrument = #"violin"
@@ -17,6 +17,10 @@ violinVoiceSettings = {
   \accidentalStyle modern-cautionary
 }
 
+violinStaffMagFactor = #.75
+
+solo = \markup {\italic \caps "Solo."}
+tutti = \markup {\italic \caps "Tutti."}
 dolce = \markup{\italic "dolce"}
 pDolceText = \markup { \hspace #4.8 p \normal-text \italic "dolce" }
 pDolceGraziosoText = \markup {
@@ -37,15 +41,35 @@ ritSpan = {
   \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
 }
 
-ffWhiteOutTxt = \markup \whiteout \pad-x #.7 \dynamic #"ff"
+ffWhiteOutTxt = \markup {
+  \override #'(style . outline)
+  \override #'(thickness . 3)
+  \whiteout \dynamic #"ff"
+}
 ffWhiteOut = #(make-dynamic-script ffWhiteOutTxt)
-fWhiteOutTxt = \markup {\whiteout \pad-x #.7 \dynamic "f"}
+fWhiteOutTxt = \markup {
+  \override #'(style . outline)
+  \override #'(thickness . 3)
+  \whiteout \dynamic "f"
+}
 fWhiteOut = #(make-dynamic-script fWhiteOutTxt)
-mfWhiteOutTxt = \markup \whiteout \pad-x #.7 \dynamic "mf"
+mfWhiteOutTxt = \markup {
+  \override #'(style . outline)
+  \override #'(thickness . 3)
+  \whiteout \dynamic "mf"
+}
 mfWhiteOut = #(make-dynamic-script mfWhiteOutTxt)
-ppWhiteOutTxt = \markup {\whiteout \pad-x #.7 \dynamic "pp"}
+ppWhiteOutTxt = \markup {
+  \override #'(style . outline)
+  \override #'(thickness . 3)
+  \whiteout \dynamic "pp"
+}
 ppWhiteOut = #(make-dynamic-script ppWhiteOutTxt)
-pWhiteOutTxt = \markup \whiteout \pad-x #.7 \dynamic "p"
+pWhiteOutTxt = \markup {
+  \override #'(style . outline)
+  \override #'(thickness . 3)
+  \whiteout \dynamic "p"
+}
 pWhiteOut = #(make-dynamic-script pWhiteOutTxt)
 
 trillFlat = \markup { \musicglyph #"scripts.trill" \super \flat }
@@ -177,5 +201,5 @@ taglineText =  \markup {
 
 %%% Local Variables:
 %%% coding: utf-8
-%%% mode: LilyPond
+%%% eval: (LilyPond-mode)
 %%% End:
