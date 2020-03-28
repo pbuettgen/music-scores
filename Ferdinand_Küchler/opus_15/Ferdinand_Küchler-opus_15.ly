@@ -1,13 +1,13 @@
 %%% -*- coding: utf-8 -*-
 %%%
-%%% Copyright © 2019 Philipp Büttgenbach
+%%% Copyright © 2019-2020 Philipp Büttgenbach
 %%%
 %%% This work is licensed under the Creative Commons
 %%% Attribution-ShareAlike 4.0 International License.  To view a copy of
 %%% this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 %%%
 
-\version "2.18.2"
+\version "2.20"
 
 \include "lily-snippets.ily"
 
@@ -26,7 +26,7 @@ globalMovementI = {
 }
 
 violinMovementI = \relative a' {
-  \partial 8 a8--\f\upbow | \repeat unfold 5 d8-- cis16 b a8---0 g16 fis |
+  \partial 8 a8--\f\upbow | \repeat unfold 5 d8-- cis16 b a8--\open g16 fis |
   e4-- a-- fis8-- e-- d a'-- |
   %% 3
   \repeat unfold 5 fis'-- e16 d e8-- d16 cis |
@@ -65,9 +65,9 @@ violinMovementI = \relative a' {
   d'16 cis b a g-4 fis e d cis-2 b a b cis d e fis |
   g fis e d cis b a g fis e d e fis g a b |
   %% 32
-  cis b a g fis e d-4 cis d8-.-0 d'-. r fis,--\downbow |
+  cis b a g fis e d-4 cis d8-.\open d'-. r fis,--\downbow |
   %% 33
-  fis8-- g16 a-0 b8-- a16-4 g fis8-- g16 fis cis8-- fis-- |
+  fis8-- g16 a\open b8-- a16-4 g fis8-- g16 fis cis8-- fis-- |
   g-- a-- b-- cis-- fis-- d16 cis b8-- fis'--\p |
   fis-- g16 a b8-- a16 g fis8-- g16 fis cis8-- fis-- |
   g-- fis-- e-- d-- cis-- fis16 d b8-- fis'--\mf\downbow |
@@ -89,11 +89,11 @@ violinMovementI = \relative a' {
   << \repeat unfold 3 {b( fis d fis)} s16\p >> d'( b fis b) |
   \repeat unfold 3 {cis( g e g)} e'( cis g cis) |
   \repeat unfold 3 {d b fis d} d' fis d b |
-  << \repeat unfold 3 {e cis g e} s16\cresc >> e'-0 g e cis |
+  << \repeat unfold 3 {e cis g e} s16\cresc >> e'\open g e cis |
   a fis' g fis b, fis' g fis cis fis g fis gis fis ais fis |
   b\f fis d b cis e d cis b8-. b,-. r a'--\upbow |
-  \repeat unfold 5 d8-- cis16 b a8---0 g16 fis |
-  e4-- a---4 fis8-- e-- d-- a'---0 |
+  \repeat unfold 5 d8-- cis16 b a8--\open g16 fis |
+  e4-- a---4 fis8-- e-- d-- a'--\open |
   \repeat unfold 4 fis'8-- fis e16 d e8 d16 cis |
   b4 e cis8-- b-- a-- e'-- | \repeat unfold 5 a8-- g16 fis b8-- a-- |
   \repeat unfold 5 g8-- fis16 e a8-- g-- |
@@ -105,9 +105,6 @@ violinMovementI = \relative a' {
   \repeat unfold 5 d8-- a-- r fis--\downbow |
   g8-- fis16 e a8---4 a,-- d4.-2\fermata \stopTextSpan \bar "|."
 }
-
-violinMovementIViolin = \new Voice \violinMovementI
-violinMovementIPiano = \violinMovementIViolin
 
 pianoUpMovementI = \new Voice \relative d' {
   \partial 8 r8 | <fis d>4\f <g d> <a d,> r8 <a d,> |
@@ -189,7 +186,11 @@ pianoUpMovementI = \new Voice \relative d' {
   r8 <e g,> <e a,> <e b> <e cis>4 <e a,> |
   <fis a,> <d a d,> <cis a e> <cis a e>8
   \once \override TextSpanner.bound-details.left.text
-  = \markup {\whiteout \pad-around #.5 \allargando}
+  = \markup {
+    \override #'(style . outline)
+    \override #'(thickness . 3)
+    \whiteout \allargando
+  }
   \once \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
   \textSpannerDown
   r \startTextSpan |
@@ -233,7 +234,7 @@ pianoDownMovementI = \new Voice \relative d {
 titleMovementII = #""
 
 globalMovementII = {
-  \tempo "Siciliano, Larghetto" 8 = 63
+  \tempo "Siciliano, Larghetto." 8 = 63
   \time 6/8
   \key d \major
 }
@@ -245,38 +246,38 @@ violinMovementII = \relative a' {
   g8.( fis16 e8) d8.-3( cis16 b8) | a8-2\>( b cis) d4.-4\p\flageolet |
   fis8.-1\f( g16 fis8) d4( b8) | fis8.\p( g16 fis8) d4-4\<( b8) |
   c8.-1\f( d16 e8) c'\>( d e\!) | r b-3\p( ais) b4.\fermata \bar "||"
-  \tempo "Adagio" 8 = 81 e4.-2\f\downbow a,4 b8 cis2.\upbow\fermata \bar "||"
-  \tempo "Allegro assai" 8 = 144 \time 3/8 d8-.-3\f fis-. a-. |
+  \tempo "Adagio." 8 = 81 e4.-2\f\downbow a,4 b8 cis2.\upbow\fermata \bar "||"
+  \tempo "Allegro assai." 8 = 144 \time 3/8 d8-.-3\f fis-. a-. |
   %% 16
-  b16( a) g fis e d | cis8-. e-.-0 a-. | e-.-0 cis-. a-.-0 | b-. d-. fis-. |
+  b16( a) g fis e d | cis8-. e-.\open a-. | e-.\open cis-. a-.\open | b-. d-. fis-. |
   %% 20
-  g16( fis) e-0 d cis b | a8-.-0 cis-. fis-. | cis-. a-.-0 fis-. |
+  g16( fis) e\open d cis b | a8-.\open cis-. fis-. | cis-. a-.\open fis-. |
   %% 23
-  g-. b-. d-. | e16( d) cis b a g | fis e fis g a-4 fis | g fis g a-0 b g |
+  g-. b-. d-. | e16( d) cis b a g | fis e fis g a-4 fis | g fis g a\open b g |
   %% 27
-  a b cis d e-0 fis | g fis g a-1 b cis | d8-. a-. fis-. | d4 r8 |
+  a b cis d e\open fis | g fis g a-1 b cis | d8-. a-. fis-. | d4 r8 |
   %% 31
   << \repeat unfold 2 {b16 cis d cis d b | cis8-. fis4}
      {s16\f s16*11 | s16\p} >> |
   %% 35
-  d16\f e-0 fis e-0 fis d | e8-.-0 a4 |
+  d16\f e\open fis e\open fis d | e8-.\open a4 |
   d,16-1\p e fis e fis d | e8-. a4-4\flageolet  |
   %% 39
   b16-2 a g-4 fis e d | g-2\cresc fis e d cis b | a g fis g a b |
   %% 42
   cis b a b cis e | d8-.\f fis-. a-. | b16( a) g fis e d |
   %% 45
-  cis8-. e-.-0 a-. | e-.-0 cis-. a-.-0 | b8-. d-. fis-. |
+  cis8-. e-.\open a-. | e-.\open cis-. a-.\open | b8-. d-. fis-. |
   %% 48
-  g16( fis) e-0 d cis b | a8-. cis-. fis-. | cis-. a-. fis-. |
+  g16( fis) e\open d cis b | a8-. cis-. fis-. | cis-. a-. fis-. |
   %% 51
   g-. b-. d-. | e16( d) cis b a g | fis e fis g a-4 fis |
   %% 54
-  g fis g a-0 b a | a16-0 b cis d e-0 fis | g fis g a-1 b cis |
+  g fis g a\open b a | a16\open b cis d e\open fis | g fis g a-1 b cis |
   %% 57
-  d8-. a-. fis-. | d4 r8 | d,8-.\f fis-. a-.-4 | fis-. a-.-0 d-. |
+  d8-. a-. fis-. | d4 r8 | d,8-.\f fis-. a-.-4 | fis-. a-.\open d-. |
   %% 61
-  a-. d-. fis-. | e8-.-0 a,-.-0 r | d,8-.^"Sp."\p\upbow fis-. a-. |
+  a-. d-. fis-. | e8-.\open a,-.\open r | d,8-.^"Sp."\p\upbow fis-. a-. |
   %% 64
   fis-. a-. d-. | a-. d-. fis-. | e-. a,-. r |
   %% 67
@@ -284,28 +285,28 @@ violinMovementII = \relative a' {
   %% 70
   a-. gis-. fis-. | cis-. fis-. a-. | cis-. a-. fis-. | gis-. b-. a-. |
   %% 74
-  fis4 r8 | a8-.-0 cis-. e-.-0 | fis16( e) d cis b a-0 |
+  fis4 r8 | a8-.\open cis-. e-.\open | fis16( e) d cis b a\open |
   %% 77
-  gis8-. b-. e-.-4 | b-. gis-. e-. | fis-. a-.-0 cis-. |
+  gis8-. b-. e-.-4 | b-. gis-. e-. | fis-. a-.\open cis-. |
   %% 80
   d16( cis) b a gis fis | e8-. gis-. cis-. | gis-. e-. cis-. |
   %% 83
-  d-.-0 fis-. a-.-0 | b16( a) gis fis e d | cis b cis d e cis |
+  d-.\open fis-. a-.\open | b16( a) gis fis e d | cis b cis d e cis |
   %% 86
   d cis d e fis d | e fis gis a b cis | d cis d e fis gis |
   a8-. e-. cis-. | a4 r8 |
   %% 91
-  d16\downbow( a-0) fis'^"Sp."\upbow a,-0 e'-0 a,-0 | d a fis' a, d a |
+  d16\downbow( a\open) fis'^"Sp."\upbow a,\open e'\open a,\open | d a fis' a, d a |
   %% 93
-  e'-0 a, g' a, fis' a, | e'-0 a, g' a, e'-0 a, | fis' a, g' a, a' a, |
+  e'\open a, g' a, fis' a, | e'\open a, g' a, e'\open a, | fis' a, g' a, a' a, |
   %% 96
-  b' a, g' a, e'-0 a, | a' a, fis' a, a' a, | g' a, e'-0 a, cis( a) |
+  b' a, g' a, e'\open a, | a' a, fis' a, a' a, | g' a, e'\open a, cis( a) |
   %% 99
-  d8-. fis-. a-. | b16( a) g fis e d | cis8-. e-.-0 a-. |
+  d8-. fis-. a-. | b16( a) g fis e d | cis8-. e-.\open a-. |
   %% 102
-  e-.-0 cis-. a-.-0 | b-. d-. fis-. | g16( fis) e d cis b |
+  e-.\open cis-. a-.\open | b-. d-. fis-. | g16( fis) e d cis b |
   %% 105
-  a8-.-0 cis-. fis-. | cis-. a-.-0 fis-. | g-. b-. d-. |
+  a8-.\open cis-. fis-. | cis-. a-.\open fis-. | g-. b-. d-. |
   %% 108
   e16( d) cis b a g | fis e fis g a fis | g fis g a b g |
   %% 111
@@ -315,9 +316,6 @@ violinMovementII = \relative a' {
   a \startTextSpan b cis d e fis | g fis g a-1 b cis |
   d8-. a-. fis-. | d4 \stopTextSpan r8 \bar "|."
 }
-
-violinMovementIIViolin = \new Voice \violinMovementII
-violinMovementIIPiano = \violinMovementIIViolin
 
 pianoUpMovementII = \new Voice \relative a' {
   <b fis d>4.\p << {\voiceOne fis8.( g16 fis8)}
@@ -396,7 +394,11 @@ pianoUpMovementII = \new Voice \relative a' {
   %% 106
   <cis fis, cis> | <b g d> | <d g, d> | <a fis d> | <g d> |
   \once \override TextSpanner.bound-details.left.text
-  = \markup {\whiteout \pad-around #.5 \senzaAllargando}
+  = \markup {
+    \override #'(style . outline)
+    \override #'(thickness . 3)
+    \whiteout \senzaAllargando
+  }
   \once \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
   \textSpannerDown
   <a e> \startTextSpan |
@@ -430,79 +432,25 @@ pianoDownMovementII = \new Voice \relative c {
 
 %%%-------------------------------------------------
 
+\include "../composer.ily"
+
 \header {
   arranger = ##f
-  composer = #"Ferdinand Küchler"
   copyright = \copyrightText
   tagline = \taglineText
   enteredby = "Philipp Büttgenbach"
   opus = #"Opus 15"
   source = "http://imslp.org/"
-  title = #"Concertino"
-  subtitle = #"In the style of Antonio Vivaldi"
+  title = #"Concertino."
+  subtitle = #"In the style of Antonio Vivaldi."
 }
 
 \include "paper.ily"
 
 #(define fileBaseName "Ferdinand_Küchler-opus_15")
 
-define(`PianoMovement', `\score {
-    <<
-      \new Staff \with {
-        fontSize = #-3
-        \override StaffSymbol.staff-space = #(magstep -3)
-      } { \globalMovement$1 \violinMovement$1Piano }
-      \new PianoStaff \with {
-        connectArpeggios = ##t
-      } <<
-        \new Staff = "up" \with {
-          \accidentalStyle modern-cautionary
-        } {
-          \globalMovement$1 \pianoUpMovement$1
-        }
-        \new Staff = "down" \with {
-          \accidentalStyle modern-cautionary
-        } {
-          \globalMovement$1 \clef bass \pianoDownMovement$1
-        }
-      >>
-    >>
-    \layout {
-      %% indent = #0
-    }
-    \header {
-      piece = \titleMovement$1
-    }
-  }')
-
-\book {
-  \bookOutputName #(string-append fileBaseName "-piano")
-
-  PianoMovement(`I')
-  PianoMovement(`II')
-}
-
-define(`ViolinMovement', `
-  \score {
-    \new Staff \with {
-      \accidentalStyle modern-cautionary
-    } {
-      \compressFullBarRests
-      \globalMovement$1 \violinMovement$1Violin
-    }
-    \layout {
-      %% indent = #0
-    }
-    \header {
-      piece = \titleMovement$1
-    }
-  }')
-
-\book {
-  \bookOutputName #(string-append fileBaseName "-violin")
-  ViolinMovement(`I')
-  ViolinMovement(`II')
-}
+define(`Movements', `(I, II)')
+include(`concertino.ily')
 
 \include "articulate.ly"
 
@@ -513,8 +461,8 @@ define(`ViolinMovement', `
     \new StaffGroup <<
       \new Staff \with {
         midiInstrument = #"violin"
-      } { \globalMovementI   \violinMovementIPiano
-          \globalMovementII  \violinMovementIIPiano
+      } { \globalMovementI   \violinMovementI
+          \globalMovementII  \violinMovementII
         }
       \new PianoStaff \with {
         midiInstrument = #"harpsichord"
