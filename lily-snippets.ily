@@ -17,8 +17,7 @@ violinVoiceSettings = {
   \accidentalStyle modern-cautionary
 }
 
-violinStaffMagFactor = #.75
-
+cadenzaAdLib = \markup {\italic #"Cadenza ad lib."}
 solo = \markup {\italic \caps "Solo."}
 tutti = \markup {\italic \caps "Tutti."}
 dolce = \markup{\italic "dolce"}
