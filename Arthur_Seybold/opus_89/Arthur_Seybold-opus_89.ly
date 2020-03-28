@@ -1,26 +1,28 @@
 %%% -*- coding: utf-8 -*-
 %%%
-%%% Copyright © 2019 Philipp Büttgenbach
+%%% Copyright © 2019-2020 Philipp Büttgenbach
 %%%
 %%% This work is licensed under the Creative Commons
 %%% Attribution-ShareAlike 4.0 International License.  To view a copy of
 %%% this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 %%%
 
-\version "2.18.2"
+\version "2.20"
 
 \include "lily-snippets.ily"
 
 lento = \markup\italic "lento"
 pesante = \markup\italic "pesante"
 
-global = {
+titleMovementI = ##f
+
+globalMovementI = {
   \tempo "Moderato." 8 = 111
   \time 6/8
   \key g \major
 }
 
-violin = \relative d'' {
+violinMovementI = \relative d'' {
   d8.\p\downbow( e16-4 d8) b4. | d8.( e16-4 d8) b4. |
   b8.\mf\<( c16 b8) b8.( c16 b8) |
   %% 4
@@ -118,7 +120,7 @@ violin = \relative d'' {
    >>
 }
 
-pianoUp = \relative b' {
+pianoUpMovementI = \relative b' {
   b8.\p( c16 b8) g4. | b8.( c16 b8) g4. |
   %% 3
   r16\mf\< b,( <fis' a> b, <fis' a> b,) r b( <e g> b <e g> b) |
@@ -245,9 +247,9 @@ pianoUp = \relative b' {
   <b d g>1.\! \bar "|."
 }
 
-\addQuote "pianoUp" \pianoUp
+\addQuote "pianoUp" \pianoUpMovementI
 
-pianoDown = \relative d' {
+pianoDownMovementI = \relative d' {
   \clef "tenor"
   << {\voiceOne d4. e8.->( d16 cis8) }
      \new Voice {\voiceTwo g2} >> |
@@ -316,11 +318,12 @@ pianoDown = \relative d' {
 
 %%% ------------
 
+\include "../composer.ily"
+
 \header {
   arranger = ##f
-  composer = "Arthur Seybold"
   copyright = \copyrightText
-  tagline = ##f % \taglineText
+  tagline = ##f
   enteredby = "Philipp Büttgenbach"
   opus = "Opus 89"
   source = "http://imslp.org/"
@@ -329,52 +332,10 @@ pianoDown = \relative d' {
 
 \include "paper.ily"
 
+fileBaseName = #"Arthur_Seybold-opus_89"
 
-\book {
-  \bookOutputName #"Arthur_Seybold-opus_89"
-  \bookOutputSuffix #"piano"
-
-  \score {
-    <<
-      \new Staff \with {
-        fontSize = #-3
-        \override StaffSymbol.staff-space = #(magstep -3)
-        instrumentName = "Violine."
-      } {
-        \global \killCues\violin
-      }
-      \new PianoStaff \with {
-          instrumentName = "Piano."
-      } <<
-        \new Staff = "up" \with {
-          \accidentalStyle modern-cautionary
-        } {
-          \global \pianoUp
-        }
-        \new Staff = "down" \with {
-          \accidentalStyle modern-cautionary
-        } {
-          \clef #"bass"
-          \global \pianoDown
-        }
-      >>
-    >>
-  }
-}
-
-\book {
-  \bookOutputName #"Arthur_Seybold-opus_89"
-  \bookOutputSuffix #"violin"
-
-  \score {
-    \new Staff \with {
-      \accidentalStyle modern-cautionary
-    } {
-      \compressFullBarRests
-      \global \violin
-    }  
-  }
-}
+define(`Movements', `(I)')
+include(`concertino.ily')
 
 \include "articulate.ly"
 
@@ -386,16 +347,16 @@ pianoDown = \relative d' {
       \new Staff \with {
         midiInstrument = #"violin"
       } {
-        \global \killCues\violin
+        \globalMovementI \killCues\violinMovementI
       }
       \new PianoStaff \with {
         midiInstrument = #"acoustic grand"
       } <<
         \new Staff = "up" {
-          \global \pianoUp
+          \globalMovementI \pianoUpMovementI
         }
         \new Staff = "down" {
-          \global \pianoDown
+          \globalMovementI \pianoDownMovementI
         }
       >>
     >>
