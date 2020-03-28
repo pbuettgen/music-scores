@@ -76,12 +76,12 @@ studyI = \new Voice \relative c'' {
 
   c8\f b c b c d e-4 d | c b c b c g e g | c b c b c d e-4 d |
   %% 4
-  c b c b c g e g | c b c b c d e-0 f | g a b a g f e-0 d |
-  c b c b c b a-0 g | f e d-0 c b g a b |
+  c b c b c g e g | c b c b c d e\open f | g a b a g f e\open d |
+  c b c b c b a\open g | f e d\open c b g a b |
   \repeat unfold 2 { c b c b c b c b | c e g c e-4 c g e } |
-  f g a-4 g f g a-4 g | f g a-4 g f e d-0 c | b a g a b c d-0 e |
+  f g a-4 g f g a-4 g | f g a-4 g f e d\open c | b a g a b c d\open e |
   %% 16
-  f e d-0 e f g a-0 b | c b c d e-0 f g a | b a g a b a g a |
+  f e d\open e f g a\open b | c b c d e\open f g a | b a g a b a g a |
   b a g a g f d b | g b d f g f d b |
   \repeat unfold 2 { c b c b c d e-4 d | c b c b c g e g } |
   %% 25
@@ -116,21 +116,21 @@ studyII = \new Voice \relative c' {
   \tempo "Allegro moderato." 4=123
   \key c \major
 
-  c8\f e a-4 g f e d-0 c | b c d-4 c b g a b | c e a-4 g f e d-0 c |
+  c8\f e a-4 g f e d\open c | b c d-4 c b g a b | c e a-4 g f e d\open c |
   %% 4
-  b c d-4 c b g a b | c e a-4 g f e d-0 e | f a-0 d c b a-0 g f |
-  e g f e d-0 f e d-0 | c g a b c d e fis | g b e-4 d c b a-0 g |
+  b c d-4 c b g a b | c e a-4 g f e d\open e | f a\open d c b a\open g f |
+  e g f e d\open f e d\open | c g a b c d e fis | g b e-4 d c b a\open g |
   %% 10
-  fis g a-4 g fis d-0 e fis | g b e-4 d c b a-0 g |
-  fis g a-4 g fis d-0 e fis | g b e-4 d c b a-0 b |
+  fis g a-4 g fis d\open e fis | g b e-4 d c b a\open g |
+  fis g a-4 g fis d\open e fis | g b e-4 d c b a\open b |
   %% 14
-  c e-0 a g fis e-0 d c | b d c b a-0 c b a-0 | g b e-4 d c b a-0 g |
-  f b d c b a-0 g f | e g c b a-0 g f e | d-0 f b a-0 g f e d-0 |
+  c e\open a g fis e\open d c | b d c b a\open c b a\open | g b e-4 d c b a\open g |
+  f b d c b a\open g f | e g c b a\open g f e | d\open f b a\open g f e d\open |
   %% 20
-  c e a-4 g f e d-0 c | b c d-4 c b g a b | c e a-4 g f e d-0 c |
-  b c d-4 c b g a b | c e a-4 g f e d-0 e | f a-0 d c b a-0 g f |
+  c e a-4 g f e d\open c | b c d-4 c b g a b | c e a-4 g f e d\open c |
+  b c d-4 c b g a b | c e a-4 g f e d\open e | f a\open d c b a\open g f |
   %% 26
-  e g f e d-0 f e d-0 | c e g e c r8 r4 \bar "|."
+  e g f e d\open f e d\open | c e g e c r8 r4 \bar "|."
 }
 
 studyIIIprologI = ##f
@@ -141,22 +141,22 @@ studyIII = \new Voice \relative e'' {
   \tempo "Moderato." 4=111
   \key g \major
 
-  e16-4\f d c b a-0 b c a-0 | d c b a g a-0 b g |
-  c b a-0 g fis d-0 e fis | g b d g b a g fis |
+  e16-4\f d c b a\open b c a\open | d c b a g a\open b g |
+  c b a\open g fis d\open e fis | g b d g b a g fis |
   %% 5
-  e-0 d c b a-0 b c a-0 | d c b a g a-0 b g | fis e d-0 c b d-0 g b |
-  c d e-0 fis g b, c d | e-0 g fis g a g fis e-0 |
-  d-3 b g-3 b d g fis g | e-0 g fis g a g fis e-0 |
+  e\open d c b a\open b c a\open | d c b a g a\open b g | fis e d\open c b d\open g b |
+  c d e\open fis g b, c d | e\open g fis g a g fis e\open |
+  d-3 b g-3 b d g fis g | e\open g fis g a g fis e\open |
   %% 12
-  d b g b d b e-4 d | c a-0 d c b g c b | a-0 g fis e d-0 d' e-4 d |
+  d b g b d b e-4 d | c a\open d c b g c b | a\open g fis e d\open d' e-4 d |
   %% 15
-  c a-0 d c b g-3 c b | a-0 g fis e d-0 c b a | g a b c d-0 e fis g |
+  c a\open d c b g-3 c b | a\open g fis e d\open c b a | g a b c d\open e fis g |
   %% 18
-  a-0 b c d e-4 a,-0 b c | e-4 d c b c d e-0 fis | a g d-3 b g b c d |
-  e-4 d c b a-0 b c a-0 | d c b a-0 g a-0 b g |
-  c b a-0 g fis d e fis | g b d g b b, c d | e-4 d c b a-0 b c a-0 |
-  d c b a-0 g a-0 b g | fis e d-0 c b d-0 g b | c d e-0 fis g b a g |
-  fis e-0 d c b g-3 fis e | d-0 c b a g4 \bar "|."
+  a\open b c d e-4 a,\open b c | e-4 d c b c d e\open fis | a g d-3 b g b c d |
+  e-4 d c b a\open b c a\open | d c b a\open g a\open b g |
+  c b a\open g fis d e fis | g b d g b b, c d | e-4 d c b a\open b c a\open |
+  d c b a\open g a\open b g | fis e d\open c b d\open g b | c d e\open fis g b a g |
+  fis e\open d c b g-3 fis e | d\open c b a g4 \bar "|."
 }
 
 studyIVprologI = ##f
@@ -167,28 +167,28 @@ studyIV = \new Voice \relative d'' {
   \tempo "Allegretto." 4=123
   \key g \major
 
-  d8\mf b16 c d8 g16 a | b8 b,16 c d8 e16-4 d | c8 a16-0 b c8 b'16 a |
+  d8\mf b16 c d8 g16 a | b8 b,16 c d8 e16-4 d | c8 a16\open b c8 b'16 a |
   g8 b,16 c d4 | d8 b16 c d8 g16 a | b8 b,16 c d8 e16-4 d |
   %% 7
-  cis8 b'16 a g8 b,16 cis | d8 a16-0 fis d8-0 e'16-4 d |
+  cis8 b'16 a g8 b,16 cis | d8 a16\open fis d8\open e'16-4 d |
   c8 fis16 g a8 b16 a | g8 b,16 c d8 e16-4 d | c8 fis16 g a8 b16 a |
   %% 12
   g8 b,16 c d8 g16 a | b8 fis16 dis-3 b8 dis16 fis |
-  a8 g16 fis g8 fis16 e-0 | d8 cis16 b a8-0 d16 fis |
-  b8 b,16 cis d8 cis16 d | e8-4 a,16-0 a a8 fis'16 g |
-  b8 a16 a a8 b16 a | g8 a,16-0 a a8 a'16 g | fis8 d16 d d8 cis16 d |
+  a8 g16 fis g8 fis16 e\open | d8 cis16 b a8\open d16 fis |
+  b8 b,16 cis d8 cis16 d | e8-4 a,16\open a a8 fis'16 g |
+  b8 a16 a a8 b16 a | g8 a,16\open a a8 a'16 g | fis8 d16 d d8 cis16 d |
   %% 21
-  e8-4 a,16-0 a a8 fis'16 g | b8 a16 a a8 cis,16 d |
+  e8-4 a,16\open a a8 fis'16 g | b8 a16 a a8 cis,16 d |
   %% 23
-  e8-0 g16 b a8 b,16 cis | d8 cis16 d e8-4 d16 cis |
+  e8\open g16 b a8 b,16 cis | d8 cis16 d e8-4 d16 cis |
   %% 25
-  d8 cis16 d e8-4 d16 cis | d8 a16-0 a a8 e'16-4 d | d8 b16 b b8 e16-4 d |
+  d8 cis16 d e8-4 d16 cis | d8 a16\open a a8 e'16-4 d | d8 b16 b b8 e16-4 d |
   %% 28
   d8 c16 c c8 fis16 g | b8 a16 gis a8 b,16 c | d8 b16 c d8 g16 a |
-  b8 b,16 c d8 e16-4 d | c8 a16-0 b c8 b'16 a | g8 b,16 c d4 |
-  d8 b16 c d8 g16 a | b8 b,16 c d8 g16 fis | e8-0 a16 g fis8 b16 a |
-  g8 b16 g d8 e16-0 fis | g8 b16 g d8 e16-0 fis | g8 b16 g d8-3 g16 d |
-  b8-1 d16-3 b g8 b16 g | d8-0 g16 d-0 b8 d16-4 b | g8 r8 r4 \bar "|."
+  b8 b,16 c d8 e16-4 d | c8 a16\open b c8 b'16 a | g8 b,16 c d4 |
+  d8 b16 c d8 g16 a | b8 b,16 c d8 g16 fis | e8\open a16 g fis8 b16 a |
+  g8 b16 g d8 e16\open fis | g8 b16 g d8 e16\open fis | g8 b16 g d8-3 g16 d |
+  b8-1 d16-3 b g8 b16 g | d8\open g16 d\open b8 d16-4 b | g8 r8 r4 \bar "|."
 }
 
 studyVprologI = \score {
@@ -227,20 +227,20 @@ studyV = \new Voice \relative c'' {
   \tempo "Moderato." 4=111
   \key f \major
 
-  c8\f bes a-0 bes c d | \repeat unfold 2 {c bes a-0 bes c d} |
+  c8\f bes a\open bes c d | \repeat unfold 2 {c bes a\open bes c d} |
   %% 4
-  e-0 f g a bes a | g a bes a g f | e-0 f g f e-0 d |
+  e\open f g a bes a | g a bes a g f | e\open f g f e\open d |
   %% 7
-  c d e-4 d c bes | \repeat unfold 3 {a-0 bes c d c bes} |
+  c d e-4 d c bes | \repeat unfold 3 {a\open bes c d c bes} |
   %% 11
-  a-0 bes c d e-0 f | g a bes a g f | e-0 f g a bes a |
-  g f e-0 d c bes | a-0 g f e d -0 e | f a, bes c d-0 e |
-  f a-0 c f e-0 d | c bes e-0 g a bes | a f c a-0 g f |
+  a\open bes c d e\open f | g a bes a g f | e\open f g a bes a |
+  g f e\open d c bes | a\open g f e d \open e | f a, bes c d\open e |
+  f a\open c f e\open d | c bes e\open g a bes | a f c a\open g f |
   %% 20
-  e g f e d-0 e | f a-0 c f e-0 d | c bes e-0 g a bes |
-  a f c a-0 g f | e g f e d-0 e | f a, c f a-4 f | e g, bes e a-4 g |
-  f a, c f a-4 f | e g, bes e a-4 g | f a-0 c f g a |
-  bes g e-0 c bes g | f a-0 c f c a-0 | f4 r r \bar "|."
+  e g f e d\open e | f a\open c f e\open d | c bes e\open g a bes |
+  a f c a\open g f | e g f e d\open e | f a, c f a-4 f | e g, bes e a-4 g |
+  f a, c f a-4 f | e g, bes e a-4 g | f a\open c f g a |
+  bes g e\open c bes g | f a\open c f c a\open | f4 r r \bar "|."
 }
 
 studyVIprologI = ##f
@@ -254,28 +254,28 @@ studyVI = \new Voice \relative c'' {
   c16\f( b) c-. c-. d( cis) d-. d-. | c( b) c-. c-. f( g) a-. f-. |
   c( b) c-. c-. d( cis) d-. d-. | c( b) c-. c-. f( g) a-. f-. |
   bes\f( a) bes-. bes-. bes( a) bes-. bes-. |
-  bes( a) g-. f-. e-0( f) g-. a-. |
+  bes( a) g-. f-. e\open( f) g-. a-. |
   %% 7
   \repeat unfold 2 {bes( a) bes-. bes-.} |
-  bes( a) g-. f-. e-0\>( d) bes-. d-. |
+  bes( a) g-. f-. e\open\>( d) bes-. d-. |
   %% 9
   c\mf( b) c-. c-. d( cis) d-. d-. | c( b) c-. c-. f( g) a-. f-. |
   c( b) c-. c-. d( cis) d-. d-. | c( b) c-. c-. f( g) a-. f-. |
   d( cis) d-. d-. g( a) bes-. g-. | a( gis) a-. f-. c( b) d-. c-. |
-  bes( a-0) bes-. bes-. d( cis) d-. e,-. |
+  bes( a\open) bes-. bes-. d( cis) d-. e,-. |
   %% 16
-  f( e) f-. a-.-4 g( fis) g-. b-. | c( b) c-. g-. e( d-0) e-. c-. |
-  f( e) f-. a-.-0 c( b) c-. a'-. | bes( a) bes-. g-. a( gis) a-. f-. |
+  f( e) f-. a-.-4 g( fis) g-. b-. | c( b) c-. g-. e( d\open) e-. c-. |
+  f( e) f-. a-.\open c( b) c-. a'-. | bes( a) bes-. g-. a( gis) a-. f-. |
   %% 20
   g( fis) g-. f-. e-4( dis) e-.-4 d-. |
-  c( b) c-. e-.-0 g( fis) g-. bes-.-4 |
-  a( gis) a-. f-. f( e-0) f-. d-. |
+  c( b) c-. e-.\open g( fis) g-. bes-.-4 |
+  a( gis) a-. f-. f( e\open) f-. d-. |
   e-4( dis) e-.-4 c-. d( cis) d-. b-. |
   %% 24
   c( b) c-. c-. e-4( dis) e-.-4 d-. | c( b) c-. c-. d( cis) d-. d-. |
   c( b) c-. c-. f( g) a-. f-. | d( cis) d-. d-. e-4( dis) e-.-4 e-. |
   d( cis) d-. d-. g( a) bes-. g-. | a( gis) a-. f-. c( b) c-. f-. |
-  a( gis) a-. f-. g( fis) g-. e-.-0 | f( e-0) f-. g-. a( f) c-. a-.-0 |
+  a( gis) a-. f-. g( fis) g-. e-.\open | f( e\open) f-. g-. a( f) c-. a-.\open |
   f4~ f8 r8 \bar "|."
 }
 
@@ -287,33 +287,33 @@ studyVII = \new Voice \relative c'' {
   \tempo "Allegro moderato." 4=123
   \key bes \major
 
-  bes8\f a-0 bes c d c bes a-0 | g fis g a-0 bes a-0 g f |
+  bes8\f a\open bes c d c bes a\open | g fis g a\open bes a\open g f |
   %% 3
-  ees d-0 c bes a c f ees | d-0 ees f d-0 bes d-0 f bes |
-  d cis d ees-4 d bes g f | e f g bes e-0 f g bes |
-  a gis a f g fis g e-0 | f e-0 f c a f g a-0 |
+  ees d\open c bes a c f ees | d\open ees f d\open bes d\open f bes |
+  d cis d ees-4 d bes g f | e f g bes e\open f g bes |
+  a gis a f g fis g e\open | f e\open f c a f g a\open |
   %% 9
-  bes a-0 bes c d c bes a-0 | g fis g a-0 bes a g f |
-  ees d-0 c bes a c f ees | d-0 ees f d-0 bes d-0 ees f |
-  g fis g bes ees-4 g bes-4 g | f e-0 f d a-0 bes c d |
-  ees-4 d ees c a-0 f ees c | a bes d-0 f bes d f bes |
+  bes a\open bes c d c bes a\open | g fis g a\open bes a g f |
+  ees d\open c bes a c f ees | d\open ees f d\open bes d\open ees f |
+  g fis g bes ees-4 g bes-4 g | f e\open f d a\open bes c d |
+  ees-4 d ees c a\open f ees c | a bes d\open f bes d f bes |
   %% 17
-  a gis a f e-0 c bes g | f e f a-4 c, f a-0 c |
-  bes a-0 bes g' f c a-0 f | e f g a-0 bes c d e |
-  f e-0 f g a f g a | bes a bes f d bes c d |
+  a gis a f e\open c bes g | f e f a-4 c, f a\open c |
+  bes a\open bes g' f c a\open f | e f g a\open bes c d e |
+  f e\open f g a f g a | bes a bes f d bes c d |
   %% 23
-  c b c f a c, bes g' | f e-0 f c a-0 f g a-0 |
-  bes a-0 bes c d c bes a-0 | g fis g a-0 bes a-0 g f |
-  ees d-0 c bes a c f ees | d-0 ees f d-0 bes d-0 f bes |
+  c b c f a c, bes g' | f e\open f c a\open f g a\open |
+  bes a\open bes c d c bes a\open | g fis g a\open bes a\open g f |
+  ees d\open c bes a c f ees | d\open ees f d\open bes d\open f bes |
   %% 29
-  d cis d ees-4 d bes g f | e f g bes-1 e-0 f g bes |
-  a gis a f g fis g e-0 | f e-0 f c a-0 f g a-0 |
+  d cis d ees-4 d bes g f | e f g bes-1 e\open f g bes |
+  a gis a f g fis g e\open | f e\open f c a\open f g a\open |
   %% 33
-  bes a-0 bes c d c bes a-0 | g fis g a-0 bes a-0 g f |
-  ees d-0 c bes a c f ees | d-0 ees f d-0 bes d-0 ees f |
+  bes a\open bes c d c bes a\open | g fis g a\open bes a\open g f |
+  ees d\open c bes a c f ees | d\open ees f d\open bes d\open ees f |
   %% 37
-  g fis g bes ees-4 g bes-4 g | f e-0 f d a-0 bes c d |
-  ees d ees c a-0 f ees c | a bes d-0 f bes4 r \bar "|."
+  g fis g bes ees-4 g bes-4 g | f e\open f d a\open bes c d |
+  ees d ees c a\open f ees c | a bes d\open f bes4 r \bar "|."
 }
 
 studyVIIIprologI = ##f
@@ -324,14 +324,14 @@ studyVIII = \new Voice \relative c' {
   \tempo "Largo." 4=55
   \key c \major
 
-  e2.\p( | f) | e2\<( a4-0 | c2 e4-4\!) | d2( e8-4 d | c2\> d8 c) |
+  e2.\p( | f) | e2\<( a4\open | c2 e4-4\!) | d2( e8-4 d | c2\> d8 c) |
   %% 7
-  b2.\<( | << {e-4)} {s4 s\!} >> | e,2.\p( | f) | e2\<( a4-0 | c2 d4) |
+  b2.\<( | << {e-4)} {s4 s\!} >> | e,2.\p( | f) | e2\<( a4\open | c2 d4) |
   %% 13
-  e2.-4\f( | d4 a-0 b) | c2.~ | c4 r r | e2-4\mf( b4 | c d8 c b a-0) |
-  b2\<( e4-0 | gis2 b4) | a2\>( fis4 | cis2 dis4) | e2.-4\<~ |
-  << {e} {s4 s\!} >> | e,2.\p( | f) | e2\<( a4-0 | c2 d4) |
-  e-4->\f f,-> e-> | d-0-> c-> b-> | a2.->\>~ | a4 r\! r \bar "|."
+  e2.-4\f( | d4 a\open b) | c2.~ | c4 r r | e2-4\mf( b4 | c d8 c b a\open) |
+  b2\<( e4\open | gis2 b4) | a2\>( fis4 | cis2 dis4) | e2.-4\<~ |
+  << {e} {s4 s\!} >> | e,2.\p( | f) | e2\<( a4\open | c2 d4) |
+  e-4->\f f,-> e-> | d->\open c-> b-> | a2.->\>~ | a4 r\! r \bar "|."
 }
 
 studyIXprologI = ##f
@@ -342,23 +342,23 @@ studyIX = \new Voice \relative a {
   \tempo "Allegretto." 8=123
   \key d \major
 
-  a8( b cis d-0 e fis) | g4.( fis8 g a-0) | b( cis d e-4 d b) |
-  d4.( fis8 b a) | a4.( e8-0 g b) | a4.( a,8-0 d cis) |
+  a8( b cis d\open e fis) | g4.( fis8 g a\open) | b( cis d e-4 d b) |
+  d4.( fis8 b a) | a4.( e8\open g b) | a4.( a,8\open d cis) |
   %% 7
-  b8( e-4 d cis b cis) | d( b a-0 fis d-0 b) | a( b cis d-0 e fis) |
+  b8( e-4 d cis b cis) | d( b a\open fis d\open b) | a( b cis d\open e fis) |
   %% 10
-  g4.( fis8 g a-0) | b( cis d e-4 d b) | d4.( fis8 b a) |
-  gis( fis gis e-0 fis gis) | a( e-0 cis a-0 b cis) |
+  g4.( fis8 g a\open) | b( cis d e-4 d b) | d4.( fis8 b a) |
+  gis( fis gis e\open fis gis) | a( e\open cis a\open b cis) |
   %% 15
-  b( cis d e, fis gis) | a-0( cis e-0 a gis a) | b( ais b g fis g) |
+  b( cis d e, fis gis) | a\open( cis e\open a gis a) | b( ais b g fis g) |
   %% 18
-  e-0( cis b a gis' a) | b( ais b g fis g) | e-0( cis b a-0 g e) |
+  e\open( cis b a gis' a) | b( ais b g fis g) | e\open( cis b a\open g e) |
   %% 21
-  d-0( fis a-0 d cis d) | b( e-0 g b g e-0) | a( fis d a-0 b cis) |
+  d\open( fis a\open d cis d) | b( e\open g b g e\open) | a( fis d a\open b cis) |
   %% 24
-  d( a-0 fis d-0 cis b) | a( cis-3 e g-3 a-0 cis) |
-  dis( e-4 cis a-0 e cis) | a( cis e g a-0 cis) |
-  dis( e-4 cis a-0 g e) | d-0( fis a-0 d fis a) | b( g e-0 b g e) |
+  d( a\open fis d\open cis b) | a( cis-3 e g-3 a\open cis) |
+  dis( e-4 cis a\open e cis) | a( cis e g a\open cis) |
+  dis( e-4 cis a\open g e) | d\open( fis a\open d fis a) | b( g e\open b g e) |
   a-4( a, a'-4 a, b cis) | d4.-4~ d8 r r \bar "|."
 }
 
@@ -390,16 +390,16 @@ studyX = \new Voice \relative a {
   \tempo "Moderato." 4=111
   \key a \major
 
-  gis16-1( b) d-0 fis e( gis) b d | cis( e-0) a gis fis( e-0) d cis |
+  gis16-1( b) d\open fis e( gis) b d | cis( e\open) a gis fis( e\open) d cis |
   %% 3
-  b( d) gis fis e-0( d) cis b | a-0( cis) fis e-0 d( cis) b a-0 |
-  gis( b,) d-0 fis e( gis) b d | cis( e-0) a gis fis( e-0) d cis |
-  b( d) gis fis e-0( d) cis b | a-0( gis) a-4 e cis-3( a) b cis |
-  d-0( fis) a-0 d fis( a) gis fis | e-0( cis) a-0 e cis( a) b cis |
+  b( d) gis fis e\open( d) cis b | a\open( cis) fis e\open d( cis) b a\open |
+  gis( b,) d\open fis e( gis) b d | cis( e\open) a gis fis( e\open) d cis |
+  b( d) gis fis e\open( d) cis b | a\open( gis) a-4 e cis-3( a) b cis |
+  d\open( fis) a\open d fis( a) gis fis | e\open( cis) a\open e cis( a) b cis |
   %% 11
-  d-0( fis) a-0 d fis( a) gis fis | e-0( cis) a-0 e cis( a) b a |
-  gis-1( b) d-0 fis e( gis) b d | cis( e-0) a gis fis( e-0) d cis |
-  b( a-0) gis fis e( d-0) cis b | a( a'-4) cis e-0 a8 r \bar "|."
+  d\open( fis) a\open d fis( a) gis fis | e\open( cis) a\open e cis( a) b a |
+  gis-1( b) d\open fis e( gis) b d | cis( e\open) a gis fis( e\open) d cis |
+  b( a\open) gis fis e( d\open) cis b | a( a'-4) cis e\open a8 r \bar "|."
 }
 
 studyXIprologI =  \score {
@@ -416,10 +416,10 @@ studyXIprologI =  \score {
     \key f \major
     \tuplet 3/2 4 {
       \omit TupletNumber
-      ees16-. d-0-. c-. bes-. aes-. g-. aes-. bes-. c-. d-0-. ees-. f-. \bar "||"
-      ees16->( d-0) c-. bes-. aes-. g-. aes->( bes) c-. d-0-. ees-. f-. \bar "||"
-      ees16->( d-0) c bes->( aes) g aes->( bes) c d-0->( ees) f \bar "||"
-      ees16-> d-0( c bes->) aes( g aes->) bes( c d-0->) s s \bar "||"
+      ees16-. d-.\open c-. bes-. aes-. g-. aes-. bes-. c-. d-.\open ees-. f-. \bar "||"
+      ees16->( d\open) c-. bes-. aes-. g-. aes->( bes) c-. d-.\open ees-. f-. \bar "||"
+      ees16->( d\open) c bes->( aes) g aes->( bes) c d->\open( ees) f \bar "||"
+      ees16-> d\open( c bes->) aes( g aes->) bes( c d->\open) s s \bar "||"
     }
   }
   \layout {
@@ -435,25 +435,25 @@ studyXI = \new Voice \relative e' {
   \key ees \major
 
   \tuplet 3/2 4 {
-    ees16 d_0 c bes aes g aes bes c d_0 ees f |
-    g f ees d_0 ees f g f g aes_4 g aes_4 |
+    ees16 d_\open c bes aes g aes bes c d_\open ees f |
+    g f ees d_\open ees f g f g aes_4 g aes_4 |
     \omit TupletNumber
     %% 3
     bes-1 g ees g bes ees-4 c aes-4 ees aes-4 c ees-4 |
     bes g ees g bes ees-4 g bes aes-3 g f ees-4 |
-    d f ees-4 d c bes a-0 c bes a-0 g f |
-    ees g f ees d-0 c d f ees d c bes |
+    d f ees-4 d c bes a\open c bes a\open g f |
+    ees g f ees d\open c d f ees d c bes |
     %% 7
     aes'-4 c bes aes g f g bes aes g f ees |
-    d-0 g f ees d c bes d-0 f aes-4 g f |
-    ees d-0 c bes aes g aes bes c d ees f |
+    d\open g f ees d c bes d\open f aes-4 g f |
+    ees d\open c bes aes g aes bes c d ees f |
     g f ees d ees f g f g aes-4 g aes-4 |
     bes g ees g bes ees-4 c aes-4 ees aes-4 c ees-4 |
     bes g ees g bes ees-4 g bes aes g f ees |
     \repeat percent 2 {d f ees-4 d c bes g' bes aes g f ees-4 } |
     c f aes g f ees-4 d c bes aes-4 g f |
     \repeat percent 2 {ees g bes ees-4 g bes aes f d bes aes-4 f } |
-    ees f g bes, c d-0 ees f g bes, c d-0 |
+    ees f g bes, c d\open ees f g bes, c d\open |
   }
   \tuplet 3/2 4 { ees g bes ees bes g } ees8 r \bar "|."
 }
@@ -472,30 +472,30 @@ studyXII = \new Voice \relative e' {
   %% 7
   bes-> ees-4( d) | c-> aes-4( ees) | c-> ees( aes) |
   c-> ees( c) | bes-> ees( g) | bes-> g( ees) |
-  d-> g( f) | ees->-4 c( a-0) | bes-> f( d-0) |
+  d-> g( f) | ees->-4 c( a\open) | bes-> f( d\open) |
   %% 16
-  bes-> c( d-0) | ees-> bes( g) | bes-> ees( g) |
+  bes-> c( d\open) | ees-> bes( g) | bes-> ees( g) |
   bes-> ees-4( g) | ees->-4 bes( g) | ees-> bes( g) |
   %% 22
   bes-> ees( g) | bes-> ees-4( d) | c-> aes-4( ees) |
   c-> ees( c) | bes-> ees( g) | c->-2 ees-4( c) |
   %% 28
   bes-> ees-4( g) | bes-> bes,( c) | d-> c( d) |
-  ees->-4 bes( g) | ees-> d-0( ees) | f-> bes( d) |
+  ees->-4 bes( g) | ees-> d\open( ees) | f-> bes( d) |
   %% 34
-  f-> bes( g) | f-> ees-4( c) | d-> d,-0( ees) |
+  f-> bes( g) | f-> ees-4( c) | d-> d,\open( ees) |
   f-> bes( d) | f-> bes( g) | f-> ees-4( c) |
   %% 40
   bes-> g'( f) | ees->-4 d( c) | d-> g( f) |
-  ees->-4 d( c) | d-> ees-4( d) | c-> bes( a-0) |
+  ees->-4 d( c) | d-> ees-4( d) | c-> bes( a\open) |
   %% 46
   bes-> ees-4( d) | c-> bes( a) | bes-> c( bes) |
   aes->-4 g( f) | g-> c( bes) | aes->-4 g( f) |
   %% 52
-  g-> c( bes) | a-0-> d( c) | bes-> d( g) |
+  g-> c( bes) | a->\open d( c) | bes-> d( g) |
   f-> g( a) | bes-> d,( g) | f-> g( a) |
   bes-> g( f) | ees->-4 d( c) | bes-> g( f) |
-  ees-> d-0( c) | bes-> a( bes) | d->-0 f( aes-4) |
+  ees-> d\open( c) | bes-> a( bes) | d->\open f( aes-4) |
   d->-3 c( bes) | aes->-4 g( f) | ees-> bes( g) |
   bes-> ees( g) | bes-> ees-4( g) | ees->-4 bes( g) |
   ees-> bes( g) | bes-> ees( g) | bes-> ees-4( d) |
@@ -517,32 +517,32 @@ studyXIII = \new Voice \relative g'' {
   b2. a16 g fis g | d2. e16-4 d cis d |
   %% 4
   g2. e16-4 d cis d | b2. c16 b d-3 c-2 | e2.-4 d16 b g a-4 |
-  fis2.-2 fis16 d-0 fis a-0 | d1 | c2. d16 c b c |
+  fis2.-2 fis16 d\open fis a\open | d1 | c2. d16 c b c |
   %% 10
-  e2.-4 d16 c b c | a2.-0 g'16 fis e-0 fis | a2. c,16 b a-0 g |
-  fis2. a16-0 b c d | fis2. a16 fis d c | b2. cis16 e-4 d b |
+  e2.-4 d16 c b c | a2.\open g'16 fis e\open fis | a2. c,16 b a\open g |
+  fis2. a16\open b c d | fis2. a16 fis d c | b2. cis16 e-4 d b |
   %% 16
-  g2. a16 b c d | e2.-0 a16 g fis e-0 | d2. a16-4 g fis g |
-  e2. a16-4 g fis e | d2.-0 e'16-4 d cis d | c2. c16 a-0 d c |
+  g2. a16 b c d | e2.\open a16 g fis e\open | d2. a16-4 g fis g |
+  e2. a16-4 g fis e | d2.\open e'16-4 d cis d | c2. c16 a\open d c |
   %% 22
-  b2. g'16 d c b | a2.-0 cis16 d e-4 d | d,2.-0 d16-4 c b a |
+  b2. g'16 d c b | a2.\open cis16 d e-4 d | d,2.\open d16-4 c b a |
   g2. g'16 fis a-4 g | e2. e16 d c b | a2. g'16 e a-4 g |
   %% 28
-  fis2. fis16 e d-0 c | b2. b'16 c b a | g2. g16 fis e d |
-  c2. c'16 b d c | a2.-0 fis16 a c d | e2.-4 d16 fis g a |
+  fis2. fis16 e d\open c | b2. b'16 c b a | g2. g16 fis e d |
+  c2. c'16 b d c | a2.\open fis16 a c d | e2.-4 d16 fis g a |
   %% 34
   b2. g,16-3 b c d | e2.-4 d16 fis g a | b2. a16 g fis g |
-  e2.-0 a16 g fis e-0 | d2. e16-4 d c b | a2.-0 d16 c b a-0 |
+  e2.\open a16 g fis e\open | d2. e16-4 d c b | a2.\open d16 c b a\open |
   %% 40
-  g2. a16-4 g fis e | d2. e16 fis g a-0 | b2. a'16 g fis e |
-  d2. e16-0 fis g a | b2. a16 g fis g | a2. a,16-0 b c d |
+  g2. a16-4 g fis e | d2. e16 fis g a\open | b2. a'16 g fis e |
+  d2. e16\open fis g a | b2. a16 g fis g | a2. a,16\open b c d |
   %% 46
   e2.-4 cis16 d fis g | b1 | a2.( g4) |
   << {\voiceOne g2.}
      \new Voice {\voiceTwo <g,, d' b'>4*3} >> \oneVoice a''16 g fis g |
   b2. a16 g fis g | d2. e16-4 d cis d |
   %% 52
-  g2. a16 g fis g | b,2. c16 b a-0 b | d2. b16 g d-0 b |
+  g2. a16 g fis g | b,2. c16 b a\open b | d2. b16 g d\open b |
   g1~ | g4 r r2 \bar "|."
 }
 
@@ -554,25 +554,25 @@ studyXIV = \new Voice \relative d' {
   \tempo "Allegro non tanto." 4=123
   \key d \major
 
-  d4\f fis'8 d a-0 fis d-0 fis | a4-0 d8 a-0 fis d a d-4 |
-  cis4 g''8-2 e cis a-0 e a-0 | cis4 e8-4 cis a-0 e fis g |
-  fis4 fis'8 d a-0 d-3 fis a | b4 g8 d b d g b |
-  a4 fis8 d a-0 d fis a | b4 g8 d b d g b |
+  d4\f fis'8 d a\open fis d\open fis | a4\open d8 a\open fis d a d-4 |
+  cis4 g''8-2 e cis a\open e a\open | cis4 e8-4 cis a\open e fis g |
+  fis4 fis'8 d a\open d-3 fis a | b4 g8 d b d g b |
+  a4 fis8 d a\open d fis a | b4 g8 d b d g b |
   a4 gis8 a b a fis d | cis4 e,8 fis a-4 g fis e |
   %% 11
   fis4 fis'8 a b a fis d | cis4 e,8 fis a-4 g fis e |
-  fis4 d8 fis a c e-4 d | b4 e,8 gis b d fis e-0 |
+  fis4 d8 fis a c e-4 d | b4 e,8 gis b d fis e\open |
   %% 15
-  cis4 fis,8 ais-4 cis e-0 g fis | d4 a8-0 cis-2 e-0 g b a |
-  fis4 a,,8 d-0 fis a-0 d fis | g4 a,,8 cis e g cis e-0 |
-  fis4 a,,8 d-0 fis a d fis | g4 a,,8 cis e g cis e-0 |
-  fis4 d,8-0 fis a d fis a | b4 d,,8 g b d g b |
+  cis4 fis,8 ais-4 cis e\open g fis | d4 a8\open cis-2 e\open g b a |
+  fis4 a,,8 d\open fis a\open d fis | g4 a,,8 cis e g cis e\open |
+  fis4 a,,8 d\open fis a d fis | g4 a,,8 cis e g cis e\open |
+  fis4 d,8\open fis a d fis a | b4 d,,8 g b d g b |
   %% 23
-  a4 d,,8-0 fis a-0 d fis a | g4 a,8-0 cis e-0 g fis e |
-  d4 a'8 fis d a-0 fis a-4 | d4 fis8 d a-0 fis d-0 fis |
-  a4-4 a,8 d-0 fis a d fis | a4 g8 e cis a-0 g e |
+  a4 d,,8\open fis a\open d fis a | g4 a,8\open cis e\open g fis e |
+  d4 a'8 fis d a\open fis a-4 | d4 fis8 d a\open fis d\open fis |
+  a4-4 a,8 d\open fis a d fis | a4 g8 e cis a\open g e |
   %% 29
-  d2-0 a8 d fis a-0 | d2 a,8 d fis a |
+  d2\open a8 d fis a\open | d2 a,8 d fis a |
   d4 r <fis a, d,> r | <d d,>2.\fermata r4 \bar "|."
 }
 
@@ -584,35 +584,35 @@ studyXV = \new Voice \relative c' {
   \tempo "Allegro." 4=123
   \key c \major
 
-  c8:16 b: a: g: c: e: g: a:-4 | g: e: c: d:-0 e: c: b: a: |
+  c8:16 b: a: g: c: e: g: a:-4 | g: e: c: d:\open e: c: b: a: |
   %% 3
-  g: b: d:-4 c: b: d:-0 f: e: | d:-0 f: b: a:-0 g: f: e: d:-0 |
+  g: b: d:-4 c: b: d:\open f: e: | d:\open f: b: a:\open g: f: e: d:\open |
   %% 5
-  c: e: g: a:-4 g:-3 c:-2 e:-0 a: | g: e:-0 c: d: e:-4 c: b: a:-0 |
+  c: e: g: a:-4 g:-3 c:-2 e:\open a: | g: e:\open c: d: e:-4 c: b: a:\open |
   %% 7
-  g: b: d: c: b: d: f: e:-0 | d: f: b: a: g: f: e:-0 d: |
+  g: b: d: c: b: d: f: e:\open | d: f: b: a: g: f: e:\open d: |
   %% 9
-  c: e:-0 g: a: g: e: c: d: | e:-4 d: c: b: a:-0 g: f: e: |
+  c: e:\open g: a: g: e: c: d: | e:-4 d: c: b: a:\open g: f: e: |
   %% 11
-  a:-0 c: e:-0 f: e:-0 c: a:-0 b: | c: a:-0 f: e: d:-0 c: b: a: |
+  a:\open c: e:\open f: e:\open c: a:\open b: | c: a:\open f: e: d:\open c: b: a: |
   %% 13
-  a':-4 f: e: d: d': e:-0 f: d: | a:-0 f: e: d:-0  d':  e:-0  f: d: |
+  a':-4 f: e: d: d': e:\open f: d: | a:\open f: e: d:\open  d':  e:\open  f: d: |
   %% 15
-  a:-0 f: e: d:-0 a':-4 f: e: d:-0 | b': f:-2 e: d: b': g:-3 f: d: |
+  a:\open f: e: d:\open a':-4 f: e: d:\open | b': f:-2 e: d: b': g:-3 f: d: |
   %% 17
-  c:-3 b: a: g: a: b: c: d:-0 | e: d:-0 c: b: c: d:-0 e: f: |
+  c:-3 b: a: g: a: b: c: d:\open | e: d:\open c: b: c: d:\open e: f: |
   %% 19
-  g: a:-0 b: c: d: e:-0 f: g: | a: f: d:-3 b: g:-3 f: a,:-1 b:-2 |
+  g: a:\open b: c: d: e:\open f: g: | a: f: d:-3 b: g:-3 f: a,:-1 b:-2 |
   %% 21
-  c: b: a: g: a: b: c: d:-0 | e: d:-0 c: b: c: d:-0 e: f: |
+  c: b: a: g: a: b: c: d:\open | e: d:\open c: b: c: d:\open e: f: |
   %% 23
-  g: a:-0 b: c: d: e:-0 f: g: | a: f: d:-3 b:-1 b':-4 g:-2 f: d:-3 |
+  g: a:\open b: c: d: e:\open f: g: | a: f: d:-3 b:-1 b':-4 g:-2 f: d:-3 |
   %% 25
-  c:-2 b: a: g: c: e:-0 g: f: | e:-0 f: d: e:-4 c: d: b: g: |
+  c:-2 b: a: g: c: e:\open g: f: | e:\open f: d: e:-4 c: d: b: g: |
   %% 27
-  c: b: a:-0 g: c: e:-0 g: f: | e:-0 f: d: e:-4 c: d: b: g: |
+  c: b: a:\open g: c: e:\open g: f: | e:\open f: d: e:-4 c: d: b: g: |
   %% 28
-  c: d: e:-4 d: c: b: a:-0 g: | f: g: a:-4 g: f: e: d:-0 c: |
+  c: d: e:-4 d: c: b: a:\open g: | f: g: a:-4 g: f: e: d:\open c: |
   %% 29
   b: c: d:-4 c: b: g: a: b: | c: g: b:-2 g: c8 r r4 \bar "|."
 }
@@ -627,27 +627,27 @@ studyXVI = \new Voice \relative e' {
 
   e8\mf( f-2 fis-2 g a-4 g) | c2. | e,8( f-2 fis-2 g a-4 g) | e'2.-4 |
   %% 5
-  \repeat percent 3 {d8( b c-2 cis-2 d e-4)} | d( c b a-0 g f) |
+  \repeat percent 3 {d8( b c-2 cis-2 d e-4)} | d( c b a\open g f) |
   %% 8
   e( f-2 fis-2 g a-4 g) | c2. | e,8( f-2 fis-2 g a-4 g) | e'2.-4 |
   %% 12
   b8( c-2 cis-2 d e-4 b) | d( cis-2 c-2 b c a) |
-  g( a ais-1 b-1 a-0 g) | fis( g a-4 g fis f-2) |
+  g( a ais-1 b-1 a\open g) | fis( g a-4 g fis f-2) |
   %% 16
   e( f-2 fis-2 g a-4 g) | c2. | e,8( f-2 fis-2 g a-4 g) | e'2.-4 |
   %% 20
-  cis8( d e-4 d c b) | ais-1( b-1 c b a g) | fis( a-0 c d e-0 fis) |
+  cis8( d e-4 d c b) | ais-1( b-1 c b a g) | fis( a\open c d e\open fis) |
   %% 23
   g2. | g8( fis-1 eis-1 fis-1 a fis) | c2. | e8-4( d cis d fis g) |
   %% 27
-  b2. | b,8( c-2 cis-2 d e-4 b-1) | d( cis-2 c-2 b c a-0) |
+  b2. | b,8( c-2 cis-2 d e-4 b-1) | d( cis-2 c-2 b c a\open) |
   %% 30
-  g( b c d e-0 fis) | g2. | a8-3( aes-3 g f e-0 f) | d2. |
-  c8( b c d ees-4 c) | g2. | aes8-4(  g f e f d-0) |
-  g( f ees d-0 ees c) | g( b c d-0 e fis) | g2. |
+  g( b c d e\open fis) | g2. | a8-3( aes-3 g f e\open f) | d2. |
+  c8( b c d ees-4 c) | g2. | aes8-4(  g f e f d\open) |
+  g( f ees d\open ees c) | g( b c d\open e fis) | g2. |
   %% 40
   e8( f-2 fis-2 g a-4 g) | c2. | a8( bes-1 b-1 c d c) | a'2. |
-  g8( fis a g e-0 c) | b( g f d-0 b g) | c( e f g a-0 b) | c2. \bar "|."
+  g8( fis a g e\open c) | b( g f d\open b g) | c( e f g a\open b) | c2. \bar "|."
 }
 
 studyXVIIprologI = ##f
@@ -658,13 +658,13 @@ studyXVII = \new Voice \relative d' {
   \tempo "Moderato assai." 4=111
   \key d \major
 
-  d8\f fis16 a-0 d fis, a-0 d fis2 | d,8 fis16 a-0 d fis, a-0 d fis2 |
-  d,8 g16 b d b d g b2 | d,,8 fis16 a-0 d fis, a-0 d fis2 |
+  d8\f fis16 a\open d fis, a\open d fis2 | d,8 fis16 a\open d fis, a\open d fis2 |
+  d,8 g16 b d b d g b2 | d,,8 fis16 a\open d fis, a\open d fis2 |
   %% 5
-  a,,8 cis16 e g e g cis e2-4 | b,8 d16-0 fis b fis b d fis2 |
+  a,,8 cis16 e g e g cis e2-4 | b,8 d16\open fis b fis b d fis2 |
   %% 7
-  e,8 a16-0 cis e-4 cis e-0 a gis8 d16 b gis e d-0 b |
-  a8 cis16 e a-4 a-0 cis e-0 a8 e16-0 cis a-0 g fis e |
+  e,8 a16\open cis e-4 cis e\open a gis8 d16 b gis e d\open b |
+  a8 cis16 e a-4 a\open cis e\open a8 e16\open cis a\open g fis e |
   %% 9
   \repeat percent 2 {d8 fis16 a d fis, a d fis2} |
   %% 11
@@ -672,42 +672,42 @@ studyXVII = \new Voice \relative d' {
   %% 13
   c,8 fis16 a c a c fis a2 | b,,8 d16 g b g b d b'2 |
   %% 15
-  a,,8 d16-0 fis a-0 d fis b a8 g16 e-0 cis a-0 g e |
+  a,,8 d16\open fis a\open d fis b a8 g16 e\open cis a\open g e |
   %% 16
-  d8 fis16 a-0 d fis a fis d2 | g8 e16-0 cis a-0 g e cis a4( g') |
-  fis8 a,16 d-0 fis a-0 d fis b4( a) |
+  d8 fis16 a\open d fis a fis d2 | g8 e16\open cis a\open g e cis a4( g') |
+  fis8 a,16 d\open fis a\open d fis b4( a) |
   %% 19
-  g8 e16-0 cis a-0 g e cis a4( g') |
+  g8 e16\open cis a\open g e cis a4( g') |
   fis8 a,16 d fis a d fis a4( fis) |
-  b8 fis16 dis b a-0 fis dis-4 b4 a16 b dis-4 fis |
-  a8-4 g16 fis g b dis e-0 g4( b) |
+  b8 fis16 dis b a\open fis dis-4 b4 a16 b dis-4 fis |
+  a8-4 g16 fis g b dis e\open g4( b) |
   %% 23
-  a8 fis16 d a-0 d fis b a8 g16 e-0 cis a-0 b cis |
+  a8 fis16 d a\open d fis b a8 g16 e\open cis a\open b cis |
   %% 24
-  d8 a16-0 fis d a d fis a-4 d, fis a-0 d4 |
-  g8 e16-0 cis a g e cis a4( g') | fis8 a,16 d fis a d fis b4( a) |
-  g8-2 e16 cis a-0 g e cis a4( g') |
-  fis8 a,16 d-0 fis a d fis a4( fis) |
-  b8 fis16 dis b a-0 fis dis-4 b4 a16 b dis-4 fis |
-  a8-4 g16 fis g b dis e-0 g4( b) |
+  d8 a16\open fis d a d fis a-4 d, fis a\open d4 |
+  g8 e16\open cis a g e cis a4( g') | fis8 a,16 d fis a d fis b4( a) |
+  g8-2 e16 cis a\open g e cis a4( g') |
+  fis8 a,16 d\open fis a d fis a4( fis) |
+  b8 fis16 dis b a\open fis dis-4 b4 a16 b dis-4 fis |
+  a8-4 g16 fis g b dis e\open g4( b) |
   %% 31
-  a8 fis16 d a-0 a d fis a8 f16 d a a d f |
-  a8 e16-0 cis a-0 a e cis a8 cis16 e a-4 g fis e |
+  a8 fis16 d a\open a d fis a8 f16 d a a d f |
+  a8 e16\open cis a\open a e cis a8 cis16 e a-4 g fis e |
   %% 33
-  \repeat percent 2 { d8 fis16 a-0 d fis, a-0 d fis2 } |
+  \repeat percent 2 { d8 fis16 a\open d fis, a\open d fis2 } |
   %% 35
-  d,8 g16 b d b d g b2 | d,,8 fis16 a-0 d fis, a-0 d fis2 |
-  a,,8 cis16 e g e g cis e2-4 | b,8 d16-0 fis b fis b d fis2 |
-  e,8 a16-0 cis e-4 cis e-0 a gis8 d16 b gis e d-0 b |
-  a8 cis16 e a-4 a-0 cis e a8 e16-0 cis a g fis e |
+  d,8 g16 b d b d g b2 | d,,8 fis16 a\open d fis, a\open d fis2 |
+  a,,8 cis16 e g e g cis e2-4 | b,8 d16\open fis b fis b d fis2 |
+  e,8 a16\open cis e-4 cis e\open a gis8 d16 b gis e d\open b |
+  a8 cis16 e a-4 a\open cis e a8 e16\open cis a g fis e |
   %% 41
-  \repeat percent 2 {d8 fis16 a-0 d fis, a-0 d fis2 } |
+  \repeat percent 2 {d8 fis16 a\open d fis, a\open d fis2 } |
   %% 43
-  d,8 g16 b d b d g b2 | d,,8 fis16 a-0 d fis, a-0 d fis2 |
+  d,8 g16 b d b d g b2 | d,,8 fis16 a\open d fis, a\open d fis2 |
   %% 45
-  c,8 fis16 a c a-0 c fis a2 | b,,8 d16-0 g b-1 g b d-3 b'2 |
-  a,,8 d16-0 fis a d fis b a8 g16 e-0 cis a-0 g e |
-  d8-0 fis16 a d fis a fis d8 r r4 \bar "|."
+  c,8 fis16 a c a\open c fis a2 | b,,8 d16\open g b-1 g b d-3 b'2 |
+  a,,8 d16\open fis a d fis b a8 g16 e\open cis a\open g e |
+  d8\open fis16 a d fis a fis d8 r r4 \bar "|."
 }
 
 studyXVIIIprologI = ##f
@@ -720,51 +720,51 @@ studyXVIII = \new Voice \relative e'' {
 
   e16-4\mf( d b d b d c e-4 c e-4 c e-4) |
   d( b d b c e-4 d\< b d g b8\!) |
-  c,16\mf( a-0 c a-0 b d c\< a-0 c fis a8\!) |
-  b,16\mf( g fis a-4\< g b a-0 c b d c e-4\!) |
+  c,16\mf( a\open c a\open b d c\< a\open c fis a8\!) |
+  b,16\mf( g fis a-4\< g b a\open c b d c e-4\!) |
   %% 5
   d16\mf( b d b d b c e-4 c e-4 c e-4) |
   d( b d b c e-4 d\< b d g b8) |
-  fis16\f( a b a g fis e-0\> a b a g e-0\!) |
-  d( a-0 d\< a cis a\! e'-4-\rit a, d\> a c a\!) |
+  fis16\f( a b a g fis e\open\> a b a g e\open\!) |
+  d( a\open d\< a cis a\! e'-4-\rit a, d\> a c a\!) |
   b^\aTempo\mf( d b d b d c e-4 c e-4 c e-4) |
   %% 10
   d( b d b c e-4 d\< b d g b8\!) |
-  c,16( a-0 c a b d c\< a-0 c fis a8\!) |
-  b,16( g fis a-4\< g b a-0 c b d c e-4\!) |
+  c,16( a\open c a b d c\< a\open c fis a8\!) |
+  b,16( g fis a-4\< g b a\open c b d c e-4\!) |
   d16\mf( b d b d b c e-4 c e-4 c e-4) |
   d( b d b c e-4 d\< b d g b8) |
   %% 15
-  b16\f( a b a fis a b\> a b a g e-0\!) |
+  b16\f( a b a fis a b\> a b a g e\open\!) |
   d8( cis16 d cis d e-4 d e-4 d e-4 d) |
   c16\mf\<( d c d c fis\! b\> a b a fis c) |
   b\<( d cis d cis d\! e-4\> d e-4 d b g) |
   c\<( d c d c fis\! b\> a b a fis c) |
   %% 20
   b\<( d cis d cis d\! e-4\> d e-4 d b g\!) |
-  e( g e g e g a-4 g fis g a-0 b) |
+  e( g e g e g a-4 g fis g a\open b) |
   c( b c b c b c b c b c b) |
   c( d e-4 d e-4 d  b d e-4 d e-4 d) |
-  a-0( d cis d cis d e-4 d e-4 d e-4 d) |
+  a\open( d cis d cis d e-4 d e-4 d e-4 d) |
   %% 25
   c\<( d c d c fis\! b\> a b a fis c) |
   b\<( d cis d cis d\! e-4\> d e-4 d b g) |
   c\<( d c d c fis\! b\> a b a fis c) |
   b\<( d cis d cis d\! e-4\> d e-4 d b g\!) |
-  e( g e g e g a-4 g fis g a-0 b) |
+  e( g e g e g a-4 g fis g a\open b) |
   %% 30
-  c( b c b c b c b a-0 b c d) |
+  c( b c b c b c b a\open b c d) |
   e-4( d e-4 d c d b d e-4 d b d) |
-  a-0( d e-4 d e-4 d e-4 d e-4 d e-4 d) |
+  a\open( d e-4 d e-4 d e-4 d e-4 d e-4 d) |
   e-4( d b d b d c e-4 c e-4 c e-4) |
   d( b d b c e-4 d\< b d g b8\!) |
   %% 35
-  c,16( a-0 c a-0 b d c\< a-0 c fis a8\!) |
-  b,16( g fis a-4\< g b a-0 c b d c e-4\!) |
+  c,16( a\open c a\open b d c\< a\open c fis a8\!) |
+  b,16( g fis a-4\< g b a\open c b d c e-4\!) |
   d\mf( b d b d b c e-4 c e-4 c e-4) |
   d( b d b c e-4 d b\< d g b8) |
-  a,16-0\f( c e-4 d e-4 d c\< fis b a b a\!) |
-  g( d-3 b-1 g d-0 b g8) r r \bar "|."
+  a,16\open\f( c e-4 d e-4 d c\< fis b a b a\!) |
+  g( d-3 b-1 g d\open b g8) r r \bar "|."
 }
 
 
@@ -830,14 +830,14 @@ studyXIX = \new Voice \relative c' {
     %% 4
     aes g fis g ees-4 c b c d c d ees |
     d b g f b d f g aes g ees-4 c |
-    b d g b a g fis e-0 fis g d b |
+    b d g b a g fis e\open fis g d b |
     d b g f b d f g aes g ees-4 c |
     %% 8
-    b b' a g d b d c a-0 g b d |
+    b b' a g d b d c a\open g b d |
     %% 9
     g fis g bes aes g aes f d ees-4 bes aes-4 |
     %% 10
-    g fis g bes g ees aes-4 f d-0 ees g bes |
+    g fis g bes g ees aes-4 f d\open ees g bes |
     g' fis g bes aes g aes f d ees-4 bes aes-4 |
     g fis g bes g ees c ees aes c ees-4 f |
     %% 13
@@ -845,9 +845,9 @@ studyXIX = \new Voice \relative c' {
     %% 14
     \repeat unfold 4 {g d fis} |
     %% 15
-    g fis g a g d b g fis g d-0 b |
+    g fis g a g d b g fis g d\open b |
     %% 16
-    g b d-0 g d b g b d g f d-0 |
+    g b d\open g d b g b d g f d\open |
     %% 17
     c g b c ees g aes-4 g fis g c ees-4 |
     %% 18
@@ -855,7 +855,7 @@ studyXIX = \new Voice \relative c' {
     %% 19
     c g b c ees g aes-4 g fis g c ees-4 |
     %% 20
-    aes g fis g ees-4 c f d b g f d-0 |
+    aes g fis g ees-4 c f d b g f d\open |
     %% 21
     \repeat unfold 4 {c g b} |
   }
@@ -877,38 +877,38 @@ studyXX = \new Voice \relative c'' {
   \override Hairpin.to-barline = ##f
   \partial 4. d8\f\downbow\<( cis d | ees4.-4\!)
   \repeat unfold 2 { d8\<( cis d | ees4.-4\!) } d8\<( bes g |
-  fis4.\!) \repeat unfold 3 {d'8\<( cis d | ees4.-4\!) } d8( c a-0 |
+  fis4.\!) \repeat unfold 3 {d'8\<( cis d | ees4.-4\!) } d8( c a\open |
   %% 8
-  bes4.) d8( g bes | a4.) a,8-0( c ees-4 | d4.) bes8( g d-0 |
+  bes4.) d8( g bes | a4.) a,8\open( c ees-4 | d4.) bes8( g d\open |
   c4.) a8( d-4 c | bes4.) g'8( bes ees-4 | d4.) fis8( g a |
   %% 14
-  bes4.) a8( g ees-4 | d4.) c8( bes a-0 | bes4.) bes8( d g |
+  bes4.) a8( g ees-4 | d4.) c8( bes a\open | bes4.) bes8( d g |
   f4.) c8( d ees-4 | d4.) bes8( d g | f4.) c8( d ees-4 |
   %% 20
-  d4.) d,8-0( ees f | g4.) g8( fis g | bes4.) a8-0( bes c |
+  d4.) d,8\open( ees f | g4.) g8( fis g | bes4.) a8\open( bes c |
   d4.) fis8( g a | bes4.) d,8( bes g | fis4.) d8( e fis |
-  g4.) g,8( bes c | d4.-4) d8-0( e fis | g4.) fis8( g bes |
+  g4.) g,8( bes c | d4.-4) d8\open( e fis | g4.) fis8( g bes |
   d4.) ees8-4( d cis |
   \ritSpan \textSpannerDown d4.\startTextSpan) ees8-4( d cis |
   d2.)~ | d4.\stopTextSpan d8_\aTempo( cis d |
   ees4.-4) \repeat unfold 2 { d8( cis d | ees4.-4) } d8( bes g |
   %% 36
-  fis4.) d8-0( fis g | a4.-4) fis8( a-0 bes-1 | c4.) a8( c d |
+  fis4.) d8\open( fis g | a4.-4) fis8( a\open bes-1 | c4.) a8( c d |
   ees4.-4) d8( cis d |
   bes'4.) \repeat unfold 3 {d,8( cis d | ees4.-4)} d8( bes g |
   %% 44
-  fis4.) d8( fis g | a4.-4) fis8( a-0 bes | c4.) a8( c d |
+  fis4.) d8( fis g | a4.-4) fis8( a\open bes | c4.) a8( c d |
   ees4.-4) d8( cis d | bes'4.) bes8( a g | f4.) g8( f g |
   %% 50
-  f4.) bes8( a g | f4.) g8( f g | f4.) d8( c bes | a4.-0) g8( f ees |
-  g4.) f8( ees d-0 | f4.) ees8( g, a | bes4.) a8( bes c |
-  d4.-4) d8-0( fis a-0 | d4.) \ritSpan d,8\startTextSpan( g bes |
+  f4.) bes8( a g | f4.) g8( f g | f4.) d8( c bes | a4.\open) g8( f ees |
+  g4.) f8( ees d\open | f4.) ees8( g, a | bes4.) a8( bes c |
+  d4.-4) d8\open( fis a\open | d4.) \ritSpan d,8\startTextSpan( g bes |
   d4.) ees8-4( d cis | d4.\stopTextSpan) d8-\aTempo( cis d |
   ees4.-4) \repeat unfold 2 {d8( cis d | ees4.-4)} d8( bes g |
-  fis4.) \repeat unfold 3 {d'8( cis d | ees4.-4)} d8( c a-0 |
-  g4.) bes8( a bes | d4.) g8( fis g | bes4.) bes,8( a-0 bes |
-  d4.) \repeat unfold 2 { g8( fis g | bes4.) } bes,8( a-0 bes |
-  d4.) d,8-0\<( ees d | g2.^\molto)~ |
+  fis4.) \repeat unfold 3 {d'8( cis d | ees4.-4)} d8( c a\open |
+  g4.) bes8( a bes | d4.) g8( fis g | bes4.) bes,8( a\open bes |
+  d4.) \repeat unfold 2 { g8( fis g | bes4.) } bes,8( a\open bes |
+  d4.) d,8\open\<( ees d | g2.^\molto)~ |
   \ritSpan \textSpannerUp << {g4.\startTextSpan}
 			     {s8 s\!} >> bes,8\p\>( d-4 bes | g2.)~ |
   << {g4\stopTextSpan} {s8 s\!} >> r4 r \bar "|."
@@ -924,18 +924,18 @@ studyXXI = \new Voice \relative g' {
 
   g8-.->-3\upbow g,-.-> \repeat unfold 2 {g'-.-> g,-.->} |
   %% 2
-  g'->( fis e) d-.-0 e( fis | g-.->) g,-.-> \repeat unfold 2 {g'-.-> g,-.->} |
-  g'->( fis e) d-.-0 e( fis | g-.) d-. b'-.-1 d,-. d'-.-3 d,-. |
+  g'->( fis e) d-.\open e( fis | g-.->) g,-.-> \repeat unfold 2 {g'-.-> g,-.->} |
+  g'->( fis e) d-.\open e( fis | g-.) d-. b'-.-1 d,-. d'-.-3 d,-. |
   %% 6
-  g'( fis g) a-. b( g | d-.) d,-.-0 e'-.-4 d,-. c'-. d,-. |
+  g'( fis g) a-. b( g | d-.) d,-.\open e'-.-4 d,-. c'-. d,-. |
   %% 8
-  b'( e-4 d) c-. b( a-0 | g-.) d-.-0 b'-.-1 d,-. d'-.-3 d,-. |
-  g'( fis g) a-. b( g | d-.) b-. e-.-4 c-. fis-. a,-.-0 |
+  b'( e-4 d) c-. b( a\open | g-.) d-.\open b'-.-1 d,-. d'-.-3 d,-. |
+  g'( fis g) a-. b( g | d-.) b-. e-.-4 c-. fis-. a,-.\open |
   %% 12
-  g'( b, c) d-. e-0( fis | g) b,-. c( d e-0) fis-. |
-  g( d-3 e-0) fis-. g( a | b-.) b,-.-1 a'-. b,-. g'-. b,-. |
+  g'( b, c) d-. e\open( fis | g) b,-. c( d e\open) fis-. |
+  g( d-3 e\open) fis-. g( a | b-.) b,-.-1 a'-. b,-. g'-. b,-. |
   %% 16
-  a'-. c,-.-2 g'-. b,-. fis'-. a,-.-0 |
+  a'-. c,-.-2 g'-. b,-. fis'-. a,-.\open |
   e'-.-4 g,-. e'-.-4 fis,-. e'-.-4 e,-. |
   e'-.-4( dis cis) b-. cis( dis |
   e-.-4) g,-. e'-.-4 fis,-. e'-.-4 e,-. |
@@ -949,27 +949,27 @@ studyXXI = \new Voice \relative g' {
   %% 28
   e->-4( dis cis) b-. cis( dis |
   \repeat unfold 2 {
-    e-4) e,-. d'-. e,-. c'-. e,-. | b'( g a-0) b-. c( d |
+    e-4) e,-. d'-. e,-. c'-. e,-. | b'( g a\open) b-. c( d |
   }
   %% 33
-  e-.-4) e,-. c'-. a-.-0 cis-. g-.-3 | e'-4( d cis) d-. e-4( d |
-  c) b-. e-4( d c) b-. | a-0( e g) fis-. e( fis |
+  e-.-4) e,-. c'-. a-.\open cis-. g-.-3 | e'-4( d cis) d-. e-4( d |
+  c) b-. e-4( d c) b-. | a\open( e g) fis-. e( fis |
   %% 37
-  g-.-3) g,-.-0 \repeat unfold 2 {g'-. g,-.} |
+  g-.-3) g,-.\open \repeat unfold 2 {g'-. g,-.} |
   %% 38
-  g'( fis e) d-0 e( fis | g-.) g,-. e'-. c-.-3 a'-.-4 a,-. |
+  g'( fis e) d\open e( fis | g-.) g,-. e'-. c-.-3 a'-.-4 a,-. |
   %% 40
-  g'( fis e) d-.-0 e( fis | g) g,-. b( d-0 g) b-. |
-  e-4( d cis) d-. c( a-0 | g) g, b( d-0 g) b-. |
-  e-4( d cis) d-. e-0( fis | g) fis-. g( a b) d,-. |
+  g'( fis e) d-.\open e( fis | g) g,-. b( d\open g) b-. |
+  e-4( d cis) d-. c( a\open | g) g, b( d\open g) b-. |
+  e-4( d cis) d-. e\open( fis | g) fis-. g( a b) d,-. |
   g( fis g) a-. b( d,-3 | b') a-. g( fis g) b,-. |
-  e-4( d cis) d-. c( a-0 |
+  e-4( d cis) d-. c( a\open |
   \repeat unfold 2 {
     g-.-3) g,-. \repeat unfold 2 {g'-. g,-.} |
     g'( d ees-1) e-.-1 f-2( fis-2
   }
   g) d-. ees-1( e-.-1 f-2) fis-.-2 | g( d ees-1) e-.-1 f-2( fis-2 |
-  g) g,-. b( d-0 g) b-. | d-3( fis,-2 g-3) b-. d( g | b) r r4 r |
+  g) g,-. b( d\open g) b-. | d-3( fis,-2 g-3) b-. d( g | b) r r4 r |
   <g,, d' b' g'>8-. r r4 r | <g g'>2.\fermata \bar "|."
 }
 
@@ -990,46 +990,46 @@ studyXXII = \new Voice \relative g {
   }
   %% 5
   \repeat unfold 2 {
-    << {d-0)} {s16 s\!} >> a8( b cis d-4) a( b cis |
-    d-0) f( a-0 d f) d( a-0 f |
+    << {d\open)} {s16 s\!} >> a8( b cis d-4) a( b cis |
+    d\open) f( a\open d f) d( a\open f |
   }
   %% 9
   \repeat unfold 2 {
-    d-0) g,( b c d-4) g,( b c | d-0) f( b d f) d( b f |
+    d\open) g,( b c d-4) g,( b c | d\open) f( b d f) d( b f |
   }
   %% 13
-  d) g,( a b c) b( c d-0 | e) g( c e-0 a) g( fis g |
-  a) g( fis e-0 d) c( b a-0 | g) d-0( e fis g) b( a-0 g |
+  d) g,( a b c) b( c d\open | e) g( c e\open a) g( fis g |
+  a) g( fis e\open d) c( b a\open | g) d\open( e fis g) b( a\open g |
   %% 17
   \repeat unfold 2 {
-    fis) e'-4( d cis d) e-4( d cis | d) fis( a g fis) e-0( d c |
-    b) e-4( d cis d) e-4( d cis | d) b'( g d c) b( a-0 g |
+    fis) e'-4( d cis d) e-4( d cis | d) fis( a g fis) e\open( d c |
+    b) e-4( d cis d) e-4( d cis | d) b'( g d c) b( a\open g |
   }
   %% 25
   \repeat unfold 2 {
-    fis) g( a-0 b c) fis( g a | b) a( g fis g) d( b g |
+    fis) g( a\open b c) fis( g a | b) a( g fis g) d( b g |
   }
   %% 29
-  f) g( f e f) a-4( g f | e) g( c e-0 a) g( fis e-0 |
+  f) g( f e f) a-4( g f | e) g( c e\open a) g( fis e\open |
   %% 31
-  d) b( e-4 d c) d,-0( e fis | g) fis( g a-4 g) f( e d-0 |
+  d) b( e-4 d c) d,\open( e fis | g) fis( g a-4 g) f( e d\open |
   \repeat unfold 2 {
     c) g( a b c) g( a b | c) e( g c e-4) c( g e |
   }
   %% 37
   \repeat unfold 2 {
-    d-0) a( b cis d-4) a( b cis | d-0) f( a-0 d f) d( a-0 f |
+    d\open) a( b cis d-4) a( b cis | d\open) f( a\open d f) d( a\open f |
   }
   %% 41
-  d-0) g,( b c d-4) g,( b c | d-0) f(b d f) d( b f |
-  d-0) g,( b c d-4) b( d-0 e | f) b( d c b) a-0( g f |
+  d\open) g,( b c d-4) g,( b c | d\open) f(b d f) d( b f |
+  d\open) g,( b c d-4) b( d\open e | f) b( d c b) a\open( g f |
   %% 45
-  e) g( c b a-0) d-3( f a | g) g( e-0 c b) g( f d-0 |
-  c) e( g c a-0) d( f a | g) g( e-0 c b) g( f d-0 |
+  e) g( c b a\open) d-3( f a | g) g( e\open c b) g( f d\open |
+  c) e( g c a\open) d( f a | g) g( e\open c b) g( f d\open |
   c) g( a b c) g( a b | c) e( g c e-4) c( g e |
   %% 51
   c) g( a b c) g( a b | c) e( g c e-4) c( g e |
-  c) g( a b c) e( f g | a-4) f( g a-0 b) g( a-0 b |
+  c) g( a b c) e( f g | a-4) f( g a\open b) g( a\open b |
   c) c( g e c) g( a b | c4) r r2 \bar "|."
 }
 
@@ -1041,41 +1041,41 @@ studyXXIII = \new Voice \relative c'' {
   \tempo "Moderato." 4=111
   \key f \major
 
-  c8\f b c a-0 bes-1( b | c) a' g f e-0 d | c b c a bes-1( b-1 |
+  c8\f b c a\open bes-1( b | c) a' g f e\open d | c b c a bes-1( b-1 |
   %% 4
-  c) a' g f e-0 d | c b d c a-4( f | e) d-0 c d-0 e f |
+  c) a' g f e\open d | c b d c a-4( f | e) d\open c d\open e f |
   %% 7
-  g a-0 bes c e-4( d | c) bes' g f e-0 d | c b c a bes-1( b |
+  g a\open bes c e-4( d | c) bes' g f e\open d | c b c a bes-1( b |
   %% 10
-  c) a' g f e-0 f | d cis d bes c-2( cis | d) bes'-4 a g f d-3 |
+  c) a' g f e\open f | d cis d bes c-2( cis | d) bes'-4 a g f d-3 |
   %% 13
-  c a' g f e-0 d | c bes g e c e | f c a c f a-4 | f c b c bes c |
+  c a' g f e\open d | c bes g e c e | f c a c f a-4 | f c b c bes c |
   %% 17
-  a a'-4 g-3 a-4 f a-4 | e a-4 cis, a'-4 d,-0 a'-4 | f d' cis d bes d |
-  a-0 d fis, d' g, d' | bes a-0 g bes' a g | f e-0 d a' f d |
+  a a'-4 g-3 a-4 f a-4 | e a-4 cis, a'-4 d,\open a'-4 | f d' cis d bes d |
+  a\open d fis, d' g, d' | bes a\open g bes' a g | f e\open d a' f d |
   %% 23
-  cis bes a-0 g f e | d-0 f bes a-0 f e | d-0 f bes a-0 f d-0 |
+  cis bes a\open g f e | d\open f bes a\open f e | d\open f bes a\open f d\open |
   %% 26
-  cis a'-4 d,-0 a'-4 e a-4 | g a-4 f a-4 e a-4 | d,-0 d'-3 c d bes d |
-  a-0 d fis, d' g, d' | bes a-0 bes g bes cis |
+  cis a'-4 d,\open a'-4 e a-4 | g a-4 f a-4 e a-4 | d,\open d'-3 c d bes d |
+  a\open d fis, d' g, d' | bes a\open bes g bes cis |
   %% 31
-  bes' cis,-2 a' cis,-2 g'-1 cis,-2 | d f bes a f e-0 | d f bes a f d |
+  bes' cis,-2 a' cis,-2 g'-1 cis,-2 | d f bes a f e\open | d f bes a f d |
   %% 34
-  cis a' g a f a | e-0 a f a g a | d, f bes a f e-0 | d f bes a f d |
+  cis a' g a f a | e\open a f a g a | d, f bes a f e\open | d f bes a f d |
   %% 38
   cis a' g a f a | e a f a g a | d, f bes a f e | d f bes a f d |
   %% 42
-  \repeat percent 2 {c a' g f e-0 f} | bes, e-0 a g e-0 c |
+  \repeat percent 2 {c a' g f e\open f} | bes, e\open a g e\open c |
   %% 45
-  bes e-0 a g e bes | \repeat percent 2 {a-0 a' f d c bes} |
+  bes e\open a g e bes | \repeat percent 2 {a\open a' f d c bes} |
   %% 48
-  a-0 a' g f e-0 d | c f e-0 d c bes | a-0 c f e-0 d c |
+  a\open a' g f e\open d | c f e\open d c bes | a\open c f e\open d c |
   %% 51
-  d c bes a-0 g f | e d-0 c d-0 e f | g f e f g a-0 |
+  d c bes a\open g f | e d\open c d\open e f | g f e f g a\open |
   %% 54
-  bes a-0 g a-0 bes c | d c bes c d e-0 | f e f a, bes-1( b |
-  c) a' g f e-0 f | g fis g bes, c-2( cis | d) bes' a g f d |
-  c a' g f e-0 d | c bes g e c bes | a c f a-0 c a' | f4 r r \bar "|."
+  bes a\open g a\open bes c | d c bes c d e\open | f e f a, bes-1( b |
+  c) a' g f e\open f | g fis g bes, c-2( cis | d) bes' a g f d |
+  c a' g f e\open d | c bes g e c bes | a c f a\open c a' | f4 r r \bar "|."
 }
 
 studyXXIVprologI = ##f
@@ -1091,17 +1091,17 @@ studyXXIV = \new Voice \relative g' {
   f4 f16-.( f-. f-. f-. f8-.) r | e g( a-4 g b, c) |
   d2-4 g,16-.( g-. g-. g-. | g8-.) r r4 r | g'2 g16-.( g-. g-. g-. |
   %% 10
-  g8-.) e'-4( c e,) g4 | a2-4 a16-.-0( a-. a-. a-. |
+  g8-.) e'-4( c e,) g4 | a2-4 a16-.\open( a-. a-. a-. |
   %% 12
-  a8-.) cis( d e-0) f4 | a a16-.( a-. a-. a-. a8-.) b,( |
+  a8-.) cis( d e\open) f4 | a a16-.( a-. a-. a-. a8-.) b,( |
   %% 14
-  d c e-4) e,( f g) | b8.( a16-0) g8 f a,( b) | c4 r r |
+  d c e-4) e,( f g) | b8.( a16\open) g8 f a,( b) | c4 r r |
   %% 17
   a''2 a16-.( a-. a-. a-. | a8-.) gis( b a f d) | b2~( b16 d c e-4) |
   %% 20
   d4. b8( d f) | a2 a16-.( a-. a-. a-. | a8-.) gis( b a f d) |
   %% 23
-  cis2~( cis8 d16 e-4) | d4. b8( a8.-0 g16) |
+  cis2~( cis8 d16 e-4) | d4. b8( a8.\open g16) |
   g2 g16-.( g-. g-. g-. | g8-.) e'-4( c e,) g4 |
   a2-4 a16-.-4( a-. a-. a-. | a8-.) g( f a,) d4-4 |
   g,4 g16-.( g-. g-. g-. g8-.) r | r g( aes-1\< a-1 bes-2 b-2) |
@@ -1110,8 +1110,8 @@ studyXXIV = \new Voice \relative g' {
 
 studyXXVprologI = ##f
 studyXXVprologII = ##f
-FisDFis = { fis16( d-0 fis) }
-AFisDFis = {a,16-. fis'( d-0 fis)}
+FisDFis = { fis16( d\open fis) }
+AFisDFis = {a,16-. fis'( d\open fis)}
 GEG = {g16( e g)}
 AGEG = {a,16-. g'( e g)}
 studyXXV = \new Voice \relative a' {
@@ -1125,7 +1125,7 @@ studyXXV = \new Voice \relative a' {
   a16-.->-4 \FisDFis \AFisDFis a-.->-4 \FisDFis |
   b-.-> \FisDFis \AFisDFis a-.->-4 \FisDFis |
   %% 3
-  a-.->-4 \FisDFis \AFisDFis d'-.->-3 fis,( d-0 fis) |
+  a-.->-4 \FisDFis \AFisDFis d'-.->-3 fis,( d\open fis) |
   a-.->-4 \FisDFis \AFisDFis a-.->-4 \FisDFis |
   %% 5
   a-.->-4 \GEG \AGEG a-.->-4 \GEG |
@@ -1133,28 +1133,28 @@ studyXXV = \new Voice \relative a' {
   a-.->-4 \GEG \AGEG e'-.-4 g,( e g) |
   a-.->-4 \GEG \AGEG a-.->-4 \GEG |
   %% 9
-  fis'-.->-1 a,-4( fis a) d,-.-0 a'-4( fis a-4) d-.->-3 a-4( fis a-4) |
+  fis'-.->-1 a,-4( fis a) d,-.\open a'-4( fis a-4) d-.->-3 a-4( fis a-4) |
   d-.-> a-4( fis a-4) d,-. a'-4( fis a-4) cis-.->-2 a-4( fis a-4) |
   cis-.-> \GEG b,-. g'( e g) b-.-> \GEG |
-  b-.-> g( d-0 g) g,-. g'( d-0 g) b-.-> g( d-0 g) |
+  b-.-> g( d\open g) g,-. g'( d\open g) b-.-> g( d\open g) |
   %% 13
-  a-.->-4 \FisDFis \AFisDFis d'-.-> fis,( d-0 fis) |
+  a-.->-4 \FisDFis \AFisDFis d'-.-> fis,( d\open fis) |
   cis'-.-> \GEG a,-. g'( e g) e'-.->-4 g,( e g) |
   d'-.-> fis,( d fis) \AFisDFis b-.-> \FisDFis |
   a-.->-4 \FisDFis \AFisDFis a-.->-4 \FisDFis |
   %% 17
-  fis'-.->-1 a,-4( fis a-4) d,-.-0 a'-4( fis a-4) d-.-> a-4( fis a-4) |
-  d-.-> a-4( fis a-4) d,-.-0 a'-4( fis a-4) cis-.-> a-4( fis a-4) |
+  fis'-.->-1 a,-4( fis a-4) d,-.\open a'-4( fis a-4) d-.-> a-4( fis a-4) |
+  d-.-> a-4( fis a-4) d,-.\open a'-4( fis a-4) cis-.-> a-4( fis a-4) |
   cis-.-> \GEG b,-. g'( e g) b-.-> \GEG |
-  b-.-> g( d-0 g) g,-. g'( d g) b-.-> g( d g) |
+  b-.-> g( d\open g) g,-. g'( d g) b-.-> g( d g) |
   %% 21
-  a-.->-4 fis( d-0 fis) a,-. fis'( d-0 fis) a-.->-4 fis( d-0 fis) |
-  a-.->-4 f( d-0 f) a,-. f'( d-0 f) a-.->-4 f( d-0 f) |
-  \repeat percent 2 { b-.-> f( d-0 f) gis,-. f'( d-0 f) b-.-> f( d-0 f) } |
+  a-.->-4 fis( d\open fis) a,-. fis'( d\open fis) a-.->-4 fis( d\open fis) |
+  a-.->-4 f( d\open f) a,-. f'( d\open f) a-.->-4 f( d\open f) |
+  \repeat percent 2 { b-.-> f( d\open f) gis,-. f'( d\open f) b-.-> f( d\open f) } |
   %% 25
-  a-.->-4 \FisDFis \AFisDFis d'-.-> fis,( d-0 fis) |
+  a-.->-4 \FisDFis \AFisDFis d'-.-> fis,( d\open fis) |
   cis'-.-> \GEG a,-. g'( e g) e'-.->-4 g,( e cis') |
-  d-.-> fis( a fis) d-. a-0( fis a-4) g-. e( cis a) | d4 r r \bar "|."
+  d-.-> fis( a fis) d-. a\open( fis a-4) g-. e( cis a) | d4 r r \bar "|."
 }
 
 
@@ -1166,28 +1166,28 @@ studyXXVI = \new Voice \relative a' {
   \tempo "Allegro." 4=123
   \key g \major
 
-  r8 d\mf\downbow( b c d b' g e-0 | d) b( g a-0 b d c e-4 |
+  r8 d\mf\downbow( b c d b' g e\open | d) b( g a\open b d c e-4 |
   %% 3
-  d) b( g b d b' g e-0 | d) b( g a-0 b d c e-4 |
+  d) b( g b d b' g e\open | d) b( g a\open b d c e-4 |
   \repeat unfold 2 {
-    d) b( g a-0 b g d-0 c | b) d-4( c e d-0 g b e-4 |
+    d) b( g a\open b g d\open c | b) d-4( c e d\open g b e-4 |
   }
   %% 9
-  d) b( g a-0 b g d-0 e'-4 | d) b( g' e-0 d b g' e-0 |
-  d) b( g a-0 b g d e'-4 | d) b( g' e-0 d b g' a |
+  d) b( g a\open b g d\open e'-4 | d) b( g' e\open d b g' e\open |
+  d) b( g a\open b g d e'-4 | d) b( g' e\open d b g' a |
   %% 13
   \repeat unfold 2 {g) d( b a' g d b a'} | g) d( b c d b g e'-4 |
   %% 16
-  d) b( g a-0 b g d-0 c' | b) g( d-0 c' b g d-0 c' |
-  b) g( d-0 fis g d b c | d-4) b( g a b d g a-4 |
+  d) b( g a\open b g d\open c' | b) g( d\open c' b g d\open c' |
+  b) g( d\open fis g d b c | d-4) b( g a b d g a-4 |
   %% 20
-  g) d-0( b c d g b c | b) g( d-0 fis g b d e-4 | d) b( g a b d g a |
+  g) d\open( b c d g b c | b) g( d\open fis g b d e-4 | d) b( g a b d g a |
   g) d( b a' g d b a' | g) d( b a' g d b-1 b' | g) d( b c d b g e'-4 |
   %% 26
-  d) b( g a-0 b g d-0 e'-4 | d) b( g b d b g' e-0 |
+  d) b( g a\open b g d\open e'-4 | d) b( g b d b g' e\open |
   %% 28
   d) b( g b d b g' b | g) d( b g' d b g e'-4 |
-  d) b( g a-0 b-\rit g d c) | b1~ | b4 r r2 \bar "|."
+  d) b( g a\open b-\rit g d c) | b1~ | b4 r r2 \bar "|."
 }
 
 studyXXVIIprologI = ##f
@@ -1201,55 +1201,55 @@ studyXXVII = \new Voice \relative a'' {
   g8\upbow( fis g) g, e'-4 e,-1 | d'-3 d, b'-1 b, g' g, |
   %% 3
   e''-4( dis e-4) e, c' c,-3 | a'-4 a, c'-2 c, e'-4 e, |
-  d'( cis e-4) e,-1 d'-3 d,-0 | c' d, <c' a'> d, <c' a'> d, |
+  d'( cis e-4) e,-1 d'-3 d,\open | c' d, <c' a'> d, <c' a'> d, |
   d'( cis e-4) e,-1 d' d, | b' g, <b'_1 b'> g, <b' b'> g, |
   %% 9
-  b''( a g) g,-3 e'-4 e,-1 | d'-3 d,-0 b'-1 b, g' g, |
+  b''( a g) g,-3 e'-4 e,-1 | d'-3 d,\open b'-1 b, g' g, |
   %% 11
   e''-4( dis e-4) e,-1 c' c, | a'-4 a, c'-2 c,-3 e'-4 e,-1 |
-  d'( cis e-4) e, d' d,-0 | a''( gis b) c, a' c, |
+  d'( cis e-4) e, d' d,\open | a''( gis b) c, a' c, |
   %% 15
   g'( fis g) b, d d, | g r <g, d' b' g'> r r4 |
   %% 17
   g''8\upbow( fis g) g,-3 e'-4 e, | b'-1 b,-2 e'-4 e, g' g,-3 |
-  fis'( g a) a,-0 fis' fis,-2 | a' a,-0 g' g,-3 g' g, |
+  fis'( g a) a,\open fis' fis,-2 | a' a,\open g' g,-3 g' g, |
   %% 21
   e'-4( dis e-4) e,-1 b' b, | g'-3 g, b'-1 b, e'-4 e, |
   c'( d e-4) e,-1 c' c,-3 | c'-2 c, b' b,-2 b' b, |
   %% 25
   b' b, e'-4 e, g' g,-3 | fis'-1 fis,-2 e'-4 e, e' e, |
   %% 27
-  d'( fis b) b, a' a, | a' a,-0 g'-2 g,-3 g'-2 g, |
+  d'( fis b) b, a' a, | a' a,\open g'-2 g,-3 g'-2 g, |
   %% 29
   b b,-2 e'-4 e, g' g, | fis' fis, e'-4 e,-1 e' e, |
   %% 31
-  d'( fis b) b, a' a, | a' a,-0 g' g,-3 g'-2 g, |
+  d'( fis b) b, a' a, | a' a,\open g' g,-3 g'-2 g, |
   %% 33
-  b'-4 b,-1 a' a,-0 g' g,-3 | fis' fis, e'-4 e,-1 d' d,-0 |
+  b'-4 b,-1 a' a,\open g' g,-3 | fis' fis, e'-4 e,-1 d' d,\open |
   %% 35
-  a''-3 a,-0 g' g, fis' fis, | e' e, d' d,-0 c'-2 c,-3 |
+  a''-3 a,\open g' g, fis' fis, | e' e, d' d,\open c'-2 c,-3 |
   %% 37
-  g'' g, fis' fis, e'-4 e, | d' d,-0 c' c, b' b,-2 |
-  e'-4 e, d' d,-0 c' c,( | b) b'-1 c, c'-2 b, b'-1 |
+  g'' g, fis' fis, e'-4 e, | d' d,\open c' c, b' b,-2 |
+  e'-4 e, d' d,\open c' c,( | b) b'-1 c, c'-2 b, b'-1 |
   %% 41
-  g,-0 b''-4 g b fis b | e, b' d, b' d, b' |
+  g,\open b''-4 g b fis b | e, b' d, b' d, b' |
   %% 43
-  g,,-0 b''-4 g,-3 b' fis,-2 b' | e,,-1 b'' d,,-0 b'' d,, b''( |
-  a g fis) fis,-2 e'-4 e,-1 | d'-3 d,-0 fis'-1 fis, a' a, |
-  a'( g fis) fis,-2 e'-4 e,-1 | d'-3 d,-0 fis'-1 fis,-2 a'-3 a,,-1( |
+  g,,\open b''-4 g,-3 b' fis,-2 b' | e,,-1 b'' d,,\open b'' d,, b''( |
+  a g fis) fis,-2 e'-4 e,-1 | d'-3 d,\open fis'-1 fis, a' a, |
+  a'( g fis) fis,-2 e'-4 e,-1 | d'-3 d,\open fis'-1 fis,-2 a'-3 a,,-1( |
   %% 49
   g) b'' g b fis b | e, b' d, b' d, b' | g,, b'' g,-3 b' fis, b' |
   %% 52
-  e,,-1 b'' d,,-0 b'' d,, b''( | a g fis) fis, e' e, |
-  d'-3 d,-0 fis' fis,-2 a' a,-0 | a'( g fis) fis,-2 e'-4 e, |
-  d' d,-0 fis' fis, a' a, | a'( g fis) fis, fis' fis, |
+  e,,-1 b'' d,,\open b'' d,, b''( | a g fis) fis, e' e, |
+  d'-3 d,\open fis' fis,-2 a' a,\open | a'( g fis) fis,-2 e'-4 e, |
+  d' d,\open fis' fis, a' a, | a'( g fis) fis, fis' fis, |
   a'\p( g fis) fis, fis' fis, | a'( g fis) d, g'\< d, |
   %% 60
   gis'-2 d, a''-3 d,, ais''-3 d,, | b''\f( a g) g,-3 e'-4 e, |
   %% 62
   d' d, b' b, g' g, | e''-4( dis e) e, c' c, |
   a'-4 a, c' c,-3 e'-4 e, | d'( cis e-4) e, d' d, |
-  c'-2 d,-0 <c' a'> d, <c' a'> d, | d'( cis e) e, d' d, |
+  c'-2 d,\open <c' a'> d, <c' a'> d, | d'( cis e) e, d' d, |
   %% 68
   b' g, <b'-1 b'> g, <b'-1 b'> g, | b''( a g) g, e' e, |
   %% 70
@@ -1269,20 +1269,20 @@ studyXXVIII = \new Voice \relative c' {
   \key g \major
 
   \repeat volta 2 {
-    << { \voiceTwo d1-0\f( }
-       \new Voice { \voiceOne c'8 d e-4 d c b c a-0 } >> \oneVoice |
+    << { \voiceTwo d1\open\f( }
+       \new Voice { \voiceOne c'8 d e-4 d c b c a\open } >> \oneVoice |
     <b d,>4-.) d,-. g-. b,-. |
     %% 3
-    <c-3 d-0>-. <c d>-. << {\voiceOne d2-0(}
+    <c-3 d\open>-. <c d>-. << {\voiceOne d2\open(}
 			   \new Voice {\voiceTwo a8-1 b c a} >> \oneVoice |
     %% 4
     <d b>4-.) <d b>-. <g g,>-. <g-3 b-1>-. |
     %% 5
-    << { \voiceTwo d1-0( }
-       \new Voice { \voiceOne c'8-2 d e-4 d c b c a-0 } >> \oneVoice |
+    << { \voiceTwo d1\open( }
+       \new Voice { \voiceOne c'8-2 d e-4 d c b c a\open } >> \oneVoice |
     <b d,>4-.) <d, b'>-. <g-3 b,-2>-. <d b>-. |
     %% 7
-    <c-3 e-1>-. <e c'>-. <c' e>-. <d,-0 c'-2 fis-1> |
+    <c-3 e-1>-. <e c'>-. <c' e>-. <d,\open c'-2 fis-1> |
     %% 8
     <g, d' b' g'> d''8 b g4 r
   }
@@ -1293,9 +1293,9 @@ studyXXVIII = \new Voice \relative c' {
     << {\voiceOne e'2(}
        \new Voice {\voiceTwo b8 d c b} >> \oneVoice <c e>4) a' |
     %% 11
-    d,,8-0( fis) a-0 c b a-0 g4 |
+    d,,8\open( fis) a\open c b a\open g4 |
     %% 12
-    << {\voiceOne d2-0~}
+    << {\voiceOne d2\open~}
        \new Voice {\voiceTwo a8-1 c b a} >> \oneVoice <d b>4 g |
     %% 13
     <a,-1 g'-3 cis-2>8( d') e-4 d cis( b) a b |
@@ -1303,7 +1303,7 @@ studyXXVIII = \new Voice \relative c' {
     cis( d) e fis g a b4 |
     %% 15
     << {\voiceOne g8( a b a g a b a)}
-       \new Voice {\voiceTwo a,1-0} >> \oneVoice |
+       \new Voice {\voiceTwo a,1\open} >> \oneVoice |
     %% 16
     <a g'>8( fis') e-\rit d cis2\fermata |
     %% 17
@@ -1315,13 +1315,13 @@ studyXXVIII = \new Voice \relative c' {
     <c d>4-. <c d>-. << {\voiceOne d2( }
 			\new Voice {\voiceTwo a8 b c a} >> \oneVoice |
     %% 20
-    <b d>4) <b d>-. <g-0 g'-3>-. <g'-3 b-1>-. |
+    <b d>4) <b d>-. <g\open g'-3>-. <g'-3 b-1>-. |
     %% 21
     << { \voiceTwo d1( }
        \new Voice { \voiceOne c'8 d e d c b d a } >> \oneVoice |
     <b d,>4-.) <d, b'>-. <b-2 g'-3>-. <d b>-. |
     %% 23
-    <c e> <e c'>-. <c' e>-. <d,-0 c'-2 fis-1> |
+    <c e> <e c'>-. <c' e>-. <d,\open c'-2 fis-1> |
     %% 24
     <g, d' b' g'> d''8 b g4 r
   }
@@ -1337,73 +1337,73 @@ studyXXIX = \new Voice \relative a {
 
   a4->~\f( a16 cis e a-4) a( e cis a) |
   %% 2
-  cis4->~( cis16 e a-0 cis) cis( a e cis) |
-  e4->~( e16 a-0 cis e-4) e( cis a e) |
+  cis4->~( cis16 e a\open cis) cis( a e cis) |
+  e4->~( e16 a\open cis e-4) e( cis a e) |
   %% 4
-  a4-0->~( a16 cis e-0 a) a( e-0 cis a-0) |
+  a4->\open~( a16 cis e\open a) a( e\open cis a\open) |
   fis4->~( fis16 a d fis) fis( d a fis) |
   %% 6
   e4->~( e16 a cis e-4) e( cis a e) |
-  d4-0->~( d16 gis b d) d( b gis d) |
+  d4->\open~( d16 gis b d) d( b gis d) |
   %% 8
-  cis4->~( cis16 e a-0 cis) cis( a e cis) |
+  cis4->~( cis16 e a\open cis) cis( a e cis) |
   b4->~( b16 e gis b) b( gis e b) |
   %% 10
   e4->~( e16 gis b e-4) e( b gis e) |
-  gis4->~( gis16 b e-0 gis) gis( e b gis) |
+  gis4->~( gis16 b e\open gis) gis( e b gis) |
   %% 12
-  fis4->~( fis16 a dis-3 fis) fis( dis-3 a-0 fis) |
+  fis4->~( fis16 a dis-3 fis) fis( dis-3 a\open fis) |
   e4->~( e16 gis b e-4) e( b gis e) |
   %% 14
-  gis4->~( gis16 b e-0 gis) gis( e b gis) |
-  b4->~( b16 e gis b) b( gis e-0 b) |
+  gis4->~( gis16 b e\open gis) gis( e b gis) |
+  b4->~( b16 e gis b) b( gis e\open b) |
   %% 16
-  d,4-0->~( d16 e gis fis) e( d-0 cis b) |
+  d,4->\open~( d16 e gis fis) e( d\open cis b) |
   a4->~( a16 cis e a-4) a( e cis a) |
   %% 18
-  cis4->~( cis16 e a-0 cis) cis( a e cis) |
+  cis4->~( cis16 e a\open cis) cis( a e cis) |
   e4->~( e16 a cis e-4) e( cis a e) |
   %% 20
-  g4->~( g16 cis-2 e g) g( e-0 cis g) |
-  fis4->~( fis16 a-0 d fis) fis( d a-0 fis) |
+  g4->~( g16 cis-2 e g) g( e\open cis g) |
+  fis4->~( fis16 a\open d fis) fis( d a\open fis) |
   %% 22
   b4->~( b16 d fis b) b( fis d b) |
-  gis4->~( gis16 b e-0 gis) gis( e b gis) |
+  gis4->~( gis16 b e\open gis) gis( e b gis) |
   %% 24
   e4->~( e16 gis b e-4) e( b gis e) |
-  a4-0->~( a16 cis e-0 a) a( e cis a) |
+  a4->\open~( a16 cis e\open a) a( e cis a) |
   %% 26
-  gis4->~( gis16 cis-2 e gis) gis( e-0 cis gis) |
+  gis4->~( gis16 cis-2 e gis) gis( e\open cis gis) |
   fis4->~( fis16 b d fis) fis( d b fis) |
   %% 28
   b4->~( b16 d fis b) b( fis d b) |
-  a4-0->~( a16 cis e-0 a) a( e cis a) |
+  a4->\open~( a16 cis e\open a) a( e cis a) |
   %% 30
   gis4->~( gis16 b d gis) gis( d b gis) |
-  a4-0->~( a16 cis e a) a( e cis a) |
+  a4->\open~( a16 cis e a) a( e cis a) |
   %% 32
-  e4->~( e16 a-0 cis e-4) e( cis a-0 e) |
+  e4->~( e16 a\open cis e-4) e( cis a\open e) |
   fis4->~( fis16 b-1 d fis-1) fis( d b fis) |
   %% 34
   gis4->~( gis16 b d gis) gis( d b gis) |
-  a4-0->~( a16 cis e-0 a) a( e cis a) |
+  a4->\open~( a16 cis e\open a) a( e cis a) |
   %% 36
-  e4->~( e16 a cis e-4) e( cis a-0 e) |
+  e4->~( e16 a cis e-4) e( cis a\open e) |
   fis4->~( fis16 b d fis) fis( d b fis) |
   %% 38
   gis4->~( gis16 b d gis) gis( d b gis) |
-  a4-0->~( a16 cis e-0 a) a( e cis a) |
+  a4->\open~( a16 cis e\open a) a( e cis a) |
   %% 40
-  fis4->~( fis16 a-0 cis fis) fis( cis a fis) |
+  fis4->~( fis16 a\open cis fis) fis( cis a fis) |
   e4->~( e16 a cis e-4) e( cis a e) |
   %% 42
-  cis4->~( cis16 e a-0 cis-2) cis( a e cis) |
+  cis4->~( cis16 e a\open cis-2) cis( a e cis) |
   a4->~( a16 cis e a-4) a( e cis a) |
   %% 44
-  fis'4->~( fis16 a-0 cis-2 fis) fis( cis a fis) |
-  e4->~( e16 a-0 cis e-4) e( cis a e) |
+  fis'4->~( fis16 a\open cis-2 fis) fis( cis a fis) |
+  e4->~( e16 a\open cis e-4) e( cis a e) |
   %% 46
-  cis4->~( cis16 e a-0 cis) cis( a-0 e cis) |
+  cis4->~( cis16 e a\open cis) cis( a\open e cis) |
   a4 r r \bar "|."
 }
 
@@ -1417,41 +1417,41 @@ studyXXX = \new Voice \relative a {
 
   \partial 4. b8\upbow\mf( c-3 cis-3) |
   %% 1
-  d-0( fis a c fis-1 c'-4 a-3 fis) |
-  g( fis g a b b, e-4 d) | c( b c d e-4 fis, b a-0) |
+  d\open( fis a c fis-1 c'-4 a-3 fis) |
+  g( fis g a b b, e-4 d) | c( b c d e-4 fis, b a\open) |
   %% 4
-  g( fis g a-0 b g fis e) | d( fis a c fis-1 c'-4 b-4 a) |
+  g( fis g a\open b g fis e) | d( fis a c fis-1 c'-4 b-4 a) |
   %% 6
-  g( fis g a b b,-1 f'-4 e-4) | d( c b a-0 g fis e fis) |
-  a-4( g d-0 b g) r r4 |
+  g( fis g a b b,-1 f'-4 e-4) | d( c b a\open g fis e fis) |
+  a-4( g d\open b g) r r4 |
   %% 9
-  \repeat percent 2 { cis'8( e-0 g a b a g e) } |
-  d( fis gis a b a fis d) | cis( d e-4 d b a-0 fis d-0) |
+  \repeat percent 2 { cis'8( e\open g a b a g e) } |
+  d( fis gis a b a fis d) | cis( d e-4 d b a\open fis d\open) |
   %% 13
   \repeat percent 2 {cis'( e g a b a g e)} |
-  d( fis gis a b a fis d) | cis( d e-4 d b a fis d-0) |
+  d( fis gis a b a fis d) | cis( d e-4 d b a fis d\open) |
   %% 17
-  \repeat percent 2 {c''-4( a-3 fis d c a-0 fis d)} |
-  b''( a g fis g fis e dis) | e-4( d c b a-0 g fis e) |
+  \repeat percent 2 {c''-4( a-3 fis d c a\open fis d)} |
+  b''( a g fis g fis e dis) | e-4( d c b a\open g fis e) |
   %% 21
-  d( fis g a-0 b d e-4 d) | c( a-0 c fis a b-4 c-4 a-3) |
-  g( b g d b g d-0 b) | g( b d-4 b g) r r4 |
+  d( fis g a\open b d e-4 d) | c( a\open c fis a b-4 c-4 a-3) |
+  g( b g d b g d\open b) | g( b d-4 b g) r r4 |
   %% 25
   \repeat percent 2 {g8( d' b'-2 f'-1 g f-1 b,-2 d,)} |
   g,( c e g c b c d) | e-4( d c b c b a g) |
   %% 29
-  \repeat percent 2 {g,( e'-2 bes'-1 cis e-0 cis bes e,-2)} |
+  \repeat percent 2 {g,( e'-2 bes'-1 cis e\open cis bes e,-2)} |
   %% 31
   g,( b d g b d b' a) | g( fis e d c b a g) |
   %% 33
   \repeat percent 2 { g,( d' b'-2 f'-1 g f-1 b,-2 d,)} |
   g,( c e g c b c d) | e( d c b c b a g) |
   %% 37
-  \repeat percent 2 {g,( e'-2 bes'-1 cis-3 e-0 cis bes e,-2)} |
+  \repeat percent 2 {g,( e'-2 bes'-1 cis-3 e\open cis bes e,-2)} |
   g,( b d g b d g fis) | e( d c b a g fis e) |
   %% 41
   d( fis a c fis c'-4 a-3 fis) | g( fis g a b b, e-4 d) |
-  c( b c d e-4 fis, b a-0) | g( fis g a b g fis e) |
+  c( b c d e-4 fis, b a\open) | g( fis g a b g fis e) |
   %% 45
   d( fis a c fis c'-4 b-4 a) | g( fis g a b a g fis) |
   e( d cis b a g fis e) | d( e fis e d c b a) | g( b e d c fis b a) |
@@ -1463,10 +1463,10 @@ studyXXX = \new Voice \relative a {
   %% 57
   g( bes cis e g bes cis e) | g( fis g a bes a bes cis,) |
   %% 59
-  d( b' a g fis c'-4 a-3 fis) | g( d b g fis d-0 e fis) |
-  g( b d g fis c'-4 a-3 fis) | g( d b g fis d-0 e fis) |
+  d( b' a g fis c'-4 a-3 fis) | g( d b g fis d\open e fis) |
+  g( b d g fis c'-4 a-3 fis) | g( d b g fis d\open e fis) |
   %% 63
-  g( d e fis g b c d) | e-4( d e-0 fis g fis g a) | b r r4 r2 |
+  g( d e fis g b c d) | e-4( d e\open fis g fis g a) | b r r4 r2 |
   <g,, d' b' g'>4\ff r <g d' b' b'> r | <g g'>1~ | <g g'>4 r r2 \bar "|."
 }
 
@@ -1523,17 +1523,17 @@ studyXXXII = \new Voice \relative g {
   %% 25
   c1-4 | c,-1 | e'-2 | c,-1 | g''-4 | c,,-1 | c''2-3 bes8( a bes c |
   %% 32
-  a4) f d a-0 | d-1 f a d | b f d b | g-1 d-0 f8-2( e f g |
+  a4) f d a\open | d-1 f a d | b f d b | g-1 d\open f8-2( e f g |
   %% 36
   e4) g, c-1 e | g c bes8( a bes c | a4) f-4 a c | f8-3( e) f g f4 b |
   %% 40
   c1 | c,,2-1 c'-4 | c,-1 e'-2 | c,-1 g''-4 | c,,-1 c''-3 |
   %% 45
-  d,,4-0 fis-2 a-0 d-1 | fis a d c | b8( a) b c d4 g,,,( | b) d g f |
+  d,,4\open fis-2 a\open d-1 | fis a d c | b8( a) b c d4 g,,,( | b) d g f |
   %% 49
   e8( d) e f g4 e'-4( | d) fis b a | g2~ g8 d, e fis | g2~g8 d e fis |
   %% 53
-  g4 b d g | b d,,-0 g-1 b | d f b c | d1~ | d4 r r8 g,,,8\upbow a b |
+  g4 b d g | b d,,\open g-1 b | d f b c | d1~ | d4 r r8 g,,,8\upbow a b |
   %% 58
   c2 g | c g | c-1 e | g c | c,4 e g c | e g c8( b) c d | c1 |
   %% 65
@@ -1554,60 +1554,60 @@ studyXXXIII = \new Voice \relative d' {
   \tempo "Allegro moderato." 4=123
   \key g \major
 
-  \partial 4 d4-0\upbow\f | \repeat percent 2 {g2.-1 d8-0 d} |
+  \partial 4 d4\open\upbow\f | \repeat percent 2 {g2.-1 d8\open d} |
   %% 3
   g4-1 a-2 b-3 a-2 | g2-1 g'-4 | fis4 e d c-4 | b a g b |
   %% 7
-  a d-1 fis e | d r r d,-0 | \repeat percent 2 {g2.-1 d8-0 d} |
+  a d-1 fis e | d r r d,\open | \repeat percent 2 {g2.-1 d8\open d} |
   %% 11
-  g8-1( d-0) a'-2 d,-0 b'-3( d,-0) a'-2 d,-0 | g4-1 g, g'-1 g'-4 |
+  g8-1( d\open) a'-2 d,\open b'-3( d,\open) a'-2 d,\open | g4-1 g, g'-1 g'-4 |
   %% 13
   fis8( g) fis e d4 c-4 | b8 c b a g4 b'-2 | a8( d b d) c d b d |
   %% 16
-  a-.-1 g-4( fis e d4) b' | a8( d b d) c d b d | a-. g-4( fis e d4) d,-0 |
+  a-.-1 g-4( fis e d4) b' | a8( d b d) c d b d | a-. g-4( fis e d4) d,\open |
   %% 19
-  g8-1( a b c) d4 b' | a8-. g( fis e d4) d,-0 | g8-1( a b c) d4 b' |
+  g8-1( a b c) d4 b' | a8-. g( fis e d4) d,\open | g8-1( a b c) d4 b' |
   %% 22
   a8-. g( fis e d) d'( b d | \repeat unfold 2 { a) d( b d a) d( b d } |
   %% 25
-  a4) r <d,, d' d'>\downbow r | <d d' d'>\downbow r r d-0\upbow | g2.-1 d8-2 d |
+  a4) r <d,, d' d'>\downbow r | <d d' d'>\downbow r r d\open\upbow | g2.-1 d8-2 d |
   %% 28
-  g2.-1 d8-0 d | g4-1 a b a | g2-1 d''-4 | c4 b a g-4 | fis e d c-4 |
+  g2.-1 d8\open d | g4-1 a b a | g2-1 d''-4 | c4 b a g-4 | fis e d c-4 |
   %% 33
-  b d,8-0 g-1 b4( a) | g8-1 a b c d e fis g | a b c b a g-4 fis e |
+  b d,8\open g-1 b4( a) | g8-1 a b c d e fis g | a b c b a g-4 fis e |
   %% 36
-  d-1 e fis e d c-4 b a | g2-1 d-0 | g8-1( a) b c d( e) fis g |
+  d-1 e fis e d c-4 b a | g2-1 d\open | g8-1( a) b c d( e) fis g |
   %% 39
   a( b) c b a( g-4) fis e | d( e) fis e d( c-4) b a | g( b) d g g,4 g,( |
   %% 42
   c2.-1) e4-3( | g2.) g4( | b2.-3) d4( | g2.-4) g,,4( | c2.-1) e4( |
   %% 47
-  g2.) g4( | b2.) d4( | g2.) b4( | d a) a a | b2( g8-4) r b,-3( d,-0 |
+  g2.) g4( | b2.) d4( | g2.) b4( | d a) a a | b2( g8-4) r b,-3( d,\open |
   %% 52
-  a'-2 d,-0 b'-3 d,-0 c'-4 d,-0 a'-2 d,-0) |
-  b'-3( d,-0 a'-2 d,-0) g-1 r b'4( | d a) a a |
+  a'-2 d,\open b'-3 d,\open c'-4 d,\open a'-2 d,\open) |
+  b'-3( d,\open a'-2 d,\open) g-1 r b'4( | d a) a a |
   %% 55
-  b2( g8-4) r b,8-3( d,-0 | c'-4 d,-0 b' d, c' d, a' d, |
-  g) r r4 r d-0 | g2.-1 d8-2 d | g2.-1 d8-0 d |
+  b2( g8-4) r b,8-3( d,\open | c'-4 d,\open b' d, c' d, a' d, |
+  g) r r4 r d\open | g2.-1 d8-2 d | g2.-1 d8\open d |
   %% 60
-  g-1( d-0 a'-2 d, b'-3 d, a'-2 d,) | g2.-1( g'4-4) |
-  fis8( g) fis e d( e) d c-4 | b( c) b a g( d-0) g-1 b | a4-2 d-1 fis e |
+  g-1( d\open a'-2 d, b'-3 d, a'-2 d,) | g2.-1( g'4-4) |
+  fis8( g) fis e d( e) d c-4 | b( c) b a g( d\open) g-1 b | a4-2 d-1 fis e |
   %% 65
-  d r r d,-0 | fis2.-2 a8-0 a | d2.-1 d,8-0 d | g2.-1 b8-3 b |
+  d r r d,\open | fis2.-2 a8\open a | d2.-1 d,8\open d | g2.-1 b8-3 b |
   %% 69
-  d2.-1 d,8-0 d | fis4-2 fis2-> a4-0 | d-1 d2-> d,4-0 | g-1 g2-> b4-3 |
+  d2.-1 d,8\open d | fis4-2 fis2-> a4\open | d-1 d2-> d,4\open | g-1 g2-> b4-3 |
   %% 73
-  d-1 d2-> d,4-0 | g8-1( a) b c-4 d( e) fis g | a( b) c b a( g) fis e |
+  d-1 d2-> d,4\open | g8-1( a) b c-4 d( e) fis g | a( b) c b a( g) fis e |
   %% 76
-  d( e) fis e d( c) b a | g( a) b g d2-0 | g8-1( a b c d e fis g) |
+  d( e) fis e d( c) b a | g( a) b g d2\open | g8-1( a b c d e fis g) |
   a( b c b a g fis e) | d( e fis e d c b a |
   %% 81
-  g) d-0( ees-1 d e d fis d | g) d-4( c d b d a d |
+  g) d\open( ees-1 d e d fis d | g) d-4( c d b d a d |
   %% 83
-  g,) d'-0( ees d e d fis d | g) d-4( c d b d a d | g,4) g'-1( b d |
+  g,) d'\open( ees d e d fis d | g) d-4( c d b d a d | g,4) g'-1( b d |
   ees) d( fis d | g) g,( b d | e) d( fis d | g) g,( b d |
   ees) d( fis d | g8) d( ees d e d fis d | g) d( ees d e d fis d |
-  g) r r4 r d,-0\upbow | g-1 b d g | b g d b |
+  g) r r4 r d,\open\upbow | g-1 b d g | b g d b |
   g r <g, d' b' b'>\downbow r | <g d' b' g'>\downbow r r2 \bar "|."
 }
 
@@ -1664,34 +1664,34 @@ studyXXXIV = \new Voice \relative d'' {
 
   d8-1\f fis a d cis d | d, g b d cis d | d, fis a d cis d |
   %% 4
-  a,-0 d-3 fis a b a | g e cis a g e | cis e a cis e g |
-  fis b a fis d a | b' a g e cis a-0 | d-1 fis a d cis d |
+  a,\open d-3 fis a b a | g e cis a g e | cis e a cis e g |
+  fis b a fis d a | b' a g e cis a\open | d-1 fis a d cis d |
   %% 10
-  d, fis b d cis d | e,-2 gis b d cis d | e,-0 b'-2 cis d cis b |
-  cis-3 e,-0 a-1 cis b a | gis-4 fis e d cis-4 b | a cis e  a b a |
+  d, fis b d cis d | e,-2 gis b d cis d | e,\open b'-2 cis d cis b |
+  cis-3 e,\open a-1 cis b a | gis-4 fis e d cis-4 b | a cis e  a b a |
   %% 16
   cis b a g fis e | d fis a d cis d | d, g b d cis d |
   %% 19
-  d, fis a d cis d | a,-0 d-3 fis a b a | g e cis a g e |
+  d, fis a d cis d | a,\open d-3 fis a b a | g e cis a g e |
   %% 22
-  cis e a cis e g | fis b a g e a,-0 | d-1 fis a d d, d' |
+  cis e a cis e g | fis b a g e a,\open | d-1 fis a d d, d' |
   d, ees d f g f | bes c bes d c bes | a bes a c d c |
   %% 28
   ees, f ees g f ees | d ees d f g f | bes c bes d c bes |
   %% 31
   a bes a c d c | d, ees d c-4 bes a | g bes d g fis g |
-  g, c ees g fis g | g, bes d g fis g | d,-0 g-1 bes d ees d |
+  g, c ees g fis g | g, bes d g fis g | d,\open g-1 bes d ees d |
   %% 37
   ees d e d fis d | g d g d gis d | a' e cis a cis e |
   %% 40
   a b a g fis e | d fis a d cis d | d, g b d cis d |
   %% 43
-  d, fis a d cis d | a,-0 d-3 fis a b a | g e cis a g e |
+  d, fis a d cis d | a,\open d-3 fis a b a | g e cis a g e |
   cis e a cis e g | fis b a fis d a | b' a g e cis a |
   %% 49
   d fis a d cis d | d, fis a c b c | b d b g d b |
   %% 52
-  g b d g fis g | a,-0 d-1 fis a b a | cis b a g fis e |
+  g b d g fis g | a,\open d-1 fis a b a | cis b a g fis e |
   d b-1 a g fis e | d4 r8 r4. \bar "|."
 }
 
@@ -1715,7 +1715,7 @@ studyXXXV = \new Voice \relative g {
   e4-.) g-. c-. | b-. \tuplet 3/2 4 {g,8( a b c b a} |
   %% 10
   g4-.) g'-. f-. | e-. \tuplet 3/2 4 {c,8( d e f e d} |
-  c4-.) b'-. c-. | a-. \tuplet 3/2 4 {d,8-0( e fis g fis e} |
+  c4-.) b'-. c-. | a-. \tuplet 3/2 4 {d,8\open( e fis g fis e} |
   d4-.) d'-. c-. | b-. \tuplet 3/2 4 {b8( g' f d b g} |
   %% 16
   f4-.) \tuplet 3/2 4 {f8( d b g a b} |
@@ -1727,11 +1727,11 @@ studyXXXV = \new Voice \relative g {
   c4-.) f-. a-. | g-. \tuplet 3/2 4 {e'8( f e d e f} |
   %% 24
   e4-.) g-. c-. | a-. \tuplet 3/2 4 {d,,8-2( cis d e d cis} |
-  d4-.) fis-. a-. | b-. \tuplet 3/2 4 {d,8-0( e fis g fis e} |
+  d4-.) fis-. a-. | b-. \tuplet 3/2 4 {d,8\open( e fis g fis e} |
   d4-.) d'-. b'-. | a-. \tuplet 3/2 4 {c,8( d c b c b} |
   %% 30
   c4-.) b'-. a-. | g-. \tuplet 3/2 4 {g,8( fis g a_4 g fis} |
-  g4-.) b,-. e-. | d-.-0 \tuplet 3/2 4 {c'8( b d c b d} |
+  g4-.) b,-. e-. | d-.\open \tuplet 3/2 4 {c'8( b d c b d} |
   %% 34
   c4-.) fis-. a-. | b-. \tuplet 3/2 4 {g,8( fis a_4 g fis a} |
   g4-.) b,-. e-. | d-. \tuplet 3/2 4 {c'8( b d c b d} |
@@ -1763,7 +1763,7 @@ studyXXXV = \new Voice \relative g {
   a-. \tuplet 3/2 4 {c,8( d e f e d} | c4-.) f-. a-. |
   %% 71
   g-. \tuplet 3/2 4 {e'8( f e d e f} | e4-.) g-. c-. |
-  a-. \tuplet 3/2 4 {f8( g f e f g} | f4-.) a,-.-0 d-.-3 |
+  a-. \tuplet 3/2 4 {f8( g f e f g} | f4-.) a,-.\open d-.-3 |
   %% 75
   c-. \tuplet 3/2 4 {g8( a_4 g fis g a} | g4-.) e-. c-. |
   g-. \tuplet 3/2 4 {f'8( g f e f g} | f4-.) a,-. b-. |
@@ -1777,8 +1777,8 @@ studyXXXV = \new Voice \relative g {
   g-. \tuplet 3/2 4 {g8( a b c b a} | g4-.) a-. b-. |
   c-. \tuplet 3/2 4 {e8( dis e f b d} |
   c4-.) \tuplet 3/2 4 {e,8( dis e f b d} |
-  c4-.) \tuplet 3/2 4 {c8( b c d c b} | c4-.) g,,-.-0 e'-.-3 |
-  c-.-1 \tuplet 3/2 4 {c''8( b c d c b} | c4-.) g,,-.-0 e'-.-3 |
+  c4-.) \tuplet 3/2 4 {c8( b c d c b} | c4-.) g,,-.\open e'-.-3 |
+  c-.-1 \tuplet 3/2 4 {c''8( b c d c b} | c4-.) g,,-.\open e'-.-3 |
   c-.-1 \tuplet 3/2 4 {c8( d e f e d} |
   c4-.) \tuplet 3/2 4 {c8-3( b a g a b} |
   c4-.) \tuplet 3/2 4 {c8( b c d-4 c b} | c4-.) r r \bar "|."
@@ -1792,31 +1792,31 @@ studyXXXVI = \new Voice \relative d' {
   \tempo "Moderato." 4=111
   \key d \major
 
-  d8-0\f fis a-0 d-1 fis a | d a fis d a-0 fis-2 | d g-1 b d g b |
-  d a fis d a-0 fis-2 | e g b e g b | a fis d a fis d |
+  d8\open\f fis a\open d-1 fis a | d a fis d a\open fis-2 | d g-1 b d g b |
+  d a fis d a\open fis-2 | e g b e g b | a fis d a fis d |
   %% 7
   a b cis d e fis | g a b e a g | fis g a-1 b cis d |
-  e,-2 fis g a b cis | d,-1 e fis g a b | a fis d a-0 fis-2 d |
+  e,-2 fis g a b cis | d,-1 e fis g a b | a fis d a\open fis-2 d |
   %% 13
   e fis g a b cis | d e fis g a-1 b | cis-3 d-4 cis b a g-2 |
   fis a, b cis d e | fis g a-1 b cis d | e,-2 fis g a b cis |
   %% 19
-  d,-1 e fis g a b | a fis d a-0 fis-2 d | b cis d e fis gis |
+  d,-1 e fis g a b | a fis d a\open fis-2 d | b cis d e fis gis |
   %% 22
-  a b cis d e fis | gis a-1 b cis d b | a e-0 cis a gis fis |
+  a b cis d e fis | gis a-1 b cis d b | a e\open cis a gis fis |
   \repeat unfold 2 {
     e gis b d gis b | a e cis a gis fis |
   }
   e fis e d cis b | a cis e a-4 gis fis |
   e gis b d cis b | a b a g fis e | d fis a d-1 fis a |
   %% 34
-  d a fis d a-0 fis | d-0 g-1 b d g b | d a fis d a-0 fis-2 |
-  e g b e-0 g b | a fis d a fis d | a b cis d e fis |
+  d a fis d a\open fis | d\open g-1 b d g b | d a fis d a\open fis-2 |
+  e g b e\open g b | a fis d a fis d | a b cis d e fis |
   %% 40
   g a cis e a g | fis g a-1 b cis d | e,-2 fis g a b cis |
-  d,-1 e fis g a b | a fis d a-0 fis-2 d | g, b e g b e-4 |
+  d,-1 e fis g a b | a fis d a\open fis-2 d | g, b e g b e-4 |
   %% 46
-  a,, cis e a cis a' | d,, fis a-0 d-1 fis a | d4 r r \bar "|."
+  a,, cis e a cis a' | d,, fis a\open d-1 fis a | d4 r r \bar "|."
 }
 
 studyXXXVIIprologI = ##f
@@ -1861,19 +1861,19 @@ studyXXXVIII = \new Voice \relative b' {
   f-. f( g f) e d c bes | a bes c bes a g f ees | d f bes d f, bes d f |
   %% 10
   bes, d f bes d,-1 f bes d | ees,-2 g bes ees-4 bes,-1 ees g bes |
-  g, bes ees g ees, g bes ees | e, g c e-4 g, c e-0 g |
+  g, bes ees g ees, g bes ees | e, g c e-4 g, c e\open g |
   %% 14
-  c, e-0 g c-4 bes, e-0 g bes | a,-0 c f a g f e d |
-  c bes a g f d c bes | a c f a-4 c, f a-0 c |
+  c, e\open g c-4 bes, e\open g bes | a,\open c f a g f e d |
+  c bes a g f d c bes | a c f a-4 c, f a\open c |
   %% 18
-  f, a-0 c f a,-0 c f a | d,-1 f bes c d c bes a | g-2 f e d c bes a g |
+  f, a\open c f a,\open c f a | d,-1 f bes c d c bes a | g-2 f e d c bes a g |
   %% 21
   f c f a c a c f | a f bes a g e a g | f a f d c f c bes |
   %% 24
-  a c a g f a-4 f ees | d-0 fis-2 a d fis, a-0 d fis |
+  a c a g f a-4 f ees | d\open fis-2 a d fis, a\open d fis |
   a, d fis a d,-1 fis a d | bes d bes a g-2 bes g d |
   %% 28
-  bes d bes a g f e d | c e g c e, g c e-4 | g, c e-0 g bes, e-0 g bes |
+  bes d bes a g f e d | c e g c e, g c e-4 | g, c e\open g bes, e\open g bes |
   %% 31
   a c-4 a g f a f c | a c a g f a c f-3 |
   ees-.-2 ees( f ees) d-. d( ees d) | c-2 bes a g f a c f-3 |
@@ -1907,7 +1907,7 @@ studyXXXIX = \new Voice \relative g {
   %% 3
   d4( b8 g-4 f d-3 b f) | a-4( g e c g2) | g4( a8 b c e g c) |
   %% 6
-  a( d f a-1 d2) | b8( g-4 f d e c-2 g e) | d( g b a g d-0 b a) |
+  a( d f a-1 d2) | b8( g-4 f d e c-2 g e) | d( g b a g d\open b a) |
   %% 9
   g4( a8 b c e g c) | b( d-1 f b d2) | d4( b8 g f d-3 b f) |
   %% 12
@@ -1918,9 +1918,9 @@ studyXXXIX = \new Voice \relative g {
   c( a'-4 fis e'-4 d fis a-3 c-4) | b-4( g d b g d e f) |
   %% 21
   e( gis b d c e a c-4) | a-3( fis d c b d g b-2) |
-  a( d cis b a e-2 g fis) | d( d' a fis d a-0 fis a-4) |
+  a( d cis b a e-2 g fis) | d( d' a fis d a\open fis a-4) |
   %% 25
-  d,( e'-4 d cis c b' a c,) | b( e-4 d d,-0 g b d ees,) |
+  d,( e'-4 d cis c b' a c,) | b( e-4 d d,\open g b d ees,) |
   %% 27
   d( e'-4 d cis c b' a c,) | b( e-4 d d, g b e-4 d) |
   %% 29
@@ -1932,9 +1932,9 @@ studyXXXIX = \new Voice \relative g {
   d( g b d c a fis d) | b'( g-4 d b-3 g2) | g,4( a8 b c e g c) |
   b( d-1 f b d2) d4( b8 g f d-3 b f) | a-4( g e c g2) |
   g4( a8 b c e g c) | a( d f a-1 d4. a8) | b8( g-4 f d b-1 g f d) |
-  b( g b d f a-4 g b,) | c( e g-1 c e g c b) | a( f d e f d b-3 g,-0) |
-  c-1( e g c e g c b) | a( f d e f d b-3 g,-0) | c-3( g c e g e g c) |
-  e-4( g, c e-0 g e g c-3) | d-4( c g-4 e c-2 g e g,) | c2. r4 \bar "|."
+  b( g b d f a-4 g b,) | c( e g-1 c e g c b) | a( f d e f d b-3 g,\open) |
+  c-1( e g c e g c b) | a( f d e f d b-3 g,\open) | c-3( g c e g e g c) |
+  e-4( g, c e\open g e g c-3) | d-4( c g-4 e c-2 g e g,) | c2. r4 \bar "|."
 }
 
 studyXLprologI = \markup \columns {
@@ -1981,7 +1981,7 @@ studyXL = \new Voice \relative b'' {
   d8-. d'16-.( d-.) d8-. a16-.( b-.) |
   c8-. a,16-.-2( a-.) a8-. a16-.( b-.) |
   %% 20
-  c8-.-4 d,16-.-0( d-.) d8-. b'16-.-1( b-.) |
+  c8-.-4 d,16-.\open( d-.) d8-. b'16-.-1( b-.) |
   b8-. g16-.-3( g-.) g8-. d16-.-4( d-.) |
   d8-. b16-.( b-.) b8-. g'16-.( g-.) |
   g8-. d16-.-4( d-.) d8-. b16-.( b-.) |
@@ -1994,12 +1994,12 @@ studyXL = \new Voice \relative b'' {
   c8-. fis16-.( g-.) a8-.-4 d16-.( c-.) |
   %% 30
   b8-. e16-.-4( e-.) e8-. c16-.( b-.) |
-  a8-. d16-.( d-.) d8-. b16-.( a-.-0) |
+  a8-. d16-.( d-.) d8-. b16-.( a-.\open) |
   g8-. g16-.( fis-.) e8-. g16-.( a-.) |
-  b8-. g16-.( fis-.) e8-. g16-.-1( a-.-0) |
-  b8-. g'16-.( fis-.) e8-.-0 g16-.( a-.) |
+  b8-. g16-.( fis-.) e8-. g16-.-1( a-.\open) |
+  b8-. g'16-.( fis-.) e8-.\open g16-.( a-.) |
   %% 35
-  b8-. g16-.( fis-.) e8-.-0 g16-.( a-.) |
+  b8-. g16-.( fis-.) e8-.\open g16-.( a-.) |
   \repeat percent 2 {
     b8-. b,16-.( b-.) dis8-.-3 fis16-.( fis-.) |
   }
@@ -2013,15 +2013,15 @@ studyXL = \new Voice \relative b'' {
   d8-. fis16-.( g-.) a8-. b16-.( c-.) |
   %% 45
   d8-. e16-.( fis-.) g8-. fis16-.( e16-.) |
-  d8-. c16-.( b-.) a8-.-0 b16-.( a-.) |
-  g8-. fis16-.( e-.) d8-.-0 b''16-.( b-.) |
+  d8-. c16-.( b-.) a8-.\open b16-.( a-.) |
+  g8-. fis16-.( e-.) d8-.\open b''16-.( b-.) |
   b8-. g16-.( g-.) g8-. d16-.( d-.) |
   d8-. b16-.( b-.) b8-. g'16-.( g-.) |
   %% 50
   g8-. d16-.( d-.) d8-. b16-.( b-.) |
   b8-. g16-.( g-.) g8-. fis16-.( e-.) |
-  d8-.-0 fis16-.( g-.) a8-.-0 b16-.( c-.) |
-  d8-. e16-.-0( fis-.) g8-. fis16-.( e-.-4) |
+  d8-.\open fis16-.( g-.) a8-.\open b16-.( c-.) |
+  d8-. e16-.\open( fis-.) g8-. fis16-.( e-.-4) |
   d8-. c16-.( b-.) a8-. b16-.( a-.) |
   %% 55
   g8-. g,16-.( g-.) g8-. g''16-.( g-.) |
@@ -2047,42 +2047,42 @@ studyXLI = \new Voice \relative a'' {
   \partial 4 a4_3\downbow( |
   b8 a fis d a fis d) a( | d fis a d fis a-1 d) a( |
   %% 3
-  b a fis-3 d a-0 fis d) a( | d fis a d fis a-1 d) a( |
+  b a fis-3 d a\open fis d) a( | d fis a d fis a-1 d) a( |
   b a g-4 e cis-2 a g) a,( | cis e g a cis e a) a( |
   b a g e cis a g) a,( | cis e g b a cis e) g( |
   %% 9
   b a fis d a fis d) a( | d fis a d fis a-1 d) c( |
   %% 11
   b fis dis b-1 a fis dis-4) a( | g b e g b e g) b-2( |
-  a d a fis d a-0 fis) d( | cis e g b a g' fis) e( |
+  a d a fis d a\open fis) d( | cis e g b a g' fis) e( |
   %% 15
   fis b a fis d a fis) d( | a cis e a cis e a) a( |
   b a fis d a fis d) a( | d fis a d fis a-1 d) a( |
-  b a fis d a-0 fis d) a( | d fis a d fis a-1 d) a( |
+  b a fis d a\open fis d) a( | d fis a d fis a-1 d) a( |
   %% 21
   b a g-4 e cis-2 a g) a,( | cis e g a cis e a) a( |
   b a g e cis a g) a,( | cis e g b a cis e) g( |
   b a fis d a fis d) a( | d fis a d fis a-1 d) cis( |
   b g d b-1 g d b) g( | b d g b d g b-2) cis( |
   %% 29
-  d a fis d a-0 fis d) a( | cis e g b a cis fis-3) e( |
+  d a fis d a\open fis d) a( | cis e g b a cis fis-3) e( |
   %% 31
   d b' a fis d b-1 a) fis( | d fis a fis' b a fis) d( |
-  cis e a-1 b cis b a) e-0( | d'-4 b gis-2 e d b gis) e( |
+  cis e a-1 b cis b a) e\open( | d'-4 b gis-2 e d b gis) e( |
   %% 35
   cis e a b cis b a) fis'( | e d b gis e d cis) b( |
   a cis e a cis b a) a,( | d fis a d-1 fis e d) fis( |
   %% 39
-  e cis' a e-0 d-3 b gis) e( | cis' a e cis a) r r e''-0\downbow( |
-  d'-4 b gis-2 e d b gis) e( | cis e a b cis b a) e'-0( |
+  e cis' a e\open d-3 b gis) e( | cis' a e cis a) r r e''\open\downbow( |
+  d'-4 b gis-2 e d b gis) e( | cis e a b cis b a) e'\open( |
   %% 43
   d'-4 b gis-2 e d b gis) e( | cis e a b cis b a) e( |
   cis e a b cis b a) a,( | d fis a d fis e d) fis( |
   %% 47
-  e cis' a e-0 d-3 b gis) e( | cis e a b cis b a) a'( |
+  e cis' a e\open d-3 b gis) e( | cis e a b cis b a) a'( |
   b a fis d a fis d) a( | d fis a d fis a-1 d) a( |
   %% 51
-  b a fis d a-0 fis d) a( | d fis a d fis a-1 d) a( |
+  b a fis d a\open fis d) a( | d fis a d fis a-1 d) a( |
   b a g-4 e cis-2 a g) a,( | cis e g a cis e a) a( |
   %% 55
   b a g e cis a g) a,( | cis e g b a cis e) g( |
@@ -2131,7 +2131,7 @@ studyXLII = \new Voice \relative c'' {
   g4( \grace {a16 g fis} g8 c) e,2 |
   g4( \grace {a16 g fis} g8 c) a-4( g e c) | c2( b4) r |
   %% 29
-  f'4\downbow( \grace {g16 f e} f8 a-4) b,( d-0 f a-4) |
+  f'4\downbow( \grace {g16 f e} f8 a-4) b,( d\open f a-4) |
   g\<( b d-1 f) b2 | d4\f~ d16 b( g-4 f d b-1 g f d b a'-4 g) |
   f4~( f16\> e g f) e4\! r |
   %% 33
@@ -2140,7 +2140,7 @@ studyXLII = \new Voice \relative c'' {
   g4( \grace {a16 g fis} g8 c-4) g( f d b) |
   d2( c8) a-4( g f) |
   e4( \grace {a16 g fis} g8 e) c'4( \grace {d16 c b} c8 e-4) |
-  d4( \grace {e16 d cis} d8 a-0) a'2-4\flageolet |
+  d4( \grace {e16 d cis} d8 a\open) a'2-4\flageolet |
   e4-2( \grace { f16 e dis} e8 g) f4-3( \grace {g16 f e} f8 b) |
   d2( c4) r \bar "|."
 }
@@ -2173,9 +2173,9 @@ studyXLIII = \new Voice \relative e' {
   %% 14
   g\( b d g a-1 b c ees-4 c g-4 ees c-2\) |
   a\( c ees-2 a-1 c ees-4 d-4 bes f-3 d bes-3 a\) |
-  g\( c bes a g a bes d,-0 f bes c d-1\) |
+  g\( c bes a g a bes d,\open f bes c d-1\) |
   ees\( f g f ees d c-2 d ees d c bes\) |
-  a-0\( bes c bes a g f a c f-3 bes c\) |
+  a\open\( bes c bes a g f a c f-3 bes c\) |
   d\( cis d bes a c bes f-3 e g f d\) |
   %% 20
   bes-1\( a c bes f d bes d f bes c d-1\) |
@@ -2279,7 +2279,7 @@ studyXLIV = \new Voice \relative a {
   %% 15
   e,4-2 a16( b c a) e4-2 gis,16-1( a b gis) |
   %% 16
-  a4 <a-0 a'-1>8-.[( r16 <a a'>-.)] <a a'>8 r a'16-3( g f e) |
+  a4 <a\open a'-1>8-.[( r16 <a a'>-.)] <a a'>8 r a'16-3( g f e) |
   %% 17
   f4 <d d,>8-.[( r16 <d d,>-.)] <d d,>8 r g16( f e d) |
   %% 18
@@ -2343,7 +2343,7 @@ studyXLIV = \new Voice \relative a {
   %% 47
   e4 a16( b c a) e4 gis16( a b gis) |
   %% 48
-  a4 <a-0 a'-3>8-.[( r16 <a a'>)] <a a'>8 r8 r4 \bar "|."
+  a4 <a\open a'-3>8-.[( r16 <a a'>)] <a a'>8 r8 r4 \bar "|."
 }
 
 studyXLVprologI = ##f
@@ -2357,7 +2357,7 @@ studyXLV = \new Voice \relative c'' {
   c4->\f b16-.( a-. g-. f-. e2) | a4->-4 g16-.( f-. e-. d-. c2) |
   %% 3
   e4-> d16-.-4( c-. b-. a-. g2) |
-  c8-> d16-.-0( e-. f-. g-. a-. b-. c2) |
+  c8-> d16-.\open( e-. f-. g-. a-. b-. c2) |
   f16( g) a-.( g-. f-. e-. d-. c-. b2) |
   c16( d) e-.-4( d-. c-. g-. e-. c-. g2) |
   b16( a) g-.( a-. b-. c-. d-. e-.) f( e) d-.( e-. f-. g-. a-. b-.) |
@@ -2373,13 +2373,13 @@ studyXLV = \new Voice \relative c'' {
   %% 16
   \tuplet 3/2 4 {c8-> e-.( g-. c-. e-. g-.} c2-4) |
   %% 17
-  \tuplet 3/2 4 {a,,8-> cis-.( e-.  a-. cis-. e-.-0} g2) |
+  \tuplet 3/2 4 {a,,8-> cis-.( e-.  a-. cis-. e-.\open} g2) |
   %% 18
   \tuplet 3/2 4 {f8-> a-.( f-. d-. a-. f-.} d2) |
   %% 19
   \tuplet 3/2 4 {g,8-> b-.( d-. g-. b-. d-.} f2) |
   \tuplet 3/2 4 {e8-> g-.( e-. c-. g-. e-.} c2) |
-  \tuplet 3/2 4 {bes8-> e-.( g-. bes-. e-.-0 g-.} bes2) |
+  \tuplet 3/2 4 {bes8-> e-.( g-. bes-. e-.\open g-.} bes2) |
   \tuplet 3/2 4 {a8-> c-.-4( a-. f-. c-. a-.} f2) |
   %% 23
   e16( g) c-.( b-. a-. g-. f-. e-.) d( f) b-.( a-. g-. f-. e-. d-.) |
@@ -2403,11 +2403,11 @@ studyXLVI = \new Voice \relative a {
   %% 4
   \tuplet 3/2 4 {d( cis d fis eis fis)} a2 |
   %% 5
-  \tuplet 3/2 4 {gis8( fis gis e fis gis) a( e-0 a-1 cis a cis)} |
+  \tuplet 3/2 4 {gis8( fis gis e fis gis) a( e\open a-1 cis a cis)} |
   %% 6
-  \tuplet 3/2 4 {e_4\flageolet( e,-0 fis gis fis gis) a( e a-1 cis a cis)} |
+  \tuplet 3/2 4 {e_4\flageolet( e,\open fis gis fis gis) a( e a-1 cis a cis)} |
   %% 7
-  \tuplet 3/2 4 {e\flageolet( e,-0 fis gis fis e) a( e-0 cis e-4 cis a)} |
+  \tuplet 3/2 4 {e\flageolet( e,\open fis gis fis e) a( e\open cis e-4 cis a)} |
   %% 8
   \tuplet 3/2 4 {e( gis b e-4 b gis) e( fis e d cis b)} |
   %% 9
@@ -2466,9 +2466,9 @@ studyXLVI = \new Voice \relative a {
   %% 35
   \tuplet 3/2 4 {gis8( fis gis e fis gis) a( e a-1 cis a cis)} |
   %% 36
-  \tuplet 3/2 4 {e\flageolet( e,-0 fis gis fis gis) a( e a-1 cis a cis)} |
+  \tuplet 3/2 4 {e\flageolet( e,\open fis gis fis gis) a( e a-1 cis a cis)} |
   %% 37
-  \tuplet 3/2 4 {e\flageolet( e,-0 fis gis fis e) a( e cis e-4 cis a)} |
+  \tuplet 3/2 4 {e\flageolet( e,\open fis gis fis e) a( e cis e-4 cis a)} |
   %% 38
   \tuplet 3/2 4 {e( gis b e-4 b gis) e( fis e d cis b)} |
   %% 39
@@ -2509,11 +2509,11 @@ studyXLVII = \new Voice \relative e' {
   gis4.( b8 d f b d) | c4.( b8 a f d b-1) | d8( b gis f e d c b) |
   %% 12
   a4.( c8 e c'-4 b a) | gis4.( b8 d f b d) | c4.( b8 a f d b-1) |
-  d8( b gis f e d c b) | a4( c8 e a-4 gis a-0 b) | c4( a8 f e d c b) |
-  a4( c8 e a-4 gis a-0 b) | c4( a8 f e d c b) |
+  d8( b gis f e d c b) | a4( c8 e a-4 gis a\open b) | c4( a8 f e d c b) |
+  a4( c8 e a-4 gis a\open b) | c4( a8 f e d c b) |
   %% 20
-  a4( c8 e a-4 gis a-0 b) | c2~( c8 gis a b) | c2~( c8 b c d) |
-  \repeat percent 2 {e4.-4( b8 e-0 gis b gis)} |
+  a4( c8 e a-4 gis a\open b) | c2~( c8 gis a b) | c2~( c8 b c d) |
+  \repeat percent 2 {e4.-4( b8 e\open gis b gis)} |
   %% 25
   e4.-4( b8 gis' e b gis) | e1 | e4.( a8-2 gis a b a) | c2.( e,4-1) |
   e4.( b'8-3 ais b c gis) | b2( a4 f-2) | e4.( c'8-4 b a gis a) |
@@ -2526,7 +2526,7 @@ studyXLVII = \new Voice \relative e' {
     %% 35
     g4.^\aTempo( b8\< d-1 f b d\!) |
     %% 36
-    e4.\flageolet( e,8-0 a-3\> g e c\!) | g4.( b,8 d g b d-1) |
+    e4.\flageolet( e,8\open a-3\> g e c\!) | g4.( b,8 d g b d-1) |
     %% 38
     e2.-2( g,4-1) | g'4.-4( d8 f e b-1 c) |
     %% 40
@@ -2634,7 +2634,7 @@ studyXLIX = \new Voice \relative g' {
     g fis g aes g fis g ees c g c ees |
     \omit TupletNumber
     %% 3
-    g fis g aes g fis g d-0 b g b d |
+    g fis g aes g fis g d\open b g b d |
     %% 4
     g fis g aes g fis g f d f b d |
     %% 5
@@ -2720,7 +2720,7 @@ studyL = \new Voice \relative d' {
   \tempo "Allegro." 4=123
   \key g \major
 
-  \partial 8 d8-0\downbow( |
+  \partial 8 d8\open\downbow( |
   %% 1
   g-.-1) \fingerNumberSpanner #"4" g'-.\startTextSpan a,-. g'-.
   b,-. g'-. a,-. g'-. |
@@ -2729,7 +2729,7 @@ studyL = \new Voice \relative d' {
   c-.) c'-. d,-. c'-. ees,-. c'-. d,-. c'-. |
   %% 4
   c,-. c'( g) ees( c) g( c) ees( | d) d( g-1) b( d) d( g) b( |
-  d) b( d) r r4 r8 d,,-0( | g-1) g'( g,) a( b) a( b) g( |
+  d) b( d) r r4 r8 d,,\open( | g-1) g'( g,) a( b) a( b) g( |
   fis-1) fis'( fis,) g( a) g( a) fis-1( |
   %% 9
   e-1) e'-4( e,) fis( g) fis( g) e( | d) d'( d,) e( fis) e( fis) d( |
@@ -2785,7 +2785,7 @@ studyL = \new Voice \relative d' {
   g,-.) g,-.\downbow a'-.-2\upbow g,-. b'-.-3 g,-. a'-. g,\downbow( |
   g'-.) g'-. a,-. g'-. b,-. g'-. a,-. g'( |
   %% 61
-  g,) g,-. a'-. g,-. b'-. g,-. a'-. g,( | g') d-0( g)  b( d) fis( b) a( |
+  g,) g,-. a'-. g,-. b'-. g,-. a'-. g,( | g') d\open( g)  b( d) fis( b) a( |
   g) d( b) g( fis) d( e) fis( | g) d( g) b( d) fis( b) a( |
   g) d( b) g( fis) e( fis) d( | g4-1) a8-. g,-. b'-. g,-. a'-. g,-. |
   g'-. g,-. a'-. g,-. b'-. g,-. a'-. g,-. |
@@ -2829,7 +2829,7 @@ studyLI = \new Voice \relative a {
   c( bes' a bes  g bes a bes  c bes a bes  g bes a bes) |
   c,( a' g a  bes a g a  c a g a  bes a g f) |
   %% 23
-  c->( c' b c  b c b c d,->-0 c'-2 b c  b c b c) |
+  c->( c' b c  b c b c d,->\open c'-2 b c  b c b c) |
   e,->( c' b c  d c b c  g-> bes a bes  c bes a bes) |
   a( c bes c  a c bes c  a c bes c  a c bes c) |
   a( c bes c  a c bes c  a c bes c  a bes c a) |
@@ -2873,7 +2873,7 @@ studyLII = \new Voice \relative c'' {
   %% 3
   \afterGrace g'1\trill_( {fis16 g)} |
   %% 4
-  a8-. r \acciaccatura {g16 a} g8( e-0) c'2-3 |
+  a8-. r \acciaccatura {g16 a} g8( e\open) c'2-3 |
   %% 5
   \afterGrace b1\trill_( {a16 b)} |
   %% 6
@@ -2893,7 +2893,7 @@ studyLII = \new Voice \relative c'' {
   %% 17
   \afterGrace c1\trill_( {b16 c)} | b8( d-1 g b c2) |
   %% 19
-  \afterGrace b1\trill_( {a16 b)} | c8( a e-0 c a2) |
+  \afterGrace b1\trill_( {a16 b)} | c8( a e\open c a2) |
   %% 21
   \afterGrace fis1_2\trill( {e16 fis)} | g8( b d g b a g fis) |
   a( g f e g f e d) | c( b a g fis g a b) |
@@ -2902,7 +2902,7 @@ studyLII = \new Voice \relative c'' {
   d8-. r \acciaccatura {d16 e} d8( b) g2 |
   %% 27
   \afterGrace g'1\trill_( {fis16 g)} |
-  a8-. r \acciaccatura {g16 a} g8( e-0) c'2-3 |
+  a8-. r \acciaccatura {g16 a} g8( e\open) c'2-3 |
   %% 29
   \afterGrace b1\trill_( {a16 b)} | d4( c \grace {b16 c} b4 a) |
   %% 31
@@ -2942,7 +2942,7 @@ studyLIII = \new Voice \relative b {
   %% 14
   <f-3 a-1>2.( d'4) |
   %% 15
-  << {\voiceOne d4-4( c\!) bes-2\>( e,-0)}
+  << {\voiceOne d4-4( c\!) bes-2\>( e,\open)}
      \new Voice {\voiceTwo e2-2 g4-4 bes,-1} >> \oneVoice |
   %% 16
   <a f'>2~ <a f'>8\! f'8\<( a d) |
@@ -2950,7 +2950,7 @@ studyLIII = \new Voice \relative b {
   << {\voiceOne c2\mf( d4 c)}
      \new Voice {\voiceTwo ees,1-2} >> \oneVoice |
   %% 18
-  <d bes'>2.( <f-3 d,-0>4) |
+  <d bes'>2.( <f-3 d,\open>4) |
   %% 19
   <c-4 ees-2>8( <b d> <c ees> <b d> <c ees>4\> <bes d>) |
   %% 20
@@ -2970,9 +2970,9 @@ studyLIII = \new Voice \relative b {
   <ees' c'>1\! |
   %% 29
   << {\voiceOne d'4->( bes)}
-     \new Voice {\voiceTwo d,2} >> \oneVoice  <f-3 d,-0>8 r r <d bes>\upbow |
+     \new Voice {\voiceTwo d,2} >> \oneVoice  <f-3 d,\open>8 r r <d bes>\upbow |
   << {\voiceOne g4->( f)}
-     \new Voice {\voiceTwo a,2} >> \oneVoice <g ees'>8 r r <a-0 ees-1>\upbow |
+     \new Voice {\voiceTwo a,2} >> \oneVoice <g ees'>8 r r <a\open ees-1>\upbow |
   <c ees,>1~ | <c ees,>4 r4 r2 \bar "|."
 }
 
@@ -2984,47 +2984,47 @@ studyLIV = \new Voice \relative a {
   \tempo "Allegro." 8 = 123
   \key d \major
 
-  \fingerNumberSpanner "1" \textSpannerDown a8\downbow\startTextSpan( bes16-2 b c cis d-4 a\stopTextSpan d-0 fis a8-4) |
+  \fingerNumberSpanner "1" \textSpannerDown a8\downbow\startTextSpan( bes16-2 b c cis d-4 a\stopTextSpan d\open fis a8-4) |
   %% 2
   bes16( a b a cis a d a d fis a8) |
   %% 3
-  a,8( bes16 b c cis d a-0 d-1 fis a8) |
+  a,8( bes16 b c cis d a\open d-1 fis a8) |
   %% 4
   bes16( a b a cis a d) a( bes a cis a |
   d) a( bes b c cis d) a( bes b c cis |
-  d) a,-0( bes b c cis d) a,( bes b c cis |
+  d) a,\open( bes b c cis d) a,( bes b c cis |
   %% 7
-  d-4) a( d-0 fis a cis d) a( d fis a ais |
+  d-4) a( d\open fis a cis d) a( d fis a ais |
   %% 8
   b) a( g fis e d cis b a g fis e) |
   %% 9
-  d8( ees16 e f fis g gis-4 a-0 bes b cis) |
-  d16( a fis d fis a d fis a fis d a-0) |
+  d8( ees16 e f fis g gis-4 a\open bes b cis) |
+  d16( a fis d fis a d fis a fis d a\open) |
   %% 11
   d8-1( ees16 e f fis g-4 gis-1 a-1 bes b cis) |
-  d( a fis-3 d a-0 fis-4 d-2 fis a d fis a-1 |
+  d( a fis-3 d a\open fis-4 d-2 fis a d fis a-1 |
   d) a( bes b c cis d) a( bes b c cis |
   %% 14
-  d8) d,16-1( e fis g) a8\flageolet a,16-0( b cis a) |
+  d8) d,16-1( e fis g) a8\flageolet a,16\open( b cis a) |
   d16-3 a( bes b c cis d) a( bes b c cis |
   %% 16
   d) b'( ais a gis g fis) b( ais a gis g |
   fis) b( a g fis e d) fis( e d cis b |
   a) d( cis b a g fis) b( a g fis e |
   %% 19
-  d) d( ees e f fis g gis-4 a-0 bes b cis |
+  d) d( ees e f fis g gis-4 a\open bes b cis |
   d) a( fis d fis a d fis a fis d a |
   %% 21
   d) d( ees e f fis g gis a-1 bes b cis |
-  d) a( fis-3 d a-0 fis d fis a d fis a-1 |
+  d) a( fis-3 d a\open fis d fis a d fis a-1 |
   %% 23
-  d8) d,16( e fis g) a8\flageolet a,16-0( b cis a |
+  d8) d,16( e fis g) a8\flageolet a,16\open( b cis a |
   d) a( bes b c cis d) b'( ais a gis g |
   %% 25
   fis) a,( bes b c cis d) bes'( ais a gis g |
   fis) a,( bes b c cis d) a,( bes b c cis |
   %% 27
-  d-4) fis( a d-1 fis a d) a( fis d a-0 fis |
+  d-4) fis( a d-1 fis a d) a( fis d a\open fis |
   d) fis( a d fis b a) fis( d a fis d |
   \repeat unfold 2 {
     cis) a( cis e a-4 a, gis') a( bes b c cis |
@@ -3032,12 +3032,12 @@ studyLIV = \new Voice \relative a {
   }
   %% 33
   g,) b( d g-1 b d g) a( bes b c cis |
-  d) a( fis d a-0 fis d) fis( g gis-4 a-0 ais |
+  d) a( fis d a\open fis d) fis( g gis-4 a\open ais |
   b) b'( ais a gis g fis) a( gis g fis f |
   %% 36
   e) a( e cis a gis b) a-4( g fis g e |
   \repeat unfold 2 {
-    d) a( bes b c cis-4 d-0) fis( g gis-4 a-0 ais |
+    d) a( bes b c cis-4 d\open) fis( g gis-4 a\open ais |
     b) e( g fis e d cis) b( a g fis e |
   }
   %% 41
@@ -3050,7 +3050,7 @@ studyLIV = \new Voice \relative a {
     d) a( bes b c cis d) a( bes b c cis |
   }
   d8) r r <d d, d,>8\sf\downbow r r |
-  <d,,-2 d-0>4.~\sf\downbow  <d d>8 r r \bar "|."
+  <d,,-2 d\open>4.~\sf\downbow  <d d>8 r r \bar "|."
 }
 
 studyLVprologI = ##f
@@ -3079,15 +3079,15 @@ studyLV = \new Voice \relative g {
   %% 14
   g) g' g,( a) a' a,( b) b' b,( | c) c' g,( c-1) e-3 g c e g |
   %% 16
-  c4-3( e8-4\flageolet) e4.~ e4 e,8-0( | d') e,-0 d'( c) e,-0 c'( b) e,-0 b'( |
+  c4-3( e8-4\flageolet) e4.~ e4 e,8\open( | d') e,\open d'( c) e,\open c'( b) e,\open b'( |
   %% 18
-  c) e,-0 c'( b) e,-0 b'( a) e-0 a-3( | b) e,-0 b'( a) e-0 a( gis) e-0 gis( |
+  c) e,\open c'( b) e,\open b'( a) e\open a-3( | b) e,\open b'( a) e\open a( gis) e\open gis( |
   %% 20
-  a) e-0 a-1( c) a c e4-4\flageolet d,,8-0( |
-  c'-4) d,-0 c'-3(  b-3) d,-0 b'-3(  a-2) d,-0 a'-2( |
+  a) e\open a-1( c) a c e4-4\flageolet d,,8\open( |
+  c'-4) d,\open c'-3(  b-3) d,\open b'-3(  a-2) d,\open a'-2( |
   %% 22
-  b-3) d,-0 b'-3( a-2) d,-0 a'-2( g-1) d-0 g-3( |
-  a) d,-0 a'( g) d-0 g( fis) d-0 fis( | g) d-0 g-1( b) g b d4\flageolet g,,8( |
+  b-3) d,\open b'-3( a-2) d,\open a'-2( g-1) d\open g-3( |
+  a) d,\open a'( g) d\open g( fis) d\open fis( | g) d\open g-1( b) g b d4\flageolet g,,8( |
   f'-4) g, f'-4( e-3) g, e'-3( d-2) g, d'-2( |
   %% 26
   e-3) g, e'-3( d-2) g, d'-2( c-1) g c-3( | d) g, d'( c) g c( b) g b( |
@@ -3102,7 +3102,7 @@ studyLV = \new Voice \relative g {
   %% 36
   c-1) e g c g e c g c-3( | e) g c e-4 c g e c e( |
   %% 38
-  g) c e-0 g e c g e g( | c) e g-1( c) g e c4. |
+  g) c e\open g e c g e g( | c) e g-1( c) g e c4. |
   %% 40
   << {\voiceOne bes8-3( c bes)}
      \new Voice {\voiceTwo c,4.-1} >> \oneVoice <bes' e>8-. c,( d e d) c |
@@ -3116,7 +3116,7 @@ studyLV = \new Voice \relative g {
      \new Voice {\voiceTwo c,4.-1} >> \oneVoice <bes' e>8-. c,( d e d) c |
   %% 45
   << {\voiceOne a'8-2( bes a)}
-     \new Voice {\voiceTwo c,4.-1} >> \oneVoice <a' f'>8-. a-0( d-3 c a) f |
+     \new Voice {\voiceTwo c,4.-1} >> \oneVoice <a' f'>8-. a\open( d-3 c a) f |
   %% 46
   aes f d( f) d b( g) a b( | c) g c( e) c e g4. |
   %% 48
@@ -3127,7 +3127,7 @@ studyLV = \new Voice \relative g {
   \repeat unfold 2 {
     c-1) g e'-3( c) g e'( c) g e'( |
   }
-  c) r r r4. <g-0 g'-1 f'-3 b-2>8\downbow r r |
+  c) r r r4. <g\open g'-1 f'-3 b-2>8\downbow r r |
   <c g' e' c'>8\downbow r r r4. r4. \bar "|."
 }
 
@@ -3144,7 +3144,7 @@ studyLVI = \new Voice \relative g {
   \repeat unfold 2 {
     <g, g'>4~( <g g'>8. d'16-.) \acciaccatura {f8} ees8.( d16-.) |
     <g, g'>4~ <g g'>8 a16-1\<( a') bes,-1( bes') c,-1( c') |
-    d,-0( d') ees,-1( ees'\!) d,\>( d') c,-1( c') bes,-1( bes') a,-1( a'\!) |
+    d,\open( d') ees,-1( ees'\!) d,\>( d') c,-1( c') bes,-1( bes') a,-1( a'\!) |
   }
   %% 8
   <g g,>4 r8 <d d'>8\downbow <ees ees'>8.( <d d'>16-.) |
@@ -3176,10 +3176,10 @@ studyLVI = \new Voice \relative g {
   %% 27
   <g g,>4 r8 <bes-3 g'-4> <bes g'> <bes g'> |
   %% 28
-  <a-2 fis'-3>8.( <d-1 d,-0>16) <d d,>8 <fis-3 a-1>( <eis-3 gis-1> <fis-3 a-1> |
+  <a-2 fis'-3>8.( <d-1 d,\open>16) <d d,>8 <fis-3 a-1>( <eis-3 gis-1> <fis-3 a-1> |
   <g bes>8. <g,-1 g,>16-.) <g g,>8( <bes-3 g'-4>) <a g'> <g g'> |
   %% 30
-  <a fis'>8.( <d-1 d,-0>16) <d d,>8 <fis-3 a-1>( <eis-3 gis-1> <fis-3 a-1> |
+  <a fis'>8.( <d-1 d,\open>16) <d d,>8 <fis-3 a-1>( <eis-3 gis-1> <fis-3 a-1> |
   <g bes>8. <g,-1 g,>16-.) <g g,>8 <bes d>8( <c ees> <bes d> |
   %% 32
   <c-1 a-3>8. <f-4 f,-1>16-.) <f f,>8-. <c-1 a-3>( <b-1 gis-3> <c-1 a-3> |
@@ -3188,9 +3188,9 @@ studyLVI = \new Voice \relative g {
   <a-3 c-1>8. <f f'>16-.) <f f'>8-. <a-3 c-1>( <gis-3 b-1> <a-3 c-1> |
   <bes-4 d-2>8. <bes bes,>16) <bes bes,>8 r g,16( g'-2) bes,-1( bes') |
   %% 36
-  d,-0( d'-2) fis,-1( fis') g,-1( g') a,-0( a'-3) bes,( bes') a,( a') |
+  d,\open( d'-2) fis,-1( fis') g,-1( g') a,\open( a'-3) bes,( bes') a,( a') |
   %% 37
-  g,-1( g') d,-0( d'-3) ees,( ees') d,( d') c,( c') bes,( bes') |
+  g,-1( g') d,\open( d'-3) ees,( ees') d,( d') c,( c') bes,( bes') |
   %% 38
   a,( a') d,( d') ees,( ees') d,( d') ees,( ees') d,( d') |
   ees,\<( ees') \repeat unfold 2 {d,( d') ees,( ees')} d,( d') |
@@ -3217,7 +3217,7 @@ studyLVI = \new Voice \relative g {
   %% 49
   <g, g'>4~ <g g'>8 a16-1\<( a') bes,-1( bes') c,-1( c') |
   %% 50
-  d,-0( d') ees,-1( ees'\!) d,\>( d') c,-1( c') bes,-1( bes') a,-1( a') |
+  d,\open( d') ees,-1( ees'\!) d,\>( d') c,-1( c') bes,-1( bes') a,-1( a') |
   << {<g, g'>4} {s8 s\!} >> r4 r |
   <g d' bes' bes'>8\ff\downbow r <d' c' a'>\downbow r <d c' fis>\downbow r |
   <g, d' bes' g'>\downbow r16 <g g'>16\upbow <g g'>8\downbow r8 r4 \bar "|."
@@ -3233,7 +3233,7 @@ studyLVII = \new Voice \relative a'' {
 
   \partial 4. a8-1\f\upbow( \acciaccatura c bes a) |
   %% 1
-  d4. d,16 f a4.-4\flageolet a,16-0 cis-2 |
+  d4. d,16 f a4.-4\flageolet a,16\open cis-2 |
   %% 2
   d2-3~ d8 a,\p( \acciaccatura c bes a) | a\<( cis-1 d e f4\! e8\> d\!) |
   %% 4
@@ -3243,7 +3243,7 @@ studyLVII = \new Voice \relative a'' {
   d2~ d8\> bes'( g e\!) | f d bes4. a8( cis e) |
   d( f a d) f\<( a-1 \acciaccatura c bes a) |
   %% 11
-  d4.\f d,16 f a4.-4\flageolet a,16-0 cis-2 |
+  d4.\f d,16 f a4.-4\flageolet a,16\open cis-2 |
   d2-3~ d8 a( \acciaccatura c bes a) |
   %% 13
   f'4.-3 d16 f a4. b16 cis | d2~ d8 c( bes a-1) |
@@ -3258,15 +3258,15 @@ studyLVII = \new Voice \relative a'' {
   c( a bes g d-1 d-3 bes g) | aes( c, ees aes-4 aes-2 c d ees) |
   d( fis g bes d a \acciaccatura c bes  a) |
   %% 30
-  g( ees d-1 d-3 c bes a g) | d-0( e fis g a bes c a) |
+  g( ees d-1 d-3 c bes a g) | d\open( e fis g a bes c a) |
   %% 32
   g( a bes c d bes a g) | f( g a bes c d ees c) |
   %% 34
   d-3( d-1 f bes d bes f ees) | d( e f e d e f e) |
   d( e f e d-1 d-3 c bes) | a( b cis d e f g e) |
-  d( e f g a-1 b cis d) | a,-0( b cis d-1 e f g e) |
+  d( e f g a-1 b cis d) | a,\open( b cis d-1 e f g e) |
   d( e f g a b cis d) | cis( bes a bes a g-4 f e) |
-  d( bes-1 a g e cis bes a) | d-4( a d-0 f e bes a cis) |
+  d( bes-1 a g e cis bes a) | d-4( a d\open f e bes a cis) |
   d-4( bes a bes a^\rit f'_4 e cis) | d1~ | d4 r4 r2 \bar "|."
 }
 
@@ -3293,11 +3293,11 @@ studyLVIII = \new Voice \relative a'' {
   %% 7
   \tuplet 3/2 4 {c( b a a_4 g fis fis_4 e d)} |
   %% 8
-  g4-0 r \tuplet 3/2 {d'8_3\upbow( c b)} |
+  g4\open r \tuplet 3/2 {d'8_3\upbow( c b)} |
   %% 9
   b4_3~( \tuplet 3/2 4 {b8 a g g_3 fis e)} |
   %% 10
-  \tuplet 3/2 4 {e_3( d b_2 d_0 g b d c b)} |
+  \tuplet 3/2 4 {e_3( d b_2 d_\open g b d c b)} |
   %% 11
   \tuplet 3/2 4 {b-3( a g g-3 fis e e-3 d c)} |
   %% 12
@@ -3325,7 +3325,7 @@ studyLIX = \new Voice \relative c'' {
   << {\voiceOne b8-1( c16 b c b c b c b c b) e-4}
      \new Voice {\voiceTwo g,2.-3 g16-3} >> \oneVoice r8. |
   %% 3
-  << {\voiceOne a2-0 a4-.~ a4-.}
+  << {\voiceOne a2\open a4-.~ a4-.}
      \new Voice {\voiceTwo fis16( e fis d fis e fis d)
 		 \repeat unfold 2 {fis( e fis d)}} >> \oneVoice |
   %% 4
@@ -3361,7 +3361,7 @@ studyLIX = \new Voice \relative c'' {
 	 d,4. b'8 b16 c b a b8 g |
 	 %% 11
 	 d4~ d8} >> \oneVoice r16
-    <e'-2 c'-3>16\downbow <e c'>8( <fis-1 a,-0> <d b'> <fis c>) |
+    <e'-2 c'-3>16\downbow <e c'>8( <fis-1 a,\open> <d b'> <fis c>) |
     %% 12
     << {\voiceOne a4( g8) }
        \new Voice {\voiceTwo c,16 b c a b8} >> \oneVoice
@@ -3388,7 +3388,7 @@ studyLIX = \new Voice \relative c'' {
      \new Voice {\voiceTwo fis,8 fis16 a} >> \oneVoice
   <d fis>16\<( <e g>) <fis-3 a-1> <eis-3 gis-1>
   <fis-3 a-1>( <g b>\!) <fis a>^\rit <e-4 g-2>
-  <d fis>\>( <c e>) <b-3 d-1> <a-0 c-4>\!
+  <d fis>\>( <c e>) <b-3 d-1> <a\open c-4>\!
   %%
   << {\voiceOne e'16_\aTempo( d e d e d e d e d e d) g}
      \new Voice {\voiceTwo b,2. b16} >> \oneVoice r8. |
@@ -3432,7 +3432,7 @@ studyLIX = \new Voice \relative c'' {
        \voiceTwo \repeat unfold 3 {fis16( e fis d) g( fis g d)}
        c( b c a)
        %%
-       \repeat unfold 2 {b( d-4 a d-4 g,-0 d' a d)}
+       \repeat unfold 2 {b( d-4 a d-4 g,\open d' a d)}
      } >> \oneVoice |
   <g b,>2. r4 \bar "|."
 }
@@ -3450,7 +3450,7 @@ studyLX = \new Voice \relative c'' {
   <cis-1 cis'-4> <d-1 d'-4>) <d d'>16[ r <b-1 b'-4>8](
   <ais ais'> <b-1 b'-4>) <b b'>16[ r <g-1 g'-4>8]( |
   %% 2
-  <fis-1 fis'-4> <g-1 g'-4>) <g g'>16[ r <d-0 d'-3>8](
+  <fis-1 fis'-4> <g-1 g'-4>) <g g'>16[ r <d\open d'-3>8](
   <e e'> <d d'>) <d d'>16[ r <d' d'>8]( |
   %% 3
   <cis cis'> <d d'>) <d d'>16[ r <b b'>8](
@@ -3465,7 +3465,7 @@ studyLX = \new Voice \relative c'' {
   <a a'> <d d,>) <d d,>16[ r <d d'>8](
   <ees ees'> <d d'>) <d d'>16[ r <d d'>8]( |
   %% 7
-  <c c'> <a-0 a'-2>) <a a'>16[ r <fis-1 fis'-4>8](
+  <c c'> <a\open a'-2>) <a a'>16[ r <fis-1 fis'-4>8](
   <g g'> <g g,>) <g g,>16[ r <g g,>8]( |
   %% 8
   <d d'> <d' d'>) \repeat unfold 3 {<d d'>} r r <d d'>( |
@@ -3488,8 +3488,8 @@ studyLX = \new Voice \relative c'' {
   <a a'> <d d,>) <d d,>16[ r <d d'>8](
   <e e'> <d d'>) <d d'>16[ r <d d'>8]( |
   %% 15
-  <c-1 c'-4> <a-0 a'-2>) <fis-1 fis'-4>16[ r <d-0 d'-2>8](
-  <bes-1 bes'-4> <g-0 g'-2>) <g g'>16[ r <bes-1 bes'-4>8]( |
+  <c-1 c'-4> <a\open a'-2>) <fis-1 fis'-4>16[ r <d\open d'-2>8](
+  <bes-1 bes'-4> <g\open g'-2>) <g g'>16[ r <bes-1 bes'-4>8]( |
   %% 16
   <d d'-2> <fis fis'>) <a a'>-2 <fis fis'> <d d'-2> r r <d d'-2>( |
   %% 17
@@ -3530,7 +3530,7 @@ studyLX = \new Voice \relative c'' {
   <a a,> <c c,>) <c c,>16[ r <d d,>8]( |
   %% 29
   <e e,> <d d,>) <d d,>16[ r <d d,>8](
-  <e e,> <d d,>) <d d,>16[ r <d,-3 d,-0>8]( |
+  <e e,> <d d,>) <d d,>16[ r <d,-3 d,\open>8]( |
   %% 30
   <e e,> <d d,>) <d d,>16[ r <d d,>8](
   <e e,> <d d,>) <d d,>16[ r <d d,>8]( |
@@ -3587,7 +3587,7 @@ studyLX = \new Voice \relative c'' {
   <ees ees'> <d d'>) <d d'>16-.[ r <d d'>8]( |
   %% 48
   <cis cis'> <d d'>) <d d'>16-.[ r <d d'>8](
-  <ees ees'> <d d'>) <d d'>16-.[ r <d-3 d,-0>8]( |
+  <ees ees'> <d d'>) <d d'>16-.[ r <d-3 d,\open>8]( |
   %% 49
   <e e,> <d d,>) <e e,>16-.[ r <d d,>8](
   <e e,> <d d,>) <d d,>16-.[ r <d d,>8]( |
@@ -3613,7 +3613,7 @@ studyLX = \new Voice \relative c'' {
   <a a'> <d d,>) <d d,>16-.[ r <d d'>8](
   <ees ees'> <d d'>) <d d'>16-.[ r <d d'>8]( |
   %% 57
-  <c c'> <a-0 a'>) <fis fis'>16-.[ r <d d'-2>8](
+  <c c'> <a\open a'>) <fis fis'>16-.[ r <d d'-2>8](
   <bes' bes,> <g-2 g,>) <g g,>16-.[ r <bes bes,>8]( |
   %% 58
   <a a,> <d d,>) \repeat unfold 3 {<d d,>} r r <d d'>( |

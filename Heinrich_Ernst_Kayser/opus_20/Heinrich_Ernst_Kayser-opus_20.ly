@@ -1,13 +1,13 @@
 %%% -*- coding: utf-8 -*-
 %%%
-%%% Copyright © 2017-2018 Philipp Büttgenbach
+%%% Copyright © 2017-2020 Philipp Büttgenbach
 %%%
 %%% This work is licensed under the Creative Commons
 %%% Attribution-ShareAlike 4.0 International License.  To view a copy of
 %%% this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 %%%
 
-\version "2.18.2"
+\version "2.20"
 
 \include "lily-snippets.ily"
 
@@ -95,8 +95,8 @@ studyXXXVI = \new Voice \relative a {
   a,( a') a,( a') c,\cresc( c') c,( c')
   e,( e') e,( e'\!) gis,,\p( gis') gis,( gis') |
   %% 29
-  a, a' a,( c e a c e a-\markup{\italic "poco a poco rallent."} e-0)
-  e'\flageolet( c a f-3 e-0 c-2 |
+  a, a' a,( c e a c e a-\markup{\italic "poco a poco rallent."} e\open)
+  e'\flageolet( c a f-3 e\open c-2 |
   %% 30
   a e) e'( c a f e c a) f'( e c a f' e c) | a1 |
   %% 32
@@ -119,35 +119,35 @@ studyXXXV = \new Voice \relative f'' {
   %% 4
   e->( d cis b-2 ais b cis b gis-> a b a) |
   %% 5
-  a( b a gis a fis d fis e-0 cis a cis) |
+  a( b a gis a fis d fis e\open cis a cis) |
   %% 6
-  d( e-4 d cis d a fis a-4 d, fis a_0 d) |
+  d( e-4 d cis d a fis a-4 d, fis a_\open d) |
   %% 7
-  b->( d g b a,-> fis' a d a,-0 a'-1 cis e) |
+  b->( d g b a,-> fis' a d a,\open a'-1 cis e) |
   %% 8
   fis->( d a fis d e eis fis g-> fis eis fis) |
   %% 9
   fis( g fis eis fis d b-1 d cis ais-4 fis ais) |
   %% 10
-  b( cis b ais-1 b_1 fis d-0 fis b, d-0 fis b) |
+  b( cis b ais-1 b_1 fis d\open fis b, d\open fis b) |
   %% 11
   fis\>( ais-4\! cis fis b,\> d-1\! fis b fis\> ais\! cis-1 fis) |
   %% 12
   e\>( d\! cis b-2 ais b cis b gis-2\> a\! b a) |
   %% 13
-  a( b a gis a fis d fis e-0 cis a cis) |
+  a( b a gis a fis d fis e\open cis a cis) |
   %% 14
   d( e d cis d a fis a-4 d, fis a d) |
   %% 15
   g,-1\>( b\! d g g,-1\> cis\! e g fis,-1\> ais\! cis fis) |
   %% 16
-  fis,-1\>( b\! d fis e,-1\> g\! b e e,\< g c e-0) |
+  fis,-1\>( b\! d fis e,-1\> g\! b e e,\< g c e\open) |
   %% 17
-  a\>( g fis g f e-0 d c\! b c e-2 g-4) |
+  a\>( g fis g f e\open d c\! b c e-2 g-4) |
   %% 18
   fis-3( d-1 cis-4 b-3 fis-1 b-4 cis-1 fis-4 fis, ais cis fis) |
   %% 19
-  b,-1( cis b ais-1 b-1 cis d e-0 fis gis ais fis) |
+  b,-1( cis b ais-1 b-1 cis d e\open fis gis ais fis) |
   %% 20
   b-2( cis b ais b cis d e fis d cis b-2) |
   %% 21
@@ -155,7 +155,7 @@ studyXXXV = \new Voice \relative f'' {
   %% 22
   ais( fis cis ais-4 fis g fis eis fis e cis d) |
   %% 23
-  b( cis b ais b cis d-0 e fis gis ais fis) |
+  b( cis b ais b cis d\open e fis gis ais fis) |
   %% 24
   b( cis b ais-1 b-1 cis d-1 e fis d cis-2 b) |
   %% 25
@@ -173,9 +173,9 @@ studyXXXV = \new Voice \relative f'' {
   %% 31
   e-2( fis e dis cis-4 b ais gis fis-4 e dis cis) |
   %% 32
-  b-2( cis dis-4 e fis gis gisis-0 ais-1 b-1 cis dis e) |
+  b-2( cis dis-4 e fis gis gisis\open ais-1 b-1 cis dis e) |
   %% 33
-  fis-1( dis'-4 cis b ais b cis dis e\flageolet cis-3 ais-1 e-0) |
+  fis-1( dis'-4 cis b ais b cis dis e\flageolet cis-3 ais-1 e\open) |
   %% 34
   dis-3( b'-4 ais gis fisis gis ais-1 b cis ais fisis-1 cis-2) |
   %% 35
@@ -191,7 +191,7 @@ studyXXXV = \new Voice \relative f'' {
   %% 40
   b-3( cis dis e fis gis-4 gisis-1 ais-1 b cis-1 dis e) |
   %% 41
-  fis( dis cis b-2 ais b cis dis-4 e cis ais e-0) |
+  fis( dis cis b-2 ais b cis dis-4 e cis ais e\open) |
   %% 42
   dis'( b ais gis-2 fisis gis ais-1 b cis ais fisis-1 cis) |
   %% 43
@@ -205,13 +205,13 @@ studyXXXV = \new Voice \relative f'' {
   %% 47
   fis\f\fermata( g^\aTempo fis eis fis d b-1 d cis ais fis-4 ais) |
   %% 48
-  b( cis b ais-1 b_1 fis d-0 fis b, d-0 fis b) |
+  b( cis b ais-1 b_1 fis d\open fis b, d\open fis b) |
   %% 49
   fis( ais-4 cis fis b, d-1 fis b fis ais cis-1 fis) |
   %% 50
   e( d cis b-2 ais b cis b gis-2 a b a) |
   %% 51
-  a( b a gis a fis d fis e-0 cis a cis) |
+  a( b a gis a fis d fis e\open cis a cis) |
   %% 52
   d( e-4 d cis d a fis a-4 d, fis a d) |
   %% 53
@@ -221,17 +221,17 @@ studyXXXV = \new Voice \relative f'' {
   %% 55
   fis( g fis eis fis d b-1 d cis ais-4 fis ais) |
   %% 56
-  b( cis b ais-1 b_1 fis d-0 fis b, d-0 fis b) |
+  b( cis b ais-1 b_1 fis d\open fis b, d\open fis b) |
   %% 57
   g-1( b d g g,-1 cis e g fis,-1 ais cis fis) |
   %% 58
-  fis,( b d fis e,-1 g b e e,-1 g c e-0) |
+  fis,( b d fis e,-1 g b e e,-1 g c e\open) |
   %% 59
-  a( g fis g f e-0 d c b c e-2 g-4) |
+  a( g fis g f e\open d c b c e-2 g-4) |
   %% 60
   fis-3( d-1 cis-4 b-3 fis-1 b-4 cis-1 fis-4 fis, ais cis fis) |
   %% 61
-    b,-1( cis b ais-1 b-1 cis d e-0 fis gis ais fis) |
+    b,-1( cis b ais-1 b-1 cis d e\open fis gis ais fis) |
   %% 62
   b-2( cis b ais b cis d e fis d cis b-2) |
   %% 63
@@ -239,7 +239,7 @@ studyXXXV = \new Voice \relative f'' {
   %% 64
   ais( fis cis ais fis g fis eis fis e cis d) |
   %% 65
-  b( cis b ais b cis d-0 e fis gis ais fis) |
+  b( cis b ais b cis d\open e fis gis ais fis) |
   %% 66
   b-1( cis b ais-1 b-1 cis d-1 e fis d cis-2 b) |
   %% 67
@@ -266,10 +266,10 @@ studyXXXIV = \new Voice \relative g'' {
   \tuplet 3/2 {cis'8-3 d cis} a4) |
   %% 3
   \tuplet 3/2 {e'8-3\>( fis e} cis4-1 \tuplet 3/2 {a8-3 b a} g4
-  \tuplet 3/2 {a,8_0 b a} e'4-4) |
+  \tuplet 3/2 {a,8_\open b a} e'4-4) |
   %% 4
   \tuplet 3/2 {fis8\<( g fis} a4\> \tuplet 3/2 {d,8-1 e d} fis4
-  \tuplet 3/2 {a,8_0 b a} d4) |
+  \tuplet 3/2 {a,8_\open b a} d4) |
   %% 5
   \tuplet 3/2 {fis,8\<( g fis} ais4-4 \tuplet 3/2 {cis8 d cis} fis4-3
   \tuplet 3/2 {e8 fis e} cis4-2) |
@@ -293,21 +293,21 @@ studyXXXIV = \new Voice \relative g'' {
   \tuplet 3/2 {cis'8-3 d cis\!} a4) |
   %% 11
   \tuplet 3/2 {e'8-3( fis e\>} cis4-1 \tuplet 3/2 {a8-3 b a} g4-2
-  \tuplet 3/2 {a,8_0 b a\!} e'4-4) |
+  \tuplet 3/2 {a,8_\open b a\!} e'4-4) |
   %% 12
   \tuplet 3/2 {fis8( g fis} a4 \tuplet 3/2 {d,8-1 e d} fis4
-  \tuplet 3/2 {a,8_0 b a} d4) |
+  \tuplet 3/2 {a,8_\open b a} d4) |
   %% 13
-  \tuplet 3/2 {c8( d c} d,4_0 \tuplet 3/2 {fis'8-3\< g fis} d4
+  \tuplet 3/2 {c8( d c} d,4_\open \tuplet 3/2 {fis'8-3\< g fis} d4
   \tuplet 3/2 {c'8 d c} a4) |
   %% 14
   \tuplet 3/2 {b8\>( ais b8} d4 \tuplet 3/2 {g,8-2 fis g\!} b4
   \tuplet 3/2 {d,8 cis d} g4-2) |
   %% 15
-  \tuplet 3/2 {a,8-0\f( b a} cis4 \tuplet 3/2 {e8 fis e} g4
+  \tuplet 3/2 {a,8\open\f( b a} cis4 \tuplet 3/2 {e8 fis e} g4
   \tuplet 3/2 {e8\dim fis e} cis4-1\!) |
   %% 16
-  \tuplet 3/2 {d8-1\>( e d\!} d,4_0 \tuplet 3/2 {fis'8\> g fis\!} d,4
+  \tuplet 3/2 {d8-1\>( e d\!} d,4_\open \tuplet 3/2 {fis'8\> g fis\!} d,4
   \tuplet 3/2 {ees'8\> f ees\!} d,4) |
   %% 17
   \tuplet 3/2 {d'8\>( ees d\!} d,4 \tuplet 3/2 {bes'8-3\> c bes\!}
@@ -345,7 +345,7 @@ studyXXXIV = \new Voice \relative g'' {
   \tuplet 3/2 {d8-1\<( ees d} f4\> \tuplet 3/2 {bes,8-1 c bes} d4
   \tuplet 3/2 {f,8 g f\!} bes4) |
   %% 27
-  \tuplet 3/2 {d,8-0\<( ees d} fis4 \tuplet 3/2 {a8 bes a} d4
+  \tuplet 3/2 {d,8\open\<( ees d} fis4 \tuplet 3/2 {a8 bes a} d4
   \tuplet 3/2 {c8 d c} a4) |
   %% 28
   \tuplet 3/2 {bes8\>( c bes} g4 \tuplet 3/2 {d'8 ees d} bes4
@@ -370,9 +370,9 @@ studyXXXIV = \new Voice \relative g'' {
   \tuplet 3/2 {a,8\dim b a} e'4-4\!) |
   %% 34
   \tuplet 3/2 {fis,8( g fis} d'4\flageolet-4
-  \tuplet 3/2 {d,8_0 e_1 d_0 b'_3 g_1 d_2} g,4-0 <d' b' g'>4\f) |
+  \tuplet 3/2 {d,8_\open e_1 d_\open b'_3 g_1 d_2} g,4\open <d' b' g'>4\f) |
   %% 35
-  \tuplet 3/2 {e'8-0\mf( fis e} b4-1
+  \tuplet 3/2 {e'8\open\mf( fis e} b4-1
   \tuplet 3/2 {g'8-4 fis e fis g fis} b,4-1 \tuplet 3/2 {a'8 g fis)} |
   %% 36
   \tuplet 3/2 {g8( b g} e4 \tuplet 3/2 {g8 fis e}
@@ -381,18 +381,18 @@ studyXXXIV = \new Voice \relative g'' {
   \tuplet 3/2 {fis b ais b fis dis} b4) |
   %% 37
   \tupletSpan 4
-  \tuplet 3/2 {e8-0( fis e} b4-1 \tuplet 3/2 {g'8-4 fis e fis g fis}
+  \tuplet 3/2 {e8\open( fis e} b4-1 \tuplet 3/2 {g'8-4 fis e fis g fis}
   b,4-1 \tuplet 3/2 {a'8 g fis)} |
   %% 38
   \tupletSpan 2.
   \once \override TupletNumber.text = #tuplet-number::calc-fraction-text
-  \tuplet 3/2 {g8\cresc( b e, fis a g fis e-0 dis}
+  \tuplet 3/2 {g8\cresc( b e, fis a g fis e\open dis}
   \tuplet 3/2 {e b g} e4 <b' e>\!) |
   %% 39
-  \tuplet 3/2 {g,8-0\p( d'_0 g_1} b4 \tuplet 3/2 {d8 e d} b'4\<
+  \tuplet 3/2 {g,8\open\p( d'_\open g_1} b4 \tuplet 3/2 {d8 e d} b'4\<
   \tuplet 3/2 {g8 e\> d} b4\!) |
   %% 40
-  \tuplet 3/2 {d,8_2( c'_4 a_0} fis'4 \tuplet 3/2 {d8 e d} e'4\flageolet\<
+  \tuplet 3/2 {d,8_2( c'_4 a_\open} fis'4 \tuplet 3/2 {d8 e d} e'4\flageolet\<
   \tuplet 3/2 {d8-4 c\> a} fis4-1\!) |
   %% 41
   \tuplet 3/2 {g8( a g} b4-2 \tuplet 3/2 {d,8 e d} g4
@@ -401,7 +401,7 @@ studyXXXIV = \new Voice \relative g'' {
   \tuplet 3/2 {a,,8( b a} g'4 \tuplet 3/2 {e8 fis e} cis'4
   \tuplet 3/2 {a8 b a)} g'4->-4~ |
   %% 43
-  \tuplet 3/2 {g8(fis d} d,4-0 a''4-4\flageolet~\> \tuplet 3/2 {a8\! g-4 e} d4)
+  \tuplet 3/2 {g8(fis d} d,4\open a''4-4\flageolet~\> \tuplet 3/2 {a8\! g-4 e} d4)
   \once \override Hairpin.to-barline = ##f
   b'4~\>( |
   %% 44
@@ -418,27 +418,27 @@ studyXXXIV = \new Voice \relative g'' {
   \once \override TupletNumber.text = #tuplet-number::calc-fraction-text
   \tuplet 3/2 {cis( e d fis\cresc e g fis a-4 gis}
   \once \override TupletNumber.text = #tuplet-number::calc-fraction-text
-  \tuplet 3/2 {b a-0 c b d c e-4 dis fis)} |
+  \tuplet 3/2 {b a\open c b d c e-4 dis fis)} |
   %% 48
   \once \override TupletNumber.text = #tuplet-number::calc-fraction-text
-  \tuplet 3/2 {e-0\f( g fis a gis b-2 a c b}
+  \tuplet 3/2 {e\open\f( g fis a gis b-2 a c b}
   \once \override TupletNumber.text = #tuplet-number::calc-fraction-text
   \tuplet 3/2 {d b c g-2\dim a eis-1 e-1 cis-2 d\!)} |
   %% 49
   \once \override TupletNumber.text = #tuplet-number::calc-fraction-text
   \tuplet 3/2 {b8-1\>( c gis a eis fis} d4\!)
   \once \override TupletNumber.text = #tuplet-number::calc-fraction-text
-  \tuplet 3/2 {dis'8\>( e-2 b-3 c-4 gis-1 a-2} d,4-0) |
+  \tuplet 3/2 {dis'8\>( e-2 b-3 c-4 gis-1 a-2} d,4\open) |
   %% 50
   \once \override TupletNumber.text = #tuplet-number::calc-fraction-text
   \tuplet 3/2 {gis'8-2\f( a g fis e d c\dim b a)}
   \once \override TupletNumber.text = #tuplet-number::calc-fraction-text
   \tuplet 3/2 {gis( a g fis e d c b a)} |
   %% 51
-  \tuplet 3/2 {g8-0\p( d'_0 g_1} b4-3\< \tuplet 3/2 {d8 e d}
+  \tuplet 3/2 {g8\open\p( d'_\open g_1} b4-3\< \tuplet 3/2 {d8 e d}
   b'4\> \tuplet 3/2 {g8 e d\!} b4) |
   %% 52
-  \tuplet 3/2 {d,8-0\<( c' a_0} fis'4-3\> \tuplet 3/2 {d8-1\! e d}
+  \tuplet 3/2 {d,8\open\<( c' a_\open} fis'4-3\> \tuplet 3/2 {d8-1\! e d}
   e'4\flageolet\> \tuplet 3/2 {d8-4 c a} fis4-1\!) |
   %% 53
   \tuplet 3/2 {g8( a g} b4-2 \tuplet 3/2 {d,8 e d} g4
@@ -457,7 +457,7 @@ studyXXXIV = \new Voice \relative g'' {
   \once \override TupletNumber.text = #tuplet-number::calc-fraction-text
   \tuplet 3/2 {a-1( gis-1 b-2 a cis b d-4\cresc cis e}
   \once \override TupletNumber.text = #tuplet-number::calc-fraction-text
-  \tuplet 3/2 {dis-1 fis-2 e-1 g fis a-4 gis-3 b-1 a-0\!)} |
+  \tuplet 3/2 {dis-1 fis-2 e-1 g fis a-4 gis-3 b-1 a\open\!)} |
   %% 58
   \once \override TupletNumber.text = #tuplet-number::calc-fraction-text
   \tuplet 3/2 {cis( b d cis e-4 dis-3 fis-1 e g}
@@ -471,10 +471,10 @@ studyXXXIV = \new Voice \relative g'' {
   \tuplet 3/2 {cis'8-3 d cis\!} a4) |
   %% 61
   \tuplet 3/2 {e'8-3( fis\> e} cis4 \tuplet 3/2 {a8-3 b a} g4-2
-  \tuplet 3/2 {a,8_0 b a\!} e'4-4) |
+  \tuplet 3/2 {a,8_\open b a\!} e'4-4) |
   %% 62
   \tuplet 3/2 {fis8\<( g fis} a4\> \tuplet 3/2 {d,8-1 e d} fis4
-  \tuplet 3/2 {a,8_0 b a\!} d4) |
+  \tuplet 3/2 {a,8_\open b a\!} d4) |
   %% 63
   \tuplet 3/2 {fis,8\<( g fis} ais4-4 \tuplet 3/2 {cis8 d cis} fis4-3
   \tuplet 3/2 {e8 fis e\!} cis4-2) |
@@ -497,21 +497,21 @@ studyXXXIV = \new Voice \relative g'' {
   \tuplet 3/2 {cis'8-3 d cis\!} a4) |
   %% 69
   \tuplet 3/2 {e'8-3( fis\> e} cis4 \tuplet 3/2 {a8-3 b a} g4
-  \tuplet 3/2 {a,8-0 b a\!} e'4) |
+  \tuplet 3/2 {a,8\open b a\!} e'4) |
   %% 70
   \tuplet 3/2 {fis8( g fis} a4 \tuplet 3/2 {d,8-1 e d} fis4
   \tuplet 3/2 {a,8 b a} d4) |
   %% 71
-  \tuplet 3/2 {c8( d c} a4-0 \tuplet 3/2 {fis'8-3\< g fis} d4
+  \tuplet 3/2 {c8( d c} a4\open \tuplet 3/2 {fis'8-3\< g fis} d4
   \tuplet 3/2 {c'8 d c} a4) |
   %% 72
   \tuplet 3/2 {b8\>( ais b} d4 \tuplet 3/2 {g,8-2 fis g} b4
   \tuplet 3/2 {d,8 cis d\!} g4-2) |
   %% 73
-  \tuplet 3/2 {a,8_0( b a} cis4 \tuplet 3/2 {e8-2 fis e} g4
+  \tuplet 3/2 {a,8_\open( b a} cis4 \tuplet 3/2 {e8-2 fis e} g4
   \tuplet 3/2 {e8 fis e} cis4-1) |
   %% 74
-  \tuplet 3/2 {d8-1\>( e d\!} d,4-0 \tuplet 3/2 {fis'8\> g fis\!} d,4
+  \tuplet 3/2 {d8-1\>( e d\!} d,4\open \tuplet 3/2 {fis'8\> g fis\!} d,4
   \tuplet 3/2 {ees'8\> f ees\!} d,4) |
   %% 75
   \tuplet 3/2 {d'8-1\>( ees d\!} d,4 \tuplet 3/2 {bes'8-3\> c bes\!} d,4
@@ -524,13 +524,13 @@ studyXXXIV = \new Voice \relative g'' {
   \tuplet 3/2 {g8_1 a g} d4) |
   %% 78
   \tuplet 3/2 {fis8_2( g fis} d4 \tuplet 3/2 {a'8_2\cresc b a} fis4-2
-  \tuplet 3/2 {d'8-3 e d} a4-0) |
+  \tuplet 3/2 {d'8-3 e d} a4\open) |
   %% 79
   \tuplet 3/2 {fis'8-3( g fis} d4 \tuplet 3/2 {a'8-3 b a} fis4
   \tuplet 3/2 {d'8 e d} a4) |
   %% 80
   \tuplet 3/2 {fis'8-4\f( eis fis} d4 \tuplet 3/2 {a8 gis a} fis4
-  \tuplet 3/2 {d8 cis d} a4-0) |
+  \tuplet 3/2 {d8 cis d} a4\open) |
   %% 81
   \tuplet 3/2 {fis8-2\p( g fis} d4 \tuplet 3/2 {a'8_2\cresc b a} d,4
   \tuplet 3/2 {d'8-1 e d} d,4\!) |
@@ -559,8 +559,8 @@ studyXXXIII = \new Voice \relative g'' {
   \tempo "Allegro moderato." 4=123
   \key c \major
 
-  g8-.->\p a16-.( g-. f-. e-.-0 d-. c-.)
-  b8-.-> d16-.( c-. b-. a-.-0 g-. f-.) |
+  g8-.->\p a16-.( g-. f-. e-.\open d-. c-.)
+  b8-.-> d16-.( c-. b-. a-.\open g-. f-.) |
   %% 2
   e8-.-> c16-.( d-. e-. f-. g-. a-.)
   g8-.-> e'16-.( d-. c-. b-. a-.-4 g-.) |
@@ -574,7 +574,7 @@ studyXXXIII = \new Voice \relative g'' {
   f8-. d'16-.-4( c-. b-. a-. g-.-4 f-.-3)
   e8-.-2 c'16-.( b-. a-. g-. f-. e-.) |
   %% 6
-  d8-. b'16-.( a-. gis-.-2 f-.-1 e-.-0 d-.)
+  d8-. b'16-.( a-. gis-.-2 f-.-1 e-.\open d-.)
   c8-. e16-.( d-. c-. b-. a-. g-.) |
   %% 7
   f8-. a'16-.( g-. f-. e-. d-. c-.)
@@ -604,12 +604,12 @@ studyXXXIII = \new Voice \relative g'' {
   d8-. bes'16-.-4( a-. bes-. f-. d-. bes-.) |
   %% 16
   a8-.\dim a'16-.( gis-. a-. e-. c-. a-.)
-  gis8-.\p e'16-.( dis-. e-.-0 fis-. gis-. a-.) |
+  gis8-.\p e'16-.( dis-. e-.\open fis-. gis-. a-.) |
   %% 17
-  b8_\markup{\italic "simile"} e,16-4 dis e-0 fis g a
+  b8_\markup{\italic "simile"} e,16-4 dis e\open fis g a
   bes8 e,16-4 dis e f g bes |
   %% 18
-  a8 d,16 cis d e-0 f g aes8 d,16-3 cis d ees f aes |
+  a8 d,16 cis d e\open f g aes8 d,16-3 cis d ees f aes |
   %% 19
   g8 c,16\cresc b c d ees d c8 c'16-3 b-2 c-1 d ees d |
   %% 20
@@ -617,9 +617,9 @@ studyXXXIII = \new Voice \relative g'' {
   %% 21
   b8-2 g'16\p fis g a b c d8 b16 ais b\cresc c d e |
   %% 22
-  f8 d16 cis d e-0 f g a8 aes16\dim aes g g fis fis |
+  f8 d16 cis d e\open f g a8 aes16\dim aes g g fis fis |
   %% 23
-  g8\p a16 g f e-0 d c b8 d16 c b a-0 g f |
+  g8\p a16 g f e\open d c b8 d16 c b a\open g f |
   %% 24
   e8 c16 d e f g a g8 e'16 d c b a g |
   %% 25
@@ -629,13 +629,13 @@ studyXXXIII = \new Voice \relative g'' {
   %% 27
   f8 d'16 c b a g f e8 c'16 b a g f e |
   %% 28
-  d8 b'16 a gis-2\cresc f-1 e-0 d c8 e16-4 d c b a-0 g\! |
+  d8 b'16 a gis-2\cresc f-1 e\open d c8 e16-4 d c b a\open g\! |
   %% 29
-  f8 a'16 g f e-0 d c b8 g'16 f e-0 d c b |
+  f8 a'16 g f e\open d c b8 g'16 f e\open d c b |
   %% 30
   c8 c'16 g e c g e c4 r |
   %% 31
-  c'8 c'16 a fis dis-4 c a-0 fis4 r |
+  c'8 c'16 a fis dis-4 c a\open fis4 r |
   %% 32
   g8 a'16 g e c g e c4 r |
   %% 33
@@ -643,7 +643,7 @@ studyXXXIII = \new Voice \relative g'' {
   %% 34
   c8\f c16 e g c e g c4 r |
   %% 35
-  c,8\p c'16 a fis ees-4 c a-0 fis4 r |
+  c,8\p c'16 a fis ees-4 c a\open fis4 r |
   %% 36
   bes,8 bes''16 g ees bes g ees bes4 r |
   %% 37
@@ -762,7 +762,7 @@ studyXXXII = \new Voice \relative g'' {
   %% 35
   g8. c16 e8.-1 g16-3\cresc c8.-2 d16 |
   %% 36
-  e8. b16 d8. c16 e,8.-0 a16-3 |
+  e8. b16 d8. c16 e,8.\open a16-3 |
   %% 37
   f8.\f f16 a8. d,16 f8. a,16 |
   %% 38
@@ -776,7 +776,7 @@ studyXXXII = \new Voice \relative g'' {
   %% 42
   d8.-3\dim g,16 b8. d,16 g8. b,16\! |
   %% 43
-  d8.-4\cresc g,16 b8. d16-0 g8.-3 b16-1 |
+  d8.-4\cresc g,16 b8. d16\open g8.-3 b16-1 |
   %% 44
   d8.-3 f16-2\! aes8.-4 aes16-4\> g8.-3 f16-2 |
   %% 45
@@ -792,7 +792,7 @@ studyXXXII = \new Voice \relative g'' {
   %% 50
   ees8.\dim c16 a8. ges16 ees8. c16 |
   %% 51
-  bes8.\p a16 bes8. c16 d8.-0 ees16 |
+  bes8.\p a16 bes8. c16 d8.\open ees16 |
   %% 52
   f8.\cresc cis16 d8. ees16 f8. g16 |
   %% 53
@@ -822,7 +822,7 @@ studyXXXII = \new Voice \relative g'' {
   %% 65
   f8.\> ees16 g,8.\! ees'16-4 d8.\> c16\! |
   %% 66
-  c8.-4\> bes16-3 d,8.-0\! aes'16\> g8. f16\! |
+  c8.-4\> bes16-3 d,8.\open\! aes'16\> g8. f16\! |
   %% 67
   ees8. g,16 bes8. ees16 g8. bes16 |
   %% 68
@@ -869,7 +869,7 @@ studyXXXI = \new Voice \relative e'' {
   %% 10
   f( e f c) c\dim( b c aes) aes( g aes f) f( e f c\!) |
   %% 11
-  b( ais b d-0) f( e f aes) b( ais b d) f( e f aes) |
+  b( ais b d\open) f( e f aes) b( ais b d) f( e f aes) |
   %% 12
   c-3( b c aes) ees( d ees c) aes-2( g aes ees) c-3( b c aes) |
   %% 13
@@ -880,13 +880,13 @@ studyXXXI = \new Voice \relative e'' {
   bes-2\p( g'-4) des'-3( g,-4)  bes,( g') des'( g,)
   b,-2\cresc( aes'-4) d-3( aes-4) b,( aes') d( aes) |
   %% 16
-  c,\f( g' c e-0) e-0( c g c,) c( g') c-. c-. c8 r |
+  c,\f( g' c e\open) e\open( c g c,) c( g') c-. c-. c8 r |
   %% 17
   ees16-4-\dolce( d ees g aes g aes b-2) c-3( b c aes ees d ees c) |
   %% 18
   aes( g aes f ees-3 d ees c) aes-1( g aes c ees d ees aes) |
   %% 19
-  g( fis g a-0 bes a bes d) ees( d ees fis g fis g a-1) |
+  g( fis g a\open bes a bes d) ees( d ees fis g fis g a-1) |
   %% 20
   bes( a bes c des-4 c des bes) g-4( fis g ees des-3 c-2 des bes) |
   %% 21
@@ -895,7 +895,7 @@ studyXXXI = \new Voice \relative e'' {
   bes( a bes g ees d ees g) bes( a bes ees g fis g bes) |
   %% 23
   bes->-4( aes g f) g->-4( f ees d)
-  ees->-4( d c bes) c->-4( aes-2 f-2 d-0) |
+  ees->-4( d c bes) c->-4( aes-2 f-2 d\open) |
   %% 24
   ees-1\p( f g aes) g-1( aes\cresc bes c)
   bes( c d ees) des-3( c des bes\!) |
@@ -904,7 +904,7 @@ studyXXXI = \new Voice \relative e'' {
   %% 26
   aes-2( g aes f ees-3 d ees c) aes-1( g aes c ees d ees aes) |
   %% 27
-  g( fis g a-0 bes a bes d) ees( d ees fis g fis g a-1) |
+  g( fis g a\open bes a bes d) ees( d ees fis g fis g a-1) |
   %% 28
   bes( a bes c des-4 c des bes) g-4( fis g ees des-3 c-2 des bes) |
   %% 29
@@ -925,7 +925,7 @@ studyXXXI = \new Voice \relative e'' {
   %% 35
   bes^\p( a bes c des c des e) f\cresc( e f a bes a bes c) |
   %% 36
-  des( c des e-0 f e f a-1) bes( a bes c des8\!) r |
+  des( c des e\open f e f a-1) bes( a bes c des8\!) r |
   %% 37
   des16->-4\f( c bes aes) bes->-4( aes g f)
   g->-4( f ees des) ees->-4( des c bes) |
@@ -946,7 +946,7 @@ studyXXXI = \new Voice \relative e'' {
   %% 44
   aes\p( g aes f) ees( d ees c') ees( d ees c) aes( c\cresc des ees) |
   %% 45
-  f( e f g) aes( g aes-3 bes-2\!) ces( bes ces aes) f-1( e-0 f-1 d-3) |
+  f( e f g) aes( g aes-3 bes-2\!) ces( bes ces aes) f-1( e\open f-1 d-3) |
   %% 46
   ees( d ees g) aes( g aes b-2) c( b c aes) ees( d ees c-2) |
   %% 47
@@ -1011,9 +1011,9 @@ studyXXX = \new Voice \relative a'' {
   %% 14
   \tuplet 3/2 {g^( a g fis\> g fis\! g a g f\cresc g f e f e d e d)} |
   %% 15
-  \tuplet 3/2 {c\f^( d_4 c b c b c d_4 c d_0 e d e f e f g f)} |
+  \tuplet 3/2 {c\f^( d_4 c b c b c d_4 c d_\open e d e f e f g f)} |
   %% 16
-  \tuplet 3/2 {g\dim( a_4 g a_0 bes a b c b c d c d e d e f e)} |
+  \tuplet 3/2 {g\dim( a_4 g a_\open bes a b c b c d c d e d e f e)} |
   %% 17
   \tuplet 3/2 {
     f\mf( g f \repeat unfold 2 {g-> a g f g f} g-> a g)} |
@@ -1038,7 +1038,7 @@ studyXXX = \new Voice \relative a'' {
   \tuplet 3/2 {
     c\mf^( d c \repeat unfold 2 {b-> c b c d c} b-> c b)} |
   %% 26
-  \tuplet 3/2 {c\f^( d_4 c d_0 e d e f e f\dim g f g a_4 g a_0 bes a\!)} |
+  \tuplet 3/2 {c\f^( d_4 c d_\open e d e f e f\dim g f g a_4 g a_\open bes a\!)} |
   %% 27
   \tuplet 3/2 {bes( c bes c d c d e d e f e f g f fis g fis)} |
   %% 28
@@ -1052,7 +1052,7 @@ studyXXX = \new Voice \relative a'' {
   \tuplet 3/2 {
     bes_( c bes \repeat unfold 2 {a-> bes a bes c bes} a-> bes a)} |
   %% 32
-  \tuplet 3/2 {bes_( c bes g-2 a g e f e c d c d e d e-0 f e)} |
+  \tuplet 3/2 {bes_( c bes g-2 a g e f e c d c d e d e\open f e)} |
   %% 33
   \tuplet 3/2 {f_( g f \repeat unfold 2 {a-> bes a f g f} a-> bes a)} |
   %% 34
@@ -1066,12 +1066,12 @@ studyXXX = \new Voice \relative a'' {
   %% 38
   \tuplet 3/2 {e( f e g-> a g bes\fz a g f e d c\fz d c bes a g)} |
   %% 39
-  \tuplet 3/2 {a\p( c e f-> c a bes d fis g-> d b c e-0 gis a-> e-0 cis)} |
+  \tuplet 3/2 {a\p( c e f-> c a bes d fis g-> d b c e\open gis a-> e\open cis)} |
   %% 40
   \tuplet 3/2 {d-1_( f a bes-> f d e g b-2 c-> g e f a cis d-> a f)} |
   %% 41
   \tuplet 3/2 {
-    g->-3_( bes-1 e-4 d-3 a-4 f-2 e-> g b c g e d-1-> f bes a e-0 c-2)} |
+    g->-3_( bes-1 e-4 d-3 a-4 f-2 e-> g b c g e d-1-> f bes a e\open c-2)} |
   %% 42
   \tuplet 3/2 {bes->_( d fis g d bes a-> c f e-> bes g f-> a cis d a f)} |
   %% 43
@@ -1091,9 +1091,9 @@ studyXXX = \new Voice \relative a'' {
   \tuplet 3/2 {
     a^( bes a gis-> a gis a bes a gis-> a gis\dim a bes a gis-> a gis\!)} |
   %% 50
-  \tuplet 3/2 {a-0( bes-1 a bes c bes b c b c\cresc d c cis d cis d e d\!)} |
+  \tuplet 3/2 {a\open( bes-1 a bes c bes b c b c\cresc d c cis d cis d e d\!)} |
   %% 51
-  \tuplet 3/2 {dis_( e dis e-0 f e f g f fis g fis g^\rall a g gis a gis)} |
+  \tuplet 3/2 {dis_( e dis e\open f e f g f fis g fis g^\rall a g gis a gis)} |
   %% 52
   \tuplet 3/2 {
     a\p_( bes^\aTempo a \repeat unfold 2 {gis-> a gis a bes a} gis-> a gis)}
@@ -1161,26 +1161,26 @@ studyXXIX = \new Voice \relative c' {
   c8-.\fp\< e-. g-. c-. e-.-1 g-.-3 |
   c-.-2 e,-.-1 g-.-3 c-.-2\! e-4 r |
   %% 3
-  b,,-.-2\fp\< d-.-0 g-. b-. d-.-1 g-.-4 | b-. d,-. g-. b-.\! d-. r |
+  b,,-.-2\fp\< d-.\open g-. b-. d-.-1 g-.-4 | b-. d,-. g-. b-.\! d-. r |
   %% 5
-  d,,-.-0\fp\< f-. a-. d-.-1 f-.-3 a-.-1 | d-. f,-. a-. d-.-2 f-.-4\! r |
-  a,,,-.\fp\< cis-. e-. a-. cis-. e-. | a-.-1 e-.-0 a-.-1 cis-.\! e-. r |
+  d,,-.\open\fp\< f-. a-. d-.-1 f-.-3 a-.-1 | d-. f,-. a-. d-.-2 f-.-4\! r |
+  a,,,-.\fp\< cis-. e-. a-. cis-. e-. | a-.-1 e-.\open a-.-1 cis-.\! e-. r |
   d,,-.\> f-.\! a-. d-. f-. a-. | b,,-.\> d-.\! g-. b-. d-. b-. |
   %% 11
   c,-.\> e-.\! g-. c-. e-. g-. | a,,-.\> c-.\! f-. a-. c-. a-. |
   b,-.\> d-.\! f-. b-.-1 d-.-3 f-.-4 | gis,,-.\> b-.\! e-. gis-. b-. gis-. |
   %% 15
-  a,-.\> c-.\! e-. a-. c-. e-. | f,-.\> a-.-0\! e'-.-4 dis-. a-. b-. |
+  a,-.\> c-.\! e-. a-. c-. e-. | f,-.\> a-.\open\! e'-.-4 dis-. a-. b-. |
   \once \override Hairpin.to-barline = ##f
-  e,-.\fp\< gis-. b-. e-.-0 gis-. b-. | e4\flageolet\! r r |
+  e,-.\fp\< gis-. b-. e-.\open gis-. b-. | e4\flageolet\! r r |
   %% 19
   a,,,8-.\fp\< c-. e-. a-. c-. e-. | f-. a,-. d-. f-.\! a-. r |
-  g,,-.\fp\< b-. d-. g-. b-. d-. | e-. g,-. c-. e-.-0\! g-. r |
+  g,,-.\fp\< b-. d-. g-. b-. d-. | e-. g,-. c-. e-.\open\! g-. r |
   %% 23
   f,-.\> a-.\! c-. f-.\< a-.-1 c-.-3\! |
-  d,,-.-0\> f'-.-3\! a-.-1 d-.-1\< f-.-3 a-.-4 |
+  d,,-.\open\> f'-.-3\! a-.-1 d-.-1\< f-.-3 a-.-4 |
   %% 25
-  g,,,-.\> c-.\! e-.\< g-. c-. e-.-0\! | g-. d-. b-.\> g-. d-. b-.\! |
+  g,,,-.\> c-.\! e-.\< g-. c-. e-.\open\! | g-. d-. b-.\> g-. d-. b-.\! |
   c-.\fp\< ees-. g-. c-. ees-. g-.-3 | c-.-2 ees,-.-1 g-.-3 c-.-2\! e-.-4 r |
   %% 29
   b,,-.\fp\< d-. g-. b-. d-.-1 g-.-4 | b-. d,-. g-. b-.\! d-. r |
@@ -1190,7 +1190,7 @@ studyXXIX = \new Voice \relative c' {
   %% 35
   g,,-1\fp\< bes-3 d g bes d\! | ees,,-1\fp\< g-3 c-2 ees-2 g-4 c-3\! |
   %% 37
-  f,,-2\fp\< bes d-1 f-3 bes d\! | f,,-2\fp\< a-0 c f a-1 c-3\! |
+  f,,-2\fp\< bes d-1 f-3 bes d\! | f,,-2\fp\< a\open c f a-1 c-3\! |
   %% 39
   d\fp bes f d bes-1 f-2 | d bes' f d bes d''-4 |
   c-3\fp a f-3 c-4 a-2 f-2 | c-3 a'-4 f c a-1 c''-4 |
@@ -1198,36 +1198,36 @@ studyXXIX = \new Voice \relative c' {
   b-4\fp aes-3 f d b b' | bes\fp g e cis bes bes' |
   a\fp f d a f a' | g\fp d bes g d g' |
   %% 47
-  f\fp c a-4 f c f' | e-0\fp c'-3 bes-2 g-2 e c |
+  f\fp c a-4 f c f' | e\open\fp c'-3 bes-2 g-2 e c |
   %% 49
   a'\fp f c a f a'-1 | c\fp g-4 e c-4 g-1 c'-3 |
   %% 51
   b\fp g d b g d''-2 | f-4\fp d-2 b-4 g-2 f-1 f'-4 |
   %% 53
   e-3 c-1 g-2 e'-3 d-2 f,-1 | e-2 c' g e d b' |
-  d\fp\> b g f d b-1 | c\< d e-0 f g gis\! |
+  d\fp\> b g f d b-1 | c\< d e\open f g gis\! |
   %% 57
-  a\fp f c a-0 f a' | g\fp e c g e g' |
-  bes\fp g d bes g bes' | a\fp f d a-0 f a'-1 |
+  a\fp f c a\open f a' | g\fp e c g e g' |
+  bes\fp g d bes g bes' | a\fp f d a\open f a'-1 |
   %% 61
   d-4\fp bes-2 f-3 d-1 bes-3 d'-4 | c\fp a f c a c' |
-  c\fp bes g-4 e-0 f-1 a | g\> e-0\! c bes g e |
+  c\fp bes g-4 e\open f-1 a | g\> e\open\! c bes g e |
   %% 65
-  f\fp a c f a c-4 | d,,-0\fp a'-2 d\flageolet f-3 a d |
-  cis,,-3 e-1 a-0 cis e-0 a | e,^\fp d' f a bes,\> g'\! |
+  f\fp a c f a c-4 | d,,\open\fp a'-2 d\flageolet f-3 a d |
+  cis,,-3 e-1 a\open cis e\open a | e,^\fp d' f a bes,\> g'\! |
   %% 69
-  c,\fp a' f c a-0 f | e\> c'\! bes g e c |
-  e^\fp g bes c e-0 g | f a f e-4 d c |
+  c,\fp a' f c a\open f | e\> c'\! bes g e c |
+  e^\fp g bes c e\open g | f a f e-4 d c |
   %% 73
   b-1\> f'-4\! d c b a-4 | g\> d'\! b g f e |
-  d\> a'-4\! f e d c | b f'-1 d-0 g,\< a b\! |
+  d\> a'-4\! f e d c | b f'-1 d\open g,\< a b\! |
   %% 77
   c\fp\< e g c e-1 g-3 | c-2 e,-1 g-3 c-2\! e-4 r |
   %% 79
   b,,\fp\< d g b d-1 g-4 | b d, g b\! d r |
   d,,\fp\< f a d-1 f-3 a | d f, a d-2\! f-4 r |
   %% 83
-  a,,,\fp\< cis e a-0 cis e-0 | a-1 e-0 a-1 cis\! e r |
+  a,,,\fp\< cis e a\open cis e\open | a-1 e\open a-1 cis\! e r |
   d,,\fp f a d f a | b,,\> d\! g b d b |
   %% 87
   c,\> e\! g c e g | a,,\> d\! fis a c a |
@@ -1239,14 +1239,14 @@ studyXXIX = \new Voice \relative c' {
   b,,\fp\< d g b d-1 g-4 | b d, g b\! d r |
   bes,,-2\fp\< d g bes d-1 g-4 | bes d, g bes\! d r |
   %% 99
-  a,,\fp\< e' a-0 cis e-0 a-1 | cis e, a cis\! e r |
+  a,,\fp\< e' a\open cis e\open a-1 | cis e, a cis\! e r |
   d,,\> f\! a d f a | b,,\> d\! g b d b |
   %% 103
-  c,\> e\! g c e-0 g | f,\> a\! d f a f |
-  g,,\> c\! e g c e | g,,\> b\! d-0 g b d |
+  c,\> e\! g c e\open g | f,\> a\! d f a f |
+  g,,\> c\! e g c e | g,,\> b\! d\open g b d |
   %% 107
   c,\fp e g c e g-2 | c4-4 r r |
-  c8-4\fp( a-3) fis-.( ees-. c-. a-.-0 | fis4-.) r r |
+  c8-4\fp( a-3) fis-.( ees-. c-. a-.\open | fis4-.) r r |
   \once \override Hairpin.to-barline = ##f
   g8-1\fp\<( c-4) e-.-2( g-.-2 c-.-1 e-.-3 | g4-.-4\!) r r |
   %% 113
@@ -1255,9 +1255,9 @@ studyXXIX = \new Voice \relative c' {
   %% 117
   a,,8\fp( c)  ees-.( fis-.\cresc a-. c-. | ees4\!) r r |
   %% 119
-  g,,8^\fp( c) e-.( g-. c-. e-.-0 | g4-.) r r |
+  g,,8^\fp( c) e-.( g-. c-. e-.\open | g4-.) r r |
   a8\ff( g) f-.( e-.-4 d-. c-. | b-. a-.-4 g-. f-. e-. d-.-4) |
-  c-.\f e-. g-. c-. e,-. g-. | c-. e-. g,-. c-. e-.-0 g-. |
+  c-.\f e-. g-. c-. e,-. g-. | c-. e-. g,-. c-. e-.\open g-. |
   %% 125
   c,-. e-. g-.-2 c-.-4 g-.-2 e-. | c-. g'-. e-. c-. g-. e-. |
   c4 r r8. <e' c'>16\ff | <e c'>4 r r8. <c e,>16 |
@@ -1277,7 +1277,7 @@ studyXXVIII = \new Voice \relative g {
   %% 2
   c16\fp( e) e e e4:16 e16\fp( a-4) a a a4:16 |
   %% 3
-  a16-0\fp( c) c c c\fp( e-4) e e e-0\fp( a) a a a-3\fp( c-4) c( a) |
+  a16\open\fp( c) c c c\fp( e-4) e e e\open\fp( a) a a a-3\fp( c-4) c( a) |
   %% 4
   a\>( gis) gis( a) a( ais) ais( b\!) b4 r |
   %% 5
@@ -1287,7 +1287,7 @@ studyXXVIII = \new Voice \relative g {
   %% 7
   d16-3\fp( f-4) f f f-4\fp( e-4) e e e\fp( d) d d d\fp( c) c( b) |
   %% 8
-  c\>( c) c( b\!) b( a-0) a-4( gis\!) a4 r |
+  c\>( c) c( b\!) b( a\open) a-4( gis\!) a4 r |
   %% 9
   b16\fp( c) c c c4:16 fis,16\fp( g) g g g4:16 |
   %% 10
@@ -1297,7 +1297,7 @@ studyXXVIII = \new Voice \relative g {
   %% 12
   c-2\>( b) b( c) c( cis) cis( d\!) d4 r |
   %% 13
-  e,16-0\fp( f-1) f f f4:16 cis16\fp( d) d d d4:16 |
+  e,16\open\fp( f-1) f f f4:16 cis16\fp( d) d d d4:16 |
   %% 14
   ais'16-4\fp( b-4) b b b4:16 fis16\fp( g) g g g4:16 |
   %% 15
@@ -1309,7 +1309,7 @@ studyXXVIII = \new Voice \relative g {
   %% 18
   d16\fp( c) c c c4:16 c16\fp( gis-2) gis gis gis4:16 |
   %% 19
-  b16\fp( a) a a a\fp( f) f f f\fp( e-0) e e e-4\fp( dis) dis dis |
+  b16\fp( a) a a a\fp( f) f f f\fp( e\open) e e e-4\fp( dis) dis dis |
   %% 20
   dis( e) e e e4:16 e r |
   %% 21
@@ -1333,7 +1333,7 @@ studyXXVIII = \new Voice \relative g {
   %% 30
   c16\fp( e) e e e4:16 e16\fp( a-4) a a a4:16 |
   %% 31
-  a16-0\fp( c) c c c\fp( e-4) e e e-0\fp( a) a a a-3\fp( c-4) c( a) |
+  a16\open\fp( c) c c c\fp( e-4) e e e\open\fp( a) a a a-3\fp( c-4) c( a) |
   %% 32
   a( gis) gis( a) a( ais) ais( b) b4 r8 b,32\f\downbow( a-4 gis fis |
   %% 33
@@ -1343,13 +1343,13 @@ studyXXVIII = \new Voice \relative g {
   %% 35
   d16-3\fp( f-4) f f f-4\fp( e-4) e e e\fp( d) d d d\fp( c) c( b) |
   %% 36
-  d( c) c( b) b( a-0) a-4( gis) a4 r8 e'32\f\downbow( d c b |
+  d( c) c( b) b( a\open) a-4( gis) a4 r8 e'32\f\downbow( d c b |
   %% 37
-  d16\fp cis) cis cis cis\fp( e-4) e e e-0( g) g\>( bes\!) bes\>( a\!) a\>( g\!) |
+  d16\fp cis) cis cis cis\fp( e-4) e e e\open( g) g\>( bes\!) bes\>( a\!) a\>( g\!) |
   %% 38
   g\fp( f) f f f\fp( d) d d d\fp( bes) bes bes bes\fp( f) f f |
   %% 39
-  f\fp( e) e e e\fp( a-0) a c e\fp( e,) a b e\fp( e,) gis b |
+  f\fp( e) e e e\fp( a\open) a c e\fp( e,) a b e\fp( e,) gis b |
   %% 40
   bes\fp( a) a a a\fp( a'-4\flageolet) a a a4 r |
   %% 41
@@ -1370,48 +1370,48 @@ studyXXVII = \new Voice \relative c'' {
 
   \tupletSpan 4
   
-  \tuplet 3/2 {cis8-.->\p b-. a-.-0 gis( a) e-. e'-. d-. cis-.} |
+  \tuplet 3/2 {cis8-.->\p b-. a-.\open gis( a) e-. e'-. d-. cis-.} |
   %% 2
   \tuplet 3/2 {d-.-> b-. a-. gis( b) e-. gis-. b-. gis-.} |
   %% 3
   \omit TupletNumber
-  \tuplet 3/2 {a-.->\cresc e-. d-. cis( e-0) a-.-1 cis-.-3 e-.-4 a,-.-1} |
+  \tuplet 3/2 {a-.->\cresc e-. d-. cis( e\open) a-.-1 cis-.-3 e-.-4 a,-.-1} |
   %% 4
   \tuplet 3/2 {
     gis-2\mf( b-4) e\flageolet-. d-.-4 b-.-2 gis-.-4 fis-.-3 e-.-2 d-.-1} |
   %% 5
   \tuplet 3/2 {cis-.->-2\p b-. a-. gis( a) e-. e'-. dis-. cis-.} |
   %% 6
-  \tuplet 3/2 {b-.-> a-. gis-. b\cresc( e-4) fis-. gis-. fis-. e-.-0} |
+  \tuplet 3/2 {b-.-> a-. gis-. b\cresc( e-4) fis-. gis-. fis-. e-.\open} |
   %% 7
   \tuplet 3/2 {dis( b'\f) a-. fis-.\> dis-. b-. a-.-4 fis-. dis-.}
   %% 8
-  \tuplet 3/2 {e->\<( gis) b-. e-.-0 gis-. b-.\!} e\flageolet-4 r |
+  \tuplet 3/2 {e->\<( gis) b-. e-.\open gis-. b-.\!} e\flageolet-4 r |
   %% 9
-  \tuplet 3/2 {e,-.-0\mf\> d'-. cis-. b( a-1) gis-. fis-. e-. d-.\!} |
+  \tuplet 3/2 {e,-.\open\mf\> d'-. cis-. b( a-1) gis-. fis-. e-. d-.\!} |
   %% 10
-  \tuplet 3/2 {cis-.-2 a'-. gis-. b->( a) e-.-0 cis-. b-. a-.} |
+  \tuplet 3/2 {cis-.-2 a'-. gis-. b->( a) e-.\open cis-. b-. a-.} |
   %% 11
   \tuplet 3/2 {fis'->( d) a-. fis-. d-. fis-. a-. d-. fis-.} |
   %% 12
-  \tuplet 3/2 {e-4( cis-.) a-. e-. cis-. e-. a-.-0 cis-. e-.-4} |
+  \tuplet 3/2 {e-4( cis-.) a-. e-. cis-. e-. a-.\open cis-. e-.-4} |
   %% 13
   \tuplet 3/2 {e,\> d''-. cis-. b( a-1) gis-. fis-. e-. d-.\!}
   %% 14
-  \tuplet 3/2 {cis-.-2 a'-. gis-. b->( a) e-.-0 cis-. b-. a-.} |
+  \tuplet 3/2 {cis-.-2 a'-. gis-. b->( a) e-.\open cis-. b-. a-.} |
   %% 15
   \tuplet 3/2 {c-.\cresc a'-. gis-. b->( a) fis-. dis-.\> c-. a-.\!} |
   %% 16
   \tuplet 3/2 {gis-. e'-. dis-. fis->( e) d-. b-. gis-. e-.} |
   %% 17
-  \tuplet 3/2 {cis-. e-.( a-._4) d,-.-0\< fis-.( a-.)\!} d-. r |
+  \tuplet 3/2 {cis-. e-.( a-._4) d,-.\open\< fis-.( a-.)\!} d-. r |
   %% 18
   \tuplet 3/2 {
     dis,-._1\downbow fis-.( b-._1) e,-.-1\< gis-.( b-.)\!} e-. r |
   %% 19
   \tuplet 3/2 {eis,-.\cresc gis-.( cis-.) fis,-. a-.( cis-.)} fis\! r |
   %% 20
-  \tuplet 3/2 {gis,-.->\< b-.( e-.) a,-. cis-.( e-.-0\!)}
+  \tuplet 3/2 {gis,-.->\< b-.( e-.) a,-. cis-.( e-.\open\!)}
   \once \override Hairpin.to-barline = ##f
   \once \override DynamicLineSpanner.staff-padding = #3.4
   a4~\> |
@@ -1420,7 +1420,7 @@ studyXXVII = \new Voice \relative c'' {
   %% 22
   \tuplet 3/2 {c( bes) g-.-4 e-. d-. c-. bes'-. a-. g-.} |
   %% 23
-  \tuplet 3/2 {a->( g) f-. \acciaccatura g f-. e-.-0 d-. c-. bes-. g-.} |
+  \tuplet 3/2 {a->( g) f-. \acciaccatura g f-. e-.\open d-. c-. bes-. g-.} |
   %% 24
   \tuplet 3/2 {f-.-> d'( c) e,-.-> c'-. d-. e-. f-. g-.} |
   %% 25
@@ -1429,11 +1429,11 @@ studyXXVII = \new Voice \relative c'' {
   \tuplet 3/2 {c( bes) g-.-4 e-. d-. c-. bes'-. a-. g-.} |
   %% 27
   \tuplet 3/2 {
-    a-.\cresc g-. f-. \acciaccatura g f-. e-.-0 dis-. e-4( cis) a-.} |
+    a-.\cresc g-. f-. \acciaccatura g f-. e-.\open dis-. e-4( cis) a-.} |
   %% 28
   \tuplet 3/2 {a->-4( gis) cis-. cis->( b) e-. d-. fis,-.( gis-.)} |
   %% 29
-  \tuplet 3/2 {a-.\mf e-. cis-. a-. cis-. e-. a-.-0\cresc b-. bis-.} |
+  \tuplet 3/2 {a-.\mf e-. cis-. a-. cis-. e-. a-.\open\cresc b-. bis-.} |
   %% 30
   \tuplet 3/2 {cis-.\f gis-. eis-. cis-. eis-. gis-. cis-. dis-. eis-.} |
   %% 31
@@ -1443,13 +1443,13 @@ studyXXVII = \new Voice \relative c'' {
   %% 33
   \tuplet 3/2 {e\flageolet-. e,-. e-. e( d') cis-. b-.\dim a-. gis-.} |
   %% 34
-  \tuplet 3/2 {fis->( dis) e-.\! e-.-0 b'-.-2 a-.-1 gis-.-4 fis-.-3 e-.-2} |
+  \tuplet 3/2 {fis->( dis) e-.\! e-.\open b'-.-2 a-.-1 gis-.-4 fis-.-3 e-.-2} |
   %% 35
   \tuplet 3/2 {d_>-1( bis-1) cis-.-2 cis-. a'-. gis-. fis-. e-.-4 d-.} |
   %% 36
   \tuplet 3/2 {cis->( ais-1) b-.-1 b( gis'-4) fis-.-3 e( d) b-.-1} |
   %% 37
-  \tuplet 3/2 {a-.-4\mf e-. cis-. a-. cis-. e-. a-.-0\cresc b-. bis-.} |
+  \tuplet 3/2 {a-.-4\mf e-. cis-. a-. cis-. e-. a-.\open\cresc b-. bis-.} |
   %% 38
   \tuplet 3/2 {cis-.\f gis-. eis-. cis-. eis-. gis-. cis-. dis-. eis-.} |
   %% 39
@@ -1459,16 +1459,16 @@ studyXXVII = \new Voice \relative c'' {
   %% 41
   \tuplet 3/2 {e\flageolet-. e,-. e-. e-.( d'-.) cis-. b-.\dim a-. gis-.} |
   %% 42
-  \tuplet 3/2 {fis->( dis) e-.\! e-.-0 b'-.-2 a-.-1 gis-.-4 fis-.-3 e-.-2} |
+  \tuplet 3/2 {fis->( dis) e-.\! e-.\open b'-.-2 a-.-1 gis-.-4 fis-.-3 e-.-2} |
   %% 43
   \tuplet 3/2 {d_>-1( bis-1) cis-.-2 cis-. a'-. gis-. fis-. e-. d-.} |
   %% 44
   \tuplet 3/2 {
     cis->( ais-1) b-.-1 b-.( gis'-.-4) fis-.-3 e( d) b-.-3} | R2. |
   %% 46
-  \tuplet 3/2 {cis8-.->-2\p b-. a-.-0 gis( a) e-. e'-. d-. cis-.} |
+  \tuplet 3/2 {cis8-.->-2\p b-. a-.\open gis( a) e-. e'-. d-. cis-.} |
   %% 47
-  \tuplet 3/2 {d-.-> b-. a-. gis( b) e-.-0 gis-. b-. gis-.} |
+  \tuplet 3/2 {d-.-> b-. a-. gis( b) e-.\open gis-. b-. gis-.} |
   %% 48
   \tuplet 3/2 {a-. e-. d-. cis\cresc( e) a-.-1 cis-.-3 e-.-4 a,-.-1} |
   %% 49
@@ -1485,11 +1485,11 @@ studyXXVII = \new Voice \relative c'' {
   %% 54
   \tuplet 3/2 {e,-.\mf\> d'-. cis-. b( a-1) gis-. fis-. e-. d-.\!} |
   %% 55
-  \tuplet 3/2 {cis-.-2 a'-. gis-. b->( a) e-.-0 cis-. b-. a-.} |
+  \tuplet 3/2 {cis-.-2 a'-. gis-. b->( a) e-.\open cis-. b-. a-.} |
   %% 56
   \tuplet 3/2 {fis'->( d) a-. fis-. d-. fis-. a-. d-. fis-.} |
   %% 57
-  \tuplet 3/2 {e->-4( cis) a-. e-. cis-. e-. a-.-0 cis-. e-.-4} |
+  \tuplet 3/2 {e->-4( cis) a-. e-. cis-. e-. a-.\open cis-. e-.-4} |
   %% 58
   \tuplet 3/2 {e,-. d''-.\> cis-. b( a) gis-. fis-. e-. d-.\!} |
   %% 59
@@ -1530,15 +1530,15 @@ studyXXVI = \new Voice \relative a' {
   %% 2
   a-. b-. a-. fis-. d'-.\> e-.-4\! d-. b-. |
   %% 3
-  a-. b-. a-. fis-. g-. a-.-0 b-. cis-. |
+  a-. b-. a-. fis-. g-. a-.\open b-. cis-. |
   %% 4
-  d-.\cresc e-.-0 fis-. g-. a-.-1 b-. cis-. d-.\! |
+  d-.\cresc e-.\open fis-. g-. a-.-1 b-. cis-. d-.\! |
   %% 5
   b-.\p cis-. b-. g-.-4 a-. b-. a-. fis-.-1 |
   %% 6
   g-. a-. g-. e-. fis-. g-. fis-. d-. |
   %% 7
-  e-.-0 fis-. e-. cis-. d-. e-.-4 d-. b-. |
+  e-.\open fis-. e-. cis-. d-. e-.-4 d-. b-. |
   %% 8
   cis-. d-. cis-. a-. b-.\> cis-. b-. g-.\! |
   %% 9
@@ -1546,21 +1546,21 @@ studyXXVI = \new Voice \relative a' {
     a-. b-. a-. fis-. d'-.\> e-.\! d-. b-. |
   }
   %% 11
-  a-. b-. a-. fis-. g-. a-.-0 b-. cis-. |
+  a-. b-. a-. fis-. g-. a-.\open b-. cis-. |
   %% 12
-  d-.\cresc e-.-0 fis-. g-. a-.-1 b-. cis-. d-. |
+  d-.\cresc e-.\open fis-. g-. a-.-1 b-. cis-. d-. |
   %% 13
   cis-.\mf d-. cis-. a-. b-. cis-. b-. gis-.-1 |
   %% 14
-  a-.-1\cresc cis-. e-. cis-. a-. e-.-0 cis-.-2 a-. |
+  a-.-1\cresc cis-. e-. cis-. a-. e-.\open cis-.-2 a-. |
   %% 15
   cis-.\f d-. cis-. a-. b-. cis-. b-. gis-. |
   %% 16
-  a-.-0 cis-. e-. cis-. a8-. r |
+  a-.\open cis-. e-. cis-. a8-. r |
   %% 17
-  a,16-.\mf b-. cis-. d-.-0 e-. fis-. g-. e-. |
+  a,16-.\mf b-. cis-. d-.\open e-. fis-. g-. e-. |
   %% 18
-  fis-. g-. a-.-0 b-. cis-. d-. e-.-0 fis-. |
+  fis-. g-. a-.\open b-. cis-. d-. e-.\open fis-. |
   %% 19
   e-.-4 d-. cis-. d-.-1 e-. fis-. g-. e-. |
   %% 20
@@ -1572,25 +1572,25 @@ studyXXVI = \new Voice \relative a' {
   %% 23
   cis\f d cis b ais\dim g-2 fis e-4\! |
   %% 24
-  d\< cis b cis d e-0 fis g |
+  d\< cis b cis d e\open fis g |
   a\f b\dim a g fis e-4 d cis |
   %% 26
   b cis b a-4 g fis e d |
-  cis\p e a g\cresc fis d b' a-0 |
+  cis\p e a g\cresc fis d b' a\open |
   %% 28
-  g e cis' b a-0 fis d' cis\! |
-  b\fz dis e-0 fis g a ais b |
+  g e cis' b a\open fis d' cis\! |
+  b\fz dis e\open fis g a ais b |
   %% 30
-  a g fis e-4 dis e-0 g e |
+  a g fis e-4 dis e\open g e |
   cis\fp bes' a g f e-4 d cis |
-  d a b cis d e f e-0 |
+  d a b cis d e f e\open |
   e-> d c bes c-> bes a gis |
-  a->-0 b cis\cresc d e fis gis a\! |
+  a->\open b cis\cresc d e fis gis a\! |
   %% 35
   g\> f e-4 d c bes a-4 gis\! |
   a e'-4 cis a g\f fis g e |
   \repeat percent 2 {
-    a-0\p b a fis d'\> e-4\! d b |
+    a\open\p b a fis d'\> e-4\! d b |
   }
   a b a fis g\cresc a b cis |
   %% 40
@@ -1601,12 +1601,12 @@ studyXXVI = \new Voice \relative a' {
   a cis e cis a\cresc cis e fis |
   %% 45
   g\mf a g e fis g fis dis |
-  e-0 g b g e b g e |
+  e\open g b g e b g e |
   dis-1\>( fis-3\!) b-.-2 b-. e,-1\>( g\!) b-. b-. |
-  fis\>( a-0\!) d-. d-. g,\>( b\!) d-. d-. |
+  fis\>( a\open\!) d-. d-. g,\>( b\!) d-. d-. |
   gis,\>( b\!) e-. e-. a,\>( cis\!) e-. e-. |
   %% 50
-  e( d) b-. gis-. a-0( cis) e-. fis |
+  e( d) b-. gis-. a\open( cis) e-. fis |
   g\mf a g e fis g fis dis |
   e g b g e b g e |
   cis\>( e\!) a-. a-. d,\>( fis\!) a-. a-. |
@@ -1617,7 +1617,7 @@ studyXXVI = \new Voice \relative a' {
   \repeat percent 2 {
     a-.\p b-. a-. fis-. d'-.\> e-. d-. b-.\! |
   }
-  a-. b-. a-. fis-. g-. a-.-0 b-. cis-. |
+  a-. b-. a-. fis-. g-. a-.\open b-. cis-. |
   %% 60
   d-.\cresc e-. fis-. g-. a-.-1 b-. cis-. d-. |
   b-.\f cis-.\dim b-. a-. g-. fis-. e-. d-. |
@@ -1628,7 +1628,7 @@ studyXXVI = \new Voice \relative a' {
   e-.\f d-. cis dis-. e-. fis g-. a-. |
   ais\>( b\!) a-. g-. fis\>( e\!) g-. e-. |
   d-. a-. b-. cis-. d-. e-. fis-. g-. |
-  a\fz( g) e-.-0 cis-. a-4( g) e-. cis-. |
+  a\fz( g) e-.\open cis-. a-4( g) e-. cis-. |
   d8 r <a e' cis'>\ff r |
   %% 70
   <a fis' d'> r <a' cis e> r |
@@ -1646,18 +1646,18 @@ studyXXV = \new Voice \relative c' {
   \tempo "Allegro." 4=123
   \key f \major
 
-  d16->\p( e) e( f) f( g) g( a-4\cresc) a-0( b) b( cis) cis( d) d( e-4) |
+  d16->\p( e) e( f) f( g) g( a-4\cresc) a\open( b) b( cis) cis( d) d( e-4) |
   %% 2
-  e-0( f) f( g) g( a-1) a( b) b( cis) cis( d) d8\! r |
+  e\open( f) f( g) g( a-1) a( b) b( cis) cis( d) d8\! r |
   %% 3
   e16\flageolet\f\>( bes-2) bes( g-2) g( e) e( bes'\!)
   bes\>( g) g( e) e-4( bes) bes( g'-4\!)  |
   %% 4
   g\>( e) e( bes) bes( g) g( e-1\!) e8 r r4 |
   %% 5
-  cis16^>\p( d-4) d-0( e) e( f) f\cresc( g) g( a-4) a-0( b) b( cis) cis( d) |
+  cis16^>\p( d-4) d\open( e) e( f) f\cresc( g) g( a-4) a\open( b) b( cis) cis( d) |
   %% 6
-  d( e-4) e-0( f) f( g) g( a) a( bes) bes( a) a8\! r |
+  d( e-4) e\open( f) f( g) g( a) a( bes) bes( a) a8\! r |
   %% 7
   d16-4\f\>( a) a( f) f( d) d( a'\flageolet\!) a\>( f) f( d) d( a) a( f'-3\!) |
   %% 8
@@ -1667,9 +1667,9 @@ studyXXV = \new Voice \relative c' {
   %% 10
   bes'16-2\>( c) c( bes) bes( a) a( g-4) g( f) f( e) e8\! r |
   %% 11
-  cis'16-3\>( e) e( cis) cis( bes) bes( g-2) g( e-0) e-4( cis) cis8\! r |
+  cis'16-3\>( e) e( cis) cis( bes) bes( g-2) g( e\open) e-4( cis) cis8\! r |
   %% 12
-  a'16-1\>( d) d( a) a( f) f( d) d( a-0) a-4( f) f8-2\! r |
+  a'16-1\>( d) d( a) a( f) f( d) d( a\open) a-4( f) f8-2\! r |
   %% 13
   d''16-2\f( f) f( d) d\dim( b) b( gis-4) gis( f-3) f( d-1) d( b-3) b( gis-1\!) |
   %% 14
@@ -1679,18 +1679,18 @@ studyXXV = \new Voice \relative c' {
   %% 16
   e'16\flageolet\f( c) c( a) a\dim( e) e-4( c-2) c( a) a-4( e) e8\! r |
   %% 17
-  e''16\f( b) b( a-1) a( e-0) e-4\dim( b) b( a) a-4( e) e8\! r |
+  e''16\f( b) b( a-1) a( e\open) e-4\dim( b) b( a) a-4( e) e8\! r |
   %% 18
   e''16\flageolet\f( b-2) b( gis-2) gis\dim( e) e-4( b)
   b( gis) gis( e) e( d) d-4( b\!) |
   %% 19
-  a( c) c( e) e( a-0) a\cresc( c) c( e,) e( a-0) a( c) c( e-4) |
+  a( c) c( e) e( a\open) a\cresc( c) c( e,) e( a\open) a( c) c( e-4) |
   %% 20
   e( a,) a( c) c( e-4) e-4( a-4\flageolet) a8\! r r4 |
   %% 21
-  bes16-4\f( g) g( e-0) e\dim( cis) cis( bes) bes( g) g( e) e8\! r |
+  bes16-4\f( g) g( e\open) e\dim( cis) cis( bes) bes( g) g( e) e8\! r |
   %% 22
-  a'16\f( f) f( d) d\dim( a-0) a( f) f( d-0) d( a) a8\! r |
+  a'16\f( f) f( d) d\dim( a\open) a( f) f( d\open) d( a) a8\! r |
   %% 23
   a''16\f( gis) gis( f) f\dim( e-4) e( d) d( c) c( b) b( a) a( gis\!) |
   %% 24
@@ -1700,7 +1700,7 @@ studyXXV = \new Voice \relative c' {
   %% 26
   c( bes) bes( a) a( g) g( f-2) f( e) e( d) d8\! r |
   %% 27
-  e16\p( g) g( bes) bes\cresc( e-4) e-0( g) g( bes,) bes( e-0) e( g) g( bes) |
+  e16\p( g) g( bes) bes\cresc( e-4) e\open( g) g( bes,) bes( e\open) e( g) g( bes) |
   %% 28
   bes( e,) e( g) g( bes-4) bes( e\flageolet) e8\! r r4 |
   %% 29
@@ -1708,7 +1708,7 @@ studyXXV = \new Voice \relative c' {
   %% 30
   d( cis) cis( e-2) e( g,-1) g( bes-3) bes( a) a( gis) a8\! r |
   %% 31
-  d,16\mf( f) f( a-0) a( d-1) d( f) f( a,-0) a( d-1) d\cresc( f) f( a\flageolet) |
+  d,16\mf( f) f( a\open) a( d-1) d( f) f( a,\open) a( d-1) d\cresc( f) f( a\flageolet) |
   %% 32
   a\flageolet( d,-1) d( f) f( a-1) a( d) d8\f r r4 |
   %% 33
@@ -1716,13 +1716,13 @@ studyXXV = \new Voice \relative c' {
   %% 34
   f( d) d( f) f( bes) bes( d) d8\f r r4 |
   %% 35
-  gis,,,16\mf( b) b( d-0) d( f) f( b) b\cresc( f) f( b) b( d-1) d( f) |
+  gis,,,16\mf( b) b( d\open) d( f) f( b) b\cresc( f) f( b) b( d-1) d( f) |
   %% 36
   f( d) d( f) f\f( b) b( d) d8 r r4 |
   %% 37
-  a,16-0\mf( d-1) d( f) f( a) a\cresc( d-1) d( f-3) f( a-4) a8\! r |
+  a,16\open\mf( d-1) d( f) f( a) a\cresc( d-1) d( f-3) f( a-4) a8\! r |
   %% 38
-  a,,16-0\mf( d-1) d( e) e( a) a\cresc( cis-1) cis( e-1) e( a) a8\! r |
+  a,,16\open\mf( d-1) d( e) e( a) a\cresc( cis-1) cis( e-1) e( a) a8\! r |
   %% 39
   d,,,16\ff( f) f( a) a( d-1) d( f-3) f( a) a( d) d( a) a( f) |
   %% 40
@@ -1751,12 +1751,12 @@ studyXXIV = \new Voice \relative c'' {
 
   \repeat volta 2 {
     %% 1
-    d16-.->^\markup{\italic "furioso"}\f c-. bes-. a-. bes-.-> a-.-0 g-. fis-.
-    g-.-> d-.-0 bes-. d-.-4 g,-.\mf bes-. d-.-0 g-. |
+    d16-.->^\markup{\italic "furioso"}\f c-. bes-. a-. bes-.-> a-.\open g-. fis-.
+    g-.-> d-.\open bes-. d-.-4 g,-.\mf bes-. d-.\open g-. |
     %% 2
-    bes, d-0 g bes d,-0\cresc g bes d g, bes d g a g fis g |
+    bes, d\open g bes d,\open\cresc g bes d g, bes d g a g fis g |
     %% 3
-    a->\f g fis e-0 fis-> e-0 d cis d-> a-0 fis a-4 d,\mf fis a d |
+    a->\f g fis e\open fis-> e\open d cis d-> a\open fis a-4 d,\mf fis a d |
     %% 4
     fis, a d fis a,\cresc d fis a d,-1 fis a d c bes a c\! |
     bes-2\fz a-1 g-4 fis-3 g f ees d ees-2 d-1 c-4 bes-3 c bes a g |
@@ -1764,14 +1764,14 @@ studyXXIV = \new Voice \relative c'' {
     g'-4\fz f-3 ees d ees d c bes c bes aes g aes g f ees |
     c-1 ees-3 aes-2 c-4 ees,-3 aes-2 c-4 ees-2 d ees c aes g aes ees c |
     %% 8
-    d-0 g-3 bes-1 d-3 g, bes d g fis a fis d c a fis d |
+    d\open g-3 bes-1 d-3 g, bes d g fis a fis d c a fis d |
   }
   %% 9
-  d'->\f c bes a bes-> a-0 g fis g-> d-0 bes d-4 g,\mf bes d g |
+  d'->\f c bes a bes-> a\open g fis g-> d\open bes d-4 g,\mf bes d g |
   %% 10
-  bes, d-0 g bes d,\cresc g bes d g, bes d g a g fis g\! |
+  bes, d\open g bes d,\cresc g bes d g, bes d g a g fis g\! |
   %% 11
-  a-> g f e-0 f-> e-0 d cis d-> a f a d,\mf f a d |
+  a-> g f e\open f-> e\open d cis d-> a f a d,\mf f a d |
   %% 12
   f, a d f a, d\cresc f a d,-1 f a d cis d a f |
   %% 13
@@ -1795,7 +1795,7 @@ studyXXIV = \new Voice \relative c'' {
   %% 22
   g->\f f ees d ees-> d c b c-> g ees g c,\mf ees g c |
   %% 23
-  d->\f c-2 bes a-0 bes-> a-0 g fis g-> d bes d g,\mf bes d g |
+  d->\f c-2 bes a\open bes-> a\open g fis g-> d bes d g,\mf bes d g |
   %% 24
   d\cresc fis a d fis, a d fis a, d fis a d,-1 fis a d |
   %% 25
@@ -1812,7 +1812,7 @@ studyXXIV = \new Voice \relative c'' {
   bes'-> a g fis g-> f ees d ees-> d c bes c-> bes a g |
   %% 31
   aes\fz c ees aes g aes ees c b\fz d f b ais b f d |
-  c\fz ees g c-3 b c g ees cis-2\fz e-0 g bes a bes g e |
+  c\fz ees g c-3 b c g ees cis-2\fz e\open g bes a bes g e |
   %% 33
   d-1\fz g-4 bes d c bes a g fis ees d c-2 bes-1 a g fis |
   %% 34
@@ -1897,7 +1897,7 @@ studyXXIII = \new Voice \relative c'' {
   %% 31
   c16.\> bes32 aes16. g32 f16. e32 f16. aes32\! |
   %% 32
-  c16. fis,32-1  g16.-2 e32-0 c16.\p bes32 aes16. g32 |
+  c16. fis,32-1  g16.-2 e32\open c16.\p bes32 aes16. g32 |
   %% 33
   f16. e32 f16. g32 aes16. g32 aes16. f32 |
   %% 34
@@ -1967,7 +1967,7 @@ studyXXIII = \new Voice \relative c'' {
   %% 66
   c16.\> bes32 aes16. g32\! f8 aes16.-.( aes32-.) |
   %% 67
-  g8 r <bes e-0>\f\upbow r | <aes c f>4.\downbow r8 |
+  g8 r <bes e\open>\f\upbow r | <aes c f>4.\downbow r8 |
   %% 69
   f'16-.\ff\downbow f,-. r8 r4 | <f aes,>2\pp\downbow\fermata \bar "|."
 }
@@ -2066,17 +2066,17 @@ studyXXII = \new Voice \relative c'' {
   cis16\>( bis cis bis cis bis cis b\! a\> gis a gis a gis a fis\!) |
   %% 43
   b-1\>( ais-1 b-2 ais-1 \repeat tremolo 2 {b ais\!}
-  b-2\< ais-1 b-1 cis-2 dis-3 e-0 fis gis\!) |
+  b-2\< ais-1 b-1 cis-2 dis-3 e\open fis gis\!) |
   %% 44
   a\>( gis b a gis a fis dis b cis a-4 fis dis fis-2 a-4 dis,-1 |
   %% 45
-  e\p) e\cresc( fis gis a-0 b cis dis e-4) gis,( a-0 b cis dis e-0 fis |
+  e\p) e\cresc( fis gis a\open b cis dis e-4) gis,( a\open b cis dis e\open fis |
   %% 46
-  gis) b,( cis dis e-0 fis gis a b) e,( fis gis a-1 b cis dis |
+  gis) b,( cis dis e\open fis gis a b) e,( fis gis a-1 b cis dis |
   %% 47
   e4.\flageolet\ff-4) b8-.-2\dim( gis-. e-. b-. gis-. |
   %% 48
-  e4\p) r <e b' gis'>^"pizz." r | <gis,-1 e'-2 b'-2 e-0>2 r \bar "|."
+  e4\p) r <e b' gis'>^"pizz." r | <gis,-1 e'-2 b'-2 e\open>2 r \bar "|."
 }
 
 studyXXIprologI = \score {
@@ -2181,7 +2181,7 @@ studyXXI = \new Voice \relative c''' {
   %% 34
   d,-. b'\pp( ais b) c,-. a'( gis a) b,-. d( cis d) g-. b( ais b) |
   %% 35
-  dis,-.\cresc b'( ais b) e,-.-0 g-2( fis g) ais,-.-1\f e'-0( fis-1 e-0)
+  dis,-.\cresc b'( ais b) e,-.\open g-2( fis g) ais,-.-1\f e'\open( fis-1 e\open)
   dis-.-3 b-1( c b) |
   %% 36
   a'-. b,( c b) g'-. b,( c b) e-. c( d c) b-. b( c b) |
@@ -2199,9 +2199,9 @@ studyXXI = \new Voice \relative c''' {
   %% 42
   f2~\fz\> f16\! d( e f) f-. f( e d) |
   %% 43
-  e-.-2 c-2( d e) e-. e( d c) c-.\dim c( b a-0) a-.-4 a( g fis\!) |
+  e-.-2 c-2( d e) e-. e( d c) c-.\dim c( b a\open) a-.-4 a( g fis\!) |
   %% 44
-  g-. g( fis g) g,-.^\cresc g( aes g) b-. b( c b) d-._0 d( ees d\!) |
+  g-. g( fis g) g,-.^\cresc g( aes g) b-. b( c b) d-._\open d( ees d\!) |
   %% 45
   f-. f\p( g aes) d,-. d( ees f) bes,-. bes( c-3 d-4)
   ees-.-1 ees\cresc( f-2 g-1\!) |
@@ -2313,23 +2313,23 @@ studyXX = \new Voice \relative g' {
 
   <g b>8-.^"(near the bow's nut)"\p fis-. <g b>-. d-. | <a' c> b <fis a> d |
   %% 3
-  <b'-3 d-1> g'-4 <c,-4 e-2> a-0 | <d,-0 b'-1> d' <fis, a> c' |
+  <b'-3 d-1> g'-4 <c,-4 e-2> a\open | <d,\open b'-1> d' <fis, a> c' |
   %% 5
-  <g b> fis <g b> d | <g cis> e'-0\cresc <cis a'> g' |
+  <g b> fis <g b> d | <g cis> e'\open\cresc <cis a'> g' |
   %% 7
   <d fis>\f a\dim <g e'> cis |
   %% 8
-  <fis, d'> a_0^"l. h. pizz." d,-0-"arco" c' |
+  <fis, d'> a_\open^"l. h. pizz." d,\open-"arco" c' |
   %% 9
   <g b>\p fis <g b> d | <a' c> b <fis a> d |
   %% 11
-  <b'-3 d-1> g'-4 <c,-4 e-2> a-0 | <d,-0 b'-1> d' <fis, a> c' |
+  <b'-3 d-1> g'-4 <c,-4 e-2> a\open | <d,\open b'-1> d' <fis, a> c' |
   %% 13
   <g b>\cresc fis <g b> d' | <ais cis>\f fis' <d fis,> b |
   %% 15
   <cis e,>\dim e <d fis,> cis | <b d,>-. <fis>-. b,-. d' |
   %% 17
-  <a c>\mf b <c d,> a-0 | <b g> d <g b,>\cresc b |
+  <a c>\mf b <c d,> a\open | <b g> d <g b,>\cresc b |
   %% 19
   <b c,> a <a cis,> g\! | <g d> fis a d,\p |
   %% 21
@@ -2339,11 +2339,11 @@ studyXX = \new Voice \relative g' {
   %% 25
   <g b>\p fis <g b> d | <a' c> b <fis a> d |
   %% 27
-  <b'-3 d-1> g'-4 <e-2 c-4> a,-0 | <b d,> d <a fis> c |
+  <b'-3 d-1> g'-4 <e-2 c-4> a,\open | <b d,> d <a fis> c |
   %% 29
   <g b>\cresc fis <g b> <f d'> | <e c'>\f b' a ais |
   %% 31
-  b\dim g <fis a> d | <g b,>\p^"l. h. pizz." d-0 g,-0 r |
+  b\dim g <fis a> d | <g b,>\p^"l. h. pizz." d\open g,\open r |
   %% 33
   <g' b e>4\f^"arco" <dis b' fis'> | <e b' g'>8-. fis'-. e-. e'-. |
   %% 35
@@ -2387,24 +2387,24 @@ studyXX = \new Voice \relative g' {
   %% 71
   <g b> fis <g b> d | <a' c> b <fis a> d |
   %% 73
-  <b'-3 d-1> g' <e-2 c-4> a,-0 | <b d,> d <a fis> c |
+  <b'-3 d-1> g' <e-2 c-4> a,\open | <b d,> d <a fis> c |
   %% 75
   <g b> fis\cresc <g b> d' | <c e,> b-. a-.( ais-.) |
   %% 77
   <b d,>\f( g') \repeat unfold 2 {<a, d,>16( <a g'>)} |
   %% 78
-  <d, c' a'>4\>( <b' g'>8\!) d,-0-"l. h. pizz." |
+  <d, c' a'>4\>( <b' g'>8\!) d,\open-"l. h. pizz." |
   %% 79
-  g,-0 <d'' b'>^"arco"[( <b g'>)] d,-0^"pizz."\dim |
+  g,\open <d'' b'>^"arco"[( <b g'>)] d,\open^"pizz."\dim |
   %% 80
-  g,-0 <d'' b'>^"arco"[( <b g'>)] d,_0^"pizz."\! |
+  g,\open <d'' b'>^"arco"[( <b g'>)] d,_\open^"pizz."\! |
   %% 81
   << {
     \voiceOne s8 <g b>-"arco"\downbow s <d b'>\downbow |
     s <b g'>\downbow s <b d>\upbow |
     <d b'>2~^"pizz." | <d b'> | <d b'>
   } \new Voice {
-    \voiceTwo \repeat unfold 4 {g,8-0 s} | g r4. |
+    \voiceTwo \repeat unfold 4 {g,8\open s} | g r4. |
     g8 r g r | g r4.
   }
    >> \oneVoice <g d' b' g'>8^"arco"\ff r4. \bar "|."
@@ -2449,27 +2449,27 @@ studyXIX = \new Voice \relative c'' {
 
   b8:16-.-1\mf ais:-.-1 b:-.-1 cis:-. e: d: cis: b: |
   %% 2
-  ais: cis: e:-0 g: fis: e:-4 d: cis: |
+  ais: cis: e:\open g: fis: e:-4 d: cis: |
   b: ais:-1 b:-1 a: g:\dim fis: e: g:\! |
   fis: d: cis: b: ais: cis: fis: ais:-4 |
   %% 5
   b:-1\mf ais:-1 b:-1 cis: e: d: cis: b: |
-  ais:-1 cis:-2 e:-0 g: fis: e:-4 d: cis: |
+  ais:-1 cis:-2 e:\open g: fis: e:-4 d: cis: |
   b:\cresc d: fis: b: g: e:-4 b: g: |
-  a:\f d: fis: a: g: e:-4 cis: a:-0 |
-  d:-> cis: d:\p e:-0 g: fis: e: d: |
+  a:\f d: fis: a: g: e:-4 cis: a:\open |
+  d:-> cis: d:\p e:\open g: fis: e: d: |
   %% 10
-  e:->-4 dis:\p e:-0 fis: a: g: fis: e: |
+  e:->-4 dis:\p e:\open fis: a: g: fis: e: |
   fis:-> e:\p fis: g: b: a: g: fis: |
   g:\cresc fis: g: a:-1 b: c: d: b: |
-  a:\f d: fis,:-3 a:-1 d,:-1 fis:-3 a,:-0 a':-3 |
+  a:\f d: fis,:-3 a:-1 d,:-1 fis:-3 a,:\open a':-3 |
   g: b: e,: g: cis,:-3 e:-4 a,: cis: |
   %% 15
-  d: fis: a,:\dim d: fis,: b: a:-0 fis:\! |
-  d:-4 cis: d:-0\cresc e: eis: fis: gis: ais: |
+  d: fis: a,:\dim d: fis,: b: a:\open fis:\! |
+  d:-4 cis: d:\open\cresc e: eis: fis: gis: ais: |
   b:\mf d: cis: b: ais:-1 cis:-3 fis:-2 ais,: |
-  a:-0 c:-2 b:-1 a:-0 gis:-1 b:-3 e:-2 gis,:-1 |
-  g:-1 bes:-3 a:-2 g:-1 fis:-2 a:-0 d:-3 fis,: |
+  a:\open c:-2 b:-1 a:\open gis:-1 b:-3 e:-2 gis,:-1 |
+  g:-1 bes:-3 a:-2 g:-1 fis:-2 a:\open d:-3 fis,: |
   %% 20
   g: cis: gis: b: ais:-4 fis:-2 e: cis: |
   b:\p ais: b: cis: e: d:-4 cis: b: |
@@ -2478,16 +2478,16 @@ studyXIX = \new Voice \relative c'' {
   fis,: b: d: b: ais:-1\dim cis:-2 ais:-1 fis:-2 |
   %% 25
   b:-1\mf ais:-1 b:-1 cis: e:-4 d: cis: b: |
-  ais: cis: e:-0 g: fis: e:-4 d: cis: |
-  b: d: fis: b: g:\f e:-0 c: e: |
+  ais: cis: e:\open g: fis: e:-4 d: cis: |
+  b: d: fis: b: g:\f e:\open c: e: |
   g,: c: e,: g: c,: e: g: c: |
   b: fis: d': b: fis': d: cis: b: |
   %% 30
   ais:-4\dim g: fis: eis: fis: e: d:-4 cis:
   \mark \markup { \musicglyph #"scripts.coda" } |
   %% 31
-  b:\p b: cis:\cresc d:-0 e: fis: gis: ais:-4 |
-  b: b: cis: d: e:-0\f fis: g: e:-4 |
+  b:\p b: cis:\cresc d:\open e: fis: gis: ais:-4 |
+  b: b: cis: d: e:\open\f fis: g: e:-4 |
   d: b: fis':-3 d:-1 b':-2 fis:-3 d':-4 b:-2 |
   ais:-1 e':-4 cis:-3 ais:-1 fis:-1 g: gis: ais: |
   b:\ff ais: b: eis,:-1 fis:-1 cis: d: ais:-1 |
@@ -2535,8 +2535,8 @@ studyXVIII = \new Voice \relative g' {
   \tuplet 3/2 {c'-. a-. fis-. e'-.-4 d-. c-.} |
   %% 3
   \omit TupletNumber
-  \tuplet 3/2 {b-.\p g,-. a-. b-.\cresc c-. d-._0}
-  \tuplet 3/2 {e-. fis-. g-. a-.-0 b-. d-.\f} |
+  \tuplet 3/2 {b-.\p g,-. a-. b-.\cresc c-. d-._\open}
+  \tuplet 3/2 {e-. fis-. g-. a-.\open b-. d-.\f} |
   %% 4
   \tuplet 3/2 {c a,-.\p b-. c-.\cresc d-. e-.}
   \tuplet 3/2 {fis-. g-. a-. b-. c-. e-.-4\f} |
@@ -2544,15 +2544,15 @@ studyXVIII = \new Voice \relative g' {
   \tuplet 3/2 {d b,-.\p c-. d-.\cresc e-. fis-.}
   \tuplet 3/2 {g-. a-. b-. c-. d-. fis-.\f} |
   %% 6
-  \tuplet 3/2 {e-._0 c,-.\p d-. e-.\cresc fis-. g-.}
+  \tuplet 3/2 {e-._\open c,-.\p d-. e-.\cresc fis-. g-.}
   \tuplet 3/2 {a-. b-. c-. d-. e-. g-.\f} |
   %% 7
   \override DynamicLineSpanner.staff-padding = #3.8
-  \tuplet 3/2 {fis-. d,-.\p\< e-. fis-. a-._0 d-.\!}
+  \tuplet 3/2 {fis-. d,-.\p\< e-. fis-. a-._\open d-.\!}
   \tuplet 3/2 {b-.\< g-. a-._4 b-. d-. g-.\!} |
   \override DynamicLineSpanner.staff-padding = #0
   %% 8
-  \tuplet 3/2 {e-.-0 c-.\cresc d-. e-. c-. a'-.}
+  \tuplet 3/2 {e-.\open c-.\cresc d-. e-. c-. a'-.}
   \tuplet 3/2 {fis-.-> d-. b'-. g-.-> e-. c'-.-3} |
   %% 9
   \tuplet 3/2 {a-.-> fis-. d'-. b-.-> c-. d-.}
@@ -2561,40 +2561,40 @@ studyXVIII = \new Voice \relative g' {
   \tuplet 3/2 {b-. d-. c-. b-. a-. g-.-2}
   \tuplet 3/2 {fis-. e-.-4 d-. c-. b-. a-.-4} |
   %% 11
-  \tuplet 3/2 {g-.\f b-. c-. d-. e-.-0 fis-.}
+  \tuplet 3/2 {g-.\f b-. c-. d-. e-.\open fis-.}
   \tuplet 3/2 {g-. b-. c-. d-. b-. g-.} |
   %% 12
-  \tuplet 3/2 {f,-.-> b-. c-. d-. e-.-0 fis-.}
+  \tuplet 3/2 {f,-.-> b-. c-. d-. e-.\open fis-.}
   \tuplet 3/2 {g-. b-.-2 c-. d-. b-. g-.} |
   %% 13
-  \tuplet 3/2 {e,-._1^\ff gis-. a-._0 b-. cis-. dis-.}
-  \tuplet 3/2 {e->-4 b-. cis-. dis-. e-.-0 fis-.} |
+  \tuplet 3/2 {e,-._1^\ff gis-. a-._\open b-. cis-. dis-.}
+  \tuplet 3/2 {e->-4 b-. cis-. dis-. e-.\open fis-.} |
   %% 14
-  \tuplet 3/2 {gis-.-> dis-. e-.-0 fis-. gis-. a-.-1}
-  \tuplet 3/2 {b-> cis dis e-0 b-2 d} |
+  \tuplet 3/2 {gis-.-> dis-. e-.\open fis-. gis-. a-.-1}
+  \tuplet 3/2 {b-> cis dis e\open b-2 d} |
   %% 15
   \override DynamicLineSpanner.staff-padding = #3.8
-  \tuplet 3/2 {c->\< a,-0 b c d dis\!}
-  \tuplet 3/2 {e->\< c d e-0 fis gis\!} |
+  \tuplet 3/2 {c->\< a,\open b c d dis\!}
+  \tuplet 3/2 {e->\< c d e\open fis gis\!} |
   \override DynamicLineSpanner.staff-padding = #0
   %% 16
-  \tuplet 3/2 {a-> e fis gis a-1 b c-> d e-0 e,-0 a-3 g} |
+  \tuplet 3/2 {a-> e fis gis a-1 b c-> d e\open e,\open a-3 g} |
   %% 17
   \tuplet 3/2 {fis\< d, fis a d c\! b-> g b d\< g fis\!} |
   %% 18
-  \tuplet 3/2 {e-0\< c, e g c b\! a-> fis a c\< fis e\!} |
+  \tuplet 3/2 {e\open\< c, e g c b\! a-> fis a c\< fis e\!} |
   %% 19
-  \tuplet 3/2 {dis b, dis_4 fis b dis e->_4 c, e a-0 c-2 e-4} |
+  \tuplet 3/2 {dis b, dis_4 fis b dis e->_4 c, e a\open c-2 e-4} |
   %% 20
-  \tuplet 3/2 {dis-> b dis fis b a g-> b, e-0 g b g} |
+  \tuplet 3/2 {dis-> b dis fis b a g-> b, e\open g b g} |
   %% 21
   \tuplet 3/2 {fis-> b ais b fis dis b-> fis'-1 eis-1 fis-1 d b} |
   %% 22
-  \tuplet 3/2 {c-> a' gis a e-0 c a-> e'-4 dis e c a} |
+  \tuplet 3/2 {c-> a' gis a e\open c a-> e'-4 dis e c a} |
   %% 23
   \tuplet 3/2 {fis-> d' cis d a fis g-> cis bes g e cis} |
   %% 24
-  \tuplet 3/2 {d d' cis d a fis e g bes cis e-0 g} |
+  \tuplet 3/2 {d d' cis d a fis e g bes cis e\open g} |
   %% 25
   \tuplet 3/2 {fis\fz d fis\p a-1 d c b a g-4 fis e d-1} |
   %% 26
@@ -2602,26 +2602,26 @@ studyXVIII = \new Voice \relative g' {
   %% 27
   \tuplet 3/2 {b-3\fz d-1 g-4 b\p d c b a g-2 fis e-4 d} |
   %% 28
-  \tuplet 3/2 {a-0\fz d-3 fis-1 a-3\p c-4 a-3 fis-1 e-0 d-3 c b a-4} |
+  \tuplet 3/2 {a\open\fz d-3 fis-1 a-3\p c-4 a-3 fis-1 e\open d-3 c b a-4} |
   %% 29
   \tuplet 3/2 {g\f b c d b g g' d b b' a g} |
   %% 30
   \tuplet 3/2 {fis d, fis a_4 fis d c' a fis e'-4 d c} |
   %% 31
-  \tuplet 3/2 {b g,\p a b c d_0 e\cresc fis g a-0 b d\f} |
+  \tuplet 3/2 {b g,\p a b c d_\open e\cresc fis g a\open b d\f} |
   %% 32
-  \tuplet 3/2 {c a,\p b c d_0 e fis\cresc g a_0 b c e-4\f} |
+  \tuplet 3/2 {c a,\p b c d_\open e fis\cresc g a_\open b c e-4\f} |
   %% 33
-  \tuplet 3/2 {d b,\p c d_0\cresc e fis g a_0 b c d fis\f} |
+  \tuplet 3/2 {d b,\p c d_\open\cresc e fis g a_\open b c d fis\f} |
   %% 34
-  \tuplet 3/2 {e_0 c,\p d e fis g a\cresc b c d e g\f} |
+  \tuplet 3/2 {e_\open c,\p d e fis g a\cresc b c d e g\f} |
   %% 35
   \override DynamicLineSpanner.staff-padding = #3.8
-  \tuplet 3/2 {fis d,\p\< e fis a-0 d\!}
+  \tuplet 3/2 {fis d,\p\< e fis a\open d\!}
   \tuplet 3/2 {b\< g a b d g\!} |
   \override DynamicLineSpanner.staff-padding = #0
   %% 36
-  \tuplet 3/2 {e c\cresc a' fis d b' g e-0 c' a fis d'} |
+  \tuplet 3/2 {e c\cresc a' fis d b' g e\open c' a fis d'} |
   %% 37
   \tuplet 3/2 {
     b c d-4 ees-4\ff bes-2 g-4 ees-2 bes'-2 g-4 ees-2 bes-1 g-3} |
@@ -2632,25 +2632,25 @@ studyXVIII = \new Voice \relative g' {
   %% 40
   \tuplet 3/2 {e d c b a g fis\dim e d c b a\!} |
   %% 41
-  \tuplet 3/2 {g\ff b c d_4 b g g' d_0 b b' a g} |
+  \tuplet 3/2 {g\ff b c d_4 b g g' d_\open b b' a g} |
   %% 42
   \tuplet 3/2 {fis d fis a_4 fis d c' a fis e' d c} |
   %% 43
   \tuplet 3/2 {b b c d b g g' d b b' a g} |
   %% 44
-  \tuplet 3/2 {fis d fis a fis d c'-4 a-3 fis-1 e'-0 d-4 a-3} |
+  \tuplet 3/2 {fis d fis a fis d c'-4 a-3 fis-1 e'\open d-4 a-3} |
   %% 45
-  \tuplet 3/2 {b d c b c g-2 fis e d c b a-0} |
+  \tuplet 3/2 {b d c b c g-2 fis e d c b a\open} |
   %% 46
   \tuplet 3/2 {b d c b a_4 g fis e d_4 c b a} |
   %% 47
   \tuplet 3/2 {g b c d e fis g b c d e fis} |
   %% 48
-  \tuplet 3/2 {g d, e fis g a_0 b d e-0 fis g a} |
+  \tuplet 3/2 {g d, e fis g a_\open b d e\open fis g a} |
   %% 49
-  \tuplet 3/2 {b g, a-0 b c d e fis g a-1 b c} |
+  \tuplet 3/2 {b g, a\open b c d e fis g a-1 b c} |
   %% 50
-  \tuplet 3/2 {d b g-4 d-1 b-3 g-1 d-0 g-1 b d g b} |
+  \tuplet 3/2 {d b g-4 d-1 b-3 g-1 d\open g-1 b d g b} |
   %% 51
   d4\ff r <d,, c' fis> r |
   %% 52
@@ -2682,11 +2682,11 @@ studyXVII = \new Voice \relative d' {
   %% 5
   d'2\>( \tuplet 3/2 {c8 bes a\!)} \breathe bes4-.( g-.-4) |
   %% 6
-  a2-0\>( \tuplet 3/2 {g8-4 f e\!)} \breathe f4-.( d-.) |
+  a2\open\>( \tuplet 3/2 {g8-4 f e\!)} \breathe f4-.( d-.) |
   %% 7
   d'2\>( \tuplet 3/2 {c8 bes a\!)} \breathe bes4-.( g-.) |
   %% 8
-  a2-0\>( \tuplet 3/2 {g8-4 f e\!)} \breathe  d4-.( f,-.-2)\p |
+  a2\open\>( \tuplet 3/2 {g8-4 f e\!)} \breathe  d4-.( f,-.-2)\p |
   %% 9
   f'2-3\>( \tuplet 3/2 {g8 f d\!)} \breathe c4-.-2( ees-.) |
   %% 10
@@ -2738,11 +2738,11 @@ studyXVII = \new Voice \relative d' {
   %% 27
   f'2-3( \tuplet 3/2 {g8\cresc f d)} \breathe cis4-.-2( a-.) |
   %% 28
-  a'2-0( \tuplet 3/2 {g8-4 f-3 e)} \breathe f4-.( d-.\f) |
+  a'2\open( \tuplet 3/2 {g8-4 f-3 e)} \breathe f4-.( d-.\f) |
   %% 29
   d'2\>( \tuplet 3/2 {c8 bes a\!)} \breathe bes4-.( g-.) |
   %% 30
-  a2-0\>( \tuplet 3/2 {g8 f e\!)} \breathe f4-.( d,-.) |
+  a2\open\>( \tuplet 3/2 {g8 f e\!)} \breathe f4-.( d,-.) |
   %% 31
   f'2-3~\>( \tuplet 3/2 {f8 e d\!)} \breathe c4-.-2\dim( a-.\!) |
   %% 32
@@ -2757,16 +2757,16 @@ studyXVII = \new Voice \relative d' {
   f,2-2~\p\>( \tuplet 3/2 {f8 g a\!)} \breathe bes4-.( r8 c-.\f) \bar "||"
   %% 37
   \key f \major
-  \tuplet 3/2 {a8-.-4\mf g-. a-.-0} \tuplet 3/2 {bes-. c-. d-.}
+  \tuplet 3/2 {a8-.-4\mf g-. a-.\open} \tuplet 3/2 {bes-. c-. d-.}
   \tuplet 3/2 {c-. f-. a-.} \breathe \tuplet 3/2 {fis\>( g a}
   \tuplet 3/2 {g) e-. c-.\!} |
   %% 38
-  \tuplet 3/2 {a8-.-4\mf g-. a-.-0} \tuplet 3/2 {bes-. c-. d-.}
+  \tuplet 3/2 {a8-.-4\mf g-. a-.\open} \tuplet 3/2 {bes-. c-. d-.}
   \tuplet 3/2 {c-. f-. a-.} \breathe \tuplet 3/2 {fis\>( g c-3}
   \tuplet 3/2 {bes-2\!) g-.-2 e-.} |
   %% 39
   \tuplet 3/2 {f-. a-. g-.} \tuplet 3/2 {f-. e-.-4 d-.}
-  \tuplet 3/2 {g-. e-.-0 d-.} \breathe \tuplet 3/2 {b(\> a b}
+  \tuplet 3/2 {g-. e-.\open d-.} \breathe \tuplet 3/2 {b(\> a b}
   \tuplet 3/2 {c\!) e-. g-.} |
   %% 40
   \tuplet 3/2 {gis->( a) f-.} \tuplet 3/2 {fis->( gis) e-.}
@@ -2799,11 +2799,11 @@ studyXVII = \new Voice \relative d' {
   %% 49
   d'2\>( \tuplet 3/2 {c8 bes a\!)} \breathe bes4-.( g-.-4) |
   %% 50
-  a2-0\>( \tuplet 3/2 {g8-4 f e\!)} \breathe f4-.( d-.) |
+  a2\open\>( \tuplet 3/2 {g8-4 f e\!)} \breathe f4-.( d-.) |
   %% 51
   d'2\>( \tuplet 3/2 {c8 bes a\!)} \breathe bes4-.( g-.) |
   %% 52
-  a2-0\>( \tuplet 3/2 {g8-4 f e\!)} \breathe d4-.( f,-.-2) |
+  a2\open\>( \tuplet 3/2 {g8-4 f e\!)} \breathe d4-.( f,-.-2) |
   %% 53
   f'2-3\>( \tuplet 3/2 {g8 f d\!)} \breathe c4-.-2( ees-.) |
   %% 54
@@ -2863,13 +2863,13 @@ studyXVI = \new Voice \relative c' {
   \key f \major
 
   \repeat volta 2 {
-    f16->\p( e f g a-0 bes c d e-0 f g a) |
+    f16->\p( e f g a\open bes c d e\open f g a) |
     %% 2
     a->( g bes a g f e-4 d c bes a-4 g) |
-    a->-4( g-3 a-0 bes c d e-0 f g a bes c) |
+    a->-4( g-3 a\open bes c d e\open f g a bes c) |
     c->( bes d c b a g-2 f e-4 d c bes) |
-    a\<( bes c d e-0 f g\> f a f d b) |
-    c\<( d e-0 f g a-1 bes a c\> bes g-2 e) |
+    a\<( bes c d e\open f g\> f a f d b) |
+    c\<( d e\open f g a-1 bes a c\> bes g-2 e) |
     %% 7
     f\<( e g f a g f\> e f d a b\!) |
   }
@@ -2884,13 +2884,13 @@ studyXVI = \new Voice \relative c' {
   }
   %% 10
   f\f( g a g f e-4 d\dim c bes a g f\!) |
-  f\>( e g f e g\! g a-0 bes c d-1 e) |
+  f\>( e g f e g\! g a\open bes c d-1 e) |
   f\<( e d e f g a b cis d a f) |
   %% 13
   f\>( ees g f ees d d-3 c b c d ees) |
   %% 14
   f\<( d bes'\> a g f ees d c bes a-4 g) |
-  fis\<( e d e fis g a-0 bes c d e-0 fis) |
+  fis\<( e d e fis g a\open bes c d e\open fis) |
   g\f\>( aes bes aes g f ees d c bes aes g) |
   %% 17
   f\<( d b' f d' b f'-3 d aes'-4 g-4 f d) |
@@ -2900,22 +2900,22 @@ studyXVI = \new Voice \relative c' {
   d-4\<( b g' d b' g d' b f'-3 d g f) |
   %% 20
   ees\>( f g f ees d c_2 bes aes g f fis\!) |
-  g\f( g, b d_0 g b d g-> fis g a f) |
+  g\f( g, b d_\open g b d g-> fis g a f) |
   %% 22
   e->\mf( g f e-4 d c b_> d c b a g) |
   c->( g f e d-4 c b c d c b c) |
   %% 24
-  a->( c d-0 e f g a_0 b d c b a) |
+  a->( c d\open e f g a_\open b d c b a) |
   fis( g a g fis g e g c e g e) |
   e->-4( d cis d fis a-1 c b d c b a) |
   a->-3( g fis g b a g fis e-4 d cis b) |
   %% 28
-  a->( b cis d e-0 fis g fis a g e cis) |
+  a->( b cis d e\open fis g fis a g e cis) |
   d\<( dis e\! d c b d\> c a-4 fis d-4 c) |
   b\>( d f g b d f e g\! f e-4 d) |
   %% 31
   e->-4( d c b c-> b a g a_4 g fis e) |
-  d( fis a_0 c\> d fis a_3 c_4 b_4 a g fis) |
+  d( fis a_\open c\> d fis a_3 c_4 b_4 a g fis) |
   %% 33
   a\cresc( gis b a-3 c-4 b-4\! g-2\< gis b a\> g f) |
   %% 34
@@ -2925,37 +2925,37 @@ studyXVI = \new Voice \relative c' {
   %% 36
   a->( c d e f g a b d c b a) |
   %% 37
-  fis->( g a g fis g e g c e-0 g e-0) |
+  fis->( g a g fis g e g c e\open g e\open) |
   %% 38
   e->-4( d cis d f e g f b\> a\! f d) |
   %% 39
   d->( c b c e d f e a g\> e c\!) |
-  c->( b ais-1 b-1 e d b g f d-0 b g) |
+  c->( b ais-1 b-1 e d b g f d\open b g) |
   c\cresc( b d c e d f e g fis a g\!) |
   %% 42
-  bes( a c bes d fis, a-4\dim g bes-4 d,-0 f e) |
-  g\cresc( g, bes a c bes d c bes c d-0 e\!) |
-  f->\p( e f g a_0 bes c d e-0 f g a) |
+  bes( a c bes d fis, a-4\dim g bes-4 d,\open f e) |
+  g\cresc( g, bes a c bes d c bes c d\open e\!) |
+  f->\p( e f g a_\open bes c d e\open f g a) |
   %% 45
   a->( g bes a g f e-4 d c bes a g) |
-  a_4( g_3 a_0 bes c d e-0 f g a-1 bes c) |
+  a_4( g_3 a_\open bes c d e\open f g a-1 bes c) |
   c->( bes d c bes a g-2 f e d c bes) |
   %% 48
-  a\<( bes c d e-0 f g f\! a f\> c a\!) |
+  a\<( bes c d e\open f g f\! a f\> c a\!) |
   fis\<( g bes a c bes d\> cis e d bes g) |
   f\<( a d c g' f b-2 a d\> c a f) |
-  e_0\<( f_1 g a bes g e\> c bes g e bes) |
+  e_\open\<( f_1 g a bes g e\> c bes g e bes) |
   %% 52
-  a\<( bes c d-0 ees f g a-0 bes c d ees) |
+  a\<( bes c d\open ees f g a\open bes c d ees) |
   ees\>( d bes' a g f e g f e g d) |
   b\>( c d c a f\! e-1 bes'-4 g-3 e c e) |
   %% 55
-  f\mf\<( a-0 bes c d e-0 f e g f a8-.\f) |
+  f\mf\<( a\open bes c d e\open f e g f a8-.\f) |
   d,,16\mf\<( f g a b cis d cis e d-3 f8-4\f) |
   b,,16\mf\<( d f gis-4 b d f-4\> d b gis-4 f d) |
   %% 58
   c\cresc( b d c f e g f bes a d c) |
-  c( b c d e-0 f g a bes g e g) |
+  c( b c d e\open f g a bes g e g) |
   f\f( a, c f a f) f\>( e bes'\! g e g) |
   %% 61
   f\>( a, c f a f\!) f\>( e bes' g e g\!) |
@@ -2975,7 +2975,7 @@ studyXV = \new Voice \relative c' {
   \tempo "Allegro moderato." 4=123
   \key bes \major
 
-  bes8-. c-. d-.-0 ees-. f-. g-. a-.-0 bes-. |
+  bes8-. c-. d-.\open ees-. f-. g-. a-.\open bes-. |
   %% 2
   \repeat unfold 2 { \grace {c16\>^( d} c8\! b16) r }
   \grace {c16\>^( d} c8\! a16) r f'4-> |
@@ -3000,7 +3000,7 @@ studyXV = \new Voice \relative c' {
   \repeat unfold 2 { \grace {a16^\>( bes} a8\! gis16) r }
   \grace {a16^\>( bes} a8\! fis16-2) r d'4-> |
   %% 11
-  g,8-. a-.-0 bes-. c-. d-. e-.-0 fis-. g-. |
+  g,8-. a-.\open bes-. c-. d-. e-.\open fis-. g-. |
   %% 12
   \grace {fis16\>^( g} fis8\! eis16) r
   \grace {fis16\>^( g} fis8\! e16) r
@@ -3090,7 +3090,7 @@ studyXV = \new Voice \relative c' {
     \grace {c16\>( d} c8\! a16)\) r c'4->\downbow~ |
   %% 43
   c8 bes-.\(
-    a-. g-. f-. ees-. d-.-0 c-._1 |
+    a-. g-. f-. ees-. d-.\open c-._1 |
     %% 44
     \grace {d16-2\>( ees} d8\! c16) r
     \grace {d16\>( ees} d8\! c16) r
@@ -3124,7 +3124,7 @@ studyXV = \new Voice \relative c' {
   g,8-. a-. bes-. c-. d-. e-. fis-. g-. |
   %% 56
   \grace {fis16\>^( g} fis8\! eis16-1) r
-  \grace {fis16\>^( g} fis8\! e16-0) r
+  \grace {fis16\>^( g} fis8\! e16\open) r
   \grace {d16\>^( e} d8\! cis16) r d4-> |
   %% 57
   g8 f ees d ees d c b |
@@ -3179,13 +3179,13 @@ studyXIV = \new Voice \relative c'' {
   d,4-. \afterGrace bes'\trill( {a16 bes)} ees,4-.
   \afterGrace bes'\trill( {a16 bes)} |
   %% 6
-  e,8.-.-0( f16-.-1) g8.-.( bes16-.) aes4-.
+  e,8.-.\open( f16-.-1) g8.-.( bes16-.) aes4-.
   \afterGrace f4\trill( {e16 f)} |
   %% 7
   g4-. \afterGrace ees_2\trill( {d16 ees)} c4-4
   \afterGrace a4\trill( {g16 a)} |
   %% 8
-  a8.-.-0( bes16-.-1) c8.-.( d16-.) bes4-.\p
+  a8.-.\open( bes16-.-1) c8.-.( d16-.) bes4-.\p
   \afterGrace bes\trill\>( {a16 bes\!)} |
   %% 9
   ees4-. \afterGrace bes\trill\>( {a16 bes\!)} g'4-.
@@ -3203,13 +3203,13 @@ studyXIV = \new Voice \relative c'' {
   d,4-. \afterGrace bes'\trill( {a16 bes)} d,4-.
   \afterGrace bes'\trill( {a16 bes)} |
   %% 14
-  e,8.-.-0( f16-.) g8.-.( bes16-.) aes4-.
+  e,8.-.\open( f16-.) g8.-.( bes16-.) aes4-.
   \afterGrace f\trill( {e16 f)} |
   %% 15
   g4-. \afterGrace ees_2\trill( {d16 ees)} c4-.-4
   \afterGrace a\trill( {g16 a)} |
   %% 16
-  a8.-.-0\>( bes16-.-1) c8.-.( d16-.\!) bes4-.\p
+  a8.-.\open\>( bes16-.-1) c8.-.( d16-.\!) bes4-.\p
   \afterGrace bes\trill\>( {a16 bes\!)}
   %% 17
   ees4-. \afterGrace bes\>\trill( {a16 bes\!)} g'4-.
@@ -3224,22 +3224,22 @@ studyXIV = \new Voice \relative c'' {
   d8.\>( ees16-.) f8.-.( g16-.\!) ees4\f^\markup {\italic "marcato assai"}
   g,16-.\downbow a-. b-. g-. |
   %% 21
-  c-. d-.-0 ees-. f-.   g-. ees-. d-.-4 c-.   f-. g-. aes-. bes-.
+  c-. d-.\open ees-. f-.   g-. ees-. d-.-4 c-.   f-. g-. aes-. bes-.
   c-. aes-. g-. f-. |
   %% 22
   g-. ees-. d-. c-. b-. c-. d-. c-. b-. c-. d-. b-. g-. a-. b-. g-. |
   %% 23
-  c d-0 ees f g ees d c d-0\cresc g bes c d bes a-4 g |
+  c d\open ees f g ees d c d\open\cresc g bes c d bes a-4 g |
   %% 24
-  d g a-0 bes\ff d c bes a-4\dim g d-0 bes a\f g a b g |
+  d g a\open bes\ff d c bes a-4\dim g d\open bes a\f g a b g |
   %% 25
-  c-. d-.-0 ees-. f-. g-. ees-. d-. c-. f g aes bes c aes g f |
+  c-. d-.\open ees-. f-. g-. ees-. d-. c-. f g aes bes c aes g f |
   %% 26
   g ees d c b c d c b c d b g a b g |
   %% 27
-  c d-0 ees f g ees d c d g\cresc bes c d bes aes-4 g |
+  c d\open ees f g ees d c d g\cresc bes c d bes aes-4 g |
   %% 28
-  d g a-0\dim bes d c bes a g bes d fis g\cresc fis g aes |
+  d g a\open\dim bes d c bes a g bes d fis g\cresc fis g aes |
   \repeat volta 2 {
     %% 29
     bes\ff g ees des bes g ees des' c bes c des ees f g aes |
@@ -3254,7 +3254,7 @@ studyXIV = \new Voice \relative c'' {
     %% 34
     g ees d c b c d c b c d b g a b g |
     %% 35
-    c d-0 ees f g es d c f aes c f a f ees d |
+    c d\open ees f g es d c f aes c f a f ees d |
   }
   \alternative {
     {
@@ -3284,12 +3284,12 @@ studyXIV = \new Voice \relative c'' {
   d,4-. \afterGrace bes'\trill( {a16 bes)} ees,4-.
   \afterGrace bes'\trill( {a16 bes)} |
   %% 43
-  e,8.-.-0( f16-.-1) g8.-.( bes16-.) aes4-. \afterGrace f\trill( {e16 f)} |
+  e,8.-.\open( f16-.-1) g8.-.( bes16-.) aes4-. \afterGrace f\trill( {e16 f)} |
   %% 44
   g4-. \afterGrace ees\trill( {d16 ees)} c4-.-4
   \afterGrace a\trill( {g16 a)} |
   %% 45
-  a8.-.-0\>( bes16-.-1) c8.-.( d16-.\!) bes4\p
+  a8.-.\open\>( bes16-.-1) c8.-.( d16-.\!) bes4\p
   \afterGrace bes\trill( {a16 bes)} |
   %% 46
   ees4-. \afterGrace bes\trill( {a16 bes)} g'4-.
@@ -3339,12 +3339,12 @@ studyXIII = \new Voice \relative c'' {
 
   \tupletSpan 4
   
-  \tuplet 3/2 {b8\p( d) b-. g-. a-._0 b-. c-. d-. e-.} |
+  \tuplet 3/2 {b8\p( d) b-. g-. a-._\open b-. c-. d-. e-.} |
   %% 2
-  \tuplet 3/2 {d( g) d-. b-. c-. d-. e-.-0 fis-. g-.} |
+  \tuplet 3/2 {d( g) d-. b-. c-. d-. e-.\open fis-. g-.} |
   %% 3
   \omit TupletNumber
-  \tuplet 3/2 {a( c-4) a-.-3 fis-. a-. fis-. d-. e-.-0 fis-.} |
+  \tuplet 3/2 {a( c-4) a-.-3 fis-. a-. fis-. d-. e-.\open fis-.} |
   %% 4
   \tuplet 3/2 {g( b) a-. g-. fis-. e-.-4 d-. c-. b-.} |
   %% 5
@@ -3352,15 +3352,15 @@ studyXIII = \new Voice \relative c'' {
   %% 6
   \tuplet 3/2 {d( b) g-. \repeat tremolo 3 {g-.} g'-. d-. b-.} |
   %% 7
-  \tuplet 3/2 {a\cresc( b) cis-. d-. e-.-0 fis-. g-. b-. cis,-.} |
+  \tuplet 3/2 {a\cresc( b) cis-. d-. e-.\open fis-. g-. b-. cis,-.} |
   %% 8
   \tuplet 3/2 {e\dim( d) cis-. e( d) cis-. e( d) c-.} |
   %% 9
-  \tuplet 3/2 {b\p( d) b-. g-. a-._0 b-._1 c-. d-. e-.} |
+  \tuplet 3/2 {b\p( d) b-. g-. a-._\open b-._1 c-. d-. e-.} |
   %% 10
-  \tuplet 3/2 {d( g) d-. b-. c-. d-. e-.-0 fis-. g-.}
+  \tuplet 3/2 {d( g) d-. b-. c-. d-. e-.\open fis-. g-.}
   %% 11
-  \tuplet 3/2 {a( c-4) a-.-3 fis-. a-. fis-. d-. e-.-0 fis-.}
+  \tuplet 3/2 {a( c-4) a-.-3 fis-. a-. fis-. d-. e-.\open fis-.}
   %% 12
   \tuplet 3/2 {g( b) a-. g-. fis-. e-.-4 d-. c-. b-.}
   %% 13
@@ -3368,9 +3368,9 @@ studyXIII = \new Voice \relative c'' {
   %% 14
   \tuplet 3/2 {d->( b) g-. \repeat tremolo 3 {g-.} g'-. d-. b-.}
   %% 15
-  \tuplet 3/2 {a\cresc( c) e-. d( b) g-. c( a_0) fis-.\!} |
+  \tuplet 3/2 {a\cresc( c) e-. d( b) g-. c( a_\open) fis-.\!} |
   %% 16
-  \tuplet 3/2 {a\>( g) fis-.\! g-. d-._0 b-. g-. b-. d-._0} |
+  \tuplet 3/2 {a\>( g) fis-.\! g-. d-._\open b-. g-. b-. d-._\open} |
   %% 17
   \tuplet 3/2 {g\f( bes) d-. \repeat tremolo 3 {g-.} bes-. g-. d-.} |
   %% 18
@@ -3378,23 +3378,23 @@ studyXIII = \new Voice \relative c'' {
   %% 19
   \tuplet 3/2 {g( f) e-.-4 \repeat tremolo 3 {d-.} \acciaccatura e8 d8-. cis-. d-.} |
   %% 20
-  \tuplet 3/2 {f( e-0) d-. cis-. e-. cis-. \repeat tremolo 3 {a-.}} |
+  \tuplet 3/2 {f( e\open) d-. cis-. e-. cis-. \repeat tremolo 3 {a-.}} |
   %% 21
   \tuplet 3/2 {fis'\mf g-. a-.-1 b-. cis-. d-. e,-.-2 fis-.-3 g-.-4} |
   %% 22
-  \tuplet 3/2 {a-1 b cis d,-.-1 e-.-0 fis-. g-. a-. b-.} |
+  \tuplet 3/2 {a-1 b cis d,-.-1 e-.\open fis-. g-. a-. b-.} |
   %% 23
-  \tuplet 3/2 {cis,-.-2 d-. e-.-0 fis-. g-. a-. b,-. cis-. d-.} |
+  \tuplet 3/2 {cis,-.-2 d-. e-.\open fis-. g-. a-. b,-. cis-. d-.} |
   %% 24
-  \tuplet 3/2 {e-.-0 fis-. g-. a,-. b-. cis-. d-. e-. fis-.} |
+  \tuplet 3/2 {e-.\open fis-. g-. a,-. b-. cis-. d-. e-. fis-.} |
   %% 25
-  \tuplet 3/2 {a( g) e-.-4 b-. g-. e-. g-. b-. e-.-0} |
+  \tuplet 3/2 {a( g) e-.-4 b-. g-. e-. g-. b-. e-.\open} |
   %% 26
-  \tuplet 3/2 {g->( fis) d-. a-.-4 fis-. d-. fis-. a-.-0 d-.} |
+  \tuplet 3/2 {g->( fis) d-. a-.-4 fis-. d-. fis-. a-.\open d-.} |
   %% 27
   \tuplet 3/2 {fis->( e) cis-. a-.-4 g-. e-. cis-. a-. cis-.} |
   %% 28
-  \tuplet 3/2 {d->( fis) a-.-0 d\p( e d) cis( d cis)} |
+  \tuplet 3/2 {d->( fis) a-.\open d\p( e d) cis( d cis)} |
   %% 29
   \tuplet 3/2 {c( d c) a'\cresc( b a)  g( a g)} |
   %% 30
@@ -3404,15 +3404,15 @@ studyXIII = \new Voice \relative c'' {
   %% 32
   \tuplet 3/2 {d( e d^\rall) cis-2( d cis) c( d c)} |
   %% 33
-  \tuplet 3/2 {b\p^\aTempo( d) b-. g-. a-.-0 b-. c-. d-. e-.} |
+  \tuplet 3/2 {b\p^\aTempo( d) b-. g-. a-.\open b-. c-. d-. e-.} |
   %% 34
-  \tuplet 3/2 {d( g) d-. b-. c-. d-. e-.-0 fis-. g-.} |
+  \tuplet 3/2 {d( g) d-. b-. c-. d-. e-.\open fis-. g-.} |
   %% 35
-  \tuplet 3/2 {a( c) a-. fis-. a-. fis-. d-. e-.-0 fis-.} |
+  \tuplet 3/2 {a( c) a-. fis-. a-. fis-. d-. e-.\open fis-.} |
   %% 36
   \tuplet 3/2 {g( b) a-. g-. fis-. e-.-4 d-. c-. b-.} |
   %% 37
-  \tuplet 3/2 {e->-4( c) g-. \repeat tremolo 3 {g-.} g'-. fis-. e-.-0} |
+  \tuplet 3/2 {e->-4( c) g-. \repeat tremolo 3 {g-.} g'-. fis-. e-.\open} |
   %% 38
   \tuplet 3/2 {d->( b) g-. \repeat tremolo 3 {g-.} g'-. d-. b-.} |
   %% 39
@@ -3432,7 +3432,7 @@ studyXIII = \new Voice \relative c'' {
   %% 46
   \tuplet 3/2 {f\>( e-4 d e\!) c-. g-. e-. g-. c-.} |
   %% 47
-  \tuplet 3/2 {e\>( d cis d\!) c-. a-.-4 fis-. d-._0 fis-.} |
+  \tuplet 3/2 {e\>( d cis d\!) c-. a-.-4 fis-. d-._\open fis-.} |
   %% 48
   \tuplet 3/2 {a\>( g fis g\!) d-. b-. \repeat tremolo 3 {g-.}}
   %% 49
@@ -3456,16 +3456,16 @@ studyXII = \new Voice \relative g {
   \tempo "Allegro, ma non tanto." 4=123
   \key g \major
 
-  g16->\mf^\markup {\italic "brillante"}( b\cresc e d-0 b-> d-0 a'-4 g
+  g16->\mf^\markup {\italic "brillante"}( b\cresc e d\open b-> d\open a'-4 g
   d-> g c b g-> b e-4 d\!) |
   %% 2
   d->( c a g' fis d b' a fis-1\dim c'-4 a-3 fis d c a c\!) |
   %% 3
   e->-4( d b a' g d b' g d b g c b g d b') |
   %% 4
-  a-0\cresc( d, fis a d fis a fis d\dim c a-0 fis d-4 c a d\!) |
+  a\open\cresc( d, fis a d fis a fis d\dim c a\open fis d-4 c a d\!) |
   %% 5
-  g,->( b e d-0 b->\cresc d-0 a'-4 g d-> g c b g-> b e d\!) |
+  g,->( b e d\open b->\cresc d\open a'-4 g d-> g c b g-> b e d\!) |
   %% 6
   d->( c a g' fis d b' a fis-1\dim c'-4 a-3 fis d c a c\!) |
   %% 7
@@ -3473,79 +3473,79 @@ studyXII = \new Voice \relative g {
   %% 8
   b,\ff( dis-4 fis ais-4 b dis fis ais b\dim a fis dis b a fis dis-1\!) |
   %% 9
-  e->-1\cresc( g c b g b dis e b e-0 a g e-> g c-4 b-4\!) |
+  e->-1\cresc( g c b g b dis e b e\open a g e-> g c-4 b-4\!) |
   %% 10
   b->( a fis a fis dis b c b\dim a-4 fis a fis dis-4 b a\!) |
   %% 11
-  g->( b dis-1 e-1 b->\cresc e fis g e-> g c b g-> b dis e-0\!) |
+  g->( b dis-1 e-1 b->\cresc e fis g e-> g c b g-> b dis e\open\!) |
   %% 12
-  g\fz( f a g f e d c b-1\dim f'-4 d-3 b g f d-0 b\!) |
+  g\fz( f a g f e d c b-1\dim f'-4 d-3 b g f d\open b\!) |
   %% 13
   c->( e a g e-> g b c g-> c f-4 e-4 c e-4 a g) |
   %% 14
   gis\fz( e b' gis e-4 d b gis e\dim d' b gis e d b gis\!) |
   %% 15
-  a->( c f e c->\cresc e gis a e-> a-0 d c a-> c f-4 e-4\!) |
+  a->( c f e c->\cresc e gis a e-> a\open d c a-> c f-4 e-4\!) |
   %% 16
   e\fz( dis b' a g fis e-4 dis e\dim ais,-1 b fis g dis-1 e-1 g\!) |
   %% 17
   f\fz( a, c f a c f a) gis\fz( f d b gis-4 f d b) |
   %% 18
-  c\fz( a c e a-0 c e-0 a) bes\fz( g e-0 cis bes g e cis) |
+  c\fz( a c e a\open c e\open a) bes\fz( g e\open cis bes g e cis) |
   %% 19
-  d-4\fz( a d-0 f a d f a) c-4\fz( a-3 fis-1 dis-4 c a-0 fis dis) |
+  d-4\fz( a d\open f a d f a) c-4\fz( a-3 fis-1 dis-4 c a\open fis dis) |
   %% 20
-  e\fz( a-0 c d e a gis a) b\fz( gis e-0 f e d b c) |
+  e\fz( a\open c d e a gis a) b\fz( gis e\open f e d b c) |
   %% 21
-  a->\cresc( c f e c-> e-0 b' a\!) a->( g e-4 cis a-4\dim g e cis\!) |
+  a->\cresc( c f e c-> e\open b' a\!) a->( g e-4 cis a-4\dim g e cis\!) |
   %% 22
-  d->\cresc( f bes a f-> a-0 e'-4 d\!) d->( c a fis' d\dim c a fis\!) |
+  d->\cresc( f bes a f-> a\open e'-4 d\!) d->( c a fis' d\dim c a fis\!) |
   %% 23
-  g->( b e d b-> d fis g) g->( e-0 cis b' a g e-4 cis) |
+  g->( b e d b-> d fis g) g->( e\open cis b' a g e-4 cis) |
   %% 24
-  d->\cresc( e d cis   d e fis g)   a-3( b-4 c-4 a-3 fis\dim d c a-0\!) |
+  d->\cresc( e d cis   d e fis g)   a-3( b-4 c-4 a-3 fis\dim d c a\open\!) |
   %% 25
-  fis( d-4 cis d-0 dis-1 e-1 f-2 fis-2 g-3 gis-4 a-0 ais-1 b-1 c-2 cis-2 d) |
+  fis( d-4 cis d\open dis-1 e-1 f-2 fis-2 g-3 gis-4 a\open ais-1 b-1 c-2 cis-2 d) |
   %% 26
-  dis->-4( e-0 fis-1 e-0 b-> c\dim d c gis->-3 a-0 b a-0 fis-> e' c a\!) |
+  dis->-4( e\open fis-1 e\open b-> c\dim d c gis->-3 a\open b a\open fis-> e' c a\!) |
   %% 27
   g->( ees' c a fis-> e' c a g-> ees' c a fis-> e' c a) |
   %% 28
-  fis( d-4 cis d-0 e\dim d b c d c gis a b a d b\!) |
+  fis( d-4 cis d\open e\dim d b c d c gis a b a d b\!) |
   %% 29
-  g->\mf( b\cresc e d-0 b->-2 d-0 a'-4 g d-> g c b g-> b e d\!) |
+  g->\mf( b\cresc e d\open b->-2 d\open a'-4 g d-> g c b g-> b e d\!) |
   %% 30
   d->( c a g' fis d b' a fis c'-4 a-3 fis d\dim c a c\!) |
   %% 31
   e->( d b a' g d b e d b g c b g d b') |
   %% 32
-  a-0( d, fis a-0 d\cresc fis a fis d c a-0 fis d\dim c a d\!) |
+  a\open( d, fis a\open d\cresc fis a fis d c a\open fis d\dim c a d\!) |
   %% 33
-  g,->( b e d b-> d-0\cresc a'-4 g d g c b g-> b e d\!) |
+  g,->( b e d b-> d\open\cresc a'-4 g d g c b g-> b e d\!) |
   %% 34
-  e,\mf( g c b g\cresc b dis e b e-0 a g e g c-4 b-4\!) |
+  e,\mf( g c b g\cresc b dis e b e\open a g e g c-4 b-4\!) |
   %% 35
-  b\f( a g e-4 cis a-4 g e) d\cresc( fis b a fis a-0 e'-4 d\!) |
+  b\f( a g e-4 cis a-4 g e) d\cresc( fis b a fis a\open e'-4 d\!) |
   %% 36
-  d\mf( c a-0 fis d-4\dim c a d) g,(b\cresc e d-0 b d-0 a' g\!) |
+  d\mf( c a\open fis d-4\dim c a d) g,(b\cresc e d\open b d\open a' g\!) |
   %% 37
-  e\f( g b c   g c dis e   c\cresc e-0 fis g   a g e-4 c\!) |
+  e\f( g b c   g c dis e   c\cresc e\open fis g   a g e-4 c\!) |
   %% 38
   b( d e d   c b a-4\dim g   fis e d-4 c   b c a b\!) |
   %% 39
-  g->\mf( b e d   b-> d-0 a'-4 g   d-> g c b   g-> b e d) |
+  g->\mf( b e d   b-> d\open a'-4 g   d-> g c b   g-> b e d) |
   %% 40
-  c->( fis b a fis d c a-4 fis-> a-0\dim e' d c a-4 fis d-4\!) |
+  c->( fis b a fis d c a-4 fis-> a\open\dim e' d c a-4 fis d-4\!) |
   %% 41
-  b->( d-0 a'-4 g   d-> g c b   g-> b e d   b-> d fis g) |
+  b->( d\open a'-4 g   d-> g c b   g-> b e d   b-> d fis g) |
   %% 42
-  a\f( g e-4 c g e c e) d-0( fis a-0 c d fis a fis) |
+  a\f( g e-4 c g e c e) d\open( fis a\open c d fis a fis) |
   %% 43
-  a->\dim( g d b   e-> d b g   c-> b g d   a'->-4 g d-0 b\!) |
+  a->\dim( g d b   e-> d b g   c-> b g d   a'->-4 g d\open b\!) |
   %% 44
   g4 r r8 \hairpinCalmato a''8\>~( a16 g d b |
   %% 45
-  e d b g\!) r8 c16->( b g d) r8 a'16->-4( g d-0 b |
+  e d b g\!) r8 c16->( b g d) r8 a'16->-4( g d\open b |
   %% 46
   g2.\pp) r4 \bar "|."
 }
@@ -3618,11 +3618,11 @@ studyXI = \new Voice \relative c' {
   \tuplet 3/2 {bes-. aes-. g-. f-. ees-. d-._4} |
   %% 3
   \omit TupletNumber
-  \tuplet 3/2 {c\< d-0 ees f g a-0 b c d ees f g} |
+  \tuplet 3/2 {c\< d\open ees f g a\open b c d ees f g} |
   %% 4
   \tuplet 3/2 {f\> ees d c bes aes g f ees d-4 c bes} |
   %% 5
-  \tuplet 3/2 {aes\< bes c d-0 ees f g aes bes c d ees} |
+  \tuplet 3/2 {aes\< bes c d\open ees f g aes bes c d ees} |
   %% 6
   \tuplet 3/2 {d\> c bes a-4 g f ees d-4 c bes a c\!} |
   %% 7
@@ -3698,7 +3698,7 @@ studyXI = \new Voice \relative c' {
   %% 40
   \tuplet 3/2 {a\> g f ees d c bes aes g f ees d} |
   %% 41
-  \tuplet 3/2 {c\< d-0 ees f g a-0 b c d ees f g} |
+  \tuplet 3/2 {c\< d\open ees f g a\open b c d ees f g} |
   %% 42
   \tuplet 3/2 {f\> ees d c bes aes g f ees d-4 c bes} |
   %% 43
@@ -3707,7 +3707,7 @@ studyXI = \new Voice \relative c' {
   \tuplet 3/2 {d\> c bes aes_4 g f ees d_4 c bes a c\!} |
   %% 45
   \override DynamicLineSpanner.staff-padding = #3.3
-  \tuplet 3/2 {bes\< c d_0 ees f g aes g bes\! aes\> f d\!} |
+  \tuplet 3/2 {bes\< c d_\open ees f g aes g bes\! aes\> f d\!} |
   %% 46
   \tuplet 3/2 {ees\< g aes bes c d\! ees\> d f ees c a\!} |
   %% 47
@@ -3717,20 +3717,20 @@ studyXI = \new Voice \relative c' {
   %% 49
   \tuplet 3/2 {g\< fis g bes a bes\! aes\> g aes c, b c\!} |
   %% 50
-  \tuplet 3/2 {bes\< a bes g' fis g\! f\> e-0 f d cis d\!} |
+  \tuplet 3/2 {bes\< a bes g' fis g\! f\> e\open f d cis d\!} |
   \override DynamicLineSpanner.staff-padding = #0
   %% 51
   \tuplet 3/2 {ees->\f f g f ees d c-> d ees d c bes} |
   %% 52
-  \tuplet 3/2 {aes-> bes c bes aes g f-> g aes f d_0 bes} |
+  \tuplet 3/2 {aes-> bes c bes aes g f-> g aes f d_\open bes} |
   %% 53
   \tuplet 3/2 {ees-> f g f ees d c-> d ees d_4 c bes} |
   %% 54
-  \tuplet 3/2 {aes-> g aes c bes aes bes-> d_0 f bes c d} |
+  \tuplet 3/2 {aes-> g aes c bes aes bes-> d_\open f bes c d} |
   %% 55
   \tuplet 3/2 {ees-> g ees bes-> c d ees-> bes g aes-> f d} |
   %% 56
-  \tuplet 3/2 {ees-> g ees bes-> c d_0 ees-> bes g aes-> bes d} |
+  \tuplet 3/2 {ees-> g ees bes-> c d_\open ees-> bes g aes-> bes d} |
   %% 57
   ees8 <d bes' f'>-. <ees bes' g'>-. <d bes' bes'>-. |
   %% 58
@@ -3801,13 +3801,13 @@ studyX = \new Voice \relative c' {
   b,\cresc( g') d'( g,) b,( g') d'( g,) \repeat unfold 2 {d( c') fis( c)} |
   g,\f( d' b' g') g( b, d, g,) g4 r |
   %% 5
-  d'16\p( a') f'( a,) d,( a') f'( a,) a\cresc( cis) e-0( cis) a( cis) e( cis) |
-  \repeat unfold 2 {d,( d') f( d)} f,( a-0) a'( a,) f( a) a'( a,) |
+  d'16\p( a') f'( a,) d,( a') f'( a,) a\cresc( cis) e\open( cis) a( cis) e( cis) |
+  \repeat unfold 2 {d,( d') f( d)} f,( a\open) a'( a,) f( a) a'( a,) |
   %% 7
   \repeat unfold 2 {e( a) g'( a,)} \repeat unfold 2 {d,( a') f'( a,)} |
-  a,\f( a'-4 cis e-0) e( cis a a,) a4 r |
+  a,\f( a'-4 cis e\open) e( cis a a,) a4 r |
   %% 9
-  d16\mf( a') f'( a,) d,( a') f'( a,) e\cresc( c') e-0( c) e,( c') e( c) |
+  d16\mf( a') f'( a,) d,( a') f'( a,) e\cresc( c') e\open( c) e,( c') e( c) |
   %% 10
   \repeat unfold 2 {f,->( d') a'( d,)} e,->( d') a'( d,) d,->( d') a'( d,) |
   %% 11
@@ -3815,18 +3815,18 @@ studyX = \new Voice \relative c' {
   %% 12
   a,\f( e' cis' a') a( cis, e, a,) a4 r |
   %% 13
-  f'16->\p( a) f'( a,) f->( a) f'( a,) g->( bes) f'( bes,) g->( bes) e-0( bes) |
+  f'16->\p( a) f'( a,) f->( a) f'( a,) g->( bes) f'( bes,) g->( bes) e\open( bes) |
   %% 14
   \repeat unfold 2 {f( c') a'( c,)} \repeat unfold 2 {f,( a) f'( a,)} |
   %% 15
   \repeat unfold 2 {bes,->( f') d'( f,)} bes,->( f') e'( f,) bes,->( f') d'( f,) |
   %% 16
-  a,( f') c'( f,) g,( e'-2) bes'-1( e,) f-2( a-0) f'-1( a,) d,( a') f'( a,) |
-  g,\mf( d' b'-2 f'-1) f( b, d, g,) g( e'-1 c'-2 e-0) e( c e, g,) |
+  a,( f') c'( f,) g,( e'-2) bes'-1( e,) f-2( a\open) f'-1( a,) d,( a') f'( a,) |
+  g,\mf( d' b'-2 f'-1) f( b, d, g,) g( e'-1 c'-2 e\open) e( c e, g,) |
   %% 18
   g\f( ees' c' a') a( c, ees, g,) g\p( d' b' g') g( b, d, g,) |
   %% 19
-  g\mf( d' b'-2 f'-1) f( b, d, g,) g( e'-1 c'-2 e-0) e( c e, g,) |
+  g\mf( d' b'-2 f'-1) f( b, d, g,) g( e'-1 c'-2 e\open) e( c e, g,) |
   %% 20
   g\f( d' c' fis) fis( c d, g,) g\mf( d' b' g') g( b, d, g,) |
   c\p( e) c'( e,) c( e) c'( e,) \repeat unfold 2 {c( f) b( f)} |
@@ -3837,14 +3837,14 @@ studyX = \new Voice \relative c' {
   %% 24
   e( b') e( b) e,( b') gis'( b,) e,4\! r |
   %% 25
-  a,16\p( e') c'( e,) a,( e') c'( e,) a-4\cresc( c) e-0( c) a-4( c) f( c) |
+  a,16\p( e') c'( e,) a,( e') c'( e,) a-4\cresc( c) e\open( c) a-4( c) f( c) |
   %% 26
   e,\f( c') g'( c,) \repeat unfold 2 {e,( c') g'( c,)} f,( c') a'( c,) |
   g,\mf( f') d'( f,) g,( f') d'( f,) g,( f') e'( f,) g,( f') d'( f,) |
   %% 28
   a,( e') d'( e,) a,\cresc( e') d'( e,) a,( e') c'( e,) b( g') d'( g,\!) |
   %% 29
-  c,( g') e'( g,) a-4( c) e-0( c) a-4\cresc( c) e-0( c) a( c) f( c) |
+  c,( g') e'( g,) a-4( c) e\open( c) a-4\cresc( c) e\open( c) a( c) f( c) |
   %% 30
   e,\f( c') g'( c,) \repeat unfold 2 {e,( c') g'( c,)} f,( c') a'( c,) |
   g,\mf( f') d'( f,) g,( f') d'( f,) g,( f') e'( f,) g,( f') d'( f,) |
@@ -3855,18 +3855,18 @@ studyX = \new Voice \relative c' {
   b,( g') d'( g,) b,\cresc( g') d'( g,) \repeat unfold 2 {d( c') fis( c)} |
   g,\f( d' b' g') g( b, d, g,) g4 r |
   %% 37
-  \repeat unfold 2 {d'16( a') f'( a,)} a-4\cresc( cis) e-0( cis) a( cis) e( cis\!) |
+  \repeat unfold 2 {d'16( a') f'( a,)} a-4\cresc( cis) e\open( cis) a( cis) e( cis\!) |
   d,\mf( d') f( d) d,( d') f( d) \repeat unfold 2 {f,( d') a'( d,)} |
   %% 39
   g,,\f( e' c' g') g( c, e, g,) g( d' b'\dim g') g( b, d, g,\!) |
-  c( e c' e-0) e( c e, c) c\cresc( g' bes e) e( bes g c,) |
+  c( e c' e\open) e( c e, c) c\cresc( g' bes e) e( bes g c,) |
   c\f( f a f') f( a, f c) c\dim( d b' g') g( b, d, c) |
   %% 42
   c\p( e c' e) e( c e, c) c\cresc( g' bes e) e( bes g c,) |
   %% 43
   c\f( f a f') f( a, f c) c\dim( d b' g') g( b, d, c\!) |
   \repeat percent 2 {
-    c( e c' e-0) e( c e, c) c->( g' c e) e( c g c,) |
+    c( e c' e\open) e( c e, c) c->( g' c e) e( c g c,) |
   }
   \repeat percent 2 {
     \repeat unfold 2 {
@@ -3887,35 +3887,35 @@ studyIX = \new Voice \relative c' {
 
   g16-.\mf b-. a-._\markup {\italic "sempre stacc."} c-. b-. d-. c-. a-. |
   %% 2
-  g b a c b d c a | g\cresc b a c b d-4 c e | d-0 fis e g\! fis a g b |
+  g b a c b d c a | g\cresc b a c b d-4 c e | d\open fis e g\! fis a g b |
   %% 5
-  a-0\mf c b d c e-4 d b | a c b d c e-4 d b |
-  a\cresc c b d c e-4 d fis | e-0 g fis a\! g b a c-4 |
+  a\open\mf c b d c e-4 d b | a c b d c e-4 d b |
+  a\cresc c b d c e-4 d fis | e\open g fis a\! g b a c-4 |
   %% 9
   b-4\dim g fis a g e-4 d fis | e-4 c b d\! c a-4 g b |
   a-4 fis e g fis-2 d c e | d-4 b a c b g a d-4 |
   %% 13
   g,\cresc b a c b d-4 c a | g b a c b d-4 c a\! |
-  g b a c b d c e | d-0 fis e g fis a-4 g b |
-  a-0 c b d c e d b | a-0 c b d c e-4 d b |
-  a-0 c b d c e d-3 fis | e-0 g fis a g b a c-4 |
+  g b a c b d c e | d\open fis e g fis a-4 g b |
+  a\open c b d c e d b | a\open c b d c e-4 d b |
+  a\open c b d c e d-3 fis | e\open g fis a g b a c-4 |
   %% 21
   b-4\dim g fis a g e-4 d fis | e-4 c b d\! c a g b |
   a-4 fis e g fis d-4 c e | d-4 b a c b g a d-4 |
   %% 25
   g,\mf bes a c bes d-4 c a | g bes a c bes d-4 c a |
   %% 27
-  g bes a\cresc c bes d-4 c ees | d-0 f ees g f a g bes\! |
+  g bes a\cresc c bes d-4 c ees | d\open f ees g f a g bes\! |
   %% 29
-  a-0\mf c bes d c ees d bes | a-0 c bes d c ees d bes |
-  a-0 c bes\dim g f a-4 g ees | d-0 f ees c bes d c a\! |
+  a\open\mf c bes d c ees d bes | a\open c bes d c ees d bes |
+  a\open c bes\dim g f a-4 g ees | d\open f ees c bes d c a\! |
   %% 33
-  bes\mf d-4 c ees d-0 f ees c | bes d-4 c ees d-0 f ees c |
-  bes d-4 c ees d-0\cresc f ees g | f a-4 g bes a-0 c bes d\! |
+  bes\mf d-4 c ees d\open f ees c | bes d-4 c ees d\open f ees c |
+  bes d-4 c ees d\open\cresc f ees g | f a-4 g bes a\open c bes d\! |
   %% 37
   c\mf ees d b c\cresc ees d b | c g' fis g\! a g ees c |
   %% 39
-  cis\cresc e d b cis e d b\! | cis e-4 dis e-0 fis e-0 cis a |
+  cis\cresc e d b cis e d b\! | cis e-4 dis e\open fis e\open cis a |
   %% 41
   d,\p fis e g fis a g e | d fis e g fis a g e |
   d fis e g fis a g b | a cis b d cis e d fis |
@@ -3939,19 +3939,19 @@ studyIX = \new Voice \relative c' {
   bes\< des c des\! ees\> des bes aes\! | g\mf ees d aes' g ees d aes' |
   %% 67
   g ees d aes' g ees d aes' | g ees d ees f ees d ees |
-  c aes g aes bes aes g aes | g\cresc bes des e g bes des e-0 |
+  c aes g aes bes aes g aes | g\cresc bes des e g bes des e\open |
   %% 71
   g\ff bes g e g bes g e | f aes f\dim d b aes f d\! |
-  b d f d b d f d | c dis-1 fis-2\cresc a-0 c dis-4 fis a |
+  b d f d b d f d | c dis-1 fis-2\cresc a\open c dis-4 fis a |
   %% 75
-  c-4\ff a-3 fis a c a fis a | g-> b g e-0 c-> e-4 c a |
+  c-4\ff a-3 fis a c a fis a | g-> b g e\open c-> e-4 c a |
   %% 77
-  g-> b g e fis-> a fis dis-1 | e-1\p g fis a-4 g b a-0 fis |
+  g-> b g e fis-> a fis dis-1 | e-1\p g fis a-4 g b a\open fis |
   e g fis a g b a fis | e g fis a g\cresc b a c |
   b dis cis e dis fis e g | fis\mf a g b a c-4 b-4 g |
-  fis a g b a c-4 b-4 g | fis a g e-0 dis\dim fis e-0 c |
+  fis a g b a c-4 b-4 g | fis a g e\open dis\dim fis e\open c |
   %% 85
-  b d c a-0 g b a-0 fis\! | g\mf b, a c b d-4 c a |
+  b d c a\open g b a\open fis\! | g\mf b, a c b d-4 c a |
   g b a c b d-4 c a | g\cresc b a c b d c e |
   %% 89
   d fis e g fis a g b\! | a c b d c e d b |
@@ -3997,21 +3997,21 @@ studyVIII = \new Voice \relative c' {
   \tempo "Commodo." 4=111
   \key d \major
 
-  d8\mf( e fis g a-0 b) | a-0( fis' e-0 d cis d) |
+  d8\mf( e fis g a\open b) | a\open( fis' e\open d cis d) |
   %% 3
-  e-4( b g' e-0 b' a) | g( fis e-4 d cis b) |
+  e-4( b g' e\open b' a) | g( fis e-4 d cis b) |
   %% 5
-  a-4( fis cis' a-0 e' d) | cis( b a-4 g fis g) |
+  a-4( fis cis' a\open e' d) | cis( b a-4 g fis g) |
   %% 7
-  b( a-0 fis d' a fis') | d( b a-0 fis d-0 cis) |
+  b( a\open fis d' a fis') | d( b a\open fis d\open cis) |
   %% 9
-  b( cis d-0 e fis g) | fis( d' cis b ais b) |
+  b( cis d\open e fis g) | fis( d' cis b ais b) |
   %% 11
   cis( a\cresc fis a cis fis) | a( gis fis e-4 dis cis) |
   %% 13
-  b\f( cis dis e-0 fis gis) | b( a gis fis e-4 dis) |
+  b\f( cis dis e\open fis gis) | b( a gis fis e-4 dis) |
   %% 15
-  e-4\dim( gis e b gis e') | e,( fis gis a-0 b bis) |
+  e-4\dim( gis e b gis e') | e,( fis gis a\open b bis) |
   %% 17
   cis\p( a-4 gis a e cis') | a( fis' e-4 cis b' a) |
   %% 19
@@ -4021,61 +4021,61 @@ studyVIII = \new Voice \relative c' {
   %% 23
   a->( gis b, fis' e-4 d) | b( gis e d' cis b) |
   %% 25
-  cis( a-4\cresc gis a-0 fis' e) | dis( b-1 ais-1 b-1 gis' fis) |
+  cis( a-4\cresc gis a\open fis' e) | dis( b-1 ais-1 b-1 gis' fis) |
   %% 27
-  e-0( cis bis cis a' gis) | fis( dis cisis dis b' a) |
+  e\open( cis bis cis a' gis) | fis( dis cisis dis b' a) |
   %% 29
-  gis\f( b a gis fis e-0) | cis( fis a fis cis a) |
+  gis\f( b a gis fis e\open) | cis( fis a fis cis a) |
   %% 31
   gis\dim( b e-4 b gis e) | dis-1( fis-2 a-4 fis-2 dis-4 b) |
   %% 33
-  e-1\cresc( dis-1 e-1 fis gis a-0) | b( cis d e fis gis) |
+  e-1\cresc( dis-1 e-1 fis gis a\open) | b( cis d e fis gis) |
   %% 35
   a( ais b a\dim gis fis) | e-4( d cis b ais b) |
   %% 37
-  cis\p( a-4 gis a e cis') | a( fis' e-0 cis b' a) |
+  cis\p( a-4 gis a e cis') | a( fis' e\open cis b' a) |
   %% 39
   a->( gis b, fis' e-4 d) | b( gis e d' cis b) |
   %% 41
-  cis( a-4 gis a e cis') | a( fis' e-0 cis b' a) |
+  cis( a-4 gis a e cis') | a( fis' e\open cis b' a) |
   %% 43
   a->( gis b, fis' e-4 d) | b( gis e d' cis b) |
   %% 45
-  cis( a-4\cresc gis a-0 fis' e) | d( b ais b gis' fis) |
+  cis( a-4\cresc gis a\open fis' e) | d( b ais b gis' fis) |
   %% 47
   e-4( cis bis cis\! b' a) | gis( fis eis\dim fis d b) |
   %% 49
-  cis( d dis e cis a) | gis( a-0 ais b gis e\!) |
+  cis( d dis e cis a) | gis( a\open ais b gis e\!) |
   %% 51
-  fis\fz( a-0 cis fis a gis) | eis->( fis e-4 d cis b) |
+  fis\fz( a\open cis fis a gis) | eis->( fis e-4 d cis b) |
   %% 53
   dis->( e d cis b a) | cis->( d cis b a-4 gis) |
   %% 55
-  a-0( e'-4 cis a e cis) | a\cresc( b cis d e eis) |
+  a\open( e'-4 cis a e cis) | a\cresc( b cis d e eis) |
   %% 57
-  fis\mf( e fis g a-0 b) | a( fis' e-0 d cis d) |
+  fis\mf( e fis g a\open b) | a( fis' e\open d cis d) |
   %% 59
-  e-4( b g' e-0 b' a) | g( fis e-4 d cis b) |
+  e-4( b g' e\open b' a) | g( fis e-4 d cis b) |
   %% 61
-  a-4( e cis' a-0 e' d) | cis( b a-4 g fis g) |
+  a-4( e cis' a\open e' d) | cis( b a-4 g fis g) |
   %% 63
-  b( a-0 fis d' a fis') | d( b a-0 fis d-0 cis) |
+  b( a\open fis d' a fis') | d( b a\open fis d\open cis) |
   %% 65
   b( cis d e fis g) | fis( d' cis b ais b) |
   %% 67
   cis( a\cresc fis a cis fis) | a( gis fis e-4 d cis) |
   %% 69
-  b( cis d dis-4\dim fis-1 e-0) | d( b gis e d-4 b) |
+  b( cis d dis-4\dim fis-1 e\open) | d( b gis e d-4 b) |
   %% 71
-  a\p( b\cresc cis d-0 e fis) | g( fis a g fis e) |
+  a\p( b\cresc cis d\open e fis) | g( fis a g fis e) |
   %% 73
-  d\mf( e fis g a-0 b) | a( fis' e-0 d cis d) |
+  d\mf( e fis g a\open b) | a( fis' e\open d cis d) |
   %% 75
-  e( b g' e-0 b' a) | g( fis e-4 d cis b) |
+  e( b g' e\open b' a) | g( fis e-4 d cis b) |
   %% 77
-  a( e cis' a-0 e' d) | cis( b a-4 g fis g) |
+  a( e cis' a\open e' d) | cis( b a-4 g fis g) |
   %% 79
-  b( a-0 fis d' a fis') | d( b a-0 fis d-0 cis) |
+  b( a\open fis d' a fis') | d( b a\open fis d\open cis) |
   %% 81
   b\f( d g b d g) | g->( e cis g e cis) |
   %% 83
@@ -4083,7 +4083,7 @@ studyVIII = \new Voice \relative c' {
   %% 85
   g->( b e g b e) | e->( cis a-4 g\dim e cis) |
   %% 87
-  d-0( fis a d fis b) | a( fis d a-4 fis d\!) |
+  d\open( fis a d fis b) | a( fis d a-4 fis d\!) |
   %% 89
   b\f( d g b d g) | g->( e cis g e cis) |
   ais->( cis fis ais-4 cis fis) | fis->( d b fis d-4 b) |
@@ -4104,16 +4104,16 @@ studyVII = \new Voice \relative c' {
 
   bes8-.\mf f'-. d-. bes'-. f d' bes f' | d bes' f d bes f' d bes |
   %% 3
-  f c' a f' c a' f-1 c'-4 | a-3 f c a' f c a-0 f |
+  f c' a f' c a' f-1 c'-4 | a-3 f c a' f c a\open f |
   %% 5
   d bes' f d' bes f' d bes | g d' bes g' d bes' g d |
   %% 7
   ees,\cresc c' g ees' c g' ees c | e, bes'-4 g-3 e' bes g' e-4 bes |
   %% 9
-  a\f f' c a-4 f c a\dim c | f a-0 c e f fis\cresc g a |
+  a\f f' c a-4 f c a\dim c | f a\open c e f fis\cresc g a |
   %% 11
-  bes\> d, f bes, d f, bes d, | f\< bes, d-0 f bes d f bes |
-  a\> c, f a, c f, a-4 c, | f\< a, c f a-0 c f ees |
+  bes\> d, f bes, d f, bes d, | f\< bes, d\open f bes d f bes |
+  a\> c, f a, c f, a-4 c, | f\< a, c f a\open c f ees |
   %% 15
   d\> bes f' d\! bes' f d bes | aes\> bes f' d\! bes' f d bes |
   %% 17
@@ -4121,15 +4121,15 @@ studyVII = \new Voice \relative c' {
   %% 19
   ees,\mf bes' g ees' bes g' ees bes' | g ees bes g' ees bes g ees |
   %% 21
-  d b' f d' b f'-4 d aes'-2 | f d b d b aes f d-0 | c g' ees c' g ees' c g' |
+  d b' f d' b f'-4 d aes'-2 | f d b d b aes f d\open | c g' ees c' g ees' c g' |
   %% 24
   ees c g ees' c g ees c | cis-4 g'-3 e cis' g e'\cresc cis g'-1 |
   %% 26
-  e-0 cis g e'-4 cis g e cis\! | d-0 a'-0 fis d' a fis' d\dim a' |
+  e\open cis g e'-4 cis g e cis\! | d\open a'\open fis d' a fis' d\dim a' |
   %% 28
-  g d bes' g d bes g bes\! | a-0\f d, fis d a' fis d' a |
+  g d bes' g d bes g bes\! | a\open\f d, fis d a' fis d' a |
   %% 30
-  g\dim bes d bes g d-0 bes g\! | d'\fz fis a fis d' a fis' d |
+  g\dim bes d bes g d\open bes g\! | d'\fz fis a fis d' a fis' d |
   d,\fz f a f d' a f' d | f\fz ees c a' f ees c a |
   %% 34
   f\dim ees' c a f ees c a | bes\mf f' d bes' f d' bes f' |
@@ -4140,11 +4140,11 @@ studyVII = \new Voice \relative c' {
   %% 40
   g d' bes g' d bes' g d | e,\cresc cis' g e' cis bes' g e |
   %% 42
-  g f d bes a-0 f ees c | b\f aes' f d' b f'-4 d-3 b-1 |
+  g f d bes a\open f ees c | b\f aes' f d' b f'-4 d-3 b-1 |
   %% 44
   c, g' ees c' g ees' c g | a, ges' ees c' ges ees' c a |
   %% 46
-  bes, f' d bes' f d' bes f | g\ff b c ees f, a-0 bes d |
+  bes, f' d bes' f d' bes f | g\ff b c ees f, a\open bes d |
   %% 48
   ees,\dim g a c d, fis g bes | ees,\cresc g bes c e, g bes cis |
   %% 50
@@ -4152,9 +4152,9 @@ studyVII = \new Voice \relative c' {
   %% 52
   ees g' ees c a f ees c | bes\f bes' aes f d' bes aes f' |
   %% 54
-  g, f' ees\dim ges, f ees' d f,\! | e d' c ees, c bes'-1 a-0 f |
+  g, f' ees\dim ges, f ees' d f,\! | e d' c ees, c bes'-1 a\open f |
   %% 56
-  c'\cresc bes f ees' d bes g' f\! | d bes' f d\dim c bes f d-0 |
+  c'\cresc bes f ees' d bes g' f\! | d bes' f d\dim c bes f d\open |
   %% 58
   bes4\! r <d' f> <d f> | <d bes'>\mf r <f a, f> r |
   %% 60
@@ -4267,7 +4267,7 @@ studyVI = \new Voice \relative c'' {
   %% 59
   c4) \tuplet 3/2 {ees8\p( d ees} g4) \tuplet 3/2 {c8( b\cresc c} |
   %% 60
-  e4-4) \tuplet 3/2 {f8( e-0 f} g4) \tuplet 3/2 {bes8( a bes} |
+  e4-4) \tuplet 3/2 {f8( e\open f} g4) \tuplet 3/2 {bes8( a bes} |
   %% 61
   aes4\dim) \tuplet 3/2 {f8( e f} c4) \tuplet 3/2 {aes8( g aes} |
   f4\cresc) \tuplet 3/2 {f8( g aes} g4) \tuplet 3/2 {g,8( a b} |
@@ -4288,13 +4288,13 @@ studyV = \new Voice \relative c''' {
 
   a8-.\f gis8-. fis-. e-.-4 d-. cis-. | b-. cis-. b-. a-.-4 e-. cis-. |
   %% 3
-  b cis d-0 e fis gis | a-0 b cis d4 r8 |
+  b cis d\open e fis gis | a\open b cis d4 r8 |
   %% 5
-  b'8 a-. gis-. fis-. e-.-4 d-. | cis d cis b gis d-0 |
+  b'8 a-. gis-. fis-. e-.-4 d-. | cis d cis b gis d\open |
   %% 7
   cis d e fis gis a | b cis d e4 r8 | fis8\mf d a a'-. gis-. fis-. |
   %% 10
-  e-4 cis a-0 e' d cis | b cis d e, fis gis | a e d-4 cis b a |
+  e-4 cis a\open e' d cis | b cis d e, fis gis | a e d-4 cis b a |
   %% 13
   fis' d a a' gis fis | e fis gis a b cis | b\cresc cis dis e fis gis |
   %% 16
@@ -4308,38 +4308,38 @@ studyV = \new Voice \relative c''' {
   %% 27
   a\f gis fis e-4 d cis | b cis b a-4 e cis | b cis d e fis gis |
   %% 30
-  a b cis d4 r8 | b'8 a gis fis e-4 d | cis d cis b gis d-0 |
-  cis d e fis gis a | b cis d e4 r8 | e-4 cis e-0 g-> a g |
+  a b cis d4 r8 | b'8 a gis fis e-4 d | cis d cis b gis d\open |
+  cis d e fis gis a | b cis d e4 r8 | e-4 cis e\open g-> a g |
   %% 36
   fis d b b b cis | d\dim b d f-> g f | e-4 c a a a b | c b a a b c |
   b\p gis e e gis b | c-> b a a b c | b gis e d-4 c b |
   %% 43
-  a\mf b c d-0 e f | e fis gis a-0 b c | a b c d e-0 f |
+  a\mf b c d\open e f | e fis gis a\open b c | a b c d e\open f |
   %% 46
-  e fis gis a4 r8 | b,,8\cresc c d-0 e f g | d e f g a-0 b |
-  f g a-0 b c d | b d e-0 f4 r8 | c,8\f d e f g a-4 |
+  e fis gis a4 r8 | b,,8\cresc c d\open e f g | d e f g a\open b |
+  f g a\open b c d | b d e\open f4 r8 | c,8\f d e f g a-4 |
   %% 52
-  g a-0 b c d e-4 | c d e-0 f g a | g a b-4 c4-4 r8 |
+  g a\open b c d e-4 | c d e\open f g a | g a b-4 c4-4 r8 |
   %% 55
-  c-4\ff a-3 g fis e-4 dis | e b a-4 g fis e | dis fis a-0 b dis fis |
+  c-4\ff a-3 g fis e-4 dis | e b a-4 g fis e | dis fis a\open b dis fis |
   %% 58
-  e b' a g fis e | f d c b a-4 gis | a-0 e'-4 d c b a-0 |
+  e b' a g fis e | f d c b a-4 gis | a\open e'-4 d c b a\open |
   %% 61
   a-4\dim g f f e dis | e\cresc gis b e fis gis |
-  a\f gis fis e-4 d cis | b cis b a-4 e cis | b cis d-0 e fis gis |
+  a\f gis fis e-4 d cis | b cis b a-4 e cis | b cis d\open e fis gis |
   %% 66
-  a b cis d4 r8 | b'8 a gis fis e-4 d | cis d cis b gis d-0 |
+  a b cis d4 r8 | b'8 a gis fis e-4 d | cis d cis b gis d\open |
   %% 69
-  cis d e fis gis a-0 | b cis d e4-4 r8 | fis8\mf d a a' gis fis |
+  cis d e fis gis a\open | b cis d e4-4 r8 | fis8\mf d a a' gis fis |
   %% 72
   e-4 cis a e' d cis | b cis d e, fis gis | a e d-4 cis b a |
   %% 75
   fis' d a a'-4 gis fis | e fis\cresc gis a b cis | b cis d e fis gis |
   %% 78
-  a\f b a gis fis gis | a e-0 cis d e d | cis\dim b a-4 gis fis gis |
-  a e cis b cis b | a cis\cresc d-0 e fis gis |
-  a-4 e fis gis a-0 b | cis gis a-0 b cis d | e cis d e-0 fis gis |
-  a\f b a gis fis gis | a e-0 cis a-0 e cis | a4 r8 r4. |
+  a\f b a gis fis gis | a e\open cis d e d | cis\dim b a-4 gis fis gis |
+  a e cis b cis b | a cis\cresc d\open e fis gis |
+  a-4 e fis gis a\open b | cis gis a\open b cis d | e cis d e\open fis gis |
+  a\f b a gis fis gis | a e\open cis a\open e cis | a4 r8 r4. |
   <e' cis' a'>4 r8 r4. | a,2.\fermata \bar "|."
 }
 
@@ -4357,7 +4357,7 @@ studyIV = \new Voice \relative c' {
   e( g e g f-> a f a e g e g f-> a f a) |
   e( g e g c-> e\cresc c e b-> d b d a-> c a c) |
   %% 4
-  gis\f( b e-0 fis \repeat unfold 4 {gis b} a-> c-4 a c) |
+  gis\f( b e\open fis \repeat unfold 4 {gis b} a-> c-4 a c) |
   gis( b-4 gis b a-> c-4 a c gis b-4 gis b a-> c-4 a c) |
   %% 6
   gis\dim( b gis b a f a f e g e g f-1 d-3 f-4 d-3) |
@@ -4376,7 +4376,7 @@ studyIV = \new Voice \relative c' {
   b\p( g d-4 b \repeat unfold 4 {g b} a-> d a d) |
   %% 16
   g,( b g b a-> d a d g, b g b a-> d a d) |
-  b( d-0 g a-0 \repeat unfold 4 {b d} c-> e c e) |
+  b( d\open g a\open \repeat unfold 4 {b d} c-> e c e) |
   %% 18
   b( d b d a-> c a c b g d-4 b d-> c a b) |
   g\mf( b \repeat unfold 5 {g b} d-> g d g) |
@@ -4387,13 +4387,13 @@ studyIV = \new Voice \relative c' {
   e( g e g f-> a f a e g e g f-> a f a) |
   e( g e g c-> e\cresc c e b-> d b d a-> c a c) |
   %% 24
-  gis\f( b e-0 fis \repeat unfold 4 {gis b} a-> c a c) |
+  gis\f( b e\open fis \repeat unfold 4 {gis b} a-> c a c) |
   gis( b gis b a-> c a c gis b gis b a-> c a c) |
   %% 26
   gis\dim( b gis b a-> f a f e g e g f-1 d-3 f-4 d-3\!) |
   cis\f( e \repeat unfold 5 {cis e} bis-> dis bis dis) |
   %% 28
-  cis( e cis e bis-> dis bis dis cis e cis e g-> e-0 g e) |
+  cis( e cis e bis-> dis bis dis cis e cis e g-> e\open g e) |
   f\ff( a \repeat unfold 5 {f a} e gis e gis) |
   %% 30
   f( a f a e-> gis e gis f a f a e-> g e g) |
@@ -4432,35 +4432,35 @@ studyIII = \new Voice \relative c' {
   \tempo "Allegretto." 4=123
   \key f \major
 
-  f8-.\mf g16-._\markup {\italic "semplice"} a-.-0 bes8-. c16-. d-. |
+  f8-.\mf g16-._\markup {\italic "semplice"} a-.\open bes8-. c16-. d-. |
   %% 2
   c8-. a'16-. g-. f8-. e16-.-4 d-. | c8-. a16-. d-. c8-. a16-. f-. |
   fis8-. g16-. a-.-4 g8-. c16-. bes-. |
   %% 5
-  a8-4\cresc g16 a-0 bes8 c16 d | c8\f a'16 g f8 e16-4 d |
+  a8-4\cresc g16 a\open bes8 c16 d | c8\f a'16 g f8 e16-4 d |
   %% 7
   c8\dim d16 dis e8-4 d16 b | a8\p c16 b a8 bes16\fz g |
   %% 9
-  f8\f g16 a-0 bes8 c16 d | c8 a'16 g f8 e16-4 d | c8 a16 d c8 a16 f |
+  f8\f g16 a\open bes8 c16 d | c8 a'16 g f8 e16-4 d | c8 a16 d c8 a16 f |
   %% 12
-  fis8 g16 a-4 g8 c16 bes | a8-4 g16 a-0 bes8 c16 d |
-  c8 a'16 g f8 e16-4 d | g8 e16-4 c g8 a16-0 b |
+  fis8 g16 a-4 g8 c16 bes | a8-4 g16 a\open bes8 c16 d |
+  c8 a'16 g f8 e16-4 d | g8 e16-4 c g8 a16\open b |
   %% 16
-  c8 e16-4 d c8 e16-0\p f | g8\< g16 a bes8\> g16 f\! |
+  c8 e16-4 d c8 e16\open\p f | g8\< g16 a bes8\> g16 f\! |
   %% 18
   e8 g16\p f e8 g,16 a | bes8\< bes16 c d8\> bes16 g\! | e8 g16 e c8 d16 e |
   %% 21
   f8\cresc g16 a bes8 c16 d | c8\f f16 ees d8 bes'16 g |
-  f8\dim e16 d c8 bes16 g\! | f8 a16-4 g f8 a16-0\f cis |
-  d8 cis16 d e8-4 d16 e-0 | f8 e16-4 d cis8 d16 e-0 |
+  f8\dim e16 d c8 bes16 g\! | f8 a16-4 g f8 a16\open\f cis |
+  d8 cis16 d e8-4 d16 e\open | f8 e16-4 d cis8 d16 e\open |
   %% 27
   f8 e16 f g8 f16 g | a8 g16 f g8 g16\ff a | bes8 a16 g a8 g16 f |
   %% 30
   g8 f16 e f8 e16 d | e8-4 d16 cis d8 d16 f | a8 a,16 a a8 a,16\p a |
-  a8 b16 cis d8-0 f16 g | a8-0 b16 cis d8 e16-0 f |
+  a8 b16 cis d8\open f16 g | a8\open b16 cis d8 e16\open f |
   %% 35
   a8\f g16 f g8 f16 e | f8 e16-4 d cis8 b16\p cis |
-  d8 cis16 d e8-4 d16 e-0 | f8 e16-4 d cis8 d16\cresc e-0 |
+  d8 cis16 d e8-4 d16 e\open | f8 e16-4 d cis8 d16\cresc e\open |
   f8 e16 f g8 f16 g | a8 g16 f g8 g16\ff a | bes8 g16 e a8 f16 d |
   %% 42
   e8-4\dim cis16 a d8 a16 f\! | ees8 g16 bes a8 cis16 e-4 |
@@ -4469,26 +4469,26 @@ studyIII = \new Voice \relative c' {
   %% 48
   g8\fz d16 bes g8 g'16\p f | e8\cresc bes'16-4 a-4 g8 e'16-4 d |
   %% 50
-  c8 g'16 f e8-0 bes'16 a | g8\dim g16 f e8-0 e16-4 d |
-  c8 c16 bes a8-0\mf a16-4 g | f8 g16 a-0 bes8 c16 d |
+  c8 g'16 f e8\open bes'16 a | g8\dim g16 f e8\open e16-4 d |
+  c8 c16 bes a8\open\mf a16-4 g | f8 g16 a\open bes8 c16 d |
   c8 a'16 g f8 e16-4 d | c8 a16 d c8 a16-4 f |
-  fis8 g16 a-4 g8 c16 bes | a8-4\cresc g16 a-0 bes8 c16 d |
+  fis8 g16 a-4 g8 c16 bes | a8-4\cresc g16 a\open bes8 c16 d |
   %% 58
-  c8\f a'16 g f8 e16-4 d | g8 e16-4 c g8 a16-0 b |
-  c8 e16-4 d c8 e16-0\p f | g8\< g16 a bes8\> g16 f\! |
+  c8\f a'16 g f8 e16-4 d | g8 e16-4 c g8 a16\open b |
+  c8 e16-4 d c8 e16\open\p f | g8\< g16 a bes8\> g16 f\! |
   %% 62
-  e8-0 g16\p f e8 g,16 a | bes8\< bes16 c d8\> bes16 g\! |
+  e8\open g16\p f e8 g,16 a | bes8\< bes16 c d8\> bes16 g\! |
   %% 64
-  e8 g16 e c8 d16 e | f8\cresc g16 a-0 bes8 c16 d |
+  e8 g16 e c8 d16 e | f8\cresc g16 a\open bes8 c16 d |
   %% 66
   c8\f f16 ees d8 bes'16 g | f8\dim e16-4 d c8 bes16 g |
   f8 a16 c f8 c16\cresc f | a8 g16 e f8 a,16 d |
   %% 70
   f8 ees16 c d8 bes'16\dim g | f8 e16-4 d c8 bes16 g |
-  f8 a16 c g8 f16\cresc g | a8-4 g16 e f8 a,16 d-0 |
+  f8 a16 c g8 f16\cresc g | a8-4 g16 e f8 a,16 d\open |
   f8 ees16 c d8 bes16 g\dim | c8 a'16-4 f e8 d16 e |
   %% 76
-  f8\cresc g16 bes a8 e'16-0 g | f8\f g16 bes a8 e16 g |
+  f8\cresc g16 bes a8 e'16\open g | f8\f g16 bes a8 e16 g |
   f8 <f, a,>\p <f a,> <f a,> | <f a,> e16\pp g f8 e16 g | f4. r8 \bar "|."
 }
 
@@ -4503,21 +4503,21 @@ studyII = \new Voice \relative c' {
 
   f1\p\espressivo | g1\espressivo |
   %% 3
-  a2.\<( f4\>) | f2\>( e) | c'2.~(\< c8 cis) | d4.\>( c8 bes4. a8-0) |
+  a2.\<( f4\>) | f2\>( e) | c'2.~(\< c8 cis) | d4.\>( c8 bes4. a8\open) |
   %% 7
   g2\<( a4.\> g8\!) | bes2-4\>( e,-1) | f1\< | f'2-4\fz\>( b,-1\!) |
   %% 11
   c4( d8.-> e16 c4 b->) | d2\>( c) | bes'2.\<( e,4)\> | g2.\>( f4) |
   e-4\>( d c bes) | a2\<( g4.\> gis8) |
   %% 17
-  \fingerNumberSpanner "1" a8-0\<( c f\startTextSpan g a\> f8 c\stopTextSpan a) |
+  \fingerNumberSpanner "1" a8\open\<( c f\startTextSpan g a\> f8 c\stopTextSpan a) |
   %% 18
   bes\<( c e g bes\> g f e) | f\<( e d c d\> c bes a\!) |
-  g\>( a-0 bes b c d c bes) | a\<( c f g a g f e) |
+  g\>( a\open bes b c d c bes) | a\<( c f g a g f e) |
   %% 22
   g( e f fis g a bes g) | g\>( f e f\! a4.\> f8\!) |
   %% 24
-  g2\>( f4\!) r8 a, | c4.\>( e8-0\!) f4.\>( a,8\!) |
+  g2\>( f4\!) r8 a, | c4.\>( e8\open\!) f4.\>( a,8\!) |
   c4.\>( e,8\!) f4.\<( a8) |
   f4.(^\markup {\italic "morendo"} a8\!) f4-.(_\rit f-.) |
   f2.\espressivo r4 \bar "|."
@@ -4553,15 +4553,15 @@ studyIprologII = ##f
 studyItheme = {
   \fingerNumberSpanner "1"
   %% 1
-  e8-0\f g e c b d b g |
+  e8\open\f g e c b d b g |
   %% 2
   c\dim b a-4 g f e d-4 c\! |
   %% 3
   \override DynamicLineSpanner.staff-padding = #3
-  b\< d-0 g b\! d\> c a fis\!
+  b\< d\open g b\! d\> c a fis\!
   \override DynamicLineSpanner.staff-padding = #0
   %% 4
-  g\< a-0 b c d e-0 f g\! | e\p g e c b d b g |
+  g\< a\open b c d e\open f g\! | e\p g e c b d b g |
   %% 6
   c b a-4 g f e d-4 c |
 }
@@ -4574,21 +4574,21 @@ studyI = \new Voice \relative c'' {
 
   \studyItheme
   %% 7
-  e a-0 c f e-4 d b gis |
+  e a\open c f e-4 d b gis |
   %% 8
-  a-4\< a-0 b c d e-0 fis gis |
+  a-4\< a\open b c d e\open fis gis |
   %% 9
-  a-3\f c-4 a-3 g fis a g fis | g b g fis e-0 g e-4 d |
+  a-3\f c-4 a-3 g fis a g fis | g b g fis e\open g e-4 d |
   %% 11
-  c\dim e-4 c b a-0 c a-4 g |
+  c\dim e-4 c b a\open c a-4 g |
   %% 12
   fis a-4 fis e\! d fis g a |
   %% 13
   \override DynamicLineSpanner.staff-padding = #1
-  b\< d g b\! a\> fis d a-0\! |
+  b\< d g b\! a\> fis d a\open\! |
   %% 14
   \override DynamicLineSpanner.staff-padding = #3.3
-  g\< b e-0 g\! fis\> d \fingerNumberSpanner "1" b fis\! |
+  g\< b e\open g\! fis\> d \fingerNumberSpanner "1" b fis\! |
   %% 15
   \override DynamicLineSpanner.staff-padding = #2
   e\< g c e-4\! d\> b g d\! |
@@ -4600,7 +4600,7 @@ studyI = \new Voice \relative c'' {
   b\p\< d g b\! a\> fis dis a\! |
   %% 18
   \override DynamicLineSpanner.staff-padding = #2.8
-  g\< b e-0 g\! f\> d b f\! |
+  g\< b e\open g\! f\> d b f\! |
   %% 19
   e-> g c e-4 d,-> a' c fis |
   %% 20
@@ -4608,19 +4608,19 @@ studyI = \new Voice \relative c'' {
   %% 21 ... 26
   \studyItheme
   %% 27
-  a\cresc b c d-0 e fis gis a-4 |
+  a\cresc b c d\open e fis gis a-4 |
   %% 28
-  d, e f g a-0 b cis d |
+  d, e f g a\open b cis d |
   %% 29
-  g, a-0 b c d e-0 fis g |
+  g, a\open b c d e\open fis g |
   %% 30
-  c, d e-0 f g a b-4 c-4 |
+  c, d e\open f g a b-4 c-4 |
   %% 31
-  a\f b a g f e-4 d c | b a-4 g a-0 b c d e-0 |
+  a\f b a g f e-4 d c | b a-4 g a\open b c d e\open |
   %% 33
   f g f e-4 d c b a-4 |
   %% 34
-  g f e f g a-0 b c | a\ff b c d e-0 f g a |
+  g f e f g a\open b c | a\ff b c d e\open f g a |
   %% 36
   g f e-4 d c b a g |
   %% 37
