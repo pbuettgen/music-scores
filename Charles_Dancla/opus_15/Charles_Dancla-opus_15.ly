@@ -1,13 +1,13 @@
 %%% -*- coding: utf-8 -*-
 %%%
-%%% Copyright © 2018 Philipp Büttgenbach
+%%% Copyright © 2018-2020 Philipp Büttgenbach
 %%%
 %%% This work is licensed under the Creative Commons
 %%% Attribution-ShareAlike 4.0 International License.  To view a copy of
 %%% this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 %%%
 
-\version "2.18.2"
+\version "2.20"
 
 \include "lily-snippets.ily"
 
@@ -41,7 +41,8 @@ violinIduoImovementI = \new Voice \relative c'' {
     c e a-4 e a e a e | c e c e cis e cis e~ | e d'4-> c8 b d b g |
     fis4 fis g b( | d8) d4 c8 b d b g | fis4 fis g b | d d, r2 |
     %% 27
-    b'2_\pDolceGrazioso( d8 c b a) | g4.( d8 g a b c) | d4\<( dis) e( g) |
+    b'2_\markup{\dynamic "p" \italic "dolce, grazioso"}( d8 c b a) |
+    g4.( d8 g a b c) | d4\<( dis) e( g) |
     %% 30
     d4.\>( c8) b4\! r | c2( e8-4 d c b) | a4.( e8 a b c e-4) |
     e4\>( fis,\!) g\<( c\!) | b2(\> a4\!) r \mark \default |
@@ -53,7 +54,7 @@ violinIduoImovementI = \new Voice \relative c'' {
     \repeat percent 2 {
       << { e2.-4( dis8. b16) } {s4.\< s4 s8\> s8. s16\! } >> } |
     %% 41
-    e4.-0( g8) f( e d c) | b4.( g8) c4 r | b2~ b8\cresc g'( fis e) |
+    e4.\open( g8) f( e d c) | b4.( g8) c4 r | b2~ b8\cresc g'( fis e) |
     d2. g4 | g~\f( g16 e c a) d4( fis,) | g4 b'8\p( fis a g fis e) |
     %% 47
     d4.( e8-4) c4.( d8) | b4 r r2 | r4 g( a-4 fis) | fis2\>( g4\!) r
@@ -91,7 +92,7 @@ violinIduoImovementI = \new Voice \relative c'' {
   c r r <e, g,>\p( | <f g,>) r r <f g,>( | <e g,>) r r <e bes>( |
   <f a,>) r <e g,>( <f g,>) | <e c> e8\upbow( f fis g e'-4 c) |
   c( b) b( c cis d a' g) | g( e) e( f fis g d'-4 c) |
-  c( e,-0 f-1 a) c,4( b) | c e8-4( b d c b a) | g4.( a8-4) f4.( g8) |
+  c( e,\open f-1 a) c,4( b) | c e8-4( b d c b a) | g4.( a8-4) f4.( g8) |
   e4 r r2 | r4 c'( d b) | b2\>( c4\!) r \bar "|."
 }
 
@@ -107,7 +108,7 @@ violinIIduoImovementI = \new Voice \relative c' {
     %% 12
     <f a> cis d r |
     %% 13
-    c''-3\p(\( e,2-0) e4-.\) | g4(\( f2) f4-.\) | a(\( b,2) b4-.\) |
+    c''-3\p(\( e,2\open) e4-.\) | g4(\( f2) f4-.\) | a(\( b,2) b4-.\) |
     d4(\( c2) c4-.\) | a8-.\cresc c( b) d( c) e( d) f( |
     %% 18
     e) g( f) a( g4)\f r \mark \default | e4-4 e2( b4) |
@@ -157,7 +158,7 @@ violinIIduoImovementI = \new Voice \relative c' {
   a\f( f a d) g,,( e' g, f') | e4 e8\p( f fis g e'-4 c) |
   %% 102
   c( b) b( c cis d a' g) | g( e) e( f fis g d'-4 c) |
-  c( e,-0 f-1 a) c,4( b) | c4 r r <e, g,>( | <f g,>) r r <f g,>( |
+  c( e,\open f-1 a) c,4( b) | c4 r r <e, g,>( | <f g,>) r r <f g,>( |
   <e g,>) r r <e bes>( | <f a,>) r <e g,>( <f g,>) | <e c> r r2 |
   r4 cis( d-4 b) | c e8( b d-4 c b a) | g4 <e' g,>( <f g,> <d g,>) |
   <d g,>2\>( <e g,>4\!) r \bar "|."
@@ -220,7 +221,7 @@ violinIIduoImovementII = \new Voice \relative d' {
     %% 28
     fis2\<( g8\> fis\!) | fis2\>( b4\!) | g'2-4( fis8 e) |
     %% 31
-    e2-4\>( dis4\!) | a'2-4-\0( g8 fis) | fis2\>( e4\!) |
+    e2-4\>( dis4\!) | a'2-4\flageolet( g8 fis) | fis2\>( e4\!) |
     e2-4\<( c8\> a\!) | e'2\<( b8\> g\!) | fis4\<( c'-4 b8\> dis,-1\!) |
     e2~ e8 r \mark \default |
   }
@@ -284,9 +285,12 @@ violinIduoImovementIII = \new Voice \relative g'' {
     \repeat percent 3 { \repeat tremolo 2 {<g b> d} } |
     \repeat tremolo 2 { a' d, } | \repeat tremolo 2 { b' d, } |
     \repeat tremolo 2 { c e } |
-    r8 <d b>\>([ <d a>\!)] cis'16_\dolce\upbow( d) |
+    r8 <d b>\>([ <d a>\!)] cis'16_\markup\whiteout{
+      \override #'(style . outline)
+      \override #'(thickness . 3)
+      \dolce}\upbow( d) |
     d4.\( fis16( g)\) | g4.\( ais16( b)\) | b8.( fis16 a g fis e) |
-    d4. c16\upbow( b) | b4.\cresc\( a'16( g)\) | g4.\( e16-2( d)\) |
+    d4. c16\upbow( b) | b4.\cresc\( a'16( g)\) | g4.\( e16_2( d)\) |
     d4.\( c'16( b)\) | b2\f | c8\p( b16 c) ais4 | b8( ais16 b) gis4-2 |
     a8( gis16 a) \afterGrace fis4\trill_( {e16 fis)} |
     a8\>( g16 fis\!) fis8\>( e16 d\!) |
@@ -306,7 +310,7 @@ violinIduoImovementIII = \new Voice \relative g'' {
   d4.\( e16( f)\) | f8 cis16( d) d8 ais16( b) |
   b8 fis16( g) g8 fis16_\pDolce( g) | g4.\( b16( c)\) |
   c4.\( dis16( e-4)\) | e8.( b16 d c b a) | g4. g'16\upbow( fis) |
-  f4.( d'16-4 c) | c2 | b8.( a16 e-0 g-2 f d) |
+  f4.( d'16-4 c) | c2 | b8.( a16 e\open g-2 f d) |
   c4( b8) r \mark \default |
   \repeat tremolo 2 { <e, c>-. g,-. } |
   \repeat percent 2 { \repeat tremolo 2 {<e' c> g,} } |
@@ -444,7 +448,7 @@ violinIduoIImovementI = \new Voice \relative c'' {
   %% 49
   e'2.-4\mf^\espr( b8. c16) | g'2.-4( dis8. e16) |
   %% 51
-  c'4.( e,8-0 g-2 f d b) | d2( c4) r | f2-3\<( e) | d-3( cis) |
+  c'4.( e,8\open g-2 f d b) | d2( c4) r | f2-3\<( e) | d-3( cis) |
   %% 55
   d4\f( c) b( \acciaccatura d8 c8. b16) | b2( e4-4) r |
   c,8\p( g c g c g c g) | e'( g, e' g, e' g, e' g,) |
@@ -533,7 +537,7 @@ violinIIduoIImovementI = \new Voice \relative g {
   f\f( a e a d, a' dis, a') | gis( e gis e gis e gis b) |
   e2.-4_\espr( b8. c16) |
   %% 58
-  g'2.-4( dis8. e16) | c'4.( e,8-0 g-2 f d b) | d2( c8 g e c) |
+  g'2.-4( dis8. e16) | c'4.( e,8\open g-2 f d b) | d2( c8 g e c) |
   %% 61
   bes( c bes c bes c bes c) | a( c a c ees f ees f) |
   %% 63
@@ -541,7 +545,7 @@ violinIIduoIImovementI = \new Voice \relative g {
   %% 65
   a4 r r2 | bes8( f' bes f bes, f' d f) | d( f bes f d f bes f) |
   %% 68
-  bes( f bes f bes f a-0 f) | ees( f a-0 ees d f bes d) |
+  bes( f bes f bes f a\open f) | ees( f a\open ees d f bes d) |
   cis2~\>( cis8 e a, a'\!) | g2( f4) r | e4.\>( f8 cis d a b\!) |
   %% 73
   d2\>( c4\!) r \mark \default | c2.( a4) | f'2.( c4) |
@@ -618,7 +622,7 @@ violinIduoIImovementII = \new Voice \relative d'' {
     %% 37
     g'2~\mf^\markup{\italic "appassionato e molto agitato"}( g8 fis g d) |
     %% 38
-    ees1 | r8 b\<( c e-0 f e f g) | bes2\>( aes4\!) r | R1 |
+    ees1 | r8 b\<( c e\open f e f g) | bes2\>( aes4\!) r | R1 |
     ees2~( ees8 d ees cis) | d2~( d8 c bes a) |
     a2-4\>( g4\!) r \mark \default |
   }
@@ -874,9 +878,10 @@ violinIIduoIImovementIII = \new Voice \relative b' {
 
 %%% ------------
 
+\include "../composer.ily"
+
 \header {
   arranger = ##f
-  composer = "Jean Baptiste Charles Dancla"
   copyright = \copyrightText
   tagline = \taglineText
   enteredby = "Philipp Büttgenbach"
