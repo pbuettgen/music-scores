@@ -1,13 +1,13 @@
 %%% -*- coding: utf-8 -*-
 %%%
-%%% Copyright © 2019 Philipp Büttgenbach
+%%% Copyright © 2019-2020 Philipp Büttgenbach
 %%%
 %%% This work is licensed under the Creative Commons
 %%% Attribution-ShareAlike 4.0 International License.  To view a copy of
 %%% this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 %%%
 
-\version "2.18.2"
+\version "2.20"
 
 \include "lily-snippets.ily"
 
@@ -19,7 +19,14 @@ globalMovementI = {
   \key c \major
 }
 
-violinMovementIpI = \relative e'' {
+violinMovementI = \relative e'' {
+  \set Timing.measurePosition = #(ly:make-moment -5/16) r16 r4 | R1*2
+  \cueDuring #"pianoUpMovementI" #DOWN {
+    R1 |
+  }
+  \cueDuring #"pianoUpMovementI" #UP {
+    r4 r
+  }
   r8. e16\open\mf\<\upbow( fis gis a-1 b) |
   %% 5
   c8\f\downbow b\downbow c4~\downbow c8 b16 c d( c) b a |
@@ -95,9 +102,8 @@ violinMovementIpI = \relative e'' {
   %% 53
   e-3) d4.\fermata_\rit d8 c4_1\fermata\glissando( a8-1) |
   g2^\aTempo r |
-}
-
-violinMovementIpII = \relative g {
+  R1*6
+  \cueDuring #"pianoUpMovementI" #DOWN R1*2
   \bar "||" \time 2/4
   %% 63
   e''4-2\mf g,-1 | e'-2 gis,-1 | e'8-2( d) d-.( a-.\open) | d4-3 c |
@@ -166,9 +172,12 @@ violinMovementIpII = \relative g {
   << \repeat percent 3 \repeat unfold 2 {c( d) c b} s16\f >> \bar "||"
   %% 139
   \time 4/4 c4 c,,-1\downbow r2 |
-}
-
-violinMovementIpIII = \relative c' {
+  R1*5 |
+  \cueDuring #"pianoUpMovementI" #UP {
+    R1*2
+    \tempo "Andante sostenuto." 4=96
+    r2
+  }
   r8. e'16\open\mf\<\upbow( fis gis a-1 b) |
   %% 148
   c8\f\downbow b\downbow c4~\downbow c8 b16 c d( c) b a |
@@ -242,7 +251,7 @@ violinMovementIpIII = \relative c' {
   %% 201
   fis16->( gis a) r a->( gis fis) r | \repeat unfold 2 {gis a gis fis} |
   %% 203
-  e\open->( fis gis) r gis->( fis e) r | d e d cis b( b') b( b,) |
+  e->\open( fis gis) r gis->( fis e) r | d e d cis b( b') b( b,) |
   %% 205
   cis16 d cis b a( a') a( cis,) | b cis b a\open gis fis a-4 fis |
   %% 207
@@ -265,43 +274,9 @@ violinMovementIpIII = \relative c' {
   \repeat unfold 2 {b( a) gis a} | b( a) gis a b( a) gis a-1 |
   \repeat percent 2 \repeat unfold 2 {cis( b) a b} |
   cis->( d cis b) a->( b a fis-3) | e->-2( fis e d) cis->-2( d cis b) |
-  a\open->( b a fis) e->( fis e d) | cis->( d cis b) a->( b cis b) |
+  a->\open( b a fis) e->( fis e d) | cis->( d cis b) a->( b cis b) |
   a4 <a e' cis'>\downbow | a\downbow <a e' cis' a'>\downbow |
   a2~\downbow | a4 r \bar "|."
-}
-
-violinMovementIViolin = \new Voice {
-  \set Timing.measurePosition = #(ly:make-moment -5/16) r16 r4 | R1*2
-  \cueDuring #"pianoUpMovementI" #DOWN {
-    R1 |
-  }
-  \cueDuring #"pianoUpMovementI" #UP {
-    r4 r
-  }
-  \violinMovementIpI
-  R1*6
-  \cueDuring #"pianoUpMovementI" #DOWN R1*2
-  \violinMovementIpII
-  R1*5 |
-  \cueDuring #"pianoUpMovementI" #UP {
-    R1*2
-    \tempo "Andante sostenuto." 4=96
-    r2
-  }
-  \violinMovementIpIII
-}
-
-violinMovementIPiano = \new Voice {
-  \set Timing.measurePosition = #(ly:make-moment -5/16) r16 r4 | R1*3 |
-  %% 4
-  r4 r
-  \violinMovementIpI
-  R1*8
-  \violinMovementIpII
-  R1*7 |
-  \tempo "Andante sostenuto." 4=96
-  r2
-  \violinMovementIpIII
 }
 
 pianoUpMovementI = \new Voice \relative e' {
@@ -749,9 +724,10 @@ pianoDownMovementI = \new Voice \relative e, {
 
 %%% ------------
 
+\include "../composer.ily"
+
 \header {
   arranger = ##f
-  composer = "Oskar Rieding"
   copyright = \copyrightText
   tagline = \taglineText
   enteredby = "Philipp Büttgenbach"
@@ -767,51 +743,50 @@ fileBaseName = "Oskar_Rieding-opus_21"
 
 define(`PianoMovement', `\score {
   <<
-      \new Staff \with {
-        fontSize = #-3
-        \override StaffSymbol.staff-space = #(magstep -3)
-      } { \globalMovement$1 \violinMovement$1Piano }
-      \new PianoStaff \with {
-        connectArpeggios = ##t
-      } <<
-        \new Staff = "up" \with {
-          \accidentalStyle modern-cautionary
-        } {
-          \globalMovement$1 \pianoUpMovement$1
-        }
-        \new Staff = "down" \with {
-          \accidentalStyle modern-cautionary
-        } {
-          \globalMovement$1 \clef bass \pianoDownMovement$1
-        }
-      >>
-    >>
-    \layout {
-      %% indent = #0
+    \new Staff \with {
+      instrumentName = "Violino."
+      \magnifyStaff \violinStaffMagFactor
+    } {
+      \globalMovement$1 \killCues\violinMovement$1
     }
-  }')
+    \new PianoStaff \with {
+      instrumentName = "Piano."
+      \accidentalStyle piano-cautionary
+      connectArpeggios = ##t
+    } <<
+      \new Staff = "up" {
+        \globalMovement$1 \pianoUpMovement$1
+      }
+      \new Staff = "down" {
+        \globalMovement$1 \clef bass \pianoDownMovement$1
+      }
+    >>
+  >>
+}')
 
 \book {
-  \bookOutputName #(string-append fileBaseName "-piano")
+  \bookOutputName   \fileBaseName
+  \bookOutputSuffix "piano"
   PianoMovement(`I')
 }
 
 define(`ViolinMovement', `
-  \score {
-    \new Staff \with {
-      \accidentalStyle modern-cautionary
-    } {
-      \compressFullBarRests
-      \globalMovement$1 \violinMovement$1Violin
-    }
-    \layout {
-      %% indent = #0
-    }
-  }')
+\score {
+  \new Staff \with {
+    \accidentalStyle modern-cautionary
+  } {
+    \compressFullBarRests
+    \globalMovement$1 \violinMovement$1
+  }
+}')
 
 \book {
-  \bookOutputName #(string-append fileBaseName "-violin")
+  \bookOutputName   \fileBaseName
+  \bookOutputSuffix "violin"
   ViolinMovement(`I')
+  \header {
+    instrument = "Violino."
+  }
 }
 
 \include "articulate.ly"
@@ -823,7 +798,7 @@ define(`ViolinMovement', `
     \new StaffGroup <<
       \new Staff \with {
         midiInstrument = #"violin"
-      } { \globalMovementI   \violinMovementIPiano
+      } { \globalMovementI   \killCues\violinMovementI
         }
       \new PianoStaff \with {
         midiInstrument = #"acoustic grand"

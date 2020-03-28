@@ -1,15 +1,19 @@
 %%% -*- coding: utf-8 -*-
 %%%
-%%% Copyright © 2018 Philipp Büttgenbach
+%%% Copyright © 2018-2020 Philipp Büttgenbach
 %%%
 %%% This work is licensed under the Creative Commons
 %%% Attribution-ShareAlike 4.0 International License.  To view a copy of
 %%% this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 %%%
 
-\version "2.18.2"
+\version "2.20"
 
 \include "lily-snippets.ily"
+
+prallNatural = \markup\left-align{\musicglyph #"scripts.prall" \super \natural}
+
+titleMovementI = ##f
 
 globalMovementI = {
   \time 4/4
@@ -17,69 +21,57 @@ globalMovementI = {
   \key b \minor
 }
 
-violinMovementIpI = \relative f'' {
-  fis4\mf( b) fis( e-0) | d( cis) b( fis) |
+violinMovementI = \relative f'' {
+  \cueDuring #"pianoUpMovementI" #DOWN R1*3 |
+  \cueDuring #"pianoUpMovementI" #UP   R1 |
+  fis4\mf( b) fis( e\open) | d( cis) b( fis) |
   %% 7
-  g( fis8 g) b4_( a8-0 g) | fis4.( d8-0) b2 |
-  ais4.( b8) cis( ais b cis) | d4-0\<( fis) b( d) |
+  g( fis8 g) b4_( a8\open g) | fis4.( d8\open) b2 |
+  ais4.( b8) cis( ais b cis) | d4\open\<( fis) b( d) |
   %% 11
-  cis4.\f( b8) a'4.( g8) | fis4.\>( g8) fis2 | fis4\mf( b) fis( e-0) |
+  cis4.\f( b8) a'4.( g8) | fis4.\>( g8) fis2 | fis4\mf( b) fis( e\open) |
   %% 14
-  d( cis) b( fis) | g( fis8 g) b4_( a8-0 g) | fis4.( d8-0) b2 |
+  d( cis) b( fis) | g( fis8 g) b4_( a8\open g) | fis4.( d8\open) b2 |
   %% 17
-  ais4.( b8) cis( ais b cis) | d4-0\<( fis) g( b) |
+  ais4.( b8) cis( ais b cis) | d4\open\<( fis) g( b) |
   fis8\f( g fis d') d4.\>( cis8\!) | b2 r |
   %% 21
   fis'4\mf\downbow( b) fis( gis) | a4.( gis8) fis( e d cis) |
   b4( cis8 d) cis4( b) | b8( a d cis) cis2 | b4\<( a') gis( fis) |
   %% 26
-  b8\f( a e-0 fis) gis( a e cis) | b\>( cis d b) gis( e d b) |
-  a2\p a4( b) | d-4->( cis) cis( d-0) | fis->( e) e\<( fis) |
+  b8\f( a e\open fis) gis( a e cis) | b\>( cis d b) gis( e d b) |
+  a2\p a4( b) | d-4->( cis) cis( d\open) | fis->( e) e\<( fis) |
   %% 31
-  a4.-4->( g8\!) b\>( a-0 g fis) | e\<( fis g a-0) b( cis d e-0) |
-  fis2->\fRisoluto d-> | b-> g'-> | a,4( a') g( e-0) | g4.( fis8) fis2 |
+  a4.-4->( g8\!) b\>( a\open g fis) | e\<( fis g a\open) b( cis d e\open) |
+  fis2->\fRisoluto d-> | b-> g'-> | a,4( a') g( e\open) | g4.( fis8) fis2 |
   %% 37
   d2->\f b-> | g-> e'-4-> | e4( cis) d( d,) | f4.->( e8\>) e2 |
   fis8\mf( g a-4 g) fis( e d c) | b( d g b) d2 |
   %% 43
-  cis8( d e-4 d) cis( b a-0 g) | fis\<( a d fis) a4. fis8( |
+  cis8( d e-4 d) cis( b a\open g) | fis\<( a d fis) a4. fis8( |
   ais4.\f) fis8( b4->) b,8( cis | d4->) d,8( e f4->) e8( d |
   %% 47
-  fis4->) a,8 b cis( d-0) e fis | g( fis) e fis g\>( a-0 b cis) |
-  d4.\mf( cis8) e8-4( d a-0 b) | cis4( a') g( e-0) |
+  fis4->) a,8 b cis( d\open) e fis | g( fis) e fis g\>( a\open b cis) |
+  d4.\mf( cis8) e8-4( d a\open b) | cis4( a') g( e\open) |
   %% 51
-  d4.( cis8) e-4( d a-0 b) | cis4( a') g( e-0) | d2 r |
-}
-
-violinMovementIpII = \relative c'' {
+  d4.( cis8) e-4( d a\open b) | cis4( a') g( e\open) |
+  d2 \cueDuring #"pianoUpMovementI" #UP { r | R1 } |
   %% 55
-  d4\f\downbow( fis) d( cis) | b( fis) d-0( b) | d-4( b) g2 |
-  g'4( b) d2 | g4\f( b) g( fis) | e4-4( b) g( e) | d-0( fis) b( d) |
+  d4\f\downbow( fis) d( cis) | b( fis) d\open( b) | d-4( b) g2 |
+  g'4( b) d2 | g4\f( b) g( fis) | e4-4( b) g( e) | d\open( fis) b( d) |
   %% 62
-  cis2\> fis | fis4\mf( b) fis( e-0) | d( cis) b( fis) |
+  cis2\> fis | fis4\mf( b) fis( e\open) | d( cis) b( fis) |
   %% 65
-  g( fis8 g) b4_( a8-0 g) | fis4.( d8-0) b2 |
-  ais4.( b8) cis( ais b cis) | d4-0\<( fis) b( d) |
-  c8\f( b c d) e-4( d e-0 fis) | g8( fis g a) b2 | g4( b) a( fis) |
+  g( fis8 g) b4_( a8\open g) | fis4.( d8\open) b2 |
+  ais4.( b8) cis( ais b cis) | d4\open\<( fis) b( d) |
+  c8\f( b c d) e-4( d e\open fis) | g8( fis g a) b2 | g4( b) a( fis) |
   g( fis) e-4( b) | cis8( d e d) cis( e,) fis g |
   fis4 d'8 cis b( a) g fis | e4 cis'8 b a( g) fis e |
-  d4 b'8 a g( fis e d) | fis2\f ais, | b g'4->( d-0) | fis2 g4->( d-0) |
-  fis( b) d( fis) | b2\f fis4( d) | b2 fis4( d-0) | b2 b | b1 \bar "|."
+  d4 b'8 a g( fis e d) | fis2\f ais, | b g'4->( d\open) | fis2 g4->( d\open) |
+  fis( b) d( fis) | b2\f fis4( d) | b2 fis4( d\open) | b2 b | b1 \bar "|."
 }
 
-violinMovementIViolin = \new Voice {
-  \cueDuring #"pianoUpMovementI" #DOWN {R1*3}
-  \cueDuring #"pianoUpMovementI" #UP {R1}
-  \violinMovementIpI
-  \cueDuring #"pianoUpMovementI" #UP {R1}
-  \violinMovementIpII
-}
-
-violinMovementIPiano = \new Voice {
-  R1*4 \violinMovementIpI R1 \violinMovementIpII
-}
-
-pianoUpMovementI = \new Voice \relative f' {
+pianoUpMovementI = \relative f' {
   fis4\mf( b fis e) | d( <dis b> <e b>) <g cis, b> |
   %% 3
   <fis d b>\< <b fis d> <b gis d> <d b gis> |
@@ -200,7 +192,7 @@ pianoUpMovementI = \new Voice \relative f' {
   \change Staff = "down" \voiceOne <b, fis d b>1 \bar "|."
 }
 
-pianoDownMovementI = \new Voice \relative f {
+pianoDownMovementI = \relative f {
   R1 | b4( a g) <e e,> | <fis fis,>2 <eis eis,> |
   %% 4
   <fis fis,>4 r8. <fis fis,>16 <fis fis,>4 r |
@@ -283,6 +275,8 @@ pianoDownMovementI = \new Voice \relative f {
 
 %%% ---------------------------
 
+titleMovementII = ##f
+
 globalMovementII = {
   \time 6/8
   \tempo "Andante." 8 = 96
@@ -290,41 +284,34 @@ globalMovementII = {
 }
 
 violinMovementII = \relative f'' {
+  \cueDuring #"pianoUpMovementII" #DOWN R2.*4 |
   g4.\p b4( a8) | g4. fis | g4( d8) d4( c8) | b4.~ b8 r r |
   %% 9
-  e4.-4\mf\downbow b | c8( d c) b( a-0 e) | g4\>( d8-0) c( b a) |
+  e4.-4\mf\downbow b | c8( d c) b( a\open e) | g4\>( d8\open) c( b a) |
   g4.\p~ g8 r r | g'4.\mf\downbow fis8( g a-4) | b4. fis |
   %% 15
-  b cis8( d e-4) | fis4.\< cis | d\f b' | a8( fis d) a-0( fis d) |
+  b cis8( d e-4) | fis4.\< cis | d\f b' | a8( fis d) a\open( fis d) |
   fis4( e8) g^\rit( b, cis) | d4.-4-\aTempo ~ d8 r r |
   %% 21
-  d8-0\downbow\mf( g bes) d( c bes) | bes4( a8) c4( a8) |
+  d8\open\downbow\mf( g bes) d( c bes) | bes4( a8) c4( a8) |
   c8( bes a) bes( d g) | f4.\< f8( g a) | bes4.\f fis | g b, |
-  c8( a' g) f( c ees) | d8\>( bes f) d4.-0 |
+  c8( a' g) f( c ees) | d8\>( bes f) d4.\open |
   %% 29
   d8\mf( g bes) d( c bes) | bes4( a8) c4( a8) |
   %% 31
   c8( bes a) bes( d g) | f4.\< f8( g a) | bes4.\f fis | g gis |
-  a8( fis d) a-0( g e) | d\>( fis a-0) d^\rit( e-4 fis) |
+  a8( fis d) a\open( g e) | d\>( fis a\open) d^\rit( e-4 fis) |
   %% 37
   g4.\p^\aTempo b4( a8) | g4. fis | g4( d8) d4( c8) | b4.~ b8 r r |
   %% 41
-  e4.-4\downbow\mf b | c8( d c) b( a-0 e) | g4( d8-0\>) c8( b a) |
-  g4.\p g8( b d-0) | g4. g8\<( b d) | g4\mf( fis8) g4( fis8) |
+  e4.-4\downbow\mf b | c8( d c) b( a\open e) | g4( d8\open\>) c8( b a) |
+  g4.\p g8( b d\open) | g4. g8\<( b d) | g4\mf( fis8) g4( fis8) |
   a8( g fis) g( b a) |
   g( d b) c^\markup{\italic "molto rit."}( b g) |
   a-4( g d\>) e( d b) | g2.\p \bar "|."
 }
 
-violinMovementIIViolin = \new Voice {
-  \cueDuring #"pianoUpMovementII" #DOWN {R2.*4} \violinMovementII
-}
-
-violinMovementIIPiano = \new Voice {
-  R2.*4 \violinMovementII
-}
-
-pianoUpMovementII = \new Voice \relative d' {
+pianoUpMovementII = \relative d' {
   d2.\p ~ | d8 d'( d,) d'( d, d') | d,\<( c' b\!) c\>( a g\!) |
   fis( e d) e( d c) |
   %% 5
@@ -395,7 +382,7 @@ pianoUpMovementII = \new Voice \relative d' {
   <g d b>4.^\markup {\italic "molto rit."} r | R2. | <g d b>2.\p \bar "|."
 }
 
-pianoDownMovementII = \new Voice \relative c' {
+pianoDownMovementII = \relative c' {
   r4 <c a>8( <b gis>4) <bes g>8( |
   %% 2
   <a fis>4) <a fis>8( <gis eis>4) <g e>8( |
@@ -433,152 +420,136 @@ pianoDownMovementII = \new Voice \relative c' {
 
 %%% ------------
 
+titleMovementIII = ##f
+
 globalMovementIII = {
   \time 4/4
   \tempo "Allegro moderato." 4=116
   \key b \minor
 }
 
-violinMovementIIIpI = \relative f'' {
-  fis4\mf\prall e-0\prall d\prall cis\prall |
+violinMovementIII = \relative f'' {
+  \cueDuring #"pianoUpMovementIII" #DOWN R1 |
+  \cueDuring #"pianoUpMovementIII" #UP   R1*3 |
+  fis4\mf\prall e\open\prall d\prall cis\prall |
   %% 6
   b8 \appoggiatura {b16 cis} d4 b8 cis4( fis8) r |
   %% 7
-  fis4\prall e-0\prall d\prall cis\prall |
+  fis4\prall e\open\prall d\prall cis\prall |
   %% 8
   b8 \appoggiatura {b16 cis} d4 cis8 b4( b'8) r |
-  a4->\f e8-0 g fis d4\mordent d8-- |
+  a4->\f e8\open g fis d4\mordent d8-- |
   %% 10
   fis4-> cis8 e-4 d \appoggiatura {d16 cis} b4 b'8-- |
   %% 11
-  a4-> e8-0 g fis d4\mordent d8 |
+  a4-> e8\open g fis d4\mordent d8 |
   %% 12
   d,8^> d( e^>) e( fis^>) fis4\prall r8 |
-  fis'4\mf\prall e-0\prall d\prall cis\prall |
+  fis'4\mf\prall e\open\prall d\prall cis\prall |
   %% 14
   b8 \appoggiatura {b16 cis} d4 b8 cis4( fis8) r |
   %% 15
-  fis4\prall e-0\prall d\prall cis\prall |
+  fis4\prall e\open\prall d\prall cis\prall |
   %% 16
   b8 \appoggiatura {b16 cis} d4 cis8 b4( b'8) r |
   %% 17
   b,8-> \appoggiatura {b16 cis} d4 b8 cis d e4-4 |
-  cis8-> \appoggiatura {cis16 d} e4-4 cis8 d e-0 fis4 |
-  b16->( a) a( fis) a8( g) a16\upbow( g) g( e-0) g8( fis) |
+  cis8-> \appoggiatura {cis16 d} e4-4 cis8 d e\open fis4 |
+  b16->( a) a( fis) a8( g) a16\upbow( g) g( e\open) g8( fis) |
   %% 20
   g16-> fis e d cis b a g fis8( d') d( cis) |
   %% 21
   b8-> \appoggiatura {b16 cis} d4 b8 cis d e4-4 |
-  cis8-> \appoggiatura {cis16 d} e4-4 cis8 d e-0 fis4 |
-  b16->( a) a( gis) gis8( fis) a16\upbow( gis) gis( fis) fis8( e-0) |
-  gis16-> fis e d  e-4 d cis b a4-0 r |
+  cis8-> \appoggiatura {cis16 d} e4-4 cis8 d e\open fis4 |
+  b16->( a) a( gis) gis8( fis) a16\upbow( gis) gis( fis) fis8( e\open) |
+  gis16-> fis e d  e-4 d cis b a4\open r |
   %% 25
   << {a'4\downbow\mf( gis4)} {s4 s_\markup{\italic "espressivo"}} >> a( gis) |
   %% 26
-  b4.( a8) fis( cis d a-0) | \repeat unfold 2 { g4( fis) } |
+  b4.( a8) fis( cis d a\open) | \repeat unfold 2 { g4( fis) } |
   %% 28
   a4.-4( g8) fis( e cis' b) | b4.( a8) cis4.( b8) |
   %% 30
-  d4.\<( cis8) e-4( d cis b) | a\f( a' b a) fis( d a-0 fis) |
+  d4.\<( cis8) e-4( d cis b) | a\f( a' b a) fis( d a\open fis) |
   %% 32
-  e( fis g a-0) cis\dim^\rit( b g e) |
-  d\mf^\aTempo( e fis g) a-0( d)  a c |
-  c->( b) g a-0 b( e-4) b d | d->( cis) a-0\< b cis( fis) cis e-4 |
+  e( fis g a\open) cis\dim^\rit( b g e) |
+  d\mf^\aTempo( e fis g) a\open( d)  a c |
+  c->( b) g a\open b( e-4) b d | d->( cis) a\open\< b cis( fis) cis e-4 |
   %% 36
-  e8->\f( d) cis b a-0\>( fis) g e |
+  e8->\f( d) cis b a\open\>( fis) g e |
   %% 37
   \repeat unfold 2 {
-    d16\mf e fis g a-0 b cis d e,\< fis g a-0 b cis d e-4 |
-    e\f( d) d( cis) cis( b) b( a) cis\>( b) b( a) a-0( g) g( e) |
+    d16\mf e fis g a\open b cis d e,\< fis g a\open b cis d e-4 |
+    e\f( d) d( cis) cis( b) b( a) cis\>( b) b( a) a\open( g) g( e) |
   }
   %% 41
-  d8:16\< fis: a:-0 cis: d:\f fis: a: fis: |
+  d8:16\< fis: a:\open cis: d:\f fis: a: fis: |
   %% 42
   d4 r r2 |
   %% 43
-  fis4\mf\prall\downbow e-0\prall d\prall cis\prall |
+  fis4\mf\prall\downbow e\open\prall d\prall cis\prall |
   %% 44
   b8 \appoggiatura {b16 cis} d4 b8 cis4( fis8) r |
   %% 45
-  fis4\prall e-0\prall d\prall cis\prall |
+  fis4\prall e\open\prall d\prall cis\prall |
   %% 46
   b8 \appoggiatura {b16 cis} d4 cis8 b4( b'8) r |
-  a4->\f e8-0 g fis d4\mordent d8-- |
+  a4->\f e8\open g fis d4\mordent d8-- |
   %% 48
   fis4-> cis8 e-4 d \appoggiatura {d16 cis} b4 b'8-- |
   %% 49
-  a4-> e8-0 g fis d4\mordent d8 |
+  a4-> e8\open g fis d4\mordent d8 |
   %% 50
   d,8^> d( e^>) e( fis^>) fis4\prall r8 |
-  fis'4\mf\prall e-0\prall d\prall cis\prall |
+  fis'4\mf\prall e\open\prall d\prall cis\prall |
   b8 \appoggiatura {b16 cis} d4 b8 cis4( fis8) r |
   %% 53
-  fis4\prall e-0\prall d\prall cis\prall |
+  fis4\prall e\open\prall d\prall cis\prall |
   b8 \appoggiatura {b16 cis} d4 cis8 b4( b'8) r |
-}
-
-violinMovementIIIpII = \relative c' {
+  \cueDuring #"pianoUpMovementIII" #DOWN R1*2 |
   %% 57
   \tempo \markup{\italic "meno mosso"}
-  b4\mf( e_\markup{\italic "espressivo"}) d( g) |
+  b,,4\mf( e_\markup{\italic "espressivo"}) d( g) |
   %% 58
-  fis( d') c2 | b4( a-0) e( fis) | g( e'-4) d2 |
+  fis( d') c2 | b4( a\open) e( fis) | g( e'-4) d2 |
   %% 61
-  g4.\f( fis8) a4.( g8) | fis4( d) a-0( b) | cis4.( b8) a-4\>( g e fis) |
+  g4.\f( fis8) a4.( g8) | fis4( d) a\open( b) | cis4.( b8) a-4\>( g e fis) |
   %% 64
-  d2-4 c | b4\mf( e) d-0( g) | fis( d') c2 | b4( a-0) e( fis) |
+  d2-4 c | b4\mf( e) d\open( g) | fis( d') c2 | b4( a\open) e( fis) |
   %% 68
-  g( e'-4) d2 | e4-4\f( d) c( b) | a( a') g( e-0) |
+  g( e'-4) d2 | e4-4\f( d) c( b) | a( a') g( e\open) |
   %% 71
   cis( d) b'4.-\rit( a8) | g2.\> b4 |
   %% 73
   \tempo "Tempo 1°"
-  a8->\mf( b,)
-  \once \override TextScript.script-priority = #-100
-  b4\prall^\markup{\smaller\natural} g'8->( b,)
-  \once \override TextScript.script-priority = #-100
-  b4\prall^\markup{\smaller\natural} |
+  a8->\mf( b,) b4^\prallNatural g'8->( b,) b4^\prallNatural |
   %% 74
-  e8:16-0 fis:\< g: a:\! b8->\> \appoggiatura {a16 g} fis4\! r8 |
+  e8:16\open fis:\< g: a:\! b8->\> \appoggiatura {a16 g} fis4\! r8 |
   %% 75
   a8->( g)
-  \once \override TextScript.script-priority = #-100
-  b,4\prall^\markup{\smaller\natural} g'8->( fis) a,4-0\prall |
+  b,4^\prallNatural g'8->( fis) a,4_\open\prall |
   %% 76
-  c8:16-> b: a:-0 g: fis4 b |
+  c8:16-> b: a:\open g: fis4 b |
   %% 77
-  \once \override TextScript.script-priority = #-100
-  b4\mf\prall^\markup{\smaller\natural} a-0\prall g\prall fis\prall |
+  b4\mf^\prallNatural a_\open\prall g\prall fis\prall |
   %% 78
-  e8 \appoggiatura {e16 fis} g4 e8 fis4( d8-0) r |
+  e8 \appoggiatura {e16 fis} g4 e8 fis4( d8\open) r |
   %% 79
-  d'4\prall c\prall b\prall a-0\prall |
+  d'4\prall c\prall b\prall a_\open\prall |
   b8( b') a g fis4( cis8) r |
-  fis4\prall e-0\prall d\prall cis\prall |
-  d\prall c\prall b\prall a-0\prall |
+  fis4\prall e\open\prall d\prall cis\prall |
+  d\prall c\prall b\prall a_\open\prall |
   g8( b) e-4 d cis( b') a g | fis( d) b fis d'4.\<( cis8) |
   \repeat unfold 2 {
     b16\f( cis d cis) b( cis d cis) b8:16 cis: d: cis: |
-    d: b': a: g: fis: e:-0 d: cis:
+    d: b': a: g: fis: e:\open d: cis:
   }
-  b8:16 cis: d: b: fis: g: fis: d:-0 |
+  b8:16 cis: d: b: fis: g: fis: d:\open |
   b:\f ais: \repeat unfold 3 { b: ais: } |
   b4 r <b'' d, fis,>\downbow r | b,,1\downbow \bar "|."
 }
 
-violinMovementIIIViolin = \new Voice {
-  \cueDuring #"pianoUpMovementIII" #DOWN {R1}
-  \cueDuring #"pianoUpMovementIII" #UP {R1*3}
-  \violinMovementIIIpI
-  \cueDuring #"pianoUpMovementIII" #DOWN {R1*2}
-  \violinMovementIIIpII
-}
-
-violinMovementIIIPiano = \new Voice {
-  R1*4 \violinMovementIIIpI R1*2 \violinMovementIIIpII
-}
-
-pianoUpMovementIII = \new Voice \relative b' {
+pianoUpMovementIII = \relative b' {
   <b e, cis>4.\f <b e, cis>8 <b eis, d>4. <b eis, d>8 |
   %% 2
   <b fis d>4\< <d b fis> <fis d b>4. <fis d b>8 |
@@ -762,7 +733,7 @@ pianoUpMovementIII = \new Voice \relative b' {
   \change Staff = "down" \voiceOne <b,, fis d b>1 \bar "|."
 }
 
-pianoDownMovementIII = \new Voice \relative g, {
+pianoDownMovementIII = \relative g, {
   \repeat percent 2 { \repeat tremolo 8 {g32( g')} } |
   %% 2
   \repeat percent 2 { \repeat tremolo 8 {fis,( fis')} } |
@@ -895,9 +866,10 @@ pianoDownMovementIII = \new Voice \relative g, {
 
 %%% ------------
 
+\include "../composer.ily"
+
 \header {
   arranger = ##f
-  composer = "Oskar Rieding"
   copyright = \copyrightText
   tagline = \taglineText
   enteredby = "Philipp Büttgenbach"
@@ -910,52 +882,8 @@ pianoDownMovementIII = \new Voice \relative g, {
 
 fileBaseName = "Oskar_Rieding-opus_35"
 
-define(`PianoMovement', `\score {
-  <<
-      \new Staff \with {
-        fontSize = #-3
-        \override StaffSymbol.staff-space = #(magstep -3)
-      } { \globalMovement$1 \violinMovement$1Piano }
-      \new PianoStaff <<
-        \new Staff = "up" {
-          \accidentalStyle modern-cautionary
-          \globalMovement$1 \pianoUpMovement$1
-        }
-        \new Staff = "down" {
-          \accidentalStyle modern-cautionary
-          \globalMovement$1 \clef bass \pianoDownMovement$1
-        }
-      >>
-    >>
-    \layout {
-      indent = #0
-    }
-  }')
-
-\book {
-  \bookOutputName #(string-append fileBaseName "-piano")
-  PianoMovement(`I')
-  PianoMovement(`II')
-  PianoMovement(`III')
-}
-
-define(`ViolinMovement', `
-  \score {
-    \new Staff {
-      \violinVoiceSettings
-      \compressFullBarRests \globalMovement$1 \violinMovement$1Violin
-    }
-    \layout {
-      indent = #0
-    }
-  }')
-
-\book {
-  \bookOutputName #(string-append fileBaseName "-violin")
-  ViolinMovement(`I')
-  ViolinMovement(`II')
-  ViolinMovement(`III')
-}
+define(`Movements', `(I, II, III)')
+include(`concertino.ily')
 
 \include "articulate.ly"
 
@@ -966,9 +894,9 @@ define(`ViolinMovement', `
     \new StaffGroup <<
       \new Staff \with {
         midiInstrument = #"violin"
-      } { \globalMovementI   \violinMovementIPiano
-          \globalMovementII  \violinMovementIIPiano
-          \globalMovementIII \violinMovementIIIPiano
+      } { \globalMovementI   \killCues\violinMovementI
+          \globalMovementII  \killCues\violinMovementII
+          \globalMovementIII \killCues\violinMovementIII
         }
       \new PianoStaff \with {
         midiInstrument = #"acoustic grand"

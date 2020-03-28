@@ -1,15 +1,17 @@
 %%% -*- coding: utf-8 -*-
 %%%
-%%% Copyright © 2018 Philipp Büttgenbach
+%%% Copyright © 2018-2020 Philipp Büttgenbach
 %%%
 %%% This work is licensed under the Creative Commons
 %%% Attribution-ShareAlike 4.0 International License.  To view a copy of
 %%% this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 %%%
 
-\version "2.18.2"
+\version "2.20"
 
 \include "lily-snippets.ily"
+
+titleMovementI = ##f
 
 globalMovementI = {
   \time 4/4
@@ -17,9 +19,7 @@ globalMovementI = {
   \key g \major
 }
 
-violinMovementI = \new Voice \relative b' {
-  \violinVoiceSettings
-
+violinMovementI = \relative b' {
   R1*8 | b2\p a8( b c a) | b4( c8 d) e2 | c2\mf b8( c d b) |
   %% 12
   c8( e a g) fis2 | b2\f a4( fis) | a4.( g8) fis( g b g) |
@@ -92,7 +92,7 @@ violinMovementI = \new Voice \relative b' {
     %% 91 / 95
     g'4-> fis16( g a g) d8:16 fis: g: a: |
     %% 92 / 96
-    bes8.( e16-0) g8.( fis16) a8.( g16) bes8.( g16) |
+    bes8.( e16\open) g8.( fis16) a8.( g16) bes8.( g16) |
     %% 93 / 97
     b8:16 g: d: b: d: c: a: fis: |
   }
@@ -102,7 +102,7 @@ violinMovementI = \new Voice \relative b' {
   g4 r <b b, d,>\downbow r | g,,1\fermata \bar "|."
 }
 
-pianoUpMovementI = \new Voice \relative b' {
+pianoUpMovementI = \relative b' {
   <b b,>2 <a a,>8 <b b,> <c c,> <a a,> |
   %% 2
   <b b,>4 <c c,>8 <d d,> <e g, e>4 <d gis, e> |
@@ -272,7 +272,7 @@ pianoUpMovementI = \new Voice \relative b' {
   <g d b g> r <b g d b> r | <g, d b>1 \bar "|."
 }
 
-pianoDownMovementI = \new Voice \relative d {
+pianoDownMovementI = \relative d {
   r4 <d b g> <d a fis> r | <d b g> r <c c,> <b b,> |
   %% 3
   <a a,>2 <c c,>4 <cis cis,> | <d d,>2. <c c,>4 |
@@ -364,13 +364,15 @@ pianoDownMovementI = \new Voice \relative d {
 
 %%% ------------
 
+titleMovementII = ##f
+
 globalMovementII = {
   \time 4/8
   \tempo "Lento." 8=55
   \key g \major
 }
 
-violinMovementII = \new Voice \relative b {
+violinMovementII = \relative b {
   \partial 4 b4\p | e fis | g\< a\! | b8-> fis4. | R2\fermata |
   %% 5
   g4\p a | b\< e\! | d8-> a4. | R2\fermata |
@@ -391,7 +393,7 @@ violinMovementII = \new Voice \relative b {
     %% 24
     d16( c) c b c8\upbow r | c16\mf( e) c( e) b4 |
     %% 26
-    c16\upbow( e) c( e) b4 | c16( b) a b c( d) e-0 fis |
+    c16\upbow( e) c( e) b4 | c16( b) a b c( d) e\open fis |
     %% 28
     g( fis) g a b8 r |
   }
@@ -404,7 +406,7 @@ violinMovementII = \new Voice \relative b {
     }
     {
       %% 33
-      g'16( b) g( b) fis4 | e16-0\upbow( g) e( g) d4 |
+      g'16( b) g( b) fis4 | e16\open\upbow( g) e( g) d4 |
       %% 35
       c16( b) a g fis( e) d c |
       %% 36
@@ -423,7 +425,7 @@ violinMovementII = \new Voice \relative b {
   b16( e\! b^\rit a) g8( fis) | e2\p | R2*4 \bar "|."
 }
 
-pianoUpMovementII = \new Voice \relative e' {
+pianoUpMovementII = \relative e' {
   \partial 4 r 4 | <e b g>\p <fis b,> | <g e b>\< <a fis e>\! |
   <b fis dis>8 <fis dis b>4 r8 |
   %% 4
@@ -500,7 +502,7 @@ pianoUpMovementII = \new Voice \relative e' {
   e2~\mf | e4 <g, e b g>\p\arpeggio | <e, b g>2\fermata \bar "|."
 }
 
-pianoDownMovementII = \new Voice \relative e {
+pianoDownMovementII = \relative e {
   \partial 4 r4 | e dis | e c | b4. b32^\f\sustainOn( dis fis b~ |
   %% 4
   b4\fermata) \clef G <fis'' dis b>8 r\sustainOff \clef bass |
@@ -563,13 +565,15 @@ pianoDownMovementII = \new Voice \relative e {
 
 %%% ------------
 
+titleMovementIII = ##f
+
 globalMovementIII = {
   \time 4/4
   \tempo "Allegro." 4=118
   \key g \major
 }
 
-violinMovementIII = \new Voice \relative d' {
+violinMovementIII = \relative d' {
   R1*3 | r2 r4 d\p |
   \repeat volta 2 {
     %% 5
@@ -626,7 +630,7 @@ violinMovementIII = \new Voice \relative d' {
   g4 r <d' b' g'>\downbow r | g,1\downbow \bar "|."
 }
 
-pianoUpMovementIII = \new Voice \relative d'' {
+pianoUpMovementIII = \relative d'' {
   <d d,>8\f <dis dis,> <e e,>4:8 <fis fis,>8\< <g g,> <gis gis,> <a a,> |
   %% 2
   <bes bes,>2\ff <e bes g e> | <d b g d> <cis bes g e> |
@@ -701,7 +705,7 @@ pianoUpMovementIII = \new Voice \relative d'' {
   <g, d b>1 \bar "|."
 }
 
-pianoDownMovementIII = \new Voice \relative d {
+pianoDownMovementIII = \relative d {
   <d d,>8 <dis dis,> <e e,> <f f,> <fis fis,> <g g,> <gis gis,> <a a,> |
   %% 2
   <bes bes,>4 <cis, cis,>-> r <cis cis,>-> |
@@ -753,9 +757,10 @@ pianoDownMovementIII = \new Voice \relative d {
 
 %%% ------------
 
+\include "../composer.ily"
+
 \header {
   arranger = ##f
-  composer = "Oskar Rieding"
   copyright = \copyrightText
   tagline = \taglineText
   enteredby = "Philipp Büttgenbach"
@@ -768,51 +773,8 @@ pianoDownMovementIII = \new Voice \relative d {
 
 fileBaseName = "Oskar_Rieding-opus_34"
 
-define(`PianoMovement', `\score {
-  <<
-      \new Staff \with {
-        fontSize = #-3
-        \override StaffSymbol.staff-space = #(magstep -3)
-      } { \globalMovement$1 \violinMovement$1 }
-      \new PianoStaff <<
-        \new Staff = "up" {
-          \accidentalStyle modern-cautionary
-          \globalMovement$1 \pianoUpMovement$1
-        }
-        \new Staff = "down" {
-          \accidentalStyle modern-cautionary
-          \globalMovement$1 \clef bass \pianoDownMovement$1
-        }
-      >>
-    >>
-    \layout {
-      %% indent = #0
-    }
-  }')
-
-\book {
-  \bookOutputName #(string-append fileBaseName "-piano")
-  PianoMovement(`I')
-  PianoMovement(`II')
-  PianoMovement(`III')
-}
-
-define(`ViolinMovement', `
-  \score {
-    \new Staff {
-      \compressFullBarRests \globalMovement$1 \violinMovement$1
-    }
-    \layout {
-      %% indent = #0
-    }
-  }')
-
-\book {
-  \bookOutputName #(string-append fileBaseName "-violin")
-  ViolinMovement(`I')
-  ViolinMovement(`II')
-  ViolinMovement(`III')
-}
+define(`Movements', `(I, II, III)')
+include(`concertino.ily')
 
 \include "articulate.ly"
 
