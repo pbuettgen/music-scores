@@ -1,40 +1,34 @@
 %%% -*- coding: utf-8 -*-
 %%%
-%%% Copyright © 2019 Philipp Büttgenbach
+%%% Copyright © 2019-2020 Philipp Büttgenbach
 %%%
 %%% This work is licensed under the Creative Commons
 %%% Attribution-ShareAlike 4.0 International License.  To view a copy of
 %%% this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 %%%
 
-\version "2.18.2"
+\version "2.20"
 
 \include "lily-snippets.ily"
 
 brillante = \markup {\italic #"brillante."}
 conMotoBrillante = \markup \italic #"con moto brillante."
-fEspressivo = \markup\whiteout\pad-around #.5 {\dynamic "f" \italic "espressivo."}
+fEspressivo = \markup{
+  \override #'(style . outline)
+  \override #'(thickness . 3)
+  \whiteout {\dynamic "f" \italic "espressivo."}
+}
 ffDeciso = \markup { \dynamic #"ff" \italic #"deciso."}
 ffGrandioso = \markup {\dynamic "ff" \italic "grandioso."}
-ffWhiteOutTxt = \markup \whiteout \pad-around #.5 \dynamic #"ff"
-ffWhiteOut = #(make-dynamic-script ffWhiteOutTxt)
-fWhiteOutTxt = \markup {\whiteout \pad-around #.5 \dynamic "f"}
-fWhiteOut = #(make-dynamic-script fWhiteOutTxt)
 grazioso = \markup {\italic #"grazioso."}
 hairpinMolto = \hairpinWithCenteredText \markup\smaller\italic #"molto."
 legato = \markup {\italic #"legato."}
 leggiero = \markup {\italic #"leggiero."}
-mfWhiteOutTxt = \markup \whiteout \pad-around #.5 \dynamic "mf"
-mfWhiteOut = #(make-dynamic-script mfWhiteOutTxt)
 morendo = \markup \italic #"morendo."
 nullTxt = \markup \null
 nullDynamic = #(make-dynamic-script nullTxt)
 pDolceCantabile = \markup {\dynamic "p" \italic "dolce cantabile."}
 piuMoto = \markup {\italic #"più moto."}
-ppWhiteOutTxt = \markup {\whiteout \pad-around #.5 \dynamic "pp"}
-ppWhiteOut = #(make-dynamic-script ppWhiteOutTxt)
-pWhiteOutTxt = \markup \whiteout \pad-around #.5 \dynamic "p"
-pWhiteOut = #(make-dynamic-script pWhiteOutTxt)
 risoluto = \markup {\italic #"risoluto."}
 solo = \markup {\italic \caps "Solo."}
 sostenuto = \markup {\italic #"sostenuto." }
@@ -837,7 +831,10 @@ pianoUpMovementII = \relative a' {
   %% 155
   <fis ees c>16.( <c' fis, ees>32) <c fis, ees>8 <fis, ees>-> |
   %% 156
-  <g ees>8.--_\markup\whiteout\pad-around #.5 \italic #"con passione." <bes g>16-.( <g ees> <f d>-.) |
+  <g ees>8.--_\markup{
+    \override #'(style . outline)
+    \override #'(thickness . 3)
+    \whiteout \italic #"con passione."} <bes g>16-.( <g ees> <f d>-.) |
   %% 157
   <g ees>8.-- <ees' g,>16-.\<( <bes g>-. <g ees>-.) |
   <<
@@ -1341,7 +1338,10 @@ pianoUpMovementIII = \relative e' {
   %% \clef "alto"
   %% 218 / 219
   << \repeat unfold 2 {r8 d,-. <g b,>4--}
-     { s8_\markup\whiteout\pad-around #.5 {\dynamic "f" \italic "grazioso."} s2 s8\>} >> |
+     { s8_\markup {
+       \override #'(style . outline)
+       \override #'(thickness . 3)
+       \whiteout {\dynamic "f" \italic "grazioso."}} s2 s8\>} >> |
   %% 220
   << \repeat unfold 2 {r8 <d b>-.} s8\p >> |
   %% 221
@@ -1427,8 +1427,12 @@ pianoUpMovementIII = \relative e' {
   << {\voiceOne b4\>( a8\!) r8}
      \new Voice {\voiceTwo <e c>4.} >> \oneVoice |
   %% 300
-  <c' a>8--_\markup\whiteout\pad-around #.5 {
-    \dynamic "p" \italic #"cantabile e dolce."} <b g>-- <a fis>-- <a d,>-- |
+  <c' a>8--_\markup{
+    \override #'(style . outline)
+    \override #'(thickness . 3)
+    \whiteout {
+      \dynamic "p" \italic #"cantabile e dolce."}
+  } <b g>-- <a fis>-- <a d,>-- |
   %% 301
   <b d,>-. <ais cis,>-. <b d,>4-- | r8 <fis d>-. <a fis>-. r |
   %% 303
@@ -1508,7 +1512,11 @@ pianoUpMovementIII = \relative e' {
   << \repeat unfold 2 {r8 <d b>} s8\p >> |
   r8 <cis ais>-. <d b>4 | r8 <g b,>-.\cresc <d b>4-- |
   <dis b>4.\mf fis,8-. |
-  <ais e'>8_\markup\whiteout\pad-around #.5 \italic #"tranquillo."( fis <ais e'> fis) |
+  <ais e'>8_\markup {
+    \override #'(style . outline)
+    \override #'(thickness . 3)
+    \whiteout \italic #"tranquillo."
+  } ( fis <ais e'> fis) |
   %% 379
   <b dis>( fis <b dis> fis) | <ais e'>\<( fis <ais e'> fis\!) |
   %% 381
@@ -1710,7 +1718,11 @@ pianoDownMovementIII = \relative a {
   <b b,>-> r | \tuplet 3/2 4 {r8 d-. e-. fis-. e-. d-.} |
   d4 r | \tuplet 3/2 4 {r8 d-. e-. fis-. e-. d-.} |
   << \repeat percent 4 \repeat tremolo 8 {g,,32 g'}
-     s2^\markup\whiteout\pad-around #.5 \italic #"tremolo." >> |
+     s2^\markup {
+       \override #'(style . outline)
+       \override #'(thickness . 3)
+       \whiteout \italic #"tremolo."
+     } >> |
   <g g,>4-. r \bar "|."
 }
 
@@ -1718,9 +1730,10 @@ pianoDownMovementIII = \relative a {
 
 %%% ------------
 
+   \include "../composer.ily"
+
 \header {
   arranger = ##f
-  composer = "Friedrich Seitz"
   copyright = \copyrightText
   tagline = \taglineText
   enteredby = "Philipp Büttgenbach"
@@ -1731,7 +1744,6 @@ pianoDownMovementIII = \relative a {
 
 \include "paper.ily"
 
-
 \book {
   \bookOutputName #"Friedrich_Seitz-opus_12"
   \bookOutputSuffix #"piano"
@@ -1739,8 +1751,8 @@ pianoDownMovementIII = \relative a {
   \score {
     <<
       \new Staff \with {
-        fontSize = #-3
-        \override StaffSymbol.staff-space = #(magstep -3)
+        instrumentName = "Violino."
+        \magnifyStaff \violinStaffMagFactor
       } {
         \killCues {
           \globalMovementI   \violinMovementI
@@ -1748,17 +1760,16 @@ pianoDownMovementIII = \relative a {
           \globalMovementIII \violinMovementIII
         }
       }
-      \new PianoStaff <<
-        \new Staff = "up" \with {
-          \accidentalStyle modern-cautionary
-        } {
+      \new PianoStaff \with {
+        instrumentName = "Piano."
+        \accidentalStyle piano-cautionary
+      } <<
+        \new Staff = "up" {
           \globalMovementI   \pianoUpMovementI
           \globalMovementII  \pianoUpMovementII
           \globalMovementIII \pianoUpMovementIII
         }
-        \new Staff = "down" \with {
-          \accidentalStyle modern-cautionary
-        } {
+        \new Staff = "down" {
           \clef #"bass"
           \globalMovementI   \pianoDownMovementI
           \globalMovementII  \pianoDownMovementII
@@ -1783,6 +1794,9 @@ pianoDownMovementIII = \relative a {
       \globalMovementIII \violinMovementIII
     }  
   }
+     \header {
+       instrument = "Violino."
+     }
 }
 
 \include "articulate.ly"
