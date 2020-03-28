@@ -1,13 +1,13 @@
 %%% -*- coding: utf-8 -*-
 %%%
-%%% Copyright © 2018 Philipp Büttgenbach
+%%% Copyright © 2018-2020 Philipp Büttgenbach
 %%%
 %%% This work is licensed under the Creative Commons
 %%% Attribution-ShareAlike 4.0 International License.  To view a copy of
 %%% this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 %%%
 
-\version "2.18.2"
+\version "2.20"
 
 \include "lily-snippets.ily"
 
@@ -31,6 +31,7 @@ pMarcato = #(make-dynamic-script
                #:italic " marcato"
                #:hspace -9.9)))
 
+titleMovementI = ##f
 
 globalMovementI = {
   \time 4/4
@@ -38,7 +39,7 @@ globalMovementI = {
   \key d \minor
 }
 
-violinMovementIpI = \relative d'' {
+violinMovementI = \relative d'' {
   <d d,>4.\f\downbow a8\upbow c bes a g | f e d4 r a'-4\upbow\pDolce |
   %% 3
   e e e f8( g) | f e d4 r a'\upbow | e e e f8( g) | f e d4 r d'\upbow |
@@ -99,25 +100,18 @@ violinMovementIpI = \relative d'' {
   f16( g a-4 g) f8-.( e-.) d16( e f e) d8-.( c-.) |
   bes16( c d c) bes8-.( a-.) g4 c | f16( g a g) f8-.( e-.) d c d e |
   f\< g a bes b c d e | f4.\f c8 e^\rit d c bes | a g f4 r2 |
-}
-
-violinMovementIpII = \relative a' {
-  \cadenzaOn r4^\cadenzaAdLib a\downbow( bes a)
+  \cueDuring #"pianoUpMovementI" #UP R1*5 |
+  \cueDuring #"pianoUpMovementI" #DOWN R1*3 |
+  \once \override Score.RehearsalMark.self-alignment-X = #LEFT
+  \mark \markup\normalsize\cadenzaAdLib
+  \cadenzaOn r4 a\downbow( bes a)
   d\<( cis f e\!) bes'2.( a4) \tuplet 3/2 {g\>( e cis\!)}
-  a4_\markup{\italic {#"attacca"}}\fermata \cadenzaOff \bar "|."
+  a4\fermata
+  \once \override Score.RehearsalMark.self-alignment-X = #RIGHT
+  \mark \markup\normalsize\italic #"attacca" \cadenzaOff \bar "|."
 }
 
-violinMovementIViolin = \new Voice {
-  \violinMovementIpI
-  \cueDuring #"pianoUpMovementI" #UP {R1*8}
-  \violinMovementIpII
-}
-
-violinMovementIPiano = \new Voice {
-  \violinMovementIpI R1*8 \violinMovementIpII
-}
-
-pianoUpMovementI = \new Voice \relative d' {
+pianoUpMovementI = \relative d' {
   \clef "C" d4.\f a8 c bes a g | f e d4 r2 |
   %% 3
   g8\p( a cis a g a cis a) | f( a d a f a d a) |
@@ -210,7 +204,7 @@ pianoUpMovementI = \new Voice \relative d' {
 
 \addQuote "pianoUpMovementI" {\pianoUpMovementI}
 
-pianoDownMovementI = \new Voice \relative d {
+pianoDownMovementI = \relative d {
   d4. a8 c bes a g | f e d4 r2 | r r4 a'4( | d,--) d-- d-- r |
   %% 5
   r2 r4 a'( |  d,--) d-- d-- r |
@@ -244,6 +238,8 @@ pianoDownMovementI = \new Voice \relative d {
 
 %%% ---------------------------
 
+titleMovementII = ##f
+
 globalMovementII = {
   \time 6/8
   \tempo "Andante." 8 = 104
@@ -267,10 +263,7 @@ violinMovementII = \relative g {
   d2.~_\morendo | d4. d, | d'2.\pp\fermata \bar "|."
 }
 
-violinMovementIIViolin = \new Voice {\violinMovementII}
-violinMovementIIPiano = \new Voice {\violinMovementII}
-
-pianoUpMovementII = \new Voice \relative d' {
+pianoUpMovementII = \relative d' {
   \clef "alto" \partial 8 r8 | <d a fis>4.\p <cis a e> | <b fis d>2. |
   %% 3
   <e b g>4. <dis a fis> | <e g, e>2. | <a, e>4. <b a fis> | <b g> <b e,> |
@@ -295,7 +288,7 @@ pianoUpMovementII = \new Voice \relative d' {
   \clef "alto" <bes, g>4. <g e> | <a fis>2.\fermata\pp \bar "|."
 }
 
-pianoDownMovementII = \new Voice \relative d {
+pianoDownMovementII = \relative d {
   \partial 8 r8 | d4. a | b2. | e4. b | c2. | cis4. dis | e g, |
   %% 7
   a a, | d8 r r r4. | <d'' b>4.( <e cis>) | <cis ais>( <d b>) |
@@ -308,6 +301,8 @@ pianoDownMovementII = \new Voice \relative d {
 }
 
 %%% ------------
+
+titleMovementIII = ##f
 
 globalMovementIII = {
   \time 2/4
@@ -352,7 +347,9 @@ violinMovementIII = \relative a'' {
       { \musicglyph #"scripts.caesura.curved" }
     }
   }
-  <a a'>4\f\downbow^\cadenzaAdLib <a f'> \breathe | a\p f \breathe |
+  \once \override Score.RehearsalMark.self-alignment-X = #LEFT
+  \mark \markup\normalsize\cadenzaAdLib
+  <a a'>4\f\downbow <a f'> \breathe | a\p f \breathe |
   <a g'>\f <a e'> \breathe | g\p e \breathe | a'8\espressivo f, e d |
   %% 76
   bes''\espressivo g, f e | g'\espressivo e, d c |
@@ -365,11 +362,7 @@ violinMovementIII = \relative a'' {
   <d d,>2\fermata \bar "|."
 }
 
-violinMovementIIIViolin = \new Voice { \violinMovementIII }
-
-violinMovementIIIPiano = \new Voice { \violinMovementIII }
-
-pianoUpMovementIII = \new Voice \relative a' {
+pianoUpMovementIII = \relative a' {
   \grace s8 \repeat percent 4 { r\p <a f> r <a f> } |
   %% 5
   \repeat unfold 2 {
@@ -425,7 +418,7 @@ pianoUpMovementIII = \new Voice \relative a' {
   <a f d>2\fermata \bar "|."
 }
 
-pianoDownMovementIII = \new Voice \relative g {
+pianoDownMovementIII = \relative g {
   \repeat percent 4 { \repeat unfold 2 { \acciaccatura gis8 <a d,>4 } } |
   \repeat unfold 2 { a4 e' | d2 } |
   \repeat percent 4 { \repeat unfold 2 { \acciaccatura gis,8 <a d,>4 } } |
@@ -449,67 +442,24 @@ pianoDownMovementIII = \new Voice \relative g {
 
 %%% ------------
 
+\include "../composer.ily"
+
 \header {
   arranger = ##f
-  composer = "Leo Portnoff"
   copyright = \copyrightText
   tagline = \taglineText
   enteredby = "Philipp Büttgenbach"
   opus = "Opus 9"
   source = "http://imslp.org/"
-  title = "Concertino in D Minor"
+  title = "Concertino in D Minor."
 }
 
 \include "paper.ily"
 
 fileBaseName = "Leo_Portnoff-opus_9"
 
-define(`PianoMovement', `\score {
-    <<
-      \new Staff \with {
-        fontSize = #-3
-        \override StaffSymbol.staff-space = #(magstep -3)
-      } { \globalMovement$1 \violinMovement$1Piano }
-      \new PianoStaff <<
-        \new Staff = "up" {
-          \accidentalStyle modern-cautionary
-          \globalMovement$1 \pianoUpMovement$1
-        }
-        \new Staff = "down" {
-          \accidentalStyle modern-cautionary
-          \globalMovement$1 \clef bass \pianoDownMovement$1
-        }
-      >>
-    >>
-    \layout {
-      indent = #0
-    }
-  }')
-
-\book {
-  \bookOutputName #(string-append fileBaseName "-piano")
-
-  PianoMovement(`I')
-  PianoMovement(`II')
-  PianoMovement(`III')
-}
-
-define(`ViolinMovement', `
-  \score {
-    \new Staff {
-      \compressFullBarRests \globalMovement$1 \violinMovement$1Violin
-    }
-    \layout {
-      indent = #0
-    }
-  }')
-
-\book {
-  \bookOutputName #(string-append fileBaseName "-violin")
-  ViolinMovement(`I')
-  ViolinMovement(`II')
-  ViolinMovement(`III')
-}
+define(`Movements', `(I, II, III)')
+include(`concertino.ily')
 
 \include "articulate.ly"
 
@@ -520,9 +470,9 @@ define(`ViolinMovement', `
     \new StaffGroup <<
       \new Staff \with {
         midiInstrument = #"violin"
-      } { \globalMovementI   \violinMovementIPiano
-          \globalMovementII  \violinMovementIIPiano
-          \globalMovementIII \violinMovementIII
+      } { \globalMovementI   \killCues\violinMovementI
+          \globalMovementII  \killCues\violinMovementII
+          \globalMovementIII \killCues\violinMovementIII
         }
       \new PianoStaff \with {
         midiInstrument = #"acoustic grand"

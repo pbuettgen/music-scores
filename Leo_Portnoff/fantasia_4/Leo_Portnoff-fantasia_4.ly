@@ -1,19 +1,18 @@
 %%% -*- coding: utf-8 -*-
 %%%
-%%% Copyright © 2019 Philipp Büttgenbach
+%%% Copyright © 2019-2020 Philipp Büttgenbach
 %%%
 %%% This work is licensed under the Creative Commons
 %%% Attribution-ShareAlike 4.0 International License.  To view a copy of
 %%% this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 %%%
 
-\version "2.18.2"
+\version "2.20"
 
 \include "lily-snippets.ily"
 
 adLib = \markup {\italic "ad lib."}
 allargando = \markup {\italic "allargando"}
-cadenzaAdLib = \markup {\italic #"Cadenza ad lib."}
 espressivoTxt = \markup {\italic "espressivo"}
 marcatoTxt = \markup {\italic "marcato"}
 pMaEspressivo = \markup {\dynamic "p" \italic "ma espressivo"}
@@ -79,10 +78,7 @@ violinMovementI = \relative g'' {
   e8-.\f b-. e,4-> \bar "|."
 }
 
-violinMovementIViolin = \new Voice \violinMovementI
-violinMovementIPiano = \new Voice \violinMovementI
-
-pianoUpMovementI = \new Voice \relative g {
+pianoUpMovementI = \relative g {
   \change Staff = "down" \voiceOne g8^\p( e a4 e2\fermata) |
   \cadenzaOn s4*6 \cadenzaOff
   g8^\< e ais4\! e2\fermata | \cadenzaOn s4*6 \cadenzaOff
@@ -135,7 +131,7 @@ pianoUpMovementI = \new Voice \relative g {
   g4) <g b,>8. fis16 | <e b g>2\f \bar "|."
 }
 
-pianoDownMovementI = \new Voice \relative g, {
+pianoDownMovementI = \relative g, {
   \voiceTwo g8 e a4 e2\fermata | \cadenzaOn s4*6 \cadenzaOff |
   g8 e ais4 e2\fermata | \cadenzaOn s4*6 \cadenzaOff |
   << {\voiceOne b''4 e d c} \new Voice {\voiceTwo g1} >> \oneVoice |
@@ -181,12 +177,12 @@ pianoDownMovementI = \new Voice \relative g, {
   dis b' b, a' | <g e> b, e,4 \bar "|."
 }
 
-
 %%% ------------
+
+\include "../composer.ily"
 
 \header {
   arranger = ##f
-  composer = "Leo Portnoff"
   copyright = \copyrightText
   tagline = ##f
   enteredby = "Philipp Büttgenbach"
@@ -199,59 +195,8 @@ pianoDownMovementI = \new Voice \relative g, {
 
 #(define fileBaseName "Leo_Portnoff-fantasia_4")
 
-define(`PianoMovement', `\score {
-    <<
-      \new Staff \with {
-        fontSize = #-3
-        \override StaffSymbol.staff-space = #(magstep -3)
-      } { \globalMovement$1 \violinMovement$1Piano }
-      \new PianoStaff <<
-        \new Staff = "up" \with {
-          \accidentalStyle modern-cautionary
-        } {
-          \globalMovement$1 \pianoUpMovement$1
-        }
-        \new Staff = "down" \with {
-          \accidentalStyle modern-cautionary
-        } {
-          \globalMovement$1 \clef bass \pianoDownMovement$1
-        }
-      >>
-    >>
-    \layout {
-%%      indent = #0
-    }
-    \header {
-      piece = \titleMovement$1
-    }
-  }')
-
-\book {
-  \bookOutputName #(string-append fileBaseName "-piano")
-
-  PianoMovement(`I')
-}
-
-define(`ViolinMovement', `
-  \score {
-    \new Staff \with {
-      \accidentalStyle modern-cautionary
-    } {
-      \compressFullBarRests
-      \globalMovement$1 \violinMovement$1Violin
-    }
-    \layout {
-%%      indent = #0
-    }
-    \header {
-      piece = \titleMovement$1
-    }
-  }')
-
-\book {
-  \bookOutputName #(string-append fileBaseName "-violin")
-  ViolinMovement(`I')
-}
+define(`Movements', `(I)')
+include(`concertino.ily')
 
 \include "articulate.ly"
 
@@ -262,7 +207,7 @@ define(`ViolinMovement', `
     \new StaffGroup <<
       \new Staff \with {
         midiInstrument = #"violin"
-      } { \globalMovementI   \violinMovementIPiano
+      } { \globalMovementI   \violinMovementI
         }
       \new PianoStaff \with {
         midiInstrument = #"acoustic grand"

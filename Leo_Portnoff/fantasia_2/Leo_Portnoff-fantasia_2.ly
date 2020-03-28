@@ -1,18 +1,17 @@
 %%% -*- coding: utf-8 -*-
 %%%
-%%% Copyright © 2019 Philipp Büttgenbach
+%%% Copyright © 2019-2020 Philipp Büttgenbach
 %%%
 %%% This work is licensed under the Creative Commons
 %%% Attribution-ShareAlike 4.0 International License.  To view a copy of
 %%% this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 %%%
 
-\version "2.18.2"
+\version "2.20"
 
 \include "lily-snippets.ily"
 
 allargando = \markup {\italic "allargando"}
-cadenzaAdLib = \markup {\italic #"Cadenza ad lib."}
 espressivoTxt = \markup {\italic "espressivo"}
 pMaEspressivo = \markup {\dynamic "p" \italic "ma espressivo"}
 pocoRit = \markup {\italic #"poco rit."}
@@ -23,29 +22,32 @@ titleMovementI = #""
 
 globalMovementI = {
   \time 4/4
-  \tempo "Andante espressivo" 4=72
+  \tempo "Andante espressivo." 4=72
   \key d \minor
 }
 
 violinMovementI = \relative g {
+  \cueDuring "pianoUpMovementI" #DOWN R1*2
   a4_\espressivoTxt\glissando( cis8-1 d) e4( cis8\glissando a-1) |
-  d4-4 d8-0( e) f4 e8( d) | e4 e8( f) g4 f8( e) | a8-2( d,-0) d-- d-- d2
+  d4-4 d8\open( e) f4 e8( d) | e4 e8( f) g4 f8( e) | a8-2( d,\open) d-- d-- d2
   \repeat volta 2 {
-    g4 g8( bes) d4 c8( bes) | d-1( a-0) a-2 a a4 g8 f-2 |
-    a-4( e) e-- f-- g4 f8( e) | a-2( d,-0) d-2 d d2
+    g4 g8( bes) d4 c8( bes) | d-1( a\open) a-2 a a4 g8 f-2 |
+    a-4( e) e-- f-- g4 f8( e) | a-2( d,\open) d-2 d d2
   }
   a'4( cis8 d-1) e4( cis8-2 a) | d4-1 d8( e) f4 e8( d) |
   e4 e8( f) g4 f8( e) | a8\flageolet( d,-1) d-- d-- d4. d8-3
   \repeat volta 2 {
     g4-2\< g8( bes\!) d4-2\> c8( bes\!) |
     d8\>( a\!) a--( a--) a4 g8-2( f) |
-    a8-1\>( e-0\!) e---2 f-- g4 f8( e) |
+    a8-1\>( e\open\!) e---2 f-- g4 f8( e) |
     a8\flageolet( d,-1) d-- d-- d2\fermata
   }
+  \once \override Score.RehearsalMark.self-alignment-X = #LEFT
+  \mark \markup\normalsize\cadenzaAdLib
   \cadenzaOn
-  a,4_\fermata^\cadenzaAdLib cis8[( d]) e[( cis) e f] g[( e) g a] \bar ""
-  bes[\< a cis d] e-4[ cis\! e-0 g] bes4\fermata\> a\fermata\!
-  \cadenzaOff \bar "||" \time 2/4 \tempo "Allegretto" 4=112
+  a,4_\fermata cis8[( d]) e[( cis) e f] g[( e) g a] \bar ""
+  bes[\< a cis d] e-4[ cis\! e\open g] bes4\fermata\> a\fermata\!
+  \cadenzaOff \bar "||" \time 2/4 \tempo "Allegretto." 4=112
   \repeat volta 2 {
     d,8-.-3\p d-. d-. d-. | cis4-> a-> | e'8-.-2 e-. e-. e-. | f4-> d->
   }
@@ -72,7 +74,7 @@ violinMovementI = \relative g {
     d16--\f\downbow a-- f-- a-- d-- a-- d-- a-- |
     cis a e a \repeat unfold 2 {cis a} |
     e'-4 a, g a \repeat unfold 2 {e' a,} |
-    f'-4 a,-0 f a \repeat unfold 2 {d a} |
+    f'-4 a,\open f a \repeat unfold 2 {d a} |
   }
   \repeat volta 2 {
     a'16( fis-1) d fis a( fis) d fis | bes( g-2) d g bes( g bes a) |
@@ -87,15 +89,7 @@ violinMovementI = \relative g {
   \bar "|."
 }
 
-violinMovementIViolin = \new Voice {
-  \cueDuring "pianoUpMovementI" #DOWN R1*2
-  \violinMovementI
-}
-violinMovementIPiano = \new Voice {
-  R1*2 | \violinMovementI
-}
-
-pianoUpMovementI = \new Voice \relative d'' {
+pianoUpMovementI = \relative d'' {
   <d f, d>2\f <cis f, cis> | <gis d gis,>1\> |
   r8\p <a e cis>\arpeggio <cis a e>\arpeggio <d a f>\arpeggio r8 <e cis a>\arpeggio <cis a e>\arpeggio <a e cis>\arpeggio |
   r8 <a f d>\arpeggio <d a f>\arpeggio <e cis a>\arpeggio r8 <f d a>\arpeggio <e cis a>\arpeggio <d a f>\arpeggio |
@@ -163,7 +157,7 @@ pianoUpMovementI = \new Voice \relative d'' {
 
 \addQuote "pianoUpMovementI" \pianoUpMovementI
 
-pianoDownMovementI = \new Voice \relative b {
+pianoDownMovementI = \relative b {
   bes2 a4. f8 | << {\voiceOne f2 e} \new Voice {\voiceTwo bes1} >> \oneVoice |
   a,2 a' | d, a' | g a | d, d' |
   \repeat volta 2 { g,2 g' | d d' | a a, | d d, }
@@ -200,74 +194,24 @@ pianoDownMovementI = \new Voice \relative b {
 
 %%% ------------
 
+\include "../composer.ily"
+
 \header {
   arranger = ##f
-  composer = "Leo Portnoff"
   copyright = \copyrightText
   tagline = ##f
   enteredby = "Philipp Büttgenbach"
   opus = "Fantasia 2"
   source = "http://imslp.org/"
-  title = "Russian Fantasia No. 2"
+  title = "Russian Fantasia No. 2."
 }
 
 \include "paper.ily"
 
 #(define fileBaseName "Leo_Portnoff-fantasia_2")
 
-define(`PianoMovement', `\score {
-    <<
-      \new Staff \with {
-        fontSize = #-3
-        \override StaffSymbol.staff-space = #(magstep -3)
-      } { \globalMovement$1 \violinMovement$1Piano }
-      \new PianoStaff <<
-        \new Staff = "up" \with {
-          \accidentalStyle modern-cautionary
-        } {
-          \globalMovement$1 \pianoUpMovement$1
-        }
-        \new Staff = "down" \with {
-          \accidentalStyle modern-cautionary
-        } {
-          \globalMovement$1 \clef bass \pianoDownMovement$1
-        }
-      >>
-    >>
-    \layout {
-%%      indent = #0
-    }
-    \header {
-      piece = \titleMovement$1
-    }
-  }')
-
-\book {
-  \bookOutputName #(string-append fileBaseName "-piano")
-
-  PianoMovement(`I')
-}
-
-define(`ViolinMovement', `
-  \score {
-    \new Staff \with {
-      \accidentalStyle modern-cautionary
-    } {
-      \compressFullBarRests
-      \globalMovement$1 \violinMovement$1Violin
-    }
-    \layout {
-%%      indent = #0
-    }
-    \header {
-      piece = \titleMovement$1
-    }
-  }')
-
-\book {
-  \bookOutputName #(string-append fileBaseName "-violin")
-  ViolinMovement(`I')
-}
+define(`Movements', `(I)')
+include(`concertino.ily')
 
 \include "articulate.ly"
 
@@ -278,7 +222,7 @@ define(`ViolinMovement', `
     \new StaffGroup <<
       \new Staff \with {
         midiInstrument = #"violin"
-      } { \globalMovementI   \violinMovementIPiano
+      } { \globalMovementI   \killCues\violinMovementI
         }
       \new PianoStaff \with {
         midiInstrument = #"acoustic grand"

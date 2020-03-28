@@ -1,20 +1,19 @@
 %%% -*- coding: utf-8 -*-
 %%%
-%%% Copyright © 2018 Philipp Büttgenbach
+%%% Copyright © 2018-2020 Philipp Büttgenbach
 %%%
 %%% This work is licensed under the Creative Commons
 %%% Attribution-ShareAlike 4.0 International License.  To view a copy of
 %%% this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 %%%
 
-\version "2.18.2"
+\version "2.20"
 
 \include "lily-snippets.ily"
 
 agitato = \markup {\italic #"agitato"}
 attacca = \markup {\italic #"attacca"}
 brillante = \markup {\italic #"brillante"}
-cadenzaAdLib = \markup {\italic #"Cadenza ad lib."}
 energico = \markup {\italic #"energico"}
 espressione = \markup {\italic #"espressione"}
 espressivoText = \markup {\italic #"espressivo"}
@@ -73,6 +72,7 @@ globalMovementI = {
 }
 
 violinMovementI = \relative a {
+  \cueDuring #"pianoUpMovementI" #UP R1*6 |
   a2->\f^\energico a'-> | e2.-> c'4-> | a-.-> e'-. c-.-> a'-.-> |
   %% 10
   g8-.-> f-.-> e4-.-> r d8.-.\p\upbow( e16-.) |
@@ -132,17 +132,17 @@ violinMovementI = \relative a {
   d( a) f-- e-- | d-- a-- b4.\fermata( a8) |
   \tuplet 3/2 4 {
     %% 69
-    c8\espressivo\p( g' c e-4 c-2 e-0) g\espressivo( e g a\espressivo e a) |
+    c8\espressivo\p( g' c e-4 c-2 e\open) g\espressivo( e g a\espressivo e a) |
     %% 70
     g\espressivo( b a g a f) e( f d c d b) |
     \omit TupletNumber
-    a\espressivo( e a c a c) e-4\espressivo( c e-0 f\espressivo c f) |
+    a\espressivo( e a c a c) e-4\espressivo( c e\open f\espressivo c f) |
     %% 72
     e\espressivo( g f e f d) c( d b a b gis) |
     %% 73
-    a-4\espressivo( c, f a f a-0) c\espressivo\<( a c d a d\!) |
+    a-4\espressivo( c, f a f a\open) c\espressivo\<( a c d a d\!) |
     %% 74
-    a\espressivo( d, fis a-4 fis a-0) c\espressivo\<( a c d a d\!) |
+    a\espressivo( d, fis a-4 fis a\open) c\espressivo\<( a c d a d\!) |
     %% 75
     \fingerNumberSpanner #"1"
     b\startTextSpan( d, g b g b) d\<( b d e-4 b e\!\stopTextSpan) |
@@ -166,21 +166,13 @@ violinMovementI = \relative a {
     <e c'>4:16-. <f d'>8:16-. <e c'>8:16-. <d c'>8:16-. <d b'>8:16-. <d g,>8:16-. <d b'>8:16-.
   } | c16 c d-4 c e e f e g g a-4 g c c d c |
   g g a-4 g c c d c e e f e g g a g | c4-4 r r2 
+  \cueDuring #"pianoUpMovementI" #DOWN R1*7 |
+  \cueDuring #"pianoUpMovementI" #UP   R1   |
+  \cueDuring #"pianoUpMovementI" #DOWN R1*3 |
+  \cueDuring #"pianoUpMovementI" #UP   R1*8 \bar "|."
 }
 
-violinMovementIViolin = \new Voice {
-  %%\cueDuring "pianoUpMovementI" #DOWN {R1*6} |
-  R1*6
-  \violinMovementI |
-  \cueDuring "pianoUpMovementI" #DOWN {R1*7} |
-  \cueDuring "pianoUpMovementI" #UP {R1} |
-  \cueDuring "pianoUpMovementI" #DOWN {R1*3} |
-  \cueDuring "pianoUpMovementI" #UP {R1*8} \bar "|."
-}
-
-violinMovementIPiano = \new Voice {R1*6 | \violinMovementI | R1*19}
-
-pianoUpMovementI = \new Voice \relative a' {
+pianoUpMovementI = \relative a' {
   <a e c>2\f <a' e c> |
   %% 2
   <e c a>~ <e c a>8 r <c-2 a-1>-.[\< r16 <d-3 b-1>16-.]\! |
@@ -318,7 +310,7 @@ pianoUpMovementI = \new Voice \relative a' {
 
 \addQuote #"pianoUpMovementI" {\pianoUpMovementI}
 
-pianoDownMovementI= \new Voice \relative a, {
+pianoDownMovementI= \relative a, {
   \repeat tremolo 16 {a32( a')} |
   \repeat tremolo 8 {a,( a'} a,8) r8 r4 |
   \clef "violin" r4 <b'' g>8( <a f>-.) <a f>4 r |
@@ -395,6 +387,7 @@ globalMovementII = {
 }
 
 violinMovementII = \relative f' {
+  \cueDuring #"pianoUpMovementII" #UP R1*2 |
   f2\p a4.( d8) | e,1 | d2 f4.( a8-4) | bes,1 | a4( c) f-- g-- |
   %% 8
   a-4( f) e'---4 d-- | c4.( g8) a4.( bes8) | a2~ a8 c\<( d e) |
@@ -449,15 +442,7 @@ violinMovementII = \relative f' {
   c2 e4.( a8-4) | f2. a4 | c2 e4.( a8) | f1\pp~ | f\fermata \bar "|."
 }
 
-violinMovementIIViolin = \new Voice {
-  R1*2 |
-  %%\cueDuring "pianoUpMovementII" #UP {R1*2} |
-  \violinMovementII
-}
-
-violinMovementIIPiano = \new Voice {R1*2 | \violinMovementII}
-
-pianoUpMovementII = \new Voice \relative c''' {
+pianoUpMovementII = \relative c''' {
   \repeat percent 3 {
     <c-4 f,-1>8\pp( <d-5 a-2> <c f,> <d a> <c f,> <d a> <c f,> <d a>)
   }
@@ -539,7 +524,7 @@ pianoUpMovementII = \new Voice \relative c''' {
 
 \addQuote #"pianoUpMovementII" \pianoUpMovementII
 
-pianoDownMovementII = \new Voice \relative g ' {
+pianoDownMovementII = \relative g ' {
   \clef "violin" <a f>4 r r2 | R1 | \clef "bass" r2 f,4-. r | r c' c, r |
   r2 d4 r | r g g, r | f''( e d des c-1 a-4 bes-3 b-3) | c2-1  c, |
   f~ f8 r r4 |
@@ -588,7 +573,7 @@ pianoDownMovementII = \new Voice \relative g ' {
 
 %%% ------------
 
-titleMovementIII = #"Finale"
+titleMovementIII = #"Finale."
 
 globalMovementIII = {
   \tempo "Allegro." 4=112
@@ -612,7 +597,7 @@ violinMovementIII = \relative a' {
   g: e: fis: dis: | e8 r r4 | r <d d,>\f\upbow |
   \repeat unfold 3 {
     <d, g,>8:16 <d a>:16 <d bes>:16 <d c>:16 |
-    <d-4 d-0>:16 <d bes>:16 <d c>:16\f <d a>:16 |
+    <d-4 d\open>:16 <d bes>:16 <d c>:16\f <d a>:16 |
   }
   <d bes>:\> <d g,>: <d a>: fis:\! | g8 r b4\f |
   \repeat unfold 2 {
@@ -655,10 +640,10 @@ violinMovementIII = \relative a' {
   %% 113
   \repeat unfold 2 {
     <a e'>8:16\p <b e>:16 <c e>:16 <d e>:16 |
-    <e-4 e-0>:16 <c e>:16 <d e>:16\f <b e>:16
+    <e-4 e\open>:16 <c e>:16 <d e>:16\f <b e>:16
   }
   <a e'>8:16\p <b e>:16 <c e>:16 <d e>:16 |
-  <e-4 e-0>:16 c:16 d:16\f b:16 |
+  <e-4 e\open>:16 c:16 d:16\f b:16 |
   \once \override Hairpin.to-barline = ##f c:\> a: b: gis: |
   a8\! r c,4->\f |
   \repeat unfold 2 {
@@ -673,18 +658,20 @@ violinMovementIII = \relative a' {
   e4) cis8( a') | gis fis e4~ | e cis8( a') | gis-- fis-- e4~ |
   e a\f\upbow | f g | e8 r f4\f | d e-4 | c8 r a'4\f\upbow |
   c,8^\rit( \tuplet 3/2 {d16 c b)} c8-- d-- | e2\fermata |
-  \cadenzaOn e,16^\cadenzaAdLib ( [
+  \once \override Score.RehearsalMark.self-alignment-X = #LEFT
+  \mark \markup\normalsize\cadenzaAdLib
+  \cadenzaOn e,16 ( [
     \once \fingerNumberSpanner "4" e')\startTextSpan e( e,)] f([ e') e( f,)] \bar ""
   fis([ e') e( fis,)] gis([ e') e\stopTextSpan( gis,)] \bar ""
-  a([ e'-0) e( a,)] ais([ e') e( ais,)] b([ e) e( b)] c([ e) e( c)] \bar ""
+  a([ e'\open) e( a,)] ais([ e') e( ais,)] b([ e) e( b)] c([ e) e( c)] \bar ""
   a\ff([ e') e( a,)] bes([ e) e( bes)] \bar ""
-  gis([ e'-4) e( gis,)] a-0([ e'-4) e( a,)] \bar ""
+  gis([ e'-4) e( gis,)] a\open([ e'-4) e( a,)] \bar ""
   fis([ e'-4) e( fis,)] gis([ e') e( gis,)] \bar ""
   e4~\espressivo( e16[ a) c-- a--] \bar ""
   d,4~\espressivo( d16[ a') c-- a--] \bar ""
   c,4~\espressivo( c16[ e) a-- e--] \bar ""
   b4~\espressivo b16[ d---> b---> ^\rit e--->] \bar "|" \cadenzaOff
-\tempo \markup {\italic "Più allegro"}
+\tempo \markup {\italic "Più allegro."}
 a,16\p
 \once \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
 \once \override TextSpanner.bound-details.left.text = \markup {\italic "poco a poco cresc."}
@@ -698,16 +685,12 @@ e8:16 d:16 e4:16 | a,4:16 c':16\fp | b8:16 a:16 gis4:16 |
 a8:16 e:16 c'4:16\fp | b8:16 a:16 gis4:16  |
 a8:16 e:16 c'4:16\fp | b8:16 a:16 gis4:16\stopTextSpan |
 a8:16\ff gis: a: f: | a: e: a: d,: | a': b,: d: f: | e: d: c: b: |
-a:-0 f: a:-4 e: | a:-4 d,: a':-4 c,: | a': b,: d: f: | e: d: c: b: |
+a:\open f: a:-4 e: | a:-4 d,: a':-4 c,: | a': b,: d: f: | e: d: c: b: |
 a4 \repeat unfold 2 { <e' b' e> <a c e> } r4 |
 <a a'> r8.a,16-> | a2~ | a8 r r4 \bar "|."
 }
 
-violinMovementIIIViolin = \new Voice {\violinMovementIII}
-
-violinMovementIIIPiano = \new Voice {\violinMovementIII}
-
-pianoUpMovementIII = \new Voice \relative e' {
+pianoUpMovementIII = \relative e' {
   \clef "alto" << R2 {s8\p s s s} >> |
   r4 \once \override Hairpin.to-barline = ##f <e b gis>\f\>( |
   <e c a>8\p) r r4 |
@@ -787,7 +770,7 @@ pianoUpMovementIII = \new Voice \relative e' {
   <a e c>4 r | <a c e a>4 r8. a,16 | a2~ | a8 r r4 \bar "|."
 }
 
-pianoDownMovementIII = \new Voice \relative a, {
+pianoDownMovementIII = \relative a, {
   a8-. e'-. a,-. e'-. | a,-. e'-. e,4( | a8-.) e'-. a,-. e'-. |
   %% 4
   a,-. e'-. e,4-.( | a8-.) e'-. a,-. e'-. | a,-. e'-. e,4-> |
@@ -838,72 +821,24 @@ pianoDownMovementIII = \new Voice \relative a, {
 
 %%% ------------
 
+\include "../composer.ily"
+
 \header {
   arranger = ##f
-  composer = "Leo Portnoff"
   copyright = \copyrightText
   tagline = \taglineText
   enteredby = "Philipp Büttgenbach"
   opus = "Opus 18"
   source = "http://imslp.org/"
-  title = "Violin-Concertino in A Minor"
+  title = "Violin-Concertino in A Minor."
 }
 
 \include "paper.ily"
 
 fileBaseName = "Leo_Portnoff-opus_18"
 
-define(`PianoMovement', `\score {
-    <<
-      \new Staff \with {
-        fontSize = #-3
-        \override StaffSymbol.staff-space = #(magstep -3)
-      } { \globalMovement$1 \violinMovement$1Piano }
-      \new PianoStaff <<
-        \new Staff = "up" \with {
-          \accidentalStyle modern-cautionary
-        } {
-          \globalMovement$1 \pianoUpMovement$1
-        }
-        \new Staff = "down" \with {
-          \accidentalStyle modern-cautionary
-        } {
-          \globalMovement$1 \clef bass \pianoDownMovement$1
-        }
-      >>
-    >>
-    \layout {
-      indent = #0
-    }
-  }')
-
-\book {
-  \bookOutputName #(string-append fileBaseName "-piano")
-
-  PianoMovement(`I')
-  PianoMovement(`II')
-  PianoMovement(`III')
-}
-
-define(`ViolinMovement', `
-  \score {
-    \new Staff \with {
-      \accidentalStyle modern-cautionary
-    } {
-      \compressFullBarRests
-      \globalMovement$1 \violinMovement$1Violin
-    }
-    \layout {
-      indent = #0
-    }
-  }')
-
-\book {
-  \bookOutputName #(string-append fileBaseName "-violin")
-  ViolinMovement(`I')
-  ViolinMovement(`II')
-  ViolinMovement(`III')
-}
+define(`Movements', `(I, II, III)')
+include(`concertino.ily')
 
 \include "articulate.ly"
 
@@ -914,9 +849,9 @@ define(`ViolinMovement', `
     \new StaffGroup <<
       \new Staff \with {
         midiInstrument = #"violin"
-      } { \globalMovementI   \violinMovementIPiano
-          \globalMovementII  \violinMovementIIPiano
-          \globalMovementIII \violinMovementIIIPiano
+      } { \globalMovementI   \killCues\violinMovementI
+          \globalMovementII  \killCues\violinMovementII
+          \globalMovementIII \killCues\violinMovementIII
         }
       \new PianoStaff \with {
         midiInstrument = #"acoustic grand"
