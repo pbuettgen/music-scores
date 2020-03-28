@@ -1,13 +1,13 @@
 %%% -*- coding: utf-8 -*-
 %%%
-%%% Copyright © 2016 Philipp Büttgenbach
+%%% Copyright © 2016-2020 Philipp Büttgenbach
 %%%
 %%% This work is licensed under the Creative Commons
 %%% Attribution-ShareAlike 4.0 International License.  To view a copy of
 %%% this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 %%%
 
-\version "2.18.2"
+\version "2.20"
 
 \include "lily-snippets.ily"
 
@@ -25,13 +25,13 @@ violinIduoImovementI = \new Voice \relative a' {
   \violinVoiceSettings
 
   \repeat volta 2 {
-    \partial 4 cis8.\f (a16) | d2 b8. (gis16) | e'2 a16 (gis fis e-0) |
+    \partial 4 cis8.\f (a16) | d2 b8. (gis16) | e'2 a16 (gis fis e\open) |
     %% 3
     e4-4 (d) d16 (cis d e) | bis4-> (cis8) r8 cis8. (a16) |
     %% 5
     d2 b8. (gis16) | e'2 a16\p (gis fis e) | e4 (dis) e16 (dis cis b) |
     %% 8
-    b4 (e-4) e16-0 (fis gis a) | gis4 (fis) fis16 (gis a b) |
+    b4 (e-4) e16\open (fis gis a) | gis4 (fis) fis16 (gis a b) |
     %% 10
     a4 (gis) e16\< (fis gis a) | b8\f (a gis fis) e dis |
     %% 12
@@ -306,7 +306,10 @@ globalduoImovementIII = {
 violinIduoImovementIII = \new Voice \relative a' {
   \violinVoiceSettings
 
-  \partial 4 cis16\mf cis e_\markup{\italic "sempre staccato"} e |
+  \partial 4 cis16\mf cis e_\markup\whiteout{
+    \override #'(style . outline)
+    \override #'(thickness . 3)
+    \italic "sempre staccato"} e |
   %% 1
   d d gis gis b b d, d | cis cis e e a a cis, cis |
   %% 3
@@ -960,8 +963,9 @@ violinIIduoIImovementIII = \new Voice \relative d' {
 
 %%% --- Output ---
 
+\include "../composer.ily"
+
 \header {
-  composer = "Johann Wenzel Kalliwoda"
   copyright = \copyrightText
   tagline = \taglineText
   enteredby = "Philipp Büttgenbach"

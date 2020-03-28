@@ -1,12 +1,12 @@
 %%% -*- coding: utf-8 -*-
 %%%
-%%% Copyright © 2016 Philipp Büttgenbach
+%%% Copyright © 2016-2020 Philipp Büttgenbach
 %%%
 %%% This work is licensed under the Creative Commons
 %%% Attribution-ShareAlike 4.0 International License.  To view a copy of
 %%% this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 
-\version "2.18.2"
+\version "2.20"
 
 \include "lily-snippets.ily"
 
@@ -16,7 +16,7 @@ titleduoImovementI = ##f
 
 globalduoImovementI = {
   \time 4/4
-  \tempo "Allegro moderato." 4 = 128
+  \tempo "Allegro moderato." 4 = 123
   \key f \major
 }
 
@@ -38,7 +38,7 @@ violinIduoImovementI = \new Voice \relative f' {
     %% 20
     g'8\f f e d c b a g | fis (a) a (d) d4-> f-> |
     %% 22
-    e8 g c, e-4 d f-4 b, d | e-0 g c, e-4 d f-4 b,-1 d |
+    e8 g c, e-4 d f-4 b, d | e\open g c, e-4 d f-4 b,-1 d |
     %% 24
     c (e-4) d b c (e) d b | c4 c c r
   }
@@ -51,9 +51,9 @@ violinIduoImovementI = \new Voice \relative f' {
   %% 36
   d4->-4 c b8 d-4 g, b | \repeat unfold 2 {c\> g e' g, f' g, d' g,} |
   %% 39
-  c2\< d | e1\>^\markup{\italic "ritard."} ( |
+  c2\< d | e1\>^\rit ( |
   %% 41
-  f4\p^\markup{\italic "a tempo"} ) c f g | a c a2 | f4\< ees d c |
+  f4\p^\aTempo ) c f g | a c a2 | f4\< ees d c |
   %% 44
   bes\> d-4 g, r\! | g'\p g g a | bes g' e d | c\< bes2-> bes4 |
   %% 48
@@ -121,9 +121,9 @@ violinIIduoImovementI = \new Voice \relative f' {
   %% 39
   e8\< (c') c c f, (c') c c |
   %% 40
-  g\> (c) c c c^\markup{\italic "ritard."} (cis d bes) |
+  g\> (c) c c c^\rit (cis d bes) |
   %% 41
-  a4\p^\markup{\italic "a tempo"} a a bes | c a' f c |
+  a4\p^\aTempo a a bes | c a' f c |
   %% 43
   a\< a bes fis | g\> fis8 (a) g4 g, | e'\p c e f | g bes g f |
   %% 47
@@ -142,7 +142,7 @@ titleduoImovementII = ##f
 
 globalduoImovementII = {
   \time 2/4
-  \tempo "Andante." 4 = 90
+  \tempo "Andante." 4 = 84
   \key f \major
 }
 
@@ -209,7 +209,7 @@ titleduoImovementIII = ##f
 
 globalduoImovementIII = {
   \time 6/8
-  \tempo "Vivace." 8 = 150
+  \tempo "Vivace." 8 = 147
   \key f \major
 }
 
@@ -218,9 +218,12 @@ violinIduoImovementIII = \new Voice \relative f' {
 
   f8\p\downbow c f e d c |
   %% 2
-  f4_\markup{\italic "sempre staccato"} (g8-.) a4.-4 |
+  f4_\markup\whiteout{
+    \override #'(style . outline)
+    \override #'(thickness . 3)
+    \italic "sempre staccato"} (g8-.) a4.-4 |
   %% 3
-  a8 g a g f g | a4-0 (bes8-.) c4. | c8\f f c  d4 (f8-.) |
+  a8 g a g f g | a4\open (bes8-.) c4. | c8\f f c  d4 (f8-.) |
   %% 6
   c8 f c d4 (f8-.) | c8 a d bes g c | a bes a g d e |
   %% 9
@@ -246,7 +249,7 @@ violinIduoImovementIII = \new Voice \relative f' {
   %% 33
   bes' a g f e d | c\> bes a g f e | f4\! r8 r4. | R2. |
   %% 37
-  f8\p\downbow c f e d c | f4 (g8-.) a4.-4 | a8\f f a-0 bes f bes |
+  f8\p\downbow c f e d c | f4 (g8-.) a4.-4 | a8\f f a\open bes f bes |
   %% 40
   a f a bes f bes | a f c a c f | a bes a g d e | f c' f a g f |
   e g c, d (c) c | f c f a g f | e g c, d (c) c | e a e c4.~ |
@@ -258,7 +261,7 @@ violinIIduoImovementIII = \new Voice \relative f' {
 
   R2.*2 | f8\p c f e d c | f4 (g8-.) a4.-4 |
   %% 4
-  a8\f f_\markup{\italic "sempre staccato"} a-0 bes f bes |
+  a8\f f_\markup{\italic "sempre staccato"} a\open bes f bes |
   %% 5
   a f a bes f bes | a f d g e c | f d c b4 (bes8-.) |
   %% 8
@@ -706,8 +709,9 @@ violinIIduoIIImovementIII = \new Voice \relative g {
 
 %%% --- Output ---
 
+\include "../composer.ily"
+
 \header {
-  composer = "Johann Wenzel Kalliwoda"
   copyright = \copyrightText
   tagline = \taglineText
   enteredby = "Philipp Büttgenbach"

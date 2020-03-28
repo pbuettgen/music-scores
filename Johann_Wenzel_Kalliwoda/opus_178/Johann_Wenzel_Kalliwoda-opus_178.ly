@@ -1,12 +1,12 @@
 %%% -*- coding: utf-8 -*-
 %%%
-%%% Copyright © 2016 Philipp Büttgenbach
+%%% Copyright © 2016-2020 Philipp Büttgenbach
 %%%
 %%% This work is licensed under the Creative Commons
 %%% Attribution-ShareAlike 4.0 International License.  To view a copy of
 %%% this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 
-\version "2.18.2"
+\version "2.20"
 
 \include "lily-snippets.ily"
 
@@ -16,7 +16,7 @@ titleduoImovementI = ##f
 
 globalduoImovementI = {
   \time 4/4
-  \tempo "Allegro moderato" 4 = 140
+  \tempo "Allegro moderato" 4 = 124
   \key c \major
 }
 
@@ -26,7 +26,7 @@ violinIduoImovementI = \new Voice \relative c'' {
   \repeat volta 2 {
     g2\f\downbow c | b a | g4-- c-- d-- g-- | f2 (e4) c | a2 f |
     %% 6
-    b4 d c e-4 | g f e-0 c | b a g r | e\downbow g c e-4 | e2 d |
+    b4 d c e-4 | g f e\open c | b a g r | e\downbow g c e-4 | e2 d |
     %% 11
     \repeat unfold 2 { c4 a' fis c | b g' d b } | c2 d | b (c4) a |
     %% 17
@@ -39,12 +39,12 @@ violinIduoImovementI = \new Voice \relative c'' {
     <b d>\< r r <c d> | <b d> r r <c d> | <b d> r\! <g d'>2\f | <g d'> r
   }
   g'4\f\downbow b d b | g'2 b, | g4 c e-4 c | g'2 c, | a4 d f d | b2 e-4 |
-  c4 f a f | d2 g | e4-0 g f d | e-4 g, a b | c a f d | g2 f | e c |
-  g' f | e4 c b g | a b c e | f2 d | g4 f e c | b d-4 c e | g d-0 b g |
+  c4 f a f | d2 g | e4\open g f d | e-4 g, a b | c a f d | g2 f | e c |
+  g' f | e4 c b g | a b c e | f2 d | g4 f e c | b d-4 c e | g d\open b g |
   c1 | b4\upbow d g b | d,1 | c4 e a c | a c f a | g e f d | b\> d g, b |
   c\p <c e> <c e> <c e> | <c e> <c e> <c e> <c e> |
   \repeat unfold 2 {<d f> <d f> <d f> <d f>} | <c e> c2\upbow g4\downbow |
-  e'2.-4 c4\downbow | c (b) a g | f'-4 f f b,-1 | c\< e-0 g b, | c e g b,\! |
+  e'2.-4 c4\downbow | c (b) a g | f'-4 f f b,-1 | c\< e\open g b, | c e g b,\! |
   c r <g c>2\f | <g c> r \bar "|."
 }
 
@@ -53,7 +53,7 @@ violinIIduoImovementI = \new Voice \relative c' {
 
   \repeat volta 2 {
     e2\f c | g' f | e4-- c-- b-- g-- | a-- b-- c-- e-- | f2 d | g4 f e c |
-    b d-4 c e | g d-0 b g | c1 ( | b4) d-- g-- b-- |
+    b d-4 c e | g d\open b g | c1 ( | b4) d-- g-- b-- |
     \repeat unfold 2 { a fis d fis | g d b' g } | e a-4 fis d | g d e c |
     b\> d-4 c d | g,\p <b d> <b d> <b d> | <b d> <b d> <b d> <b d> |
     <c d> <c d> <c d> <c d> | <a d> <a d> <a d> <a d> | <b d> g' b d |
@@ -61,9 +61,9 @@ violinIIduoImovementI = \new Voice \relative c' {
     g r\! <b g'>2\f | <b g'> r
   }
   R1 | g,4--\downbow\f b-- d-- g-- | e2 c | g4 c e g | f2 d | g4 e g b |
-  a2-4 f | b4 g b d | c g a-0 b | c g' f d | e-4 c a d | c b a g | g2 c |
-  b a | g4 c d g | f2 (e4) c | a2 f' | b,4 d c e-0 | g f e c | b a g r |
-  e\downbow g c e-4 | e2 d | f,4 a d f | f2 e-0 | f4 c a f | e g a-4 f |
+  a2-4 f | b4 g b d | c g a\open b | c g' f d | e-4 c a d | c b a g | g2 c |
+  b a | g4 c d g | f2 (e4) c | a2 f' | b,4 d c e\open | g f e c | b a g r |
+  e\downbow g c e-4 | e2 d | f,4 a d f | f2 e\open | f4 c a f | e g a-4 f |
   g\> f e d | c2.\p g4 | e'2. c4 | c (b) a (g) | g' g g b, |
   c <g e'> <g e'> <g e'> | <g e'> <g e'> <g e'> <g e'> |
   <g f'> <g f'> <g f'> <g f'> | <g d'> <g d'> <g d'> <g d'> |
@@ -75,7 +75,7 @@ titleduoImovementII = ##f
 
 globalduoImovementII = {
   \time 3/4
-  \tempo "Adagio" 4 = 70
+  \tempo "Adagio" 4 = 64
   \key c \major
 }
 
@@ -87,7 +87,7 @@ violinIduoImovementII = \new Voice \relative c'' {
   a (b) d (c) b (a) | c2 b4-- | a-- r r | a8\p (c) c (b) a (c) |
   f2 d4-- | b8 (d) d (c) b (d) | g4\f e-- d-- | g-- e-- d-- |
   c8 (cis d e) f (a) | g (f) d (e-4) c4-- | b2\upbow c4--\downbow |
-  e8-4 (d) b (d) c4-- | gis2 a4-0 | b8 (c e-4 d) c (b) | a4-4 (gis) e-- |
+  e8-4 (d) b (d) c4-- | gis2 a4\open | b8 (c e-4 d) c (b) | a4-4 (gis) e-- |
   a,-- r r | a8\p\upbow (c) c (b) a (c) | f2 e4-- | d8-4 (c) b (a) gis (b) |
   a4--\f c-- e-- | a,-- c-- e-- | f-- d-- e-- | a-4-- a,-- r \bar "|."
 }
@@ -97,10 +97,10 @@ violinIIduoImovementII = \new Voice \relative c' {
 
   R2. | a8\p\downbow (c) c (b) a (c) | f2 e4 | d8-4 (c) b (a) gis (b) |
   a4--\f c-- e-- | a,-- c-- e-- | f2 d4 | e e2\> | a,8\p (c) c (b) a (c) |
-  f2 e4 | b8 (d-4) d (c) b (d-0) | g2 f4 | e8\f (g) c-. g-. b-. g-. |
+  f2 e4 | b8 (d-4) d (c) b (d\open) | g2 f4 | e8\f (g) c-. g-. b-. g-. |
   e (g) c-. g-. b-. g-. | a-4 (g f e) d-4 (c) | b4 g c |
   g'8\upbow (f) d (e) e4 | gis2 a4-4 | e8 (d) b (d-4) c4 |
-  d-0 f d | e8 (f e) d'-. c-. b-. | a\p (c) c (b) a (c) | f2 e4-0 |
+  d\open f d | e8 (f e) d'-. c-. b-. | a\p (c) c (b) a (c) | f2 e4\open |
   d8 (c) b (a) gis (b) | e2-4 d4 | c8\f (e-4) c (a gis b) |
   c (e-4) c (a gis b) | a (b) c (b) a-4 (gis) |
   a-4-. e-. c-. e-. a,4 \bar "|."
@@ -110,14 +110,14 @@ titleduoImovementIII = ##f
 
 globalduoImovementIII = {
   \time 2/4
-  \tempo "Allegro" 4 = 140
+  \tempo "Allegro" 4 = 124
   \key c \major
 }
 
 violinIduoImovementIII = \new Voice \relative c'' {
   \violinVoiceSettings
 
-  g8-.\f\downbow g-. c-. e-.-0 | g-. g-. d4-- | g,8-. g-. c-. e-. |
+  g8-.\f\downbow g-. c-. e-.\open | g-. g-. d4-- | g,8-. g-. c-. e-. |
   %% 4
   g-. g-. d4-- | e8-.-4 e-. e (d) | c c b (a) | g-. a-.-4 f-. g-. |
   %% 8
@@ -125,15 +125,15 @@ violinIduoImovementIII = \new Voice \relative c'' {
   %% 12
   b8-. g-. b-. d-. | c-. c-. a'4-4 | fis8-. fis-. g4-- |
   %% 15
-  e8-. c-. d-.-4 c-. | b-. g-. b-. d-.-0 | g-.\f g-. b-. d-. |
+  e8-. c-. d-.-4 c-. | b-. g-. b-. d-.\open | g-.\f g-. b-. d-. |
   %% 18
-  g-. g-. d4-- | g,8-. g-. c-. e-.-0 | g-. g-. e4-- | c8-. c-. a'4-- |
+  g-. g-. d4-- | g,8-. g-. c-. e-.\open | g-. g-. e4-- | c8-. c-. a'4-- |
   %% 23
   b,8-. b-. g'4-- | f8-.\> e-. d-. c-. | b-. c-. b-. a-. |
   %% 26
   gis-.\p gis-. b4-> |
-  gis8-._\markup {\italic "ritard."} gis-. b4-> |
-  g8-.\f^\markup {\italic "a tempo"} g-. c-. e-. |
+  gis8-._\rit gis-. b4-> |
+  g8-.\f^\aTempo g-. c-. e-. |
   %% 29
   g-. g-. d4-- | g,8-. g-. c-. e-. | g-. g-. d4-- | e8-.-4 e-. e (d) |
   %% 33
@@ -147,17 +147,17 @@ violinIduoImovementIII = \new Voice \relative c'' {
 violinIIduoImovementIII = \new Voice \relative c' {
   \violinVoiceSettings
 
-  e4-.\f\downbow c-. | b8-. g-. b-. d-.-0 | e4 c | b8 g b d |
+  e4-.\f\downbow c-. | b8-. g-. b-. d-.\open | e4 c | b8 g b d |
   c-. e-. g4-- | a8-.-4 e-. f4-- | e8-. c-. d-.-4 b-. | c-. a-. b-. g-. |
-  g'-.\p g-. c-. e-.-0 | g-. g-. d4-- | g,8-. g-. c-. e-.-0 |
-  g-. g-. d4-- | e---4 c8-. c-. | d4-- b8-. b-. | c-. a-.-0 fis-. a-.-4 |
-  g-. b-. g-. r | R2 | g,8-.\f\downbow g-. b-. d-.-0 | g4-- e8-. (c-.) |
+  g'-.\p g-. c-. e-.\open | g-. g-. d4-- | g,8-. g-. c-. e-.\open |
+  g-. g-. d4-- | e---4 c8-. c-. | d4-- b8-. b-. | c-. a-.\open fis-. a-.-4 |
+  g-. b-. g-. r | R2 | g,8-.\f\downbow g-. b-. d-.\open | g4-- e8-. (c-.) |
   g-. g-. c-. e-. | a-.-4 g-. f-. a-. | g-. f-. e-. g-. |
   a-.-4\> g-. f-. e-. | d4 f | e\p b8 b |
-  e4_\markup {\italic "ritart."} b8 b |
-  e4\f^\markup{\italic "a tempo"} c | b8-. g-. b-. d-. | e4 c |
+  e4_\rit b8 b |
+  e4\f^\aTempo c | b8-. g-. b-. d-. | e4 c |
   b8-. g-. b-. d-. | c-. e-. g4-- | a8-.-4 e-. f4-- | e8-. c-. d-.-4 b-. |
-  c-. a-. b-. g-. | g'-.\p g-. c-. e-.-0 | g-. g-. d4-- |
+  c-. a-. b-. g-. | g'-.\p g-. c-. e-.\open | g-. g-. d4-- |
   g,8-. g-. c-. e-. | g-. g-. d4-- | e8-.-4 e-. e (d) | c-. b-. a-. f-. |
   e-.\< c-. f-. e-. | <g g,>-.\f <g, f'>-. <g e'>-. r \bar "|."
 }
@@ -168,7 +168,7 @@ titleduoIImovementI = ##f
 
 globalduoIImovementI = {
   \time 3/4
-  \tempo "Allegro" 4 = 140
+  \tempo "Allegro" 4 = 128
   \key g \major
 }
 
@@ -184,7 +184,7 @@ violinIduoIImovementI = \new Voice \relative g' {
     %% 11
     <b d> <b d> <b d> | <g d'>2. | fis'8-. g-. a-.-4 fis-. d-. fis-. |
     %% 14
-    g-. g,-. b-. d-.-0 g-. b-. | <a g'>4 <a g'> <a g'> | <a fis'>2. |
+    g-. g,-. b-. d-.\open g-. b-. | <a g'>4 <a g'> <a g'> | <a fis'>2. |
     %% 17
     b'8\upbow (a g fis e d) | cis (d e fis) g4 |
     %% 19
@@ -195,7 +195,7 @@ violinIduoIImovementI = \new Voice \relative g' {
   }
   d'4\f d d | cis8 (d e-4 cis b a) | c4 c c | b8 (c d b a g) |
   c-. b-. c-. d-. e-. fis-. | g4-. d-. (b-.) |
-  c8-. d-. c-. d-. e-. a-. | b-. g-. e4-.-0 g8-. e-. |
+  c8-. d-. c-. d-. e-. a-. | b-. g-. e4-.\open g8-. e-. |
   c4-. e8-.-4 c-. a4-. | c8-.\downbow b-. a-. b-. a-. g-. |
   fis-. a-. d4-. d-. | cis8-. e-. g4-. g-. | c,8-. fis-. a4-. a-. |
   a8 (fis) d (c a fis) | d4-. cis8 (c b a) | <g d'>4 <g d'> <g d'> |
@@ -226,11 +226,11 @@ violinIIduoIImovementI = \new Voice \relative g {
     %% 13
     <d, c'> <d c'> <d c'> | <d b'>2. | cis'8-. a-. e-. cis-. a-. cis-. |
     %% 16
-    d-.-4 a-. d-.-0 fis-. a-. d-. | g,4 b8 (a g fis) | e (d cis b a cis) |
+    d-.-4 a-. d-.\open fis-. a-. d-. | g,4 b8 (a g fis) | e (d cis b a cis) |
     %% 19
-    d4 fis8-. a-.-4 g-. a-. | fis4 r d-4\p | d (cis) d-.-0 | e (cis) a-. |
+    d4 fis8-. a-.-4 g-. a-. | fis4 r d-4\p | d (cis) d-.\open | e (cis) a-. |
     %% 23
-    cis8-. e-. a-.-0 cis-. e-.-4 cis-. | d4-. d,-. <a fis'>\upbow |
+    cis8-. e-. a-.\open cis-. e-.-4 cis-. | d4-. d,-. <a fis'>\upbow |
     %% 25
     <a fis'> <a fis'> <a fis'> | <a g'> <a g'> <a g'> |
     %% 27
@@ -241,7 +241,7 @@ violinIIduoIImovementI = \new Voice \relative g {
   %% 34
   b8-. c-. d-. e-. fis-. g-. | a4-.-4 fis-. d-. | g b8-. g-. e4-. |
   %% 37
-  g8-. e-. c4-. e8-. c-. | a b c4 cis | d4.-0 fis8-. a-.-4 fis-. |
+  g8-. e-. c4-. e8-. c-. | a b c4 cis | d4.\open fis8-. a-.-4 fis-. |
   %% 40
   d4. g8-. bes-. g-. | d4. a'8-. c-. a-. | <d, c'>4 r2 |
   %% 43
@@ -273,7 +273,7 @@ titleduoIImovementII = ##f
 
 globalduoIImovementII = {
   \time 2/4
-  \tempo "Allegretto" 4 = 120
+  \tempo "Allegretto" 4 = 108
   \key g \major
 }
 
@@ -309,7 +309,7 @@ titleduoIImovementIII = ##f
 
 globalduoIImovementIII = {
   \time 3/8
-  \tempo "Andantino" 8 = 110
+  \tempo "Andantino" 8 = 119
   \key g \major
 }
 
@@ -326,17 +326,17 @@ violinIduoIImovementIII = \new Voice \relative g' {
   %% 17
   g,8-. b-. d-.-4 | g,-. b-. d-. | \repeat unfold 2 { a-. c-. d-. } |
   %% 21
-  a-. d-.-0 fis-. | a,-. d-. fis-. | \repeat unfold 2 { b,-. d-. g-. } |
+  a-. d-.\open fis-. | a,-. d-. fis-. | \repeat unfold 2 { b,-. d-. g-. } |
   %% 25
   g,-. r r | b-.\upbow d-. g-. | b-. a-. g-. | g-. fis-. e-. |
   %% 29
   fis-. d-. a'-.-4 | fis-. d-. a-. | <a fis'> <a g'> <a fis'> |
   %% 32
-  d\> d d | a'-.-0\p d,-. d-. | b'-. d,-. d-. | c'-. d,-. e'-.-4 |
+  d\> d d | a'-.\open\p d,-. d-. | b'-. d,-. d-. | c'-. d,-. e'-.-4 |
   %% 36
   d-. d,-. b'-. | a-. d,-. d-. | b'-. d,-. d-. | cis'-. d,-. e'-.-4 |
   %% 40
-  d4 r8 | fis,4.\downbow | g | a4-0 (c8) | b4 (g8) | fis4. | g |
+  d4 r8 | fis,4.\downbow | g | a4\open (c8) | b4 (g8) | fis4. | g |
   %% 47
   e4 (g8) | fis4 (d'8) | cis8-. d,-. e'-.-4 | d-. a'-. fis-. | d4 r8 |
   %% 52
@@ -344,11 +344,11 @@ violinIduoIImovementIII = \new Voice \relative g' {
   %% 56
   c-. a-. fis-. | d-.\< c-. a-. | g-.\f b-. d-.-4 | g,-. b-. d-. |
   %% 60
-  \repeat unfold 2 { a-. c-. d-. } | a-. d-.-0 fis-. | a,-. d-. fis-. |
+  \repeat unfold 2 { a-. c-. d-. } | a-. d-.\open fis-. | a,-. d-. fis-. |
   %% 64
   \repeat unfold 2 { b,-. d-. g-. } | g,-. b-. d-.-4 | a-. c-. d-. |
   %% 68
-  g,-. b-. d-. | a-. c-. d-. | g,4 r8 | g8-.\upbow b-. d-.-0 |
+  g,-. b-. d-. | a-. c-. d-. | g,4 r8 | g8-.\upbow b-. d-.\open |
   %% 72
   b-. d-. g-. | <d b'> <d c'> <d a'> | <d d'>4 r8 |
   %% 75
@@ -366,17 +366,17 @@ violinIIduoIImovementIII = \new Voice \relative g {
   %% 2
   g,_\markup {\italic "sempre staccato."} b d |
   %% 3
-  \repeat unfold 2 { a c d } | a d-0 fis | a, d fis |
+  \repeat unfold 2 { a c d } | a d\open fis | a, d fis |
   %% 7
   \repeat unfold 2 { b, d g } | g, b d-4 | a c d | g, b d | a c d |
   %% 13
-  g, b d | b d-0 g | fis fis fis | fis4 r8 | b8 d g | d4 (b8) |
+  g, b d | b d\open g | fis fis fis | fis4 r8 | b8 d g | d4 (b8) |
   %% 19
   d8 c a | fis4 r8 | c' fis a | fis4 (c8) | e-4 d b | g4 r8 |
   %% 25
   b d g | b a g | g fis e | e-4 d cis | d a' fis | d a fis | d e cis |
   %% 32
-  d4-4 r8 | fis4. | g | a4-0 (c8) | b4 (g8) | fis4. | g | e4 (g8) |
+  d4-4 r8 | fis4. | g | a4\open (c8) | b4 (g8) | fis4. | g | e4 (g8) |
   %% 40
   fis d d | a' d, d | b' d, d | c' d, e'-4 | d d, b' | a d, d |
   %% 46
@@ -410,7 +410,7 @@ violinIduoIIImovementI = \new Voice \relative d' {
   \violinVoiceSettings
 
   \repeat volta 2 {
-    fis4-.\f\downbow a-.-0 d-. fis-. | a4.-> (a,8) a2 |
+    fis4-.\f\downbow a-.\open d-. fis-. | a4.-> (a,8) a2 |
     %% 3
     fis8 (g a b) a (b cis d) | cis (d e fis) g4-. r |
     %% 5
@@ -420,7 +420,7 @@ violinIduoIIImovementI = \new Voice \relative d' {
     %% 11
     e,4-. gis-. b-. d-. | d4.-> (cis8-.) cis2 | b4-. fis'-. d-. b-. |
     %% 14
-    gis2 a-4 | fis4 d'-. cis8 (b a gis) | a4-.\p\upbow cis-. e-.-0 a-. |
+    gis2 a-4 | fis4 d'-. cis8 (b a gis) | a4-.\p\upbow cis-. e-.\open a-. |
     %% 17
     e2-4 cis4 a | d-. d-. d-. b-. | gis-. gis-. gis-. b-. |
     %% 20
@@ -432,7 +432,7 @@ violinIduoIIImovementI = \new Voice \relative d' {
     %% 23
     \repeat unfold 2 { d e d e } |
     %% 24
-    cis-.\f e-.-0 a-. e-. fis4-. d-. | cis8-. e-. a-. e-. fis4-. d-.
+    cis-.\f e-.\open a-. e-. fis4-. d-. | cis8-. e-. a-. e-. fis4-. d-.
     %% 26
     cis-. e-. a-. e | e4.-- (d8-.) cis2 | cis4. (b8-.) a2 |
     %% 29
@@ -443,15 +443,15 @@ violinIduoIIImovementI = \new Voice \relative d' {
   %% 34
   e4.-- (cis8-.) cis2 | d4-.-4\p a-. fis'-. a,-. |
   %% 36
-  g'-. a,-. cis-. e8 (g) | fis8 (g a-0 b) a (b cis d) |
+  g'-. a,-. cis-. e8 (g) | fis8 (g a\open b) a (b cis d) |
   %% 38
-  e-4 (d cis b) a4-.-4 (g-.) | fis8\< (g a-0 b) c4-. (c-.) |
+  e-4 (d cis b) a4-.-4 (g-.) | fis8\< (g a\open b) c4-. (c-.) |
   %% 40
   b8-.\! d-. g-. fis-. e4->-4 cis8-. b-. |
   %% 41
   a-.\upbow cis-. fis-. e-. d4-> b8-. a-. |
   %% 42
-  g8-. b-. e-.-4 d-. cis4-> a8-. (g-.) | fis4-. a-.-0 d-. fis-. |
+  g8-. b-. e-.-4 d-. cis4-> a8-. (g-.) | fis4-. a-.\open d-. fis-. |
   %% 44
   a4. (a,8-.) a2 | a4.---4\p (fis8-.) fis2 | b4-.\< g-. e-. cis'-. |
   %% 47
@@ -459,17 +459,17 @@ violinIduoIIImovementI = \new Voice \relative d' {
   %% 50
   cis-. e8-. e-. b4-. e8-. e-. |
   %% 51
-  cis-. b-. a-. gis-. a-.-4 gis-. a-.-0 b-. |
+  cis-. b-. a-. gis-. a-.-4 gis-. a-.\open b-. |
   %% 52
   cis-. b-. a-. g-. fis-. e-. d-. cis-. | d4-. fis-. a-. d-. |
   %% 54
   fis4.-- (fis,8-.) fis2 | d4-. a-. fis'-. a, |
   %% 56
-  g'8 (fis e d) cis4-. r | e-. a-.-0 cis-. e-. | g4.-- (g,8-.) g2 |
+  g'8 (fis e d) cis4-. r | e-. a-.\open cis-. e-. | g4.-- (g,8-.) g2 |
   %% 59
   e'8-4 (d cis b) cis (b a g) | fis (g a b) a4 r |
   %% 61
-  fis-. a-.-0 d-. fis-. | fis4.-> (e8-.) e2 | d,4-. fis-. b-. d-. |
+  fis-. a-.\open d-. fis-. | fis4.-> (e8-.) e2 | d,4-. fis-. b-. d-. |
   %% 64
   d4.-> (cis8-.) cis2 | b,4-. d-. g-. b-. | a-. g'-. fis-. d-. |
   %% 67
@@ -492,11 +492,11 @@ violinIIduoIIImovementI = \new Voice \relative d' {
   \repeat volta 2 {
     d4-.\f\downbow fis-. a-. d-. | fis4. (fis,8-.) fis2 |
     %% 3
-    d4-. a-. fis'-. a,-. | g'8 (fis e d) cis4 r | e-. a-.-0 cis-. e-. |
+    d4-. a-. fis'-. a,-. | g'8 (fis e d) cis4 r | e-. a-.\open cis-. e-. |
     %% 6
     g4.-- (g,8-.) g2 | e'8-4 (d cis b) cis (b a g) | fis (g a b) a4 r |
     %% 9
-    d,-. a'-.-4 fis-. d-. | cis-. e-. a-.-0 cis-. | cis4.->-- (b8-.) b2 |
+    d,-. a'-.-4 fis-. d-. | cis-. e-. a-.\open cis-. | cis4.->-- (b8-.) b2 |
     %% 12
     a,4-. cis-. e-. a-.-4 | d,1 ( | b4) e-. cis-. a-. | d-.-4 b-. e-. e-. |
     %% 16
@@ -508,7 +508,7 @@ violinIIduoIIImovementI = \new Voice \relative d' {
     %% 23
     gis-. gis-. gis-. b | a-.\f cis-. d8-. a'-.-4 fis-. d-. |
     %% 25
-    a4-. cis-. d8-. a'-. fis-. d-. | a4-. cis-. d-. a'-.-0 |
+    a4-. cis-. d8-. a'-. fis-. d-. | a4-. cis-. d-. a'-.\open |
     %% 27
     cis4.-- (b8-.) a2 | e4. (d8-.) cis2 | d4-.-4 b-. e-. e-. |
     %% 30
@@ -521,7 +521,7 @@ violinIIduoIIImovementI = \new Voice \relative d' {
   %% 36
   e-4 (d cis b) a4-4 (g8 e) | d4-.-4 a-. fis'-. a,-. |
   %% 38
-  g'-. a,-. cis-. e-. | d2-0\< e8 (g) fis a-4 |
+  g'-. a,-. cis-. e-. | d2\open\< e8 (g) fis a-4 |
   %% 40
   g4->\f\upbow e8-. d-. cis-. e-. a-.-4 g-. |
   %% 41
@@ -535,15 +535,15 @@ violinIIduoIIImovementI = \new Voice \relative d' {
   %% 49
   a-.-4\f e-. gis-. e-. | a-. e8-. e-. gis4-. e8-. e-. |
   %% 51
-  a8-.-4 gis-. a-.-0 b-. cis-. b-. cis-. d-. |
+  a8-.-4 gis-. a-.\open b-. cis-. b-. cis-. d-. |
   %% 52
-  e8-.-4 d-. cis-. b-. a-.-0 g-. fis-. e-. | fis4-. a-. d-. fis-. |
+  e8-.-4 d-. cis-. b-. a-.\open g-. fis-. e-. | fis4-. a-. d-. fis-. |
   %% 54
   a4.-- (a,8-.) a2 | fis8 (g a b) a (b cis d) | cis (d e fis) g4-. r |
   %% 57
   cis,,4-. e-. a-. cis-. | e4.---4 (e,8-.) e2 | cis4-. a-. e'-. a,-. |
   %% 60
-  d8 (e fis g) fis4-. r | d4-. a'-.-4 fis-. d | cis-. e-. a-.-0 cis-. |
+  d8 (e fis g) fis4-. r | d4-. a'-.-4 fis-. d | cis-. e-. a-.\open cis-. |
   %% 63
   cis4.->-- (b8-.) b2 | a,4-. cis-. fis-. a-.-4 | a4.->-- (g8-.) g2 |
   %% 66
@@ -578,7 +578,7 @@ violinIduoIIImovementII = \new Voice \relative d'' {
   %% 3
   e8-.-4 cis-. fis,-. g \( (fis) fis-. \) |
   %% 4
-  fis-. b-. d-. fis4-. r8 | d8-.\f e-.-0 fis-. g4. |
+  fis-. b-. d-. fis4-. r8 | d8-.\f e-.\open fis-. g4. |
   %% 6
   cis,8-. d-. e-. fis4. | b,8-. cis-. d-. g,-. a-. b-. |
   %% 8
@@ -590,7 +590,7 @@ violinIduoIIImovementII = \new Voice \relative d'' {
   %% 16
   fis-.\< a-. d-. fis-. e-. d-. | cis-.\f d-. g-. b-. a-. g-. |
   %% 18
-  fis-. g-. a-. e4.-4 | e8-.-0 fis-. g-. d4. |
+  fis-. g-. a-. e4.-4 | e8-.\open fis-. g-. d4. |
   d8-. e-. fis-. e-. d-. cis-. | b4.\> ais-1 |
   b-1\!_\dolce fis' |
   g8-. fis-. e-. e-.-4 d-. cis-. | b4. fis' |
@@ -603,7 +603,7 @@ violinIIduoIIImovementII = \new Voice \relative d' {
 
   b8\p\downbow r4 d4---4 (b8-.) | ais4. ais8-. cis-. fis-. |
   %% 3
-  fis8 r4 e4-- (cis8-.) | d4.-4 b8-.\< d-.-0 fis-. |
+  fis8 r4 e4-- (cis8-.) | d4.-4 b8-.\< d-.\open fis-. |
   %% 5
   b4.\f e,8-. fis-. g-. | a4.-4 d,8-. e-. fis-. |
   %% 7
@@ -617,7 +617,7 @@ violinIIduoIIImovementII = \new Voice \relative d' {
   %% 15
   g8-. cis-. b-. a-.-4 g-. e-. | d4. b8-.\< e-. gis-. |
   %% 17
-  a4.-4\f e8-. a-.-0 cis-. | d4. cis8-. b-. a-. | c4. b8-. a-. g-. |
+  a4.-4\f e8-. a-.\open cis-. | d4. cis8-. b-. a-. | c4. b8-. a-. g-. |
   %% 20
   fis4. g8-. fis-. e-. | d-.\> e-. fis-. e-. d-. cis-. |
   <b d>\!_\dolce <b d> <b d> \repeat tremolo 3 {<b d>8} |
@@ -640,15 +640,18 @@ violinIduoIIImovementIII = \new Voice \relative a' {
 
   a8-.\f\downbow d-. d-. d-. |
   %% 2
-  b_\markup{\italic "sempre staccato."} e-4 e e | cis e-0 a g |
+  b_\markup\whiteout{
+    \override #'(style . outline)
+    \override #'(thickness . 3)
+    \italic "sempre staccato."} e-4 e e | cis e\open a g |
   %% 4
   fis d b cis | a d d d | a e'-4 e e | cis a' b, gis' |
   %% 8
-  a e-0 cis a | a' c, c c | b d e fis | g b, b b | a cis d  e|
+  a e\open cis a | a' c, c c | b d e fis | g b, b b | a cis d  e|
   %% 13
   fis a, a a | g b cis d | e-4 g, g g | g4\< (fis) |
   %% 17
-  gis8-.\upbow b\downbow (e-0) gis-. | a4\f <cis, e> |
+  gis8-.\upbow b\downbow (e\open) gis-. | a4\f <cis, e> |
   %% 19
   <d e> <d e> | <cis e> <cis a'>8\downbow <cis a'> |
   %% 21
@@ -660,19 +663,22 @@ violinIduoIIImovementIII = \new Voice \relative a' {
   %% 31
   a  a'8-.-4 (a-.) | \repeat unfold 2 { a4-. a8-. (a-.) } |
   %% 34
-  a8-.-0 d-. d-. d-. |
+  a8-.\open d-. d-. d-. |
   %% 35
-  b_\markup{\italic "sempre staccato."} e-0 e e |
+  b_\markup\whiteout{
+    \override #'(style . outline)
+    \override #'(thickness . 3)
+    \italic "sempre staccato."} e\open e e |
   %% 36
-  cis e-0 a g | fis d b cis | a d d d | b e-4 e e |
+  cis e\open a g | fis d b cis | a d d d | b e-4 e e |
   %% 40
-  cis a' b, gis' | a e-0 cis a | d,\p fis g a-4 | g fis  e d |
+  cis a' b, gis' | a e\open cis a | d,\p fis g a-4 | g fis  e d |
   %% 44
   cis e fis g | fis\< e d cis | d4\f <fis a>8-. (<fis a>-.) |
   %% 47
   <g a>4 <g a> | <fis a>8 a-4 fis d | cis e a, cis |
   %% 50
-  d4-4 b8-. (b-.) | g g b b | d-0\p fis a-0 d |
+  d4-4 b8-. (b-.) | g g b b | d\open\p fis a\open d |
   %% 53
   fis <a, a'> <a a'> <a a'> | <a a'>4 <a g'>8-. (<a g'>-.) |
   %% 55
@@ -702,19 +708,19 @@ violinIIduoIIImovementIII = \new Voice \relative d' {
   %% 17
   d4 b | a8\f cis e a-4 | gis b e, gis | a4-4 (fis8) fis-. |
   %% 21
-  d d e e | a, a'-0 a a | c4-> c-> | b8 e-4 e e | dis4-> dis-> |
+  d d e e | a, a'\open a a | c4-> c-> | b8 e-4 e e | dis4-> dis-> |
   %% 26
-  e8-0 b' b b | cis,4-> cis-> | d8 a' a a | g4-> fis-> | e8-4 a, d a |
+  e8\open b' b b | cis,4-> cis-> | d8 a' a a | g4-> fis-> | e8-4 a, d a |
   %% 31
-  cis a, b cis | d-4 b cis d | e cis d-0 e | fis-. d-. e-. fis-. |
+  cis a, b cis | d-4 b cis d | e cis d\open e | fis-. d-. e-. fis-. |
   %% 35
   g_\markup{\italic "sempre staccato."} e fis g | a-4 g fis e |
   %% 37
   d fis g e | fis d e  fis | g e fis gis | a-4 fis d e |
   %% 41
-  a, cis e a-0 | a'\p c, c c | b d e-0 fis | g b, b b |
+  a, cis e a\open | a'\p c, c c | b d e\open fis | g b, b b |
   %% 45
-  a\< cis d e-0 | fis\f a fis d | cis e-4 a, cis |
+  a\< cis d e\open | fis\f a fis d | cis e-4 a, cis |
   %% 48
   d4 <a fis'>8 <a fis'> | <a g'>4 <a g'> |
   %% 50
@@ -731,8 +737,9 @@ violinIIduoIIImovementIII = \new Voice \relative d' {
 
 %%% --- Output ---
 
+\include "../composer.ily"
+
 \header {
-  composer = "Johann Wenzel Kalliwoda"
   copyright = \copyrightText
   tagline = \taglineText
   enteredby = "Philipp Büttgenbach"
