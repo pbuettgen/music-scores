@@ -1,6 +1,6 @@
 %%% -*- coding: utf-8 -*-
 %%%
-%%% Copyright © 2016 Philipp Büttgenbach
+%%% Copyright © 2016-2020 Philipp Büttgenbach
 %%%
 %%% This work is licensed under the Creative Commons
 %%% Attribution-ShareAlike 4.0 International License.  To view a copy of
@@ -63,7 +63,7 @@ define(`EmitViolinX', `
 \book {
   \bookOutputName #(string-append fileBaseName "-violin_$1")
   \header {
-    instrument = "Violin $1"
+    instrument = "Violino $1."
   }
   foreach(`duett', AllDuetts, `EmitDuettViolinX($1, duett)')
 }')
@@ -98,3 +98,8 @@ define(`EmitMidiDuo', `
 }')
 
 foreach(`duett', AllDuetts, `EmitMidiDuo(duett)')
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% eval: (LilyPond-mode)
+%%% End:
