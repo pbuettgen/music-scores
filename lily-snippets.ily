@@ -186,11 +186,11 @@ fingerNumberSpanner =
   \override TextSpanner.bound-details.left.text = \markup { \finger #FingerNumber }
   #})
 
-copyrightText = \markup \center-column {
-  {\small #(strftime "Copyright © %Y Philipp Büttgenbach"
-            (localtime (current-time)))}
-  \with-url #"http://creativecommons.org/licenses/by-sa/4.0/"
-  {\small "Creative Commons Attribution-ShareAlike 4.0"}
+copyrightText = \markup \fill-line \general-align #Y #CENTER {
+  \pad-x #4.4 \small #(strftime "Copyright © %Y Philipp Büttgenbach"
+           (localtime (current-time)))
+  \pad-x #1.8 \with-url #"http://creativecommons.org/licenses/by-sa/4.0/"
+  \epsfile #X #11 #"cc-by-sa.eps"
 }
 
 taglineText =  \markup {
