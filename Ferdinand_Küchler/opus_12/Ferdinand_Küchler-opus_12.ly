@@ -362,8 +362,8 @@ violinMovementII = \new Voice \relative b' {
   d\f a b | c8.( d16) c8( b c a) | b2 g4-4\> |
   %% 15
   fis8.( e16) fis8( d e fis) | g2\mf r4 |
-  \cueDuring #"pianoUpMovementII" #UP { \clef "alto" R2.*4 } |
-  \clef "violin" e,2\f b4 |
+  \cueDuringWithClef #"pianoUpMovementII" #UP "alto" R2.*4 |
+  e,2\f b4 |
   g( b) c-1 | e fis( e) | dis2. | g,2 b4 | a c2 | b4( dis-2) fis |
   e2.\> | b'-1\mf | gis2 e4 | c'2. | e | b | g2 e4 |
   fis2. | b, | e2\f b4 | g( b) c-1 | e fis( e) | dis2. | e2 fis4 |
