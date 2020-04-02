@@ -303,7 +303,7 @@ globalMovementII = {
 
 violinMovementII = \relative b' {
   R2. |
-  \cueDuring #"pianoUpMovementII" #DOWN { R2.*2 | r2\fermata }
+  \cueDuringWithClef #"pianoUpMovementII" #UP "alto" { R2.*2 | r2\fermata }
   r4 |
   \once \override Score.RehearsalMark.self-alignment-X = #LEFT
   \mark \markup\normalsize\solo
@@ -515,8 +515,9 @@ violinMovementIIIwdh = {
 }
 
 violinMovementIII = \relative a' {
-  \clef "alto" \partial 4. r4. |
-  \cueDuring #"pianoUpMovementIII" #DOWN { R2.*5 \clef "violin" R2. }
+  \partial 4. r4. |
+  \cueDuringWithClef #"pianoUpMovementIII" #DOWN "alto" R2.*5 |
+  \cueDuring #"pianoUpMovementIII" #DOWN R2. |
   \cueDuring #"pianoUpMovementIII" #UP {R2. | r4.} r4 a8\open\p\downbow^\solo( |
   %% 9
   d)[ r a\upbow]( d)[ r a]( | \violinMovementIIIwdh
