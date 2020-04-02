@@ -24,13 +24,14 @@ titleMovementI = #""
 
 globalMovementI = {
   \time 4/4
-  \tempo "Andante" 4=72
+  \tempo "Andante." 4=72
   \key e \minor
 }
 
 violinMovementI = \relative g'' {
-  R1 | \cadenzaOn g8_\adLib([ e a e]) g([ e d b]) e2_2\fermata \bar "|"
-  \cadenzaOff R1 |
+  \cueDuringWithClef #"pianoUpMovementI" #DOWN "tenor" R1 |
+  \cadenzaOn g8_\adLib([ e a e]) g([ e d b]) e2_2\fermata \bar "|" \cadenzaOff
+  \cueDuringWithClef #"pianoUpMovementI" #DOWN "tenor" R1 |
   \cadenzaOn g8([ e ais-4 e]) g([ e d c]) e2_2\fermata \bar "|" \cadenzaOff
   b4( e_4^2) d8( e16 d c4-2) |
   b( ais8. fis'16-3) fis2 \fermata \bar "||"
@@ -40,9 +41,11 @@ violinMovementI = \relative g'' {
     b'2-2\f a8-3\>( g fis e\!) | d8( b fis'4-3) e2 |
     b2-3\f a8\>( g fis-2 e) | d\p( b fis'8.-4 e16) e2
   }
-  \time 2/4 \tempo "Allegro" 4=116
-  R2 | dis8-.\p\< dis-. dis->( fis) | a8-.\> a-. a->^\rit( cis\!) | b2 |
-  R2 | dis8 dis8 dis8->( fis) | a-1 a_\rit a->( c-4) | b2-4 \bar "||"
+  \time 2/4 \tempo "Allegro." 4=116
+  \cueDuringWithClef #"pianoUpMovementI" #DOWN "alto" R2 |
+  dis8-.\p\< dis-. dis->( fis) | a8-.\> a-. a->^\rit( cis\!) | b2 |
+  \cueDuringWithClef #"pianoUpMovementI" #DOWN "alto" R2 |
+  dis8 dis8 dis8->( fis) | a-1 a_\rit a->( c-4) | b2-4 \bar "||"
   e,8-._\markup{\dynamic "p" \italic "con grazia"} e-. e->( g) |
   b-. b-. b->( g) | a-. a-. a( e) | g-. g-. g( e) |
   a4_\dolce\flageolet( fis8.-3 e16) | d2 | b'4( g8.-2 fis16) | e2 |
@@ -131,6 +134,8 @@ pianoUpMovementI = \relative g {
   g4) <g b,>8. fis16 | <e b g>2\f \bar "|."
 }
 
+\addQuote #"pianoUpMovementI" \pianoUpMovementI
+
 pianoDownMovementI = \relative g, {
   \voiceTwo g8 e a4 e2\fermata | \cadenzaOn s4*6 \cadenzaOff |
   g8 e ais4 e2\fermata | \cadenzaOn s4*6 \cadenzaOff |
@@ -207,7 +212,7 @@ include(`concertino.ily')
     \new StaffGroup <<
       \new Staff \with {
         midiInstrument = #"violin"
-      } { \globalMovementI   \violinMovementI
+      } { \globalMovementI \killCues \violinMovementI
         }
       \new PianoStaff \with {
         midiInstrument = #"acoustic grand"
