@@ -46,7 +46,7 @@ violinMovementI = \relative d'' {
   \cueDuring #"pianoUp" #DOWN R1*2 \bar "||"
   \key c \major \time 3/4 \tempo "Andante." 4=99
   %% 26
-  e'4--\open\downbow\p_\markup\italic "espressivo, dolce" e-- e-- |
+  e'4--\open\downbow_\markup{\dynamic "p" \italic "espress., dolce"} e-- e-- |
   g2( g4--) |
   %% 28
   \fingerNumberSpanner "3" \textSpannerDown a2 \startTextSpan c8-4( a8-3) \stopTextSpan |
@@ -108,10 +108,11 @@ violinMovementI = \relative d'' {
     b-. a-. g-. fis-.\> e-. d-. fis-. e-. d-. c-. b-. a-.\! \bar "||"
   }
   \tempo "Andante." 4=90 \time 6/8
-  g4^\markup\smaller "Stille Nacht." r8 r4. | d'8.\p( e16-4 d8) b4. |
-  d8.( e16-4 d8) b4. \bar "||" \time 3/2 \tempo "Choral." 2=86
+  g4^\markup\smaller "Stille Nacht." r8 r4. |
+  << \repeat percent 2 {d'8.( e16-4 d8) b4.} s8.\p >> \bar "||"
+  \time 3/2 \tempo "Choral." 2=86
   << {
-    d2\f^\pesante e2\open fis\< |
+    d2_\markup{\dynamic f \pesante} e2\open fis\< |
     g a b\! | \once \override Hairpin.to-barline = ##f a1.\> | g\! \bar "|."
   }
      \addlyrics {
@@ -129,7 +130,7 @@ pianoUpMovementI = \relative b' {
   %% 5
   e'8\f( d c) b\>( a g~ | g4\! a8 ais4) r8 |
   %% 7
-  g8.\pWhiteOut( a16 g8) b( a <f c>) \bar "||" \time 4/4
+  g8.\pWhiteOut( a16 g8) b( a <fis c>) \bar "||" \time 4/4
   %% 8
   <g b,>4 r r2
   \repeat volta 2 {
@@ -219,7 +220,7 @@ pianoUpMovementI = \relative b' {
      \new Voice {\voiceTwo c2. bes4} >> \oneVoice |
   <bes f' bes>2 \once \override Hairpin.to-barline = ##f
   <bes ees g bes>4--\>( <c ees f a>--) |
-  << {\voiceOne <f bes>4\!^\rit c'8_\lento( bes) a4 <ais fis d>}
+  << {\voiceOne <f bes>4\!^\lento c'8_\rit( bes) a4 <ais fis d>}
      \new Voice {\voiceTwo d,2.} >> \oneVoice \bar "||" \key g \major
   << \new Voice {\voiceTwo g1} {\voiceOne b2\p c} >> \oneVoice |
   <b g>4.( a8) g4( a) |
@@ -237,7 +238,7 @@ pianoUpMovementI = \relative b' {
      \new Voice {\voiceTwo g,1 | g2 <gis e>4 } >> \oneVoice <c a e>4 |
   <b g d>2\> <a fis d c>\! \bar "||" \time 6/8
   %% 93
-  <g d b>4 r8 r4. | b8.\p( c16 b8) g4. | b8.( c16 b8) g4. \bar "||"
+  <g d b>4 r8 r4. | << \repeat percent 2 {b8.( c16 b8) g4.} s8.\p >> \bar "||"
   \time 3/2 \clef "alto"
   <d a fis>2\f^\pesante <e a, g> <fis d a>\< |
   <g d g,>2 <a fis d a> <b g d b>\! |
@@ -311,7 +312,7 @@ pianoDownMovementI = \relative d' {
     \repeat unfold 5 {cis->( d g,)} |
     \repeat percent 2 \repeat percent 2 << s8\f \repeat unfold 3 {cis16->( d g,)} >>  |
   }
-  \bar "||" \time 3/2
+  \bar "||" \time 3/2 \clef "subbass"
   <d' d,>2 <cis cis,> <c c,> | <b b,> <a a,> <g g,> |
   <c c,>1( <d d,>2) | <g g,>1( g,,2->) \bar "|."
 }
