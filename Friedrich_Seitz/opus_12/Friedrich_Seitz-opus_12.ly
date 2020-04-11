@@ -37,13 +37,13 @@ tranquillo = \markup {\italic #"tranquillo."}
 tranquilloEtDolce = \markup \italic #"tranquillo et dolce."
 tutti = \markup {\italic \caps "Tutti."}
 
-globalMovementI = {
+globalMovementIx = {
   \time 4/4
   \tempo "Allegro risoluto." 4=117
   \key g \minor
 }
 
-violinMovementI = \relative g {
+violinMovementIx = \relative g {
   \cueDuring #"pianoUp" #DOWN { \partial 4 r4^\tutti }
   \cueDuring #"pianoUp" #UP   { R1*4 }
   \cueDuring #"pianoUp" #DOWN { R1*7 }
@@ -212,7 +212,7 @@ violinMovementI = \relative g {
   \cueDuring #"pianoUp" #DOWN { R1*4 \bar "||" }
 }
 
-pianoUpMovementI = \relative d' {
+pianoUpMovementIx = \relative d' {
   \partial 4 d8.\f d16 | g4.-> d8-. g-. a-. bes-. c-. |
   %% 2
   d8.-- <g g,>16-. <g g,>2-> d8.--\< d16-. |
@@ -453,7 +453,7 @@ pianoUpMovementI = \relative d' {
   <bes a f d>2--\pp^\rit r \bar "||"
 }
 
-pianoDownMovementI = \relative d {
+pianoDownMovementIx = \relative d {
   \partial 4 d8. d16 |
   %% 1
   <g g,>4.-> d8-. <g g,>-. <a a,>-. <bes bes,>-. <c c,>-. |
@@ -666,13 +666,13 @@ pianoDownMovementI = \relative d {
 
 %%% ---------------------------
 
-globalMovementII = {
+globalMovementIIx = {
   \tempo "Adagio." 8 = 88
   \time 3/8
   \key ees \major
 }
 
-violinMovementII = \relative a' {
+violinMovementIIx = \relative a' {
   %% 120
   bes8_\markup {\dynamic "p" \italic "espressivo." } ( g aes) |
   %% 121
@@ -757,7 +757,7 @@ violinMovementII = \relative a' {
   <ees g,>8 r r \mark \markup{\normalsize \fermata} \bar "||"
 }
 
-pianoUpMovementII = \relative a' {
+pianoUpMovementIIx = \relative a' {
   %% 120
   <bes g>8\p( <g ees> <aes f>) |
   <bes g>8\<( <g ees>4) |
@@ -906,7 +906,7 @@ pianoUpMovementII = \relative a' {
   <ees, bes g>\arpeggio r r \bar "||"
 }
 
-pianoDownMovementII = \relative b {
+pianoDownMovementIIx = \relative b {
   %% 120
   <bes ees,>4-- <bes ees,>8 |
   <bes ees,>4. |
@@ -992,13 +992,13 @@ pianoDownMovementII = \relative b {
 
 %%% ---------------------------
 
-globalMovementIII = {
+globalMovementIIIx = {
   \tempo "Allegro vivace." 4 = 120
   \time 2/4
   \key g \major
 }
 
-violinMovementIII = \relative d' {
+violinMovementIIIx = \relative d' {
   \cueDuring #"pianoUp" #DOWN {R2*9}
   \cueDuring #"pianoUp" #UP   {R2*5}
   \cueDuring #"pianoUp" #DOWN {R2*3}
@@ -1316,7 +1316,7 @@ d'16\p\<( fis g b d b') a-. g-.\! | e16( d b) g-. e8^>\f( d) |
    \repeat percent 2 <g g'>2-> | <g d' b' g'>4->\ff r4 \bar "|."
 }
 
-pianoUpMovementIII = \relative e' {
+pianoUpMovementIIIx = \relative e' {
   %% 199
   << \repeat unfold 2 \repeat tremolo 8 {ees32 d}
      s32\f^\markup \italic #"quassi trillo." >> |
@@ -1579,7 +1579,7 @@ pianoUpMovementIII = \relative e' {
   <b d g>4-.\fz r4 \bar "|."
 }
 
-pianoDownMovementIII = \relative a {
+pianoDownMovementIIIx = \relative a {
   %% 199
   \repeat unfold 2 { R2*3 | <a fis ees c>2\f } | 
   \repeat unfold 2 { R2 | r4 <a fis ees c>4->\f } |
@@ -1726,16 +1726,38 @@ pianoDownMovementIII = \relative a {
   <g g,>4-. r \bar "|."
 }
 
-   \addQuote #"pianoUp" {\pianoUpMovementI \pianoUpMovementII \pianoUpMovementIII}
+%%% ----------------
+
+   titleMovementI = ##f
+
+   globalMovementI = {}
+
+   violinMovementI = {
+     \globalMovementIx \violinMovementIx
+     \globalMovementIIx \violinMovementIIx
+     \globalMovementIIIx \violinMovementIIIx
+   }
+
+   pianoUpMovementI = {
+     \globalMovementIx \pianoUpMovementIx
+     \globalMovementIIx \pianoUpMovementIIx
+     \globalMovementIIIx \pianoUpMovementIIIx
+   }
+
+   \addQuote #"pianoUp" \pianoUpMovementI
+
+   pianoDownMovementI = {
+     \globalMovementIx \pianoDownMovementIx
+     \globalMovementIIx \pianoDownMovementIIx
+     \globalMovementIIIx \pianoDownMovementIIIx
+   }
 
 %%% ------------
 
-   \include "../composer.ily"
+   \include "composer.ily"
 
 \header {
   arranger = ##f
-  copyright = \copyrightText
-  tagline = \taglineText
   enteredby = "Philipp Büttgenbach"
   opus = "Opus 12"
   source = "http://imslp.org/"
@@ -1744,65 +1766,15 @@ pianoDownMovementIII = \relative a {
 
 \include "paper.ily"
 
-\book {
-  \bookOutputName #"Friedrich_Seitz-opus_12"
-  \bookOutputSuffix #"piano"
+   #(define fileBaseName "Friedrich_Seitz-opus_12")
 
-  \score {
-    <<
-      \new Staff \with {
-        instrumentName = "Violino."
-        \magnifyStaff \violinStaffMagFactor
-      } {
-        \killCues {
-          \globalMovementI   \violinMovementI
-          \globalMovementII  \violinMovementII
-          \globalMovementIII \violinMovementIII
-        }
-      }
-      \new PianoStaff \with {
-        instrumentName = "Piano."
-        \accidentalStyle piano-cautionary
-      } <<
-        \new Staff = "up" {
-          \globalMovementI   \pianoUpMovementI
-          \globalMovementII  \pianoUpMovementII
-          \globalMovementIII \pianoUpMovementIII
-        }
-        \new Staff = "down" {
-          \clef #"bass"
-          \globalMovementI   \pianoDownMovementI
-          \globalMovementII  \pianoDownMovementII
-          \globalMovementIII \pianoDownMovementIII
-        }
-      >>
-    >>
-  }
-}
-
-   \book {
-     \bookOutputName #"Friedrich_Seitz-opus_12"
-  \bookOutputSuffix #"violin"
-
-  \score {
-    \new Staff \with {
-      \accidentalStyle modern-cautionary
-    } {
-      \compressFullBarRests
-      \globalMovementI   \violinMovementI
-      \globalMovementII  \violinMovementII
-      \globalMovementIII \violinMovementIII
-    }  
-  }
-     \header {
-       instrument = "Violino."
-     }
-}
+   define(`Movements', `(I)')
+include(`concertino.ily')
 
 \include "articulate.ly"
 
 \book {
-  \bookOutputName #"Friedrich_Seitz-opus_12"
+  \bookOutputName \fileBaseName
   \score {
     \articulate \unfoldRepeats
     \new StaffGroup <<
@@ -1811,8 +1783,6 @@ pianoDownMovementIII = \relative a {
       } {
         \killCues {
           \globalMovementI   \violinMovementI
-          \globalMovementII  \violinMovementII
-          \globalMovementIII \violinMovementIII
         }
       }
       \new PianoStaff \with {
@@ -1820,13 +1790,9 @@ pianoDownMovementIII = \relative a {
       } <<
         \new Staff = "up" {
           \globalMovementI \pianoUpMovementI
-          \globalMovementII \pianoUpMovementII
-          \globalMovementIII \pianoUpMovementIII
         }
         \new Staff = "down" {
           \globalMovementI \pianoDownMovementI
-          \globalMovementII \pianoDownMovementII
-          \globalMovementIII \pianoDownMovementIII
         }
       >>
     >>

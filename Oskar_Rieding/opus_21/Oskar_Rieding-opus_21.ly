@@ -13,6 +13,8 @@
 
 moltoRit = \markup {\italic #"molto rit."}
 
+titleMovementI = ##f
+
 globalMovementI = {
   \time 4/4
   \tempo "Andante sostenuto." 4=96
@@ -724,12 +726,10 @@ pianoDownMovementI = \new Voice \relative e, {
 
 %%% ------------
 
-\include "../composer.ily"
+\include "composer.ily"
 
 \header {
   arranger = ##f
-  copyright = \copyrightText
-  tagline = \taglineText
   enteredby = "Philipp Büttgenbach"
   opus = "Opus 21"
   source = "http://imslp.org/"
@@ -741,53 +741,8 @@ pianoDownMovementI = \new Voice \relative e, {
 
 fileBaseName = "Oskar_Rieding-opus_21"
 
-define(`PianoMovement', `\score {
-  <<
-    \new Staff \with {
-      instrumentName = "Violino."
-      \magnifyStaff \violinStaffMagFactor
-    } {
-      \globalMovement$1 \killCues\violinMovement$1
-    }
-    \new PianoStaff \with {
-      instrumentName = "Piano."
-      \accidentalStyle piano-cautionary
-      connectArpeggios = ##t
-    } <<
-      \new Staff = "up" {
-        \globalMovement$1 \pianoUpMovement$1
-      }
-      \new Staff = "down" {
-        \globalMovement$1 \clef bass \pianoDownMovement$1
-      }
-    >>
-  >>
-}')
-
-\book {
-  \bookOutputName   \fileBaseName
-  \bookOutputSuffix "piano"
-  PianoMovement(`I')
-}
-
-define(`ViolinMovement', `
-\score {
-  \new Staff \with {
-    \accidentalStyle modern-cautionary
-  } {
-    \compressFullBarRests
-    \globalMovement$1 \violinMovement$1
-  }
-}')
-
-\book {
-  \bookOutputName   \fileBaseName
-  \bookOutputSuffix "violin"
-  ViolinMovement(`I')
-  \header {
-    instrument = "Violino."
-  }
-}
+define(`Movements', `(I)')
+include(`concertino.ily')
 
 \include "articulate.ly"
 

@@ -51,15 +51,15 @@ breatheFermata = \markup {
   }
 }
 
-titleMovementI = #""
+titleMovementIx = #""
 
-globalMovementI = {
+globalMovementIx = {
   \time 4/4
   \tempo "Allegro moderato." 4=114
   \key d \major
 }
 
-violinMovementI = \relative d'' {
+violinMovementIx = \relative d'' {
   \cueDuring #"pianoUp" #DOWN R1*2
   \cueDuring #"pianoUp" #UP   R1*2
   \cueDuring #"pianoUp" #DOWN R1*2
@@ -158,7 +158,7 @@ violinMovementI = \relative d'' {
   \bar "||"
 }
 
-pianoUpMovementI = \relative d' {
+pianoUpMovementIx = \relative d' {
   d4.->\f a8-. d-. a-. d-. e-. | fis4.-- e8-. d4-. a' |
   <fis a fis'>2-> <a d>-> | <a cis e>2. r4 |
   %% 5
@@ -340,7 +340,7 @@ pianoUpMovementI = \relative d' {
   <d bes f>2_\markup\whiteout\pad-around #.5 \morendo <c g e>\fermata \bar "||"
 }
 
-pianoDownMovementI = \relative d {
+pianoDownMovementIx = \relative d {
   d4.-> a8-. d-. a-. d-. e-. | fis4.->-- e8-. d4-. r |
   <d d,>2-> <fis fis,>-> | \repeat tremolo 8 {a,32 a'} a,4 r |
   %% 5
@@ -442,15 +442,15 @@ pianoDownMovementI = \relative d {
 
 %%% --------------------------------------------------------
 
-titleMovementII = #""
+titleMovementIIx = #""
 
-globalMovementII = {
+globalMovementIIx = {
   \time 3/4
   \tempo "Andante cantabile" 4=96
   \key f \major
 }
 
-violinMovementII = \relative c'' {
+violinMovementIIx = \relative c'' {
   c2\p^\espressione c4 | d( c) a | c4.( b8) bes[ ( a ) ] | g2 f4-- |
   %% 5
   e-- d'\>( c\!) | e,-- c'\>( bes\!) | bes4.\> b8( c bes\!) |
@@ -502,7 +502,7 @@ violinMovementII = \relative c'' {
   f2.~\pp^\morendo | f~ | f4 r r \bar "||"
 }
 
-pianoUpMovementII = \new Voice \relative f' {
+pianoUpMovementIIx = \relative f' {
   <f a,>2\p <f a,>4 |
   %% 2 / 3
   << {\voiceOne f2 a4 | a( g) }
@@ -607,7 +607,7 @@ pianoUpMovementII = \new Voice \relative f' {
   <f a, f>2.\ppWhiteOut^\morendo | <f a, f>2.~ | <f a, f>4 r r \bar "||"
 }
 
-pianoDownMovementII = \new Voice \relative f, {
+pianoDownMovementIIx = \relative f, {
   \repeat percent 2 { f4( f'2) } | fis4( g) c | bes8( a g4) des |
   %% 5
   \repeat percent 2 {
@@ -677,15 +677,15 @@ pianoDownMovementII = \new Voice \relative f, {
 
 %%% --------------------------------------------------------
 
-titleMovementIII = #"Rondo"
+titleMovementIIIx = #"Rondo"
 
-globalMovementIII = {
+globalMovementIIIx = {
   \tempo "Allegretto" 4 = 112
   \time 2/4
   \key d \major
 }
 
-violinMovementIII = \relative c'' {
+violinMovementIIIx = \relative c'' {
   \cueDuring #"pianoUp" #DOWN R2*9
   \cueDuring #"pianoUp" #UP   { R2*3 | r4 }
   %% 12
@@ -836,7 +836,7 @@ violinMovementIII = \relative c'' {
   <d d,>4-. r | <fis a, d,>-.\ff\downbow r | d,-.\downbow r \bar "|."
 }
 
-pianoUpMovementIII = \new Voice \relative f' {
+pianoUpMovementIIIx = \relative f' {
   r4 r8 f8\f( | e) dis-. e-. d-. |
   %% 2
   c16-. d-. c-. b-. a8-. e'-.\p( | <a c,>4.) <c e,>8 |
@@ -988,7 +988,7 @@ pianoUpMovementIII = \new Voice \relative f' {
   <d a fis d>4-. r | <fis d a>\ffWhiteOut r | d,,\ffWhiteOut r \bar "|."
 }
 
-pianoDownMovementIII = \new Voice \relative f {
+pianoDownMovementIIIx = \relative f {
   r4 r8 f8( | e) dis-. e-. d-. | c16-. d-. c-. b-. a8-. r |
   %% 3
   r e'8( a4) | <gis e>4.\fermata f8( | e) dis-. e-. d-. |
@@ -1083,24 +1083,27 @@ pianoDownMovementIII = \new Voice \relative f {
 
 %% --------
 
-violin = \new Voice {
-  \globalMovementI   \violinMovementI
-  \globalMovementII  \violinMovementII
-  \globalMovementIII \violinMovementIII
+titleMovementI = ##f
+globalMovementI = {}
+
+violinMovementI = {
+  \globalMovementIx   \violinMovementIx
+  \globalMovementIIx  \violinMovementIIx
+  \globalMovementIIIx \violinMovementIIIx
 }
 
-pianoUp = \new Voice {
-  \globalMovementI   \pianoUpMovementI
-  \globalMovementII  \pianoUpMovementII
-  \globalMovementIII \pianoUpMovementIII
+pianoUpMovementI = {
+  \globalMovementIx   \pianoUpMovementIx
+  \globalMovementIIx  \pianoUpMovementIIx
+  \globalMovementIIIx \pianoUpMovementIIIx
 }
 
-\addQuote #"pianoUp" \pianoUp
+\addQuote #"pianoUp" \pianoUpMovementI
 
-pianoDown = \new Voice {
-  \globalMovementI   \pianoDownMovementI
-  \globalMovementII  \pianoDownMovementII
-  \globalMovementIII \pianoDownMovementIII
+pianoDownMovementI = {
+  \globalMovementIx   \pianoDownMovementIx
+  \globalMovementIIx  \pianoDownMovementIIx
+  \globalMovementIIIx \pianoDownMovementIIIx
 }
 
 %%% --------------------------------------------------------
@@ -1108,8 +1111,6 @@ pianoDown = \new Voice {
 \header {
   arranger = ##f
   composer = "Friedrich Seitz"
-  copyright = \copyrightText
-  tagline = \taglineText
   enteredby = "Philipp Büttgenbach"
   opus = "Opus 22"
   source = "http://imslp.org/"
@@ -1120,66 +1121,30 @@ pianoDown = \new Voice {
 
 #(define fileBaseName "Friedrich_Seitz-opus_22")
 
-pianoScore = {
-  <<
-    \new Staff \with {
-      fontSize = #-3
-      \override StaffSymbol.staff-space = #(magstep -3)
-      midiInstrument = #"violin"
-      instrumentName = #"Violin"
-    } {
-      \override BreathingSign.text = \markup {
-        \musicglyph #"scripts.caesura.straight"
-      }
-      \killCues \violin
-    }
-    \new PianoStaff \with {
-      midiInstrument = #"acoustic grand"
-      instrumentName = #"Piano"
-    } <<
-      \new Staff = "up" {
-        \accidentalStyle modern-cautionary
-        \pianoUp
-      }
-      \new Staff = "down" {
-        \clef "bass"
-        \accidentalStyle modern-cautionary
-        \pianoDown
-      }
-    >>
-  >>
-}
-
-\book {
-  \bookOutputName \fileBaseName
-  \bookOutputSuffix #"piano"
-
-  \score { \pianoScore }
-}
-
-\book {
-  \bookOutputName \fileBaseName
-  \bookOutputSuffix #"violin"
-
-  \score {
-    \new Staff {
-      \override BreathingSign.text = \markup {
-        \musicglyph #"scripts.caesura.straight"
-      }
-      \accidentalStyle modern-cautionary
-      \compressFullBarRests
-      \violin
-    }
-  }
-}
+define(`Movements', `(I)')
+include(`concertino.ily')
 
 \include "articulate.ly"
 
 \book {
   \bookOutputName \fileBaseName
-
   \score {
-    \articulate \unfoldRepeats \pianoScore
+    \articulate \unfoldRepeats
+    \new StaffGroup <<
+      \new Staff \with {
+        midiInstrument = #"violin"
+      } { \globalMovementI   \killCues\violinMovementI }
+      \new PianoStaff \with {
+        midiInstrument = #"acoustic grand"
+      } <<
+        \new Staff = "up" {
+          \globalMovementI \pianoUpMovementI
+        }
+        \new Staff = "down" {
+          \globalMovementI \pianoDownMovementI
+        }
+      >>
+    >>
     \midi{}
   }
 }
