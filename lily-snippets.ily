@@ -186,17 +186,16 @@ fingerNumberSpanner =
   \override TextSpanner.bound-details.left.text = \markup { \finger #FingerNumber }
   #})
 
-copyrightText = \markup \fill-line \general-align #Y #CENTER {
-  \pad-x #4.4 \small \sans #(strftime "Copyright © %Y Philipp Büttgenbach"
-           (localtime (current-time)))
-  \pad-x #1.8 \with-url #"http://creativecommons.org/licenses/by-sa/4.0/"
-  \epsfile #X #11 #"cc-by-sa.eps"
+\header {
+  copyright = \markup \fill-line \general-align #Y #CENTER {
+    \pad-x #4.4 \tiny \sans #(strftime "Copyright © %Y Philipp Büttgenbach"
+                               (localtime (current-time)))
+    \pad-x #1.8 \with-url #"http://creativecommons.org/licenses/by-sa/4.0/"
+    \epsfile #X #11 #"cc-by-sa.eps"
+  }
 }
 
-taglineText =  \markup {
-  \with-url #"http://www.lilypond.org/"
-  {\small "LilyPond … music notation for everyone!"}
-}
+\include "tagline.ily"
 
 %%% Local Variables:
 %%% coding: utf-8
