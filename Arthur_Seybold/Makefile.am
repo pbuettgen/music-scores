@@ -1,21 +1,13 @@
-#! /bin/sh
-# \
-exec make -I../.. -f "$0" "$@"
-#
 # -*- coding: utf-8 -*-
 #
-# Copyright © 2018 Philipp Büttgenbach
+# Copyright © 2020-2020 Philipp Büttgenbach
 #
 # This work is licensed under the Creative Commons
 # Attribution-ShareAlike 4.0 International License.  To view a copy of
 # this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 #
 
-piece = Friedrich_Seitz-opus_22
-
-archive_extra_files = 
-
-include rules.make
+SUBDIRS = opus_89
 
 # Local Variables:
 # coding: utf-8
