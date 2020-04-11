@@ -821,12 +821,10 @@ pianoDownMovementIII = \relative a, {
 
 %%% ------------
 
-\include "../composer.ily"
+\include "composer.ily"
 
 \header {
   arranger = ##f
-  copyright = \copyrightText
-  tagline = \taglineText
   enteredby = "Philipp Büttgenbach"
   opus = "Opus 18"
   source = "http://imslp.org/"

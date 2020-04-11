@@ -963,11 +963,9 @@ violinIIduoIImovementIII = \new Voice \relative d' {
 
 %%% --- Output ---
 
-\include "../composer.ily"
+\include "composer.ily"
 
 \header {
-  copyright = \copyrightText
-  tagline = \taglineText
   enteredby = "Philipp Büttgenbach"
   opus = "Opus 180"
   source = "http://www.imslp.org/"

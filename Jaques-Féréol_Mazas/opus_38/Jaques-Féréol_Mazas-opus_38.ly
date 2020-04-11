@@ -3163,12 +3163,10 @@ violinIIduoVImovementIII = \new Voice \relative c' {
 
 %%% ------------
 
-\include "../composer.ily"
+\include "composer.ily"
 
 \header {
   arranger = "Revus et doigtés par József Bloch."
-  copyright = \copyrightText
-  tagline = \taglineText
   enteredby = "Philipp Büttgenbach"
   opus = "Opus 38"
   source = "http://imslp.org/"

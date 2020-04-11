@@ -709,11 +709,9 @@ violinIIduoIIImovementIII = \new Voice \relative g {
 
 %%% --- Output ---
 
-\include "../composer.ily"
+\include "composer.ily"
 
 \header {
-  copyright = \copyrightText
-  tagline = \taglineText
   enteredby = "Philipp Büttgenbach"
   opus = "Opus 179"
   source = "http://www.imslp.org/"

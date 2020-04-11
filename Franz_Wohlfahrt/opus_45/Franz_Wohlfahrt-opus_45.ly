@@ -11,7 +11,6 @@
 
 \include "lily-snippets.ily"
 
-Composer = "Franz Wohlfahrt"
 Opus = "Opus 45"
 
 studyIprologI = \markup \columns {
@@ -3641,13 +3640,11 @@ studyLX = \new Voice \relative c'' {
 
 %%% ------------
 
+   \include "composer.ily"
+
 \header {
   arranger = "Edited by Gaston Blay"
-  composer = \Composer
-  copyright = \copyrightText
-  tagline = \taglineText
   enteredby = "Philipp Büttgenbach"
-%  opus = \Opus
   source = "http://imslp.org/"
   title = "Sixty Studies For the Violin"
 }

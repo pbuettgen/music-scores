@@ -1971,11 +1971,10 @@ violinIIduoVImovementII = \new Voice \relative e' {
 
 %%% ------------
 
+\include "composer.ily"
+
 \header {
   arranger = ##f
-  composer = "Ignace Pleyel"
-  copyright = \copyrightText
-  tagline = \taglineText
   enteredby = "Philipp Büttgenbach"
   opus = "Opus 8"
   source = "http://imslp.org/"

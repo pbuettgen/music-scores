@@ -319,11 +319,10 @@ pianoDownMovementI = \relative d' {
 
 %%% ------------
 
-\include "../composer.ily"
+\include "composer.ily"
 
 \header {
   arranger = ##f
-  copyright = \copyrightText
   tagline = ##f
   enteredby = "Philipp Büttgenbach"
   opus = "Opus 89"

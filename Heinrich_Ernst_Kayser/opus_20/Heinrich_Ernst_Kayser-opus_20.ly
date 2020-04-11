@@ -11,7 +11,6 @@
 
 \include "lily-snippets.ily"
 
-Composer = "Heinrich Ernst Kayser"
 Opus = "Opus 20"
 
 studyXXXVIprologI = ##f
@@ -4630,6 +4629,8 @@ studyI = \new Voice \relative c'' {
 
 %%% ------------
 
+\include "composer.ily"
+
 \header {
   arranger = \markup \column {
     \halign #RIGHT
@@ -4637,11 +4638,7 @@ studyI = \new Voice \relative c'' {
     \halign #RIGHT
     "Overwhelming instructions removed by Philipp Büttgenbach"
   }
-  composer = \Composer
-  copyright = \copyrightText
-  tagline = \taglineText
   enteredby = "Philipp Büttgenbach"
-%  opus = \Opus
   source = "http://imslp.org/"
   title = \markup \pad-around #3. \center-column {
     "Thirty-Six Elementary and Progressive Studies"
