@@ -13,6 +13,7 @@
 
 pMaEspressivo = \markup {\dynamic "p" \italic "ma espressivo"}
 pocoRit = \markup {\italic #"poco rit."}
+sempreF = \markup {\italic #"sempre" \dynamic #"f"}
 simile = \markup {\italic #"simile"}
 tranquillo= \markup {\italic #"tranquillo"}
 
@@ -109,9 +110,11 @@ pianoUpMovementI = \new Voice \relative a {
   \partial 2 r8 a8-.\f b-. cis-. | d2->~ d8 e-. fis-. g-. |
   %% 2
   a2->~ a8 d-. cis-. d-. | b4-- a-- g-- fis-- | e-- d-- cis-- d-- |
-  <e d b>2( <d b'>4-.) r4 | <e d b>2( <e d'>4-.) r4 |
+  %% 5
+  << {\voiceOne e2( b'4-.)} \new Voice {\voiceTwo <d,~ b>2 d4} >> \oneVoice r4 |
+  << {\voiceOne e2( <e d'>4-.)} \new Voice {\voiceTwo <d b>2} >> \oneVoice r4 |
   %% 7
-  a,4-. <a' g'>2( e'4 | d4) <cis g>\> <b g> <a g> | <a fis d>2.\mf r4 |
+  a4-. <a' g'>2( e'4 | d4) <cis g>\> <b g> <a g> | <a fis d>2.\mf r4 |
   <a fis d>2. <b g d>4 |
   %% 11
   << {\voiceOne <b g>4( d a)}
@@ -287,7 +290,7 @@ pianoDownMovementI = \new Voice \relative a, {
   %% 12
   \repeat percent 2 {a2. a8 gis} | a2. cis8 e | a2 a, |
   %% 16
-  <d d,>2~ <d d,>4 r | d2. d4 | cis2. cis4 | b2 e,4( e') | a, d cis a |
+  <d d,>2~ 4 r | d2. d4 | cis2. cis4 | b2 e,4( e') | a, d cis a |
   %% 21
   d,2. d'4 | cis b cis d | e e, e'2 | a,2 a, | a' g | fis d |
   %% 27
@@ -319,7 +322,7 @@ pianoDownMovementI = \new Voice \relative a, {
   r4 <a e'> <b e> <cis e> | d,2~ d8 a b cis | d2. g4 | g fis d2 |
   \repeat percent 2 {a2. a8 gis} | a2. cis8 e | a2 a, |
   %% 85
-  <d d,>2~ <d d,>4 r | d2. d4 | cis2. cis4 | b2 e,4( e') |
+  <d d,>2~ 4 r | d2. d4 | cis2. cis4 | b2 e,4( e') |
   %% 89
   a, d cis a | d,2. d'4 | cis4 b cis d | e e, e'2 | a, a, |
   %% 94
@@ -529,7 +532,8 @@ violinMovementIII = \relative a' {
   a4.\mf\downbow d8( cis) b8-. | a4. fis | e g8( fis e) |
   d( e) fis-. e4. | a4. d8( cis) b-. | e4. cis |
   fis8( e fis) gis( fis gis) | a4.~ a8 r r |
-  a4.-1\f d8( a) b-. | a4. fis-3 | e g8( fis e) | d( e) fis-. e4. |
+  %% 60
+  a4.-1\f d8( cis) b-. | a4. fis-3 | e g8( fis e) | d( e) fis-. e4. |
   %% 64
   a8( b a) d( cis b) | a4. fis-3 |
   %% 66
@@ -573,7 +577,7 @@ violinMovementIII = \relative a' {
   a4.-1\downbow\f d8( cis) b-. | a4. fis-3 | e g8( fis e) |
   d( e) fis-. e4. | a8( b a) d( cis b) | a4. fis |
   e8-! fis-! g-! a-! b-! cis-! |
-  d8-.^"o. H."_\markup{\italic "sempre" \dynamic "f"} a8-. fis-. d-. a-.\open fis-. |
+  d8-.^"o. H."_\sempreF a8-. fis-. d-. a-.\open fis-. |
   d fis a\open d-1 fis a | d b fis d-1 b-1 fis | d fis b d fis b |
   g e b g e b | g b e g b e\open | g e cis a g e | a, e' g a cis e |
   d4. r | <cis e>4\ff\downbow r8 r4. |
@@ -630,7 +634,7 @@ pianoUpMovementIII = \new Voice \relative f' {
      \new Voice {\voiceTwo <e,~ c>4. <e cis> | <dis b>2.} >> \oneVoice |
   %% 72
   <g e b>4.\mf <fis dis a> | <e b g> <g e b> | <fis dis b> <b fis b,> |
-  <g e b>4.~ <g e b>8 r r | <g e b>4. <fis dis a> |
+  <g e b>4.~ 8 r r | <g e b>4. <fis dis a> |
   %% 77
   \repeat unfold 2 <g e b> | <g e a,> <a g cis,> | <a fis d>4 d,8( d'4) d8 |
   d8( e d f e d | <cis a>4) a8( a'4.) |
@@ -652,17 +656,19 @@ pianoUpMovementIII = \new Voice \relative f' {
   << {\voiceOne a'4.~( a4 gis8)}
      \new Voice {\voiceTwo <d a>4.~ <d a>} >> \oneVoice |
   %% 91
-  <cis a'>4.~ <cis a'>8 r r |
+  <cis a'>4.~ 8 r r |
   %% 92
   \change Staff = "down" \voiceOne
-  <a f>4. <g bes> \change Staff = "up" \oneVoice |
+  <a f>4. <g bes> |
   %% 93
-  <f~ a> << {\voiceTwo f4.} \new Voice {\voiceOne f'8( e d)} >> \oneVoice |
+  << \new Voice {\voiceOne <f~ a>4. f4.}
+     {s4. \change Staff="up" f'8( e d)} >> \oneVoice |
   %% 94
   <cis a>4. <bes e g>4 <a d f>8 | <a cis e>4. <e' a cis> |
   %% 96
   <d a' d> <d f a> | <d g d'>4. r | <e d bes> <e cis a> | <d f,>\> r |
-  <f a>\p <e g bes> | <f a>4.~ <f a>8 r r | <a d f>4.\pp( <bes e> |
+  %% 100
+  <f a>\p <e g bes> | <f a>4.~ 8 r r | <a d f>4.\pp( <bes e> |
   <a cis>2.) \bar "||" \key d \major
   fis8\mf d a g' d b | fis' d a a' d, a | \repeat unfold 2 {e' cis a} |
   %%
@@ -700,7 +706,11 @@ pianoUpMovementIII = \new Voice \relative f' {
   \repeat unfold 2 {e' cis a} |
   d a d << {\voiceOne e fis g} \new Voice {\voiceTwo cis,4.} >> \oneVoice |
   fis8 d a f' d gis, | fis' d a fis' dis a | g' e b g' cis, a |
-  <a d fis>4_\markup{\italic "sempre" \dynamic "f"} r8 r4. |
+  <a d fis>4_\markup {
+    \override #'(style . outline)
+    \override #'(thickness . 3)
+    \whiteout \sempreF
+  } r8 r4. |
   \repeat unfold 2 {<d fis a>4 r8} | <d fis b>4.-> r |
   <d fis b>4 r8 <fis d b>4 r8 | <g e b>4.-> r |
   \repeat unfold 2 {<g e b>4 r8} | <a g e cis>4.-> r |
@@ -734,15 +744,15 @@ pianoDownMovementIII = \new Voice \relative d {
   %% 57
   cis2. | b4. e | a,2. | d | d,4. fis | a2. | fis4. a | d2. | d4. b |
   %% 66
-  e a, | d,4 d'8 cis4 d8 | <b a'>2. | <e g> | a,4. ais | b2. | e | e, |
+  e a, | d,4 d'8 cis4 c8 | <b a'>2. | <e g> | a,4. ais | b2. | e | e, |
   b'4. dis | e8( e,) g-. b-. e-. fis-. | e4. e, | e' d | cis a |
   d~ d4 r8 | <bes' d>2. | <a e'> | <d, bes> |
   <cis a> \bar "||" \key d \minor \voiceTwo d,2. | d \oneVoice |
   %% 86
   d4.~ d8 f-. g-. | a4. bes |
   %% 88
-  a cis | d c | bes2. | a4. g8( f e) | \voiceTwo d2.~ \oneVoice |
-  d4. d' | a4. cis4 d8 |
+  a cis | d c | bes2. | a4. g8( f e) | \voiceTwo d2.~ |
+  d4. d' \oneVoice | a4. cis4 d8 |
   a4. g' | f d | bes r | g a | d,8( f a) d( f a) | d2. | d4.~ d8 r r |
   d4. g, | a( a,) \bar "||" \key d \major
   %% 104
