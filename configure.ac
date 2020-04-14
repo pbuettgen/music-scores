@@ -54,13 +54,7 @@ AC_SUBST([LYFLAGS_EXTRA])
 AC_SUBST([LYINCLUDE])
 AC_SUBST([LYRUN])
 
-git_commitish="xxxxxxx"
-AM_COND_IF([MAINTAINER_MODE],
-    [git_commitish=$(git rev-parse --short HEAD)])
-AC_SUBST([git_commitish])
-
 AC_CONFIG_FILES([
-    tagline.ily
     Makefile
     Arthur_Seybold/Makefile
     Arthur_Seybold/opus_89/Makefile
