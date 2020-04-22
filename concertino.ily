@@ -30,7 +30,7 @@ define(`PianoMovement', `
     >>
   >>
   \header {
-    piece = \titleMovement$1
+    piece = \markup\larger\caps\titleMovement$1
   }
 }')
 
@@ -43,7 +43,7 @@ define(`ViolinMovement', `
     \globalMovement$1 \violinMovement$1
   }
   \header {
-    piece = \titleMovement$1
+    piece = \markup\larger\caps\titleMovement$1
   }
 }')
 

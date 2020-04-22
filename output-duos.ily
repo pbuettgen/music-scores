@@ -22,7 +22,7 @@ define(`EmitStaffViolinX', `
 define(`EmitMovementFull', `
 \score{
   \header {
-    piece = \titleduo$1movement$2
+    piece = \markup\larger\caps\titleduo$1movement$2
   }
   \new StaffGroup <<
     foreach(`violin', AllViolins, `EmitStaffViolinX($1, $2, violin)')
@@ -43,7 +43,7 @@ define(`EmitDuettFull', `
 define(`EmitMovementViolinX', `
 \score{
   \header {
-    piece = \titleduo$2movement$3
+    piece = \markup\larger\caps\titleduo$2movement$3
   }
   EmitStaffViolinX($2, $3, $1)
   \layout {

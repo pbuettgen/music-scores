@@ -52,7 +52,7 @@
 
   scoreTitleMarkup = \markup \column {
     \on-the-fly \print-all-headers { \bookTitleMarkup \hspace #1 }
-    \larger \fromproperty #'header:piece
+    \fromproperty #'header:piece
   }
 
   oddHeaderMarkup = \markup \fill-line {
