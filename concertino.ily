@@ -48,14 +48,12 @@ define(`ViolinMovement', `
 }')
 
 \book {
-  \bookOutputName   \fileBaseName
   \bookOutputSuffix "piano"
 
   foreach(Mvmnt, Movements, `PianoMovement(Mvmnt)')
 }
 
 \book {
-  \bookOutputName \fileBaseName
   \bookOutputSuffix "violin"
 
   foreach(Mvmnt, Movements, `ViolinMovement(Mvmnt)')

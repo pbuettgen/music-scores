@@ -61,7 +61,7 @@ define(`EmitDuettViolinX', `
 
 define(`EmitViolinX', `
 \book {
-  \bookOutputName #(string-append fileBaseName "-violin_$1")
+  \bookOutputSuffix "violin_$1"
   \header {
     instrument = "Violino $1."
   }
@@ -70,7 +70,6 @@ define(`EmitViolinX', `
 
 %% Complete Score
 \book {
-  \bookOutputName \fileBaseName
   foreach(`duett', AllDuetts, `EmitDuettFull(duett)')
 }
 
@@ -87,7 +86,7 @@ define(`EmitMidiStaff', `
 
 define(`EmitMidiDuo', `
 \book {
-  \bookOutputName #(string-append fileBaseName "-duo_$1")
+  \bookOutputSuffix "duo_$1"
   \score {
     \articulate \unfoldRepeats
     \new StaffGroup <<

@@ -10,8 +10,12 @@
 CLEANFILES = $(target_files)
 M4FLAGS = -I /usr/share/doc/m4/examples -I ../..
 
-$(target_files): $(piece).ly ${top_srcdir}/lily-snippets.ily ${top_srcdir}/paper.ily ${top_srcdir}/tagline.ily
-	m4 ${M4FLAGS} $< | ${LYRUN} -
+%.ly: %.ly.in
+	${M4} ${M4FLAGS} $< > $@
+
+$(target_files): 	$(piece).ly ${top_srcdir}/lily-snippets.ily			\
+					${top_srcdir}/paper.ily ${top_srcdir}/tagline.ily
+	${LYRUN} $<
 
 all: $(target_files)
 
