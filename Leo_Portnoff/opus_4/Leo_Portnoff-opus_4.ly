@@ -1,13 +1,13 @@
 %%% -*- coding: utf-8 -*-
 %%%
-%%% Copyright © 2019 Philipp Büttgenbach
+%%% Copyright © 2019-2020 Philipp Büttgenbach
 %%%
 %%% This work is licensed under the Creative Commons
 %%% Attribution-ShareAlike 4.0 International License.  To view a copy of
 %%% this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 %%%
 
-\version "2.18.2"
+\version "2.20"
 
 \include "lily-snippets.ily"
 
@@ -68,10 +68,7 @@ violinMovementI = \relative d' {
   g2.-1\pp^\markup {\italic "morendo e rit."} a4 | b1\ppp\fermata \bar "|."
 }
 
-violinMovementIViolin = \new Voice \violinMovementI
-violinMovementIPiano = \new Voice \violinMovementI
-
-pianoUpMovementI = \new Voice \relative b {
+pianoUpMovementI = \relative b {
   \clef "alto" r8\p <b g d>4 <b g d>8
   \repeat unfold 2 {r8 <b g d>4 <b g d>8} r8 <c g e>4 <b g d>8 |
   r8 <b g d>4( <d a fis>8) r8 <g d b>4( <g c>8) |
@@ -157,7 +154,7 @@ pianoUpMovementI = \new Voice \relative b {
   r8 <g c,> r <a fis d c> | <b g d>1\ppp\fermata \bar "|."
 }
 
-pianoDownMovementI = \new Voice \relative g, {
+pianoDownMovementI = \relative g, {
   g2 g | g g | g g'4.( a8) | \repeat percent 2 { b4( b, b' c->) } |
   b( fis g d) | e( c b g) | a1 | d8^\<( d, fis a\!) d^\>( b c a\! |
   g2) g | g g'4.( a8) | \repeat percent 2 {b4( b, b' c->)} |
@@ -191,10 +188,10 @@ pianoDownMovementI = \new Voice \relative g, {
 
 %%% ------------
 
+\include "composer.ily"
+
 \header {
   arranger = ##f
-  composer = "Leo Portnoff"
-  copyright = \copyrightText
   tagline = ##f
   enteredby = "Philipp Büttgenbach"
   opus = "Opus 4"
@@ -204,61 +201,8 @@ pianoDownMovementI = \new Voice \relative g, {
 
 \include "paper.ily"
 
-#(define fileBaseName "Leo_Portnoff-opus_4")
-
-define(`PianoMovement', `\score {
-    <<
-      \new Staff \with {
-        fontSize = #-3
-        \override StaffSymbol.staff-space = #(magstep -3)
-      } { \globalMovement$1 \violinMovement$1Piano }
-      \new PianoStaff <<
-        \new Staff = "up" \with {
-          \accidentalStyle modern-cautionary
-        } {
-          \globalMovement$1 \pianoUpMovement$1
-        }
-        \new Staff = "down" \with {
-          \accidentalStyle modern-cautionary
-        } {
-          \globalMovement$1 \clef bass \pianoDownMovement$1
-        }
-      >>
-    >>
-    \layout {
-%%      indent = #0
-    }
-    \header {
-      piece = \titleMovement$1
-    }
-  }')
-
-\book {
-  \bookOutputName #(string-append fileBaseName "-piano")
-
-  PianoMovement(`I')
-}
-
-define(`ViolinMovement', `
-  \score {
-    \new Staff \with {
-      \accidentalStyle modern-cautionary
-    } {
-      \compressFullBarRests
-      \globalMovement$1 \violinMovement$1Violin
-    }
-    \layout {
-%%      indent = #0
-    }
-    \header {
-      piece = \titleMovement$1
-    }
-  }')
-
-\book {
-  \bookOutputName #(string-append fileBaseName "-violin")
-  ViolinMovement(`I')
-}
+define(`Movements', `(I)')
+include(`concertino.ily')
 
 \include "articulate.ly"
 
