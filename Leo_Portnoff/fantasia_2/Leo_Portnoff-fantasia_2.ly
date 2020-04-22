@@ -37,7 +37,7 @@ violinMovementI = \relative g {
   a'4( cis8 d-1) e4( cis8-2 a) | d4-1 d8( e) f4 e8( d) |
   e4 e8( f) g4 f8( e) | a8\flageolet( d,-1) d-- d-- d4. d8-3
   \repeat volta 2 {
-    g4-2\< g8( bes\!) d4-2\> c8( bes\!) |
+    g4-2\< g8( bes-2\!) d4\> c8( bes\!) |
     d8\>( a\!) a--( a--) a4 g8-2( f) |
     a8-1\>( e\open\!) e---2 f-- g4 f8( e) |
     a8\flageolet( d,-1) d-- d-- d2\fermata
