@@ -187,11 +187,14 @@ fingerNumberSpanner =
   #})
 
 \header {
-  copyright = \markup \fill-line \general-align #Y #CENTER {
-    \pad-x #4.4 \tiny \sans #(strftime "Copyright © %Y Philipp Büttgenbach"
-                               (localtime (current-time)))
-    \pad-x #1.8 \with-url #"http://creativecommons.org/licenses/by-sa/4.0/"
-    \epsfile #X #11 #"cc-by-sa.eps"
+  copyright = \markup \overlay {
+    \raise #1.6 \draw-hline
+    \fill-line \general-align #Y #CENTER {
+      \tiny \sans #(strftime "Copyright © %Y Philipp Büttgenbach"
+                    (localtime (current-time)))
+      \with-url #"http://creativecommons.org/licenses/by-sa/4.0/"
+      \epsfile #X #11 #"cc-by-sa.eps"
+    }
   }
 }
 
