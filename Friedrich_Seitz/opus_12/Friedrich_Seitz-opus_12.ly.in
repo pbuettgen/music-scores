@@ -30,12 +30,10 @@ nullDynamic = #(make-dynamic-script nullTxt)
 pDolceCantabile = \markup {\dynamic "p" \italic "dolce cantabile."}
 piuMoto = \markup {\italic #"più moto."}
 risoluto = \markup {\italic #"risoluto."}
-solo = \markup {\italic \caps "Solo."}
 sostenuto = \markup {\italic #"sostenuto." }
 tenutoTxt = \markup { \italic #"tenuto." }
 tranquillo = \markup {\italic #"tranquillo."}
 tranquilloEtDolce = \markup \italic #"tranquillo et dolce."
-tutti = \markup {\italic \caps "Tutti."}
 
 globalMovementIx = {
   \time 4/4
