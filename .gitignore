@@ -1,4 +1,5 @@
 *.log
+*.ly
 *.mid
 *.midi
 *.ogg
@@ -10,8 +11,9 @@
 Makefile
 Makefile.in
 aclocal.m4
+aminclude.am
 autom4te.cache
-config.status
+config.*
 configure
 install-sh
 missing
