@@ -10,7 +10,7 @@
 CLEANFILES = $(target_files)
 M4FLAGS = -I /usr/share/doc/m4/examples -I ../..
 
-%.ly: %.ly.in
+%.ly: %.ly.in ${top_srcdir}/concertino.ily ${top_srcdir}/output-duos.ily
 	${M4} ${M4FLAGS} $< > $@
 
 $(target_files): 	$(piece).ly ${top_srcdir}/lily-snippets.ily			\
