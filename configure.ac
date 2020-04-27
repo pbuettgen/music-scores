@@ -10,6 +10,8 @@
 AC_INIT([music-scores], [0.1])
 AM_INIT_AUTOMAKE
 
+AX_AM_JOBSERVER([${CPU_COUNT}])
+
 AM_MAINTAINER_MODE([enable])
 
 LYFLAGS_EXTRA="-dmidi-extension=mid"
@@ -84,6 +86,7 @@ AC_CONFIG_FILES([
 	Leo_Portnoff/Makefile
     Leo_Portnoff/fantasia_2/Makefile
     Leo_Portnoff/fantasia_4/Makefile
+    Leo_Portnoff/opus_4/Makefile
     Leo_Portnoff/opus_9/Makefile
     Leo_Portnoff/opus_13/Makefile
     Leo_Portnoff/opus_18/Makefile

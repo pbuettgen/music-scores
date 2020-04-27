@@ -7,6 +7,8 @@
 # this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 #
 
+@INC_AMINCLUDE@
+
 SUBDIRS = Arthur_Seybold						\
 	Charles_Dancla								\
 	Ferdinand_Küchler							\
