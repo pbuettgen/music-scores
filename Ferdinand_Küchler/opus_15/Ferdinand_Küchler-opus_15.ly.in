@@ -440,7 +440,7 @@ pianoDownMovementII = \new Voice \relative c {
   opus = #"Opus 15"
   source = "http://imslp.org/"
   title = #"Concertino."
-  subtitle = #"In the style of Antonio Vivaldi."
+  subtitle = #"Nello stile di Antonio Vivaldi."
 }
 
 \include "paper.ily"
