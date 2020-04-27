@@ -13,11 +13,15 @@ define(`PianoMovement', `
 \score {
   <<
     \new Staff \with {
-      instrumentName = "Violino."
+      \override InstrumentName.self-alignment-X = #RIGHT
+      \override InstrumentName.padding = #.8
+      instrumentName = #"Violino."
       \magnifyStaff #.75
     } { \globalMovement$1 \killCues\violinMovement$1 }
     \new PianoStaff \with {
-      instrumentName = "Piano."
+      \override InstrumentName.self-alignment-X = #RIGHT
+      \override InstrumentName.padding = #.8
+      instrumentName = #"Piano."
       \accidentalStyle piano-cautionary
       connectArpeggios = ##t
     } <<
@@ -30,7 +34,7 @@ define(`PianoMovement', `
     >>
   >>
   \header {
-    piece = \markup\larger\caps\titleMovement$1
+    piece = \titleMovement$1
   }
 }')
 
@@ -43,7 +47,7 @@ define(`ViolinMovement', `
     \globalMovement$1 \violinMovement$1
   }
   \header {
-    piece = \markup\larger\caps\titleMovement$1
+    piece = \titleMovement$1
   }
 }')
 
