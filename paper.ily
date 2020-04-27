@@ -9,25 +9,39 @@
 
 \paper {
   #(set-paper-size "c4")
-  binding-offset = 8\mm
+
+  #(define fonts
+    (set-global-fonts
+     #:roman "GFS Artemisia"
+     #:sans "Montserrat"
+   ))
+
+  binding-offset = 5\mm
   page-breaking = #ly:page-turn-breaking
   two-sided = ##t
   auto-first-page-number = ##t
   blank-after-score-page-penalty = #.1
+  number-of-division = 21
+  division-width  = #(/ (- paper-width binding-offset) number-of-division)
+  division-height = #(/ paper-height number-of-division)
+  inner-margin  = #(* 1 division-width)
+  outer-margin  = #(* 2 division-width)
+  top-margin    = #(* 1 division-height)
+  bottom-margin = #(* 2 division-height)
+  line-width =  #(- (- paper-width (* 3 division-width)) binding-offset)
 
   bookTitleMarkup = \markup {
     \override #'(baseline-skip . 3.5)
     \column {
       \fill-line { \fromproperty #'header:dedication }
-      \override #'(baseline-skip . 3.5)
+      \override #'(baseline-skip . 4)
       \column {
         \fill-line {
-          \huge \larger \larger \bold
-          \fromproperty #'header:title
+          \abs-fontsize #20 \bold \sans \fromproperty #'header:title
         }
         \fill-line {
-          \large \bold
-          \fromproperty #'header:subtitle
+          \override #'(font-name . "Montserrat SemiBold")
+          \abs-fontsize #14 \fromproperty #'header:subtitle
         }
         \fill-line {
           \smaller \bold
@@ -35,7 +49,8 @@
         }
         \fill-line {
           \fromproperty #'header:poet
-          { \large \bold \fromproperty #'header:instrument }
+          { \override #'(font-name . "Montserrat SemiBold")
+            \larger \fromproperty #'header:instrument }
           \fromproperty #'header:composer
         }
         \fill-line {
@@ -52,24 +67,38 @@
 
   scoreTitleMarkup = \markup \column {
     \on-the-fly \print-all-headers { \bookTitleMarkup \hspace #1 }
-    \fromproperty #'header:piece
+    \override #'(font-name . "Montserrat Medium")
+    \larger \fromproperty #'header:piece
   }
 
-  oddHeaderMarkup = \markup \fill-line {
-    %% force the header to take some space, otherwise the
-    %% page layout becomes a complete mess.
-    " "
-    \on-the-fly #not-part-first-page \fromproperty #'header:instrument
-    \on-the-fly #print-page-number-check-first \with-dimensions #'(-12 . -9) #'(-.4 . 1.2) \sans\italic \right-align \fromproperty #'page:page-number-string
+  oddHeaderMarkup = \markup \overlay {
+    \override #'(font-name . "Montserrat Medium")
+    \fill-line {
+      %% force the header to take some space, otherwise the
+      %% page layout becomes a complete mess.
+      " "
+      \on-the-fly #not-part-first-page \fromproperty #'header:instrument
+      \on-the-fly #print-page-number-check-first
+      \sans \fromproperty #'page:page-number-string
+    }
+    \on-the-fly #not-part-first-page \lower #1 \draw-hline
   }
 
-  %% evenHeaderMarkup would inherit the value of
-  %% oddHeaderMarkup if it were not defined here
-  evenHeaderMarkup = \markup \fill-line {
-    \on-the-fly #print-page-number-check-first \with-dimensions #'(9 . 12) #'(-.4 . 1.2) \sans\italic \fromproperty #'page:page-number-string
-    \on-the-fly #not-part-first-page \fromproperty #'header:instrument
-    " "
+  evenHeaderMarkup = \markup \overlay {
+    \override #'(font-name . "Montserrat Medium")
+    \fill-line {
+      \on-the-fly #print-page-number-check-first
+      \sans \fromproperty #'page:page-number-string
+      \on-the-fly #not-part-first-page \sans \fromproperty #'header:instrument
+      " "
+    }
+    \on-the-fly #not-part-first-page \lower #1 \draw-hline
   }
+
+  top-system-spacing.padding = 2
+  %% TODO: Should be zero on first page!
+  top-markup-spacing.padding = 3
+  system-system-spacing.stretchability = 24
 }
 
 %%% Local Variables:
