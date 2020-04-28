@@ -4710,3 +4710,8 @@ define(`EmitMidi', `
 foreach(`Study', StudiesPartI, `EmitMidi(Study)')
 dnl foreach(`Study', StudiesPartII, `EmitMidi(Study)')
 
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% eval: (LilyPond-mode)
+%%% End:

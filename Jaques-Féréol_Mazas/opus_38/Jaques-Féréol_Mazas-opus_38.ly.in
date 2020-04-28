@@ -3182,3 +3182,8 @@ define(`Movements', `(I, II, III)')
 define(`AllViolins', `(I, II)')
 
 include(`output-duos.ily')
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% eval: (LilyPond-mode)
+%%% End:

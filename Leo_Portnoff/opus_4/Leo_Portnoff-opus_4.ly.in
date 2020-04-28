@@ -226,3 +226,8 @@ include(`concertino.ily')
   }
 }
 
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% eval: (LilyPond-mode)
+%%% End:

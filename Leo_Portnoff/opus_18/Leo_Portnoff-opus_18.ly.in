@@ -869,3 +869,8 @@ include(`concertino.ily')
     \midi{}
   }
 }
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% eval: (LilyPond-mode)
+%%% End:
