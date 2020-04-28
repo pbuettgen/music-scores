@@ -26,6 +26,8 @@ tagline.ily: tagline.ily.in $(wildcard .git/index)
 	test -e .git/index && git_commitish=$$(git rev-parse --short HEAD); \
 	$(SED) -e s/@git_commitish@/$${git_commitish}/ tagline.ily.in > tagline.ily
 
+all: tagline.ily
+
 # Local Variables:
 # coding: utf-8
 # mode: Makefile
