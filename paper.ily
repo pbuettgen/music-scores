@@ -95,6 +95,20 @@
     \on-the-fly #not-part-first-page \lower #1 \draw-hline
   }
 
+  oddFooterMarkup = \markup {
+    \column {
+      \fill-line {
+        %% Copyright header field only on first page in each bookpart.
+        \on-the-fly #part-first-page \fromproperty #'header:copyright
+      }
+      \fill-line {
+        %% Tagline header field only on last page in the book.
+        \on-the-fly #not-part-first-page
+        \on-the-fly #last-page \fromproperty #'header:tagline
+      }
+    }
+  }
+
   top-system-spacing.padding = 2
   %% TODO: Should be zero on first page!
   top-markup-spacing.padding = 3

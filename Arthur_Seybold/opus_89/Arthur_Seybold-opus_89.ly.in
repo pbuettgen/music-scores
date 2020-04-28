@@ -322,17 +322,12 @@ pianoDownMovementI = \relative d' {
 \include "composer.ily"
 
 \header {
-  arranger = ##f
-  tagline = ##f
-  enteredby = "Philipp Büttgenbach"
-  opus = "Opus 89"
-  source = "http://imslp.org/"
   title = "Weihnachtsfantasie."
+  opus = "Opus 89"
+  arranger = ##f
 }
 
 \include "paper.ily"
-
-fileBaseName = #"Arthur_Seybold-opus_89"
 
 define(`Movements', `(I)')
 include(`concertino.ily')
@@ -340,7 +335,6 @@ include(`concertino.ily')
 \include "articulate.ly"
 
 \book {
-  \bookOutputName #"Arthur_Seybold-opus_89"
   \score {
     \articulate \unfoldRepeats
     \new StaffGroup <<

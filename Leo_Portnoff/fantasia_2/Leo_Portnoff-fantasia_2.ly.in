@@ -197,17 +197,12 @@ pianoDownMovementI = \relative b {
 \include "composer.ily"
 
 \header {
-  arranger = ##f
-  tagline = ##f
-  enteredby = "Philipp Büttgenbach"
-  opus = "Fantasia 2"
-  source = "http://imslp.org/"
   title = "Russian Fantasia No. 2."
+  opus = "Fantasia 2"
+  arranger = ##f
 }
 
 \include "paper.ily"
-
-#(define fileBaseName "Leo_Portnoff-fantasia_2")
 
 define(`Movements', `(I)')
 include(`concertino.ily')
@@ -215,7 +210,6 @@ include(`concertino.ily')
 \include "articulate.ly"
 
 \book {
-  \bookOutputName \fileBaseName
   \score {
     \articulate \unfoldRepeats
     \new StaffGroup <<
