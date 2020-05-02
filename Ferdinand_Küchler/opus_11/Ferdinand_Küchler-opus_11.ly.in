@@ -61,7 +61,7 @@ violinMovementI = \relative g {
   b4 g':8\ff b,:8 d:8 | g,4 d:8 b:8 d:8 | g,2 g'' | <g b,> r \bar "|."
 }
 
-pianoUpMovementI = \new Voice \relative e'' {
+pianoUpMovementI = \relative e'' {
   \voiceOne g2->\f fis4-> e-> | d2.-> \oneVoice g,8 a |
   << {\voiceOne b2. b4~ | b e8 c}
      \new Voice {\voiceTwo r4 <a fis> <g e> <gis e> | <gis e>( e)} >>
@@ -136,7 +136,7 @@ pianoUpMovementI = \new Voice \relative e'' {
 
 \addQuote #"pianoUpMovementI" \pianoUpMovementI
 
-pianoDownMovementI = \new Voice \relative g' {
+pianoDownMovementI = \relative g' {
   \change Staff = "up" \voiceTwo g2 fis4 e |
   d2. \change Staff = "down" \oneVoice g,8 a |
   << {\voiceOne b2. b4 | b a}
@@ -202,7 +202,7 @@ violinMovementII = \relative c'' {
   e4\p( g e) | c'2. \bar "|."
 }
 
-pianoUpMovementII = \new Voice \relative g' {
+pianoUpMovementII = \relative g' {
   <g e>4\p\<( <f d> <e c>) |
   << {\voiceOne e( d c\!) | d2. | g\> }
      \new Voice {\voiceTwo g,2. | b4( c a) | b( c d)} >> \oneVoice |
@@ -248,7 +248,7 @@ pianoUpMovementII = \new Voice \relative g' {
 
 \addQuote "pianoUpMovementII" \pianoUpMovementII
 
-pianoDownMovementII = \new Voice \relative c, {
+pianoDownMovementII = \relative c, {
   c2 g'4 | c( d e) | <d g,>2. |
   << {\voiceOne d4( e f)} \new Voice {\voiceTwo g,2.} >> \oneVoice |
   c,2 c'4 | a2 d,4 | g2. | g'2 g,4 | c,2 c'4 | f,4 g b | c2. | c, |
@@ -308,7 +308,7 @@ violinMovementIII = \relative d' {
   d4 r | <a' fis'>\downbow r | <b g'>\downbow r8 \bar "|."
 }
 
-pianoUpMovementIII = \new Voice \relative d''' {
+pianoUpMovementIII = \relative d''' {
   \partial 8 \voiceOne d8\f | d4. d,8 |
   << {\voiceOne d4.} \new Voice {\voiceTwo d,4.} >> \oneVoice d'8 |
   d4. d,8 d4 r | \repeat percent 4 { r8\f b8~ <b d g>4 } |
@@ -373,7 +373,7 @@ pianoUpMovementIII = \new Voice \relative d''' {
 
 \addQuote "pianoUpMovementIII" \pianoUpMovementIII
 
-pianoDownMovementIII = \new Voice \relative d'' {
+pianoDownMovementIII = \relative d'' {
   \partial 8 \change Staff = "up" \voiceTwo d8 | d4. d,8 |
   \change Staff = "down" \oneVoice r4 r8 d,8 | d4. d,8 | d4 r | g'2 | d | g, |
   g' | d | d4( c | b2) | g4 r | g'2 | d | g | e | a, | a, | d |
@@ -402,16 +402,10 @@ pianoDownMovementIII = \new Voice \relative d'' {
 \include "composer.ily"
 
 \header {
-  arranger = ##f
-  enteredby = "Philipp Büttgenbach"
-  opus = "Opus 11"
-  source = "http://imslp.org/"
   title = "Concertino."
+  opus = "Opus 11"
+  arranger = ##f
 }
-
-\include "paper.ily"
-
-#(define fileBaseName "Ferdinand_Küchler-opus_11")
 
 define(`Movements', `(I, II, III)')
 include(`concertino.ily')
@@ -419,7 +413,6 @@ include(`concertino.ily')
 \include "articulate.ly"
 
 \book {
-  \bookOutputName \fileBaseName
   \score {
     \articulate \unfoldRepeats
     \new StaffGroup <<

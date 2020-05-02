@@ -7,6 +7,8 @@
 %%% this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 %%%
 
+\include "paper.ily"
+
 include(`foreach.m4')
 
 foreach(`duo', AllDuetts,
@@ -17,7 +19,10 @@ define(`EmitVoice', `
 \globalduo$1movement$2 \violin$3duo$1movement$2')
 
 define(`EmitStaffViolinX', `
-\new Staff << EmitVoice($1, $2, $3) >>')
+\new Staff \with {
+  \accidentalStyle "modern-cautionary"
+  \override BreathingSign.text = \markup \musicglyph #"scripts.caesura.straight"
+} { EmitVoice($1, $2, $3) }')
 
 define(`EmitMovementFull', `
 \score{
@@ -80,9 +85,11 @@ foreach(`violin', AllViolins, `EmitViolinX(violin)')
 \include "articulate.ly"
 
 define(`EmitMidiStaff', `
-\new Staff << {
+\new Staff \with {
+  midiInstrument = #"violin"
+} {
   foreach(`movement', MovementsDuo$1, `EmitVoice($1, movement, $2)')
-  } >>')
+}')
 
 define(`EmitMidiDuo', `
 \book {

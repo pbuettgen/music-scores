@@ -106,7 +106,7 @@ violinMovementI = \relative a' {
   g8-- fis16 e a8---4 a,-- d4.-2\fermata \stopTextSpan \bar "|."
 }
 
-pianoUpMovementI = \new Voice \relative d' {
+pianoUpMovementI = \relative d' {
   \partial 8 r8 | <fis d>4\f <g d> <a d,> r8 <a d,> |
   %% 2
   <b d,>4 <a cis,> <a fis d> r | <a fis> <ais e> <b d,> r8 <e ais, e> |
@@ -198,7 +198,7 @@ pianoUpMovementI = \new Voice \relative d' {
   g8 fis16 e a8 a, d4.\fermata \stopTextSpan \bar "|."
 }
 
-pianoDownMovementI = \new Voice \relative d {
+pianoDownMovementI = \relative d {
   \partial 8 r8 | d4 e fis r8 fis | g8 fis16 g a8 a, d4 r |
   %% 3
   d4 cis b r8 cis8 | d8 cis16 d e8 e, a4 r | r8 a'8 b cis d4 dis |
@@ -317,7 +317,7 @@ violinMovementII = \relative a' {
   d8-. a-. fis-. | d4 \stopTextSpan r8 \bar "|."
 }
 
-pianoUpMovementII = \new Voice \relative a' {
+pianoUpMovementII = \relative a' {
   <b fis d>4.\p << {\voiceOne fis8.( g16 fis8)}
                    \new Voice {\voiceTwo b,4.} >> \oneVoice |
   %% 2
@@ -406,7 +406,7 @@ pianoUpMovementII = \new Voice \relative a' {
   <cis g e> | <d fis, d> | <d a fis>4 \stopTextSpan r8 \bar "|."
 }
 
-pianoDownMovementII = \new Voice \relative c {
+pianoDownMovementII = \relative c {
   b4 b8 d4 d8 | ais4 ais8 fis4 fis8 | d'4 d8 ais4 ais8 |
   b4 e8 b'8( fis e) | d4 d8 fis4 fis8 | cis4 cis8 a4 a8 |
   cis4 g'8 fis4 g8 | a4 a,8 d4. | ais'4. b | ais, b | e, e' |
@@ -435,17 +435,11 @@ pianoDownMovementII = \new Voice \relative c {
 \include "composer.ily"
 
 \header {
-  arranger = ##f
-  enteredby = "Philipp Büttgenbach"
-  opus = #"Opus 15"
-  source = "http://imslp.org/"
   title = #"Concertino."
   subtitle = #"Nello stile di Antonio Vivaldi."
+  opus = #"Opus 15"
+  arranger = ##f
 }
-
-\include "paper.ily"
-
-#(define fileBaseName "Ferdinand_Küchler-opus_15")
 
 define(`Movements', `(I, II)')
 include(`concertino.ily')
@@ -453,7 +447,6 @@ include(`concertino.ily')
 \include "articulate.ly"
 
 \book {
-  \bookOutputName \fileBaseName
   \score {
     \articulate \unfoldRepeats
     \new StaffGroup <<

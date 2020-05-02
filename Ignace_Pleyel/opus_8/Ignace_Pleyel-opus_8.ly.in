@@ -19,9 +19,7 @@ globalduoImovementI = {
   \key c \major
 }
 
-violinIduoImovementI = \new Voice \relative g' {
-  \violinVoiceSettings
-  
+violinIduoImovementI = \relative g' {
   \repeat volta 2 {
     g1\p | a | b | c2 r | e1 | d | c2 a | g r4 b-.\f\upbow |
     %% 9
@@ -88,9 +86,7 @@ violinIduoImovementI = \new Voice \relative g' {
   }
 }
 
-violinIIduoImovementI = \new Voice \relative e' {
-  \violinVoiceSettings
-
+violinIIduoImovementI = \relative e' {
   \repeat volta 2 {
     <c e>4\p \repeat unfold 3 {<e c>} | \repeat unfold 4 {<f c>4} |
     %% 3
@@ -213,9 +209,7 @@ globalduoImovementII = {
   \key c \major
 }
 
-violinIduoImovementII = \new Voice \relative g' {
-  \violinVoiceSettings
-
+violinIduoImovementII = \relative g' {
   \repeat volta 2 {
     \partial 4 g4\p | c( b c) | d2( e4) | c( b c) | d2( g,4) |
     %% 5
@@ -285,9 +279,7 @@ violinIIduoImovementIIvoltaII = {
   e( g f) | e( d e) | f( d g) |
 }
 
-violinIIduoImovementII = \new Voice \relative e' {
-  \violinVoiceSettings
-
+violinIIduoImovementII = \relative e' {
   \repeat volta 2 {\partial 4 r4 | \violinIIduoImovementIIvoltaI }
   \repeat volta 2 { \violinIIduoImovementIIvoltaII e( c) }
   r | r a''2\downbow | r4 gis2\downbow | r4 f2\downbow | r4 e2\downbow |
@@ -317,9 +309,7 @@ globalduoIImovementI = {
   \key g \major
 }
 
-violinIduoIImovementI = \new Voice \relative g' {
-  \violinVoiceSettings
-
+violinIduoIImovementI = \relative g' {
   \repeat volta 2 {
     g2\f g, | b' b, | d' g | <c, d,>4-! <b d,>-! r2 | a2 a, | c' c, |
     %% 7
@@ -409,9 +399,7 @@ violinIduoIImovementI = \new Voice \relative g' {
   }
 }
 
-violinIIduoIImovementI = \new Voice \relative g' {
-  \violinVoiceSettings
-
+violinIIduoIImovementI = \relative g' {
   \repeat volta 2 {
     R1 | g2\f g, | b' b, | <fis' a,>4-! <g g,>-! r2 | R1 | a2 a, |
     %% 7
@@ -510,9 +498,7 @@ globalduoIImovementII = {
   \key g \major
 }
 
-violinIduoIImovementII = \new Voice \relative g' {
-  \violinVoiceSettings
-
+violinIduoIImovementII = \relative g' {
   \repeat volta 2 {
     \partial 4 b8-.\p\downbow c-. | d-. b-. g'-. e-. | d4 b8-. c-. |
     %% 3
@@ -560,9 +546,7 @@ violinIduoIImovementII = \new Voice \relative g' {
   <g b,>2 \mark \markup { \musicglyph #"scripts.ufermata" } \bar "|."
 }
 
-violinIIduoIImovementII = \new Voice \relative g' {
-  \violinVoiceSettings
-
+violinIIduoIImovementII = \relative g' {
   \repeat volta 2 {
     \partial 4 g8-.\p\downbow a-. | b-. g-. e-. c-. |
     %% 2
@@ -632,9 +616,7 @@ globalduoIIImovementI = {
   \key c \major
 }
 
-violinIduoIIImovementI = \new Voice \relative a' {
-  \violinVoiceSettings
-
+violinIduoIIImovementI = \relative a' {
   \repeat volta 2 {
     <a a'>2\f <a a'>4.--( <a a'>8-.) | <a a'>2 r4 e\p | a( c b a) |
     %% 4
@@ -723,9 +705,7 @@ violinIduoIIImovementI = \new Voice \relative a' {
   <cis' e,>4 r <cis a'>\f <cis a'> | <cis a'>2 r \bar "|."
 }
 
-violinIIduoIIImovementI = \new Voice \relative c'' {
-  \violinVoiceSettings
-
+violinIIduoIIImovementI = \relative c'' {
   \repeat volta 2 {
     <c e>2\f <c e>4.--( <c e>8-.) | <c e>2 r | r4 a,\p( d f) | e2 r |
     %% 5
@@ -824,9 +804,7 @@ globalduoIIImovementII = {
   \key c \major
 }
 
-violinIduoIIImovementII = \new Voice \relative a' {
-  \violinVoiceSettings
-
+violinIduoIIImovementII = \relative a' {
   \repeat volta 2 {
     a4( b8) \acciaccatura d8 c8( b a) | e'4.-4( d) |
     c8( e c) b( d b) | a4.-4( gis4) r8 |
@@ -889,9 +867,7 @@ violinIduoIIImovementII = \new Voice \relative a' {
   \mark \markup { \musicglyph #"scripts.ufermata" } \bar "|."
 }
 
-violinIIduoIIImovementII = \new Voice \relative e' {
-  \violinVoiceSettings
-
+violinIIduoIIImovementII = \relative e' {
   \repeat volta 2 {
     R2. | e4( fis8) \acciaccatura a8 gis( fis e) | a4. d, |
     e8( f dis e d b) | a4 r8 r4. |
@@ -974,9 +950,7 @@ globalduoIVmovementI = {
   \key f \major
 }
 
-violinIduoIVmovementI = \new Voice \relative a' {
-  \violinVoiceSettings
-
+violinIduoIVmovementI = \relative a' {
   \repeat volta 2 {
     <a f'>4\f <a f'> <a f'> | <a f'> r c-.\downbow | f-. c-. a'-. |
     %% 4
@@ -1027,9 +1001,7 @@ violinIduoIVmovementI = \new Voice \relative a' {
   }
 }
 
-violinIIduoIVmovementI = \new Voice \relative f' {
-  \violinVoiceSettings
-
+violinIIduoIVmovementI = \relative f' {
   \repeat volta 2 {
     <f c'>4\f <f c'> <f c'> | <f c'> r r | r r c-.\downbow |
     %% 4
@@ -1110,9 +1082,7 @@ globalduoIVmovementII = {
   \key f \major
 }
 
-violinIduoIVmovementII = \new Voice \relative a' {
-  \violinVoiceSettings
-
+violinIduoIVmovementII = \relative a' {
   \repeat volta 2 {
     a2( d) | bes( a) | g( f4 g) | a1-4 | f2( g) | a\open( bes4 a) |
     g2( a-4) | f1
@@ -1124,9 +1094,7 @@ violinIduoIVmovementII = \new Voice \relative a' {
   a2( b) | c4 r c r | c2. r4\fermata \bar "|."
 }
 
-violinIIduoIVmovementII = \new Voice \relative f' {
-  \violinVoiceSettings
-
+violinIIduoIVmovementII = \relative f' {
   \repeat volta 2 {
     f4( d e f) | g( d g d) | e( a, d bes) | a( cis e a) | d,( f e c) |
     f( e d c) | bes( g c e) | f( c a c)
@@ -1147,9 +1115,7 @@ globalduoIVmovementIII = {
   \key f \major
 }
 
-violinIduoIVmovementIII = \new Voice \relative c'' {
-  \violinVoiceSettings
-
+violinIduoIVmovementIII = \relative c'' {
   \partial 8 c8_\dolce | f( e) f-. g( f) g-. | a4.( g4) g8 |
   %% 3
   f( e) f-. g( a) g-. | c,4.~ c4 c8 | f( e) f-. g( f) g-. |
@@ -1195,9 +1161,7 @@ violinIduoIVmovementIII = \new Voice \relative c'' {
   <f c' a'>2 r4 \mark \markup { \musicglyph #"scripts.ufermata" } \bar "|."
 }
 
-violinIIduoIVmovementIII = \new Voice \relative a' {
-  \violinVoiceSettings
-
+violinIIduoIVmovementIII = \relative a' {
   \partial 8 r8 | a4\p( c8) e,4( c'8) | f,4( c'8) bes4( c8) | a4. b |
   %% 4
   c8-. g-. e-. c4 r8 | a'4( c8) e,4( c'8) | f,4( c'8) bes4( c8) |
@@ -1253,9 +1217,7 @@ globalduoVmovementI = {
   \key d \major
 }
 
-violinIduoVmovementI = \new Voice \relative a' {
-  \violinVoiceSettings
-
+violinIduoVmovementI = \relative a' {
   \repeat volta 2 {
     \partial 128 s128
     \acciaccatura {a8} a'1\p | \acciaccatura b,8 b'1 |
@@ -1355,9 +1317,7 @@ violinIduoVmovementI = \new Voice \relative a' {
   <d a' fis'>2 r \bar "|."
 }
 
-violinIIduoVmovementI = \new Voice \relative d' {
-  \violinVoiceSettings
-
+violinIIduoVmovementI = \relative d' {
   \repeat volta 2 {
     \partial 128 s128
     <fis d>8\p \repeat unfold 3 {<fis d>} \repeat tremolo 4 {<fis d>8} |
@@ -1468,9 +1428,7 @@ globalduoVmovementII = {
   \key g \major
 }
 
-violinIduoVmovementII = \new Voice \relative a' {
-  \violinVoiceSettings
-
+violinIduoVmovementII = \relative a' {
   \repeat volta 2 {
     b4--\p( b8-.) c4( b8) | a( g a) b4( g8) | g( c b) e4--( d8-.) |
     cis( c b) <b d,>4( <a d,>8) | b4--( b8-.) d->( c b) |
@@ -1483,9 +1441,7 @@ violinIduoVmovementII = \new Voice \relative a' {
   }
 }
 
-violinIIduoVmovementII = \new Voice \relative d' {
-  \violinVoiceSettings
-
+violinIIduoVmovementII = \relative d' {
   \repeat volta 2 {
     <d g,>4--\p( <d g,>8-.) <e g,>4( <d g,>8) | c( b c) d4( b8) |
     r4. g'8\upbow( c b) | a( fis g) g4( fis8) |
@@ -1511,9 +1467,7 @@ globalduoVmovementIII = {
   \key d \major
 }
 
-violinIduoVmovementIII = \new Voice \relative a'' {
-  \violinVoiceSettings
-
+violinIduoVmovementIII = \relative a'' {
   \repeat volta 2 {
     \partial 2 a4-.\mf\downbow a-. | fis2 e8( fis) g-. e-. |
     d2 e4-. e-. | g8( fis) e-. d-. g( a fis g) | e2 a4-. a-. |
@@ -1549,9 +1503,7 @@ violinIduoVmovementIII = \new Voice \relative a'' {
   \mark \markup { \musicglyph #"scripts.ufermata" } \bar "|."
 }
 
-violinIIduoVmovementIII = \new Voice \relative f' {
-  \violinVoiceSettings
-
+violinIIduoVmovementIII = \relative f' {
   \repeat volta 2 {
     \partial 2 fis8-.\mf\downbow a,-. fis'-. a,-. |
     \repeat tremolo 2 {d8 a} \repeat tremolo 2 {g' a,} |
@@ -1601,9 +1553,7 @@ globalduoVImovementI = {
   \key g \major
 }
 
-violinIduoVImovementI = \new Voice \relative b {
-  \violinVoiceSettings
-
+violinIduoVImovementI = \relative b {
   \repeat volta 2 {
     \partial 4 b8.\f\upbow( e16) | e2. b8.( g'16) | g2. e8.( g16) |
     %% 3
@@ -1721,9 +1671,7 @@ violinIduoVImovementI = \new Voice \relative b {
   e4 \repeat unfold 2 {<e' e, g,>} r \bar "|."
 }
 
-violinIIduoVImovementI = \new Voice \relative e' {
-  \violinVoiceSettings
-
+violinIIduoVImovementI = \relative e' {
   \repeat volta 2 {
     \partial 4 r4 | \repeat percent 2 {r4 <e g,>\f <e g,> <e g,>} |
     %% 3
@@ -1836,9 +1784,7 @@ globalduoVImovementII = {
   \key e \major
 }
 
-violinIduoVImovementII = \new Voice \relative g' {
-  \violinVoiceSettings
-
+violinIduoVImovementII = \relative g' {
   \repeat volta 2 {
     gis2\p( a4 b) | fis2( gis4 fis) | e2 fis | gis r |
     %% 5
@@ -1910,9 +1856,7 @@ violinIduoVImovementII = \new Voice \relative g' {
   \mark \markup { \musicglyph #"scripts.ufermata" } \bar "|."
 }
 
-violinIIduoVImovementII = \new Voice \relative e' {
-  \violinVoiceSettings
-
+violinIIduoVImovementII = \relative e' {
   \repeat volta 2 {
     e4\p( b fis' gis) | dis( b e dis) | cis( gis a b) | e( b gis b) |
     e( b fis' gis) | a( a, gis gis') | fis( dis e ais,-2) |
@@ -1974,16 +1918,10 @@ violinIIduoVImovementII = \new Voice \relative e' {
 \include "composer.ily"
 
 \header {
-  arranger = ##f
-  enteredby = "Philipp Büttgenbach"
-  opus = "Opus 8"
-  source = "http://imslp.org/"
   title = "Six Duos for 2 Violins"
+  opus = "Opus 8"
+  arranger = ##f
 }
-
-\include "paper.ily"
-
-#(define fileBaseName "Ignace_Pleyel-opus_8")
 
 define(`AllDuetts', `(I, II, III, IV, V, VI)')
 define(`Movements', `(I, II)')

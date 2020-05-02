@@ -9,14 +9,6 @@
 
 \version "2.20"
 
-violinVoiceSettings = {
-  \set Staff.midiInstrument = #"violin"
-  \override BreathingSign.text = \markup {
-    \musicglyph #"scripts.caesura.straight"
-  }
-  \accidentalStyle modern-cautionary
-}
-
 cadenzaAdLib = \markup {\italic #"Cadenza ad lib."}
 solo = \markup {\italic \caps "Solo."}
 tutti = \markup {\italic \caps "Tutti."}

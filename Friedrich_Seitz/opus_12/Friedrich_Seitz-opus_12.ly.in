@@ -1755,16 +1755,10 @@ pianoDownMovementIIIx = \relative a {
    \include "composer.ily"
 
 \header {
-  arranger = ##f
-  enteredby = "Philipp Büttgenbach"
-  opus = "Opus 12"
-  source = "http://imslp.org/"
   title = "Student's Concerto No III."
+  opus = "Opus 12"
+  arranger = ##f
 }
-
-\include "paper.ily"
-
-   #(define fileBaseName "Friedrich_Seitz-opus_12")
 
    define(`Movements', `(I)')
 include(`concertino.ily')
@@ -1772,7 +1766,6 @@ include(`concertino.ily')
 \include "articulate.ly"
 
 \book {
-  \bookOutputName \fileBaseName
   \score {
     \articulate \unfoldRepeats
     \new StaffGroup <<

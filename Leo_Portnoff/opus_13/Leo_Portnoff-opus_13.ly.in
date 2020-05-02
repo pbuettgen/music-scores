@@ -504,7 +504,7 @@ violinMovementIII = \relative d' {
 
 }
 
-pianoUpMovementIII = \new Voice \relative c'' {
+pianoUpMovementIII = \relative c'' {
   \voiceOne c8\f r <e c>-. r | <g e c>-. r \oneVoice r4 |
   %% 3
   c,,8\p c <e c> <e c> | <g e c>4 r | r <b fis dis b>\f |
@@ -556,7 +556,7 @@ pianoUpMovementIII = \new Voice \relative c'' {
 
 \addQuote "pianoUpMovementIII" {\pianoUpMovementIII}
 
-pianoDownMovementIII = \new Voice \relative a' {
+pianoDownMovementIII = \relative a' {
   \change Staff = "up" \voiceTwo ais8 r ais-. r |
   %% 2
   ais-. r s4 \change Staff ="down" \oneVoice | ais,8 ais ais ais |
@@ -595,16 +595,10 @@ pianoDownMovementIII = \new Voice \relative a' {
 \include "composer.ily"
 
 \header {
-  arranger = ##f
-  enteredby = "Philipp Büttgenbach"
-  opus = "Opus 13"
-  source = "http://imslp.org/"
   title = "Concertino."
+  opus = "Opus 13"
+  arranger = ##f
 }
-
-\include "paper.ily"
-
-fileBaseName = "Leo_Portnoff-opus_13"
 
 define(`Movements', `(I, II, III)')
 include(`concertino.ily')
@@ -612,7 +606,6 @@ include(`concertino.ily')
 \include "articulate.ly"
 
 \book {
-  \bookOutputName \fileBaseName
   \score {
     \articulate \unfoldRepeats
     \new StaffGroup <<

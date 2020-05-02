@@ -281,7 +281,7 @@ violinMovementI = \relative e'' {
   a2~\downbow | a4 r \bar "|."
 }
 
-pianoUpMovementI = \new Voice \relative e' {
+pianoUpMovementI = \relative e' {
   \clef "alto"
   \set Timing.measurePosition = #(ly:make-moment -5/16)
   <e e,>16\f <fis fis,> <gis gis,> <a a,> <b b,> |
@@ -514,7 +514,7 @@ pianoUpMovementI = \new Voice \relative e' {
 
 \addQuote "pianoUpMovementI" \pianoUpMovementI
 
-pianoDownMovementI = \new Voice \relative e, {
+pianoDownMovementI = \relative e, {
   \set Timing.measurePosition = #(ly:make-moment -5/16)
   <e e,>16\sustainOn <fis fis,> <gis gis,> <a a,> <b b,>\sustainOff |
   %% 1
@@ -729,17 +729,11 @@ pianoDownMovementI = \new Voice \relative e, {
 \include "composer.ily"
 
 \header {
-  arranger = ##f
-  enteredby = "Philipp Büttgenbach"
-  opus = "Opus 21"
-  source = "http://imslp.org/"
   title = "Concertino"
-  subtitle = "in ungarischer Weise."
+  subtitle = "in un moda ungherese."
+  opus = "Opus 21"
+  arranger = ##f
 }
-
-\include "paper.ily"
-
-fileBaseName = "Oskar_Rieding-opus_21"
 
 define(`Movements', `(I)')
 include(`concertino.ily')
@@ -747,7 +741,6 @@ include(`concertino.ily')
 \include "articulate.ly"
 
 \book {
-  \bookOutputName \fileBaseName
   \score {
     \articulate \unfoldRepeats
     \new StaffGroup <<

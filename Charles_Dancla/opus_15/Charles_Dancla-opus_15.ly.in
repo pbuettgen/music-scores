@@ -22,9 +22,7 @@ globalduoImovementI = {
   \key c \major
 }
 
-violinIduoImovementI = \new Voice \relative c'' {
-  \violinVoiceSettings
-
+violinIduoImovementI = \relative c'' {
   \repeat volta 2 {
     c2\f e | g2. e8-.([ r16 c-.)] | g4 e8-.([ r16 c-.)] g4 <g' b> |
     %% 4
@@ -96,9 +94,7 @@ violinIduoImovementI = \new Voice \relative c'' {
   e4 r r2 | r4 c'( d b) | b2\>( c4\!) r \bar "|."
 }
 
-violinIIduoImovementI = \new Voice \relative c' {
-  \violinVoiceSettings
-
+violinIIduoImovementI = \relative c' {
   \repeat volta 2 {
     c2\f e | g2. e8-.([ r16 c-.)] | g4 r r f' | e  <g b,> <g c,> r |
     %% 5
@@ -172,9 +168,7 @@ globalduoImovementII = {
   \key g \major
 }
 
-violinIduoImovementII = \new Voice \relative a' {
-  \violinVoiceSettings
-  
+violinIduoImovementII = \relative a' {
   b2\p( a4) | d2. | g,4-.( g-. a-.) | b2( g4) | a2( b4) | c2( e4-4) |
   fis,4~( fis8 g d' c) | \repeat percent 2 {b2( a4)} | d2. |
   g,4-.( g-. a-.) | b2. | a2( gis4) | a\< b c | d e fis | g2.\f |
@@ -199,9 +193,7 @@ violinIduoImovementII = \new Voice \relative a' {
   g r r \bar "|."
 }
 
-violinIIduoImovementII = \new Voice \relative d' {
-  \violinVoiceSettings
-
+violinIIduoImovementII = \relative d' {
   r8 d\p( g d c d) | b( d b d b d) | b( d b d fis d) | g( d g d b d) |
   %% 5
   c( e c e gis,-1 e'-2) | a,( e' a, e' c e) | c( d c b c e) |
@@ -242,9 +234,7 @@ globalduoImovementIII = {
   \key c \major
 }
 
-violinIduoImovementIII = \new Voice \relative g'' {
-  \violinVoiceSettings
-
+violinIduoImovementIII = \relative g'' {
   \partial 8 g8-.\upbow\p
   \repeat volta 2 {
     %% 1
@@ -325,9 +315,7 @@ violinIduoImovementIII = \new Voice \relative g'' {
   e8 fis16( g) g8 b16-2( c) | c4 r8 \bar "|."
 }
 
-violinIIduoImovementIII = \new Voice \relative d' {
-  \violinVoiceSettings
-
+violinIIduoImovementIII = \relative d' {
   \partial 8 r8
   \repeat volta 2 {
     r <f g,>\p\>([ <e g,>\!)] r | r <f g,>\>([ <e g,>\!)] c16( d) |
@@ -410,9 +398,7 @@ globalduoIImovementI = {
   \key f \major
 }
 
-violinIduoIImovementI = \new Voice \relative c'' {
-  \violinVoiceSettings
-
+violinIduoIImovementI = \relative c'' {
   \repeat volta 2 {
     c2.\p( a4) | f'2.( c4) | a'2~( a16 f c a c bes g e) | g2( f4) r |
     %% 5
@@ -488,9 +474,7 @@ violinIduoIImovementI = \new Voice \relative c'' {
   c( a8 f c-2 a) | f4 r r2 \bar "|."
 }
 
-violinIIduoIImovementI = \new Voice \relative g {
-  \violinVoiceSettings
-
+violinIIduoIImovementI = \relative g {
   \repeat volta 2 {
     a8\p( c f c a c f c) | a( c f c a c a c) | f( c f c f c e c) |
     %% 4
@@ -583,9 +567,7 @@ globalduoIImovementII = {
   \key bes \major
 }
 
-violinIduoIImovementII = \new Voice \relative d'' {
-  \violinVoiceSettings
-
+violinIduoIImovementII = \relative d'' {
   \repeat volta 2 {
     d2\p( bes8. f16 c'8. f,16) | d'2( bes4) r | f'2-3( ees4 d) |
     %% 4
@@ -641,9 +623,7 @@ violinIduoIImovementII = \new Voice \relative d'' {
   \mark \markup {\fermata}
 }
 
-violinIIduoIImovementII = \new Voice \relative b' {
-  \violinVoiceSettings
-
+violinIIduoIImovementII = \relative b' {
   \repeat volta 2 {
     bes8\p( f bes f d f a f) | bes( f bes f d f d f) |
     aes( bes aes bes g bes f bes) | a( f a f a f a f) |
@@ -694,9 +674,7 @@ globalduoIImovementIII = {
   \key f \major
 }
 
-violinIduoIImovementIII = \new Voice \relative d'' {
-  \violinVoiceSettings
-
+violinIduoIImovementIII = \relative d'' {
   \partial 4 c16-.\p\upbow([ r c-.]) r | c8\>( f\!) d\>( f\!) |
   %% 2
   c\>( f\!) a16-.([ r a-.]) r | a8\>( bes\!) g16-.([ r e-.]) r |
@@ -781,9 +759,7 @@ violinIduoIImovementIII = \new Voice \relative d'' {
   f8 r <f c' a'>\downbow r | <f a,>4\downbow \bar "|."
 }
 
-violinIIduoIImovementIII = \new Voice \relative b' {
-  \violinVoiceSettings
-
+violinIIduoIImovementIII = \relative b' {
   \partial 4 r4 | a4\p( bes) | a( f) | \repeat tremolo 2 {bes,8 c} |
   %% 4
   a4 r | a'4( bes) | a( f) | g,8 c g b | c r c'16-.([ r c-.)] r |
@@ -881,16 +857,10 @@ violinIIduoIImovementIII = \new Voice \relative b' {
 \include "composer.ily"
 
 \header {
-  arranger = ##f
-  enteredby = "Philipp Büttgenbach"
-  opus = "Opus 15"
-  source = "http://imslp.org/"
   title = "Troi Duos."
+  opus = "Opus 15"
+  arranger = ##f
 }
-
-\include "paper.ily"
-
-#(define fileBaseName "Charles_Dancla-opus_15")
 
 define(`AllDuetts', `(I, II)')
 define(`Movements', `(I, II, III)')

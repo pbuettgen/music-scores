@@ -192,8 +192,6 @@ pianoDownMovementI = \relative g, {
   arranger = ##f
 }
 
-\include "paper.ily"
-
 define(`Movements', `(I)')
 include(`concertino.ily')
 

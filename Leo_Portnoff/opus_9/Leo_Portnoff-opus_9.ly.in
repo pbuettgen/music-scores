@@ -445,16 +445,10 @@ pianoDownMovementIII = \relative g {
 \include "composer.ily"
 
 \header {
-  arranger = ##f
-  enteredby = "Philipp Büttgenbach"
-  opus = "Opus 9"
-  source = "http://imslp.org/"
   title = "Concertino in D Minor."
+  opus = "Opus 9"
+  arranger = ##f
 }
-
-\include "paper.ily"
-
-fileBaseName = "Leo_Portnoff-opus_9"
 
 define(`Movements', `(I, II, III)')
 include(`concertino.ily')
@@ -462,7 +456,6 @@ include(`concertino.ily')
 \include "articulate.ly"
 
 \book {
-  \bookOutputName \fileBaseName
   \score {
     \articulate \unfoldRepeats
     \new StaffGroup <<

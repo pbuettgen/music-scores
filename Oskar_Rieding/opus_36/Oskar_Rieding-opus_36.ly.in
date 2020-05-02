@@ -718,16 +718,10 @@ pianoDownMovementIII = \relative b, {
 \include "composer.ily"
 
 \header {
-  arranger = ##f
-  enteredby = "Philipp Büttgenbach"
-  opus = "Opus 36"
-  source = "http://imslp.org/"
   title = "Concert."
+  opus = "Opus 36"
+  arranger = ##f
 }
-
-\include "paper.ily"
-
-fileBaseName = "Oskar_Rieding-opus_36"
 
 define(`Movements', `(I, II, III)')
 include(`concertino.ily')
@@ -735,7 +729,6 @@ include(`concertino.ily')
 \include "articulate.ly"
 
 \book {
-  \bookOutputName \fileBaseName
   \score {
     \articulate \unfoldRepeats
     \new StaffGroup <<

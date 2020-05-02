@@ -19,9 +19,7 @@ globalduoImovementI = {
   \key c \major
 }
 
-violinIduoImovementI = \new Voice \relative c'' {
-  \violinVoiceSettings
-  
+violinIduoImovementI = \relative c'' {
   \repeat volta 2 {
     c2\f\downbow g | e2. c4-- | e4-- g-- c-- e--\open | g4. (f8) e4--\open r |
     %% 5
@@ -79,9 +77,7 @@ violinIduoImovementI = \new Voice \relative c'' {
   \repeat unfold 2 {c4-. g'2-> b,4-.} | c2 e-4-> | c-> r \bar "|."
 }
 
-violinIIduoImovementI = \new Voice \relative c' {
-  \violinVoiceSettings
-
+violinIIduoImovementI = \relative c' {
   \repeat volta 2 {
     c2\f\downbow g | c2. g4-- | c-- e-- g-- c-- | b-- g-- c-- r |
     %% 5
@@ -151,9 +147,7 @@ globalduoImovementII = {
   \key f \major
 }
 
-violinIduoImovementII = \new Voice \relative a' {
-  \violinVoiceSettings
-
+violinIduoImovementII = \relative a' {
   \partial 2 a4--\open\upbow\pDolce (bes--) |
   %% 1
   c2 f4. (e8\open) | e4-4 (d) g,-- (a---4) |
@@ -196,9 +190,7 @@ violinIduoImovementII = \new Voice \relative a' {
   f1~ | f2 r \bar "|."
 }
 
-violinIIduoImovementII = \new Voice \relative a' {
-  \violinVoiceSettings
-
+violinIIduoImovementII = \relative a' {
   \partial 2 f4--\p\upbow (g--) |
   %% 1
   a--\open c-- a-- f-- | bes---4 bes,---2 e-- f-- |
@@ -244,9 +236,7 @@ globalduoImovementIII = {
   \key c \major
 }
 
-violinIduoImovementIII = \new Voice \relative g' {
-  \violinVoiceSettings
-
+violinIduoImovementIII = \relative g' {
   \partial 8 g8-.\f\upbow | g4. c8-. b-. c-. | cis4.\> (d4\!) g,8-. |
   %% 3
   g4. d'8-. c-. d-. | dis4.\> (e4-4\!) g,8-. | g4. c8-- e--\open g-- |
@@ -334,9 +324,7 @@ violinIduoImovementIII = \new Voice \relative g' {
   c4.~\downbow c4 r8 \bar "|."
 }
 
-violinIIduoImovementIII = \new Voice \relative g {
-  \violinVoiceSettings
-
+violinIIduoImovementIII = \relative g {
   \partial 8 r8 |
   %% 1
   <g e'>8-.\f\downbow <g e'>-. <g e'>-. \repeat tremolo 3 {<g e'>-.} |
@@ -432,9 +420,7 @@ globalduoIImovementI = {
   \key g \major
 }
 
-violinIduoIImovementI = \new Voice \relative g' {
-  \violinVoiceSettings
-
+violinIduoIImovementI = \relative g' {
   \repeat volta 2 {
     b2\downbow\pDolce \acciaccatura d8 c8 (b c a\open) | d2. g,4 |
     %% 3
@@ -517,9 +503,7 @@ violinIduoIImovementI = \new Voice \relative g' {
   g2.\downbow r4 \bar "|."
 }
 
-violinIIduoIImovementI = \new Voice \relative g {
-  \violinVoiceSettings
-
+violinIIduoIImovementI = \relative g {
   \repeat volta 2 {
     g4\p\downbow d'\open a d\open | b d\open g b | d fis, a\open c | b fis g g, |
     %% 5
@@ -615,9 +599,7 @@ globalduoIImovementII = {
   \key d \major
 }
 
-violinIduoIImovementII = \new Voice \relative d' {
-  \violinVoiceSettings
-
+violinIduoIImovementII = \relative d' {
   \repeat volta 2 {
     d4\open\f\downbow (fis) a--\open | d2 cis8 (d) | e4-4( a,\open) a-- |
     %% 4
@@ -675,9 +657,7 @@ violinIduoIImovementII = \new Voice \relative d' {
   <a, g'>2.\p ( | <a fis'>2\fermata) r4 \bar "|."
 }
 
-violinIIduoIImovementII = \new Voice \relative d' {
-  \violinVoiceSettings
-
+violinIIduoIImovementII = \relative d' {
   \repeat volta 2 {
     R2. | d4\open\f\downbow (fis) d-- | a (g') e-- |
     %% 4
@@ -742,9 +722,7 @@ globalduoIImovementIII = {
   \key g \major
 }
 
-violinIduoIImovementIII = \new Voice \relative d'' {
-  \violinVoiceSettings
-
+violinIduoIImovementIII = \relative d'' {
   \partial 4 d8-.\p\upbow (d-.) | g-. g-. b,-. b-. |
   %% 2
   e4-4 a,8\open (b16 c) | <<d8-.-3 s8-3>> g,-. c-. b-. |
@@ -813,9 +791,7 @@ violinIduoIImovementIII = \new Voice \relative d'' {
   <g, d' b' g'>4\downbow r \bar "|."
 }
 
-violinIIduoIImovementIII = \new Voice \relative b {
-  \violinVoiceSettings
-
+violinIIduoIImovementIII = \relative b {
   \partial 4 r4 | b8-.\downbow\p b-. g-. g-. | c-. a-. d-.-4 c-. |
   %% 3
   b-. d-.\open fis-. g-. | g (fis) r4 | b,8-.\downbow b-. g-. g-. |
@@ -885,9 +861,7 @@ globalduoIIImovementI = {
   \key d \major
 }
 
-violinIduoIIImovementI = \new Voice \relative a' {
-  \violinVoiceSettings
-
+violinIduoIIImovementI = \relative a' {
   \repeat volta 2 {
     \partial 2 a4--\open\mf\downbow d-- | fis2 e8-4 (d) cis-- b-- |
     %% 2
@@ -984,9 +958,7 @@ violinIduoIIImovementI = \new Voice \relative a' {
   d2\open\downbow \bar "|."
 }
 
-violinIIduoIIImovementI = \new Voice \relative d' {
-  \violinVoiceSettings
-
+violinIIduoIIImovementI = \relative d' {
   \repeat volta 2 {
     \partial 2 r2 | d4-.\open\mf\downbow <fis a>-. d-. g-. |
     %% 2
@@ -1092,9 +1064,7 @@ globalduoIIImovementII = {
   \key a \major
 }
 
-violinIduoIIImovementII = \new Voice \relative a' {
-  \violinVoiceSettings
-
+violinIduoIIImovementII = \relative a' {
   \partial 4 a4--\open_\dolce\upbow | cis2 e-4 | b2. cis4-- |
   %% 3
   d2 fis4. (e8\open) | d2 (cis4) e--\open | a2 gis | fis e4.\open (fis8) |
@@ -1128,9 +1098,7 @@ violinIduoIIImovementII = \new Voice \relative a' {
   a2.-4\fermata r4 \bar "|."
 }
 
-violinIIduoIIImovementII = \new Voice \relative a {
-  \violinVoiceSettings
-
+violinIIduoIIImovementII = \relative a {
   \partial 4 r4 | a--\downbow\p a'--\open cis-- a-- |
   %% 2
   gis-- e-- gis-- a---4 | b-- a--\open gis-- e-- |
@@ -1174,9 +1142,7 @@ globalduoIIImovementIII = {
   \key d \major
 }
 
-violinIduoIIImovementIII = \new Voice \relative a' {
-  \violinVoiceSettings
-
+violinIduoIIImovementIII = \relative a' {
   \partial 8 a16\open\p\upbow (b) |
   %% 1
   a8-. [fis-. d-.\open] a'16\open (b) | a8-. [g-. e-.] a16\open (b) |
@@ -1272,9 +1238,7 @@ violinIduoIIImovementIII = \new Voice \relative a' {
   <d, d'>8\f\downbow r8 <d a' fis'>\downbow r | <d d'>2\downbow \bar "|."
 }
 
-violinIIduoIIImovementIII = \new Voice \relative a {
-  \violinVoiceSettings
-
+violinIIduoIIImovementIII = \relative a {
   \partial 8 r8 |
   %% 1
   <a fis'>8-.\p\downbow \repeat unfold 3 {<a fis'>-.} |
@@ -1382,9 +1346,7 @@ globalduoIVmovementI = {
   \key a \major
 }
 
-violinIduoIVmovementI = \new Voice \relative a'' {
-  \violinVoiceSettings
-
+violinIduoIVmovementI = \relative a'' {
   \repeat volta 2 {
     \partial 4 gis16\mf\upbow (a b a) |
     %% 1
@@ -1516,9 +1478,7 @@ violinIduoIVmovementI = \new Voice \relative a'' {
   a4-.\open a'-. a,-. r \bar "|."
 }
 
-violinIIduoIVmovementI = \new Voice \relative a {
-  \violinVoiceSettings
-
+violinIIduoIVmovementI = \relative a {
   \repeat volta 2 {
     \partial 4 a8-.\upbow\mf r | cis-. r e-. r a-.-4 r cis,8.\< (d16-4) |
     %% 2
@@ -1665,9 +1625,7 @@ globalduoIVmovementII = {
   \key d \major
 }
 
-violinIduoIVmovementII = \new Voice \relative d' {
-  \violinVoiceSettings
-
+violinIduoIVmovementII = \relative d' {
   \partial 4 fis8\upbow\pDolce (g) | a\open\< (b) cis-- d-- fis (e\open) |
   %% 2
   d4\> (cis\!) e,8 (fis) | \acciaccatura {a8-4} g8 (fis g) b (a\open e) |
@@ -1726,9 +1684,7 @@ violinIduoIVmovementII = \new Voice \relative d' {
   <a fis'>2.\fermata \bar "|."
 }
 
-violinIIduoIVmovementII = \new Voice \relative d' {
-  \violinVoiceSettings
-
+violinIIduoIVmovementII = \relative d' {
   \partial 4 d8\open\p\upbow (e) | <fis a>\< r <fis a> r <d a'> r |
   %% 2
   <g a>\> r <e a>\! r cis\upbow (d-4) |
@@ -1801,9 +1757,7 @@ globalduoIVmovementIII = {
   \key a \major
 }
 
-violinIduoIVmovementIII = \new Voice \relative a' {
-  \violinVoiceSettings
-
+violinIduoIVmovementIII = \relative a' {
   \partial 8 cis8-.\pDolce\upbow |
   %% 1
   cis4 (cis8-.\<) \acciaccatura d8 cis8-. bis-. cis-. |
@@ -1930,9 +1884,7 @@ violinIduoIVmovementIII = \new Voice \relative a' {
   <a e' a>\downbow r8 r4. \bar "|."
 }
 
-violinIIduoIVmovementIII = \new Voice \relative a {
-  \violinVoiceSettings
-
+violinIIduoIVmovementIII = \relative a {
   \partial 8 r8 | a8-.\p\downbow\< cis-. e-. a,-. cis-. e-. |
   %% 2
   gis,-.-1\> b-.-3 e-.-2 a,-.-1 cis-. e-.\! |
@@ -2074,9 +2026,7 @@ globalduoVmovementI = {
   \key f \major
 }
 
-violinIduoVmovementI = \new Voice \relative a' {
-  \violinVoiceSettings
-
+violinIduoVmovementI = \relative a' {
   \repeat volta 2 {
     \partial 4 a8.\open\pDolce\upbow (bes16) | c4 d8-- e---4 f4\< (fis\!) |
     %% 2
@@ -2190,9 +2140,7 @@ violinIduoVmovementI = \new Voice \relative a' {
   f4) r a---4\pp\upbow r | f2\downbow r \bar "|."
 }
 
-violinIIduoVmovementI = \new Voice \relative f' {
-  \violinVoiceSettings
-
+violinIIduoVmovementI = \relative f' {
   \repeat volta 2 {
     \partial 4 f8.\upbow\pDolce (g16) | a4-4 bes8---4 g---3 a4-4\< (c) |
     %% 2
@@ -2309,9 +2257,7 @@ globalduoVmovementII = {
   \key f \major
 }
 
-violinIduoVmovementII = \new Voice \relative a' {
-  \violinVoiceSettings
-
+violinIduoVmovementII = \relative a' {
   \partial 4 a4--\open\f\upbow | d-- f-- r a,--\open\upbow |
   %% 2
   e'--\open g-- r a,--\open\upbow  | d-- e---4 f-- gis-- |
@@ -2357,9 +2303,7 @@ violinIduoVmovementII = \new Voice \relative a' {
   d-.-4 r f--\pp\upbow r d2\open\downbow r \bar "|."
 }
 
-violinIIduoVmovementII = \new Voice \relative a {
-  \violinVoiceSettings
-
+violinIIduoVmovementII = \relative a {
   \partial 4 r4 | r a--\f\upbow d--\open f-- | r a,--\upbow e'-- g-- |
   %% 3
   f-- e-- d--\open bes-- | a( cis8) e-- a---4 g-- f-- e-- |
@@ -2424,9 +2368,7 @@ globalduoVmovementIII = {
   \key f \major
 }
 
-violinIduoVmovementIII = \new Voice \relative a' {
-  \violinVoiceSettings
-
+violinIduoVmovementIII = \relative a' {
   \partial 4. a8-.\open\p\upbow( bes-. b-.) | c4( c8-.) c-.( d-. e-.-4) |
   %% 2
   g4( f8) \acciaccatura g8 f-. e-.\open f-. |
@@ -2531,9 +2473,7 @@ violinIduoVmovementIII = \new Voice \relative a' {
   f4 r8 <a f'>4\downbow r8 | <a, f'>4.~\downbow <a f'>4 r8 \bar "|."
 }
 
-violinIIduoVmovementIII = \new Voice \relative f' {
-  \violinVoiceSettings
-
+violinIIduoVmovementIII = \relative f' {
   \partial 4. f8-.\p\upbow( g-. gis-.-4) |
   %% 1
   \repeat tremolo 3 {<f a\open>8-.} \repeat tremolo 3 {<g bes>-.} |
@@ -2648,9 +2588,7 @@ globalduoVImovementI = {
   \key bes \major
 }
 
-violinIduoVImovementI = \new Voice \relative f' {
-  \violinVoiceSettings
-
+violinIduoVImovementI = \relative f' {
   \repeat volta 2 {
     \partial 2 f4_\markup{\dynamic p \italic "dolce"}\<\upbow( d'\!) |
     %% 1
@@ -2762,9 +2700,7 @@ violinIduoVImovementI = \new Voice \relative f' {
   <d bes'>-- <d d'>-- <d bes'>-- r \bar "|."
 }
 
-violinIIduoVImovementI = \new Voice \relative b {
-  \violinVoiceSettings
-
+violinIIduoVImovementI = \relative b {
   \repeat volta 2 {
     \partial 2 r2 | bes8\p\downbow( f' d\open f) d( f d f) |
     %% 2
@@ -2876,9 +2812,7 @@ globalduoVImovementII = {
   \key bes \major
 }
 
-violinIduoVImovementII = \new Voice \relative g' {
-  \violinVoiceSettings
-
+violinIduoVImovementII = \relative g' {
   \partial 8 g8--\upbow\pDolce | bes--([ r c--)] d--([ r ees--)] |
   %% 2
   d--([ r c--)] bes4. | a4\open( a8--) a\(( \acciaccatura c8 bes) a--\) |
@@ -2921,9 +2855,7 @@ violinIduoVImovementII = \new Voice \relative g' {
   g8--\! r4 d4.-4\pp\upbow | bes2.\fermata \bar "|."
 }
 
-violinIIduoVImovementII = \new Voice \relative g' {
-  \violinVoiceSettings
-
+violinIIduoVImovementII = \relative g' {
   \partial 8 r8 | g--\p\downbow g,-- a'---4 bes-- g,-- c'-- |
   %% 2
   bes-- g,-- a'---4 g-- d--\open bes-- | c4. cis-4 |
@@ -2975,9 +2907,7 @@ globalduoVImovementIII = {
   \key bes \major
 }
 
-violinIduoVImovementIII = \new Voice \relative f' {
-  \violinVoiceSettings
-
+violinIduoVImovementIII = \relative f' {
   f8-.\p\downbow bes-. f-. bes-. | g-. c-. ees4-> |
   %% 3
   a,8\open( c) ees-. g-. | f-. d16-- bes-- bes( a\open g f) |
@@ -3071,9 +3001,7 @@ violinIduoVImovementIII = \new Voice \relative f' {
   bes4 r | <bes d,>->\downbow <d f,>-> | <bes d,>2-> \bar "|."
 }
 
-violinIIduoVImovementIII = \new Voice \relative c' {
-  \violinVoiceSettings
-
+violinIIduoVImovementIII = \relative c' {
   d8-.-4\p\downbow bes-. d-.-4 bes-. | ees-. g-. ees-. c-. |
   %% 3
   f-. a-.\open c-. ees-. | d-. bes,-. c-. ees-. | d-.\open bes-. d-.-4 bes-. |
@@ -3166,16 +3094,10 @@ violinIIduoVImovementIII = \new Voice \relative c' {
 \include "composer.ily"
 
 \header {
-  arranger = "Revus et doigtés par József Bloch."
-  enteredby = "Philipp Büttgenbach"
-  opus = "Opus 38"
-  source = "http://imslp.org/"
   title = "Douze petits Duos."
+  opus = "Opus 38"
+  arranger = "Revus et doigtés par József Bloch."
 }
-
-\include "paper.ily"
-
-#(define fileBaseName "Jaques-Féréol_Mazas-opus_38")
 
 define(`AllDuetts', `(I, II, III, IV, V, VI)')
 define(`Movements', `(I, II, III)')

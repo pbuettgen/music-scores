@@ -21,9 +21,9 @@
   two-sided = ##t
   auto-first-page-number = ##t
   blank-after-score-page-penalty = #.1
-  number-of-division = 21
-  division-width  = #(/ (- paper-width binding-offset) number-of-division)
-  division-height = #(/ paper-height number-of-division)
+  number-of-divisions = 21
+  division-width  = #(/ (- paper-width binding-offset) number-of-divisions)
+  division-height = #(/ paper-height number-of-divisions)
   inner-margin  = #(* 1 division-width)
   outer-margin  = #(* 2 division-width)
   top-margin    = #(* 1 division-height)

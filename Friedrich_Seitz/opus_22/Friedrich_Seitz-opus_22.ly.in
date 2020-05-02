@@ -1,13 +1,13 @@
 %%% -*- coding: utf-8 -*-
 %%%
-%%% Copyright © 2018 Philipp Büttgenbach
+%%% Copyright © 2018-2020 Philipp Büttgenbach
 %%%
 %%% This work is licensed under the Creative Commons
 %%% Attribution-ShareAlike 4.0 International License.  To view a copy of
 %%% this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 %%%
 
-\version "2.18.2"
+\version "2.20"
 
 \include "lily-snippets.ily"
 
@@ -15,14 +15,8 @@ brillante = \markup {\italic "brillante"}
 espress = \markup {\italic "espress."}
 espressione = \markup {\italic "espressione"}
 fRisoluto = \markup {\dynamic #"f" \italic #"risoluto"}
-ffWhiteOutTxt = \markup \whiteout \pad-around #.5 \dynamic #"ff"
-ffWhiteOut = #(make-dynamic-script ffWhiteOutTxt)
-fWhiteOutTxt = \markup {\whiteout \pad-around #.5 \dynamic "f"}
-fWhiteOut = #(make-dynamic-script fWhiteOutTxt)
 grazioso = \markup {\italic "grazioso"}
 leggiero = \markup {\italic "leggiero"}
-mfWhiteOutTxt = \markup \whiteout \pad-around #.5 \dynamic "mf"
-mfWhiteOut = #(make-dynamic-script mfWhiteOutTxt)
 moltoTenuto = \markup\italic #"molto tenuto"
 morendo = \markup {\italic "morendo"}
 pDolce = \markup {\dynamic #"p" \italic #"dolce"}
@@ -31,16 +25,11 @@ piuMoto = \markup {\italic "più moto"}
 pocoRit = \markup {\italic "poco rit."}
 pLeggiero = \markup{\dynamic #"p" \italic #"leggiero"}
 ppTranquillo = \markup {\dynamic #"pp" \italic #"tranquillo"}
-ppWhiteOutTxt = \markup {\whiteout \pad-around #.5 \dynamic "pp"}
-ppWhiteOut = #(make-dynamic-script ppWhiteOutTxt)
-pWhiteOutTxt = \markup \whiteout \pad-around #.5 \dynamic "p"
-pWhiteOut = #(make-dynamic-script pWhiteOutTxt)
 risoluto = \markup {\italic "risoluto"}
 sostenuto = \markup {\italic "sostenuto" }
 tenutoTxt = \markup { \italic "tenuto" }
 tranquillo = \markup {\italic "tranquillo"}
 tranquilloEDolce = \markup {\italic "tranquillo e dolce"}
-tutti = \markup {\italic \caps "Tutti"}
 
 breatheFermata = \markup {
   \translate #'(0 . 3)
@@ -1108,18 +1097,13 @@ pianoDownMovementI = {
 
 %%% --------------------------------------------------------
 
+\include "composer.ily"
+
 \header {
-  arranger = ##f
-  composer = "Friedrich Seitz"
-  enteredby = "Philipp Büttgenbach"
-  opus = "Opus 22"
-  source = "http://imslp.org/"
   title = "Student's Concerto No V."
+  opus = "Opus 22"
+  arranger = ##f
 }
-
-\include "paper.ily"
-
-#(define fileBaseName "Friedrich_Seitz-opus_22")
 
 define(`Movements', `(I)')
 include(`concertino.ily')
@@ -1127,7 +1111,6 @@ include(`concertino.ily')
 \include "articulate.ly"
 
 \book {
-  \bookOutputName \fileBaseName
   \score {
     \articulate \unfoldRepeats
     \new StaffGroup <<

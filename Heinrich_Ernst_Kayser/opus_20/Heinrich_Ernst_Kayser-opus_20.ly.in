@@ -16,8 +16,7 @@ Opus = "Opus 20"
 studyXXXVIprologI = ##f
 studyXXXVIprologII = ##f
 
-studyXXXVI = \new Voice \relative a {
-  \violinVoiceSettings
+studyXXXVI = \relative a {
   \time 4/4
   \tempo "Allegro." 4=123
   \key c \major
@@ -105,8 +104,7 @@ studyXXXVI = \new Voice \relative a {
 studyXXXVprologI = ##f
 studyXXXVprologII = ##f
 
-studyXXXV = \new Voice \relative f'' {
-  \violinVoiceSettings
+studyXXXV = \relative f'' {
   \time 3/2
   \tempo "Allegro con fuoco." 4=123
   \key d \major
@@ -252,8 +250,7 @@ studyXXXV = \new Voice \relative f'' {
 studyXXXIVprologI = ##f
 studyXXXIVprologII = ##f
 
-studyXXXIV = \new Voice \relative g'' {
-  \violinVoiceSettings
+studyXXXIV = \relative g'' {
   \time 6/4
   \tempo "Andante, poco allegretto." 4=111
   \key d \major
@@ -552,8 +549,7 @@ studyXXXIIIprologI =  \markup {
 
 studyXXXIIIprologII = ##f
 
-studyXXXIII = \new Voice \relative g'' {
-  \violinVoiceSettings
+studyXXXIII = \relative g'' {
   \time 4/4
   \tempo "Allegro moderato." 4=123
   \key c \major
@@ -673,7 +669,6 @@ studyXXXIIprologI = \score {
     (minimum-distance . .5)
     (padding . .2))
   } \new Voice \relative g'' {
-    \violinVoiceSettings
     \time 3/4
     \key ees \major
     
@@ -688,8 +683,7 @@ studyXXXIIprologI = \score {
 
 studyXXXIIprologII = ##f
 
-studyXXXII = \new Voice \relative g'' {
-  \violinVoiceSettings
+studyXXXII = \relative g'' {
   \time 3/4
   \tempo "Allegro moderato." 4=123
   \key es \major
@@ -838,8 +832,7 @@ studyXXXII = \new Voice \relative g'' {
 
 studyXXXIprologI = ##f
 studyXXXIprologII = ##f
-studyXXXI = \new Voice \relative e'' {
-  \violinVoiceSettings
+studyXXXI = \relative e'' {
   \time 4/4
   \tempo "Allegro, molto agitato." 4=123
   \key as \major
@@ -966,8 +959,7 @@ studyXXXI = \new Voice \relative e'' {
 
 studyXXXprologI = ##f
 studyXXXprologII = ##f
-studyXXX = \new Voice \relative a'' {
-  \violinVoiceSettings
+studyXXX = \relative a'' {
   \time 3/4
   \tempo "Allegro moderato." 4=123
   \key f \major
@@ -1151,8 +1143,7 @@ studyXXX = \new Voice \relative a'' {
 
 studyXXIXprologI = ##f
 studyXXIXprologII = ##f
-studyXXIX = \new Voice \relative c' {
-  \violinVoiceSettings
+studyXXIX = \relative c' {
   \time 3/4
   \tempo "Moderato." 4=111
   \key c \major
@@ -1266,8 +1257,7 @@ studyXXIX = \new Voice \relative c' {
 
 studyXXVIIIprologI = ##f
 studyXXVIIIprologII = ##f
-studyXXVIII = \new Voice \relative g {
-  \violinVoiceSettings
+studyXXVIII = \relative g {
   \time 4/4
   \tempo "Allegro assai." 4=123
   \key c \major
@@ -1361,8 +1351,7 @@ studyXXVIII = \new Voice \relative g {
 
 studyXXVIIprologI = ##f
 studyXXVIIprologII = ##f
-studyXXVII = \new Voice \relative c'' {
-  \violinVoiceSettings
+studyXXVII = \relative c'' {
   \time 3/4
   \tempo "Allegro." 4=123
   \key a \major
@@ -1519,8 +1508,7 @@ studyXXVII = \new Voice \relative c'' {
 
 studyXXVIprologI = ##f
 studyXXVIprologII = ##f
-studyXXVI = \new Voice \relative a' {
-  \violinVoiceSettings
+studyXXVI = \relative a' {
   \time 2/4
   \tempo "Allegro." 4=123
   \key d \major
@@ -1639,8 +1627,7 @@ studyXXVI = \new Voice \relative a' {
 
 studyXXVprologI = ##f
 studyXXVprologII = ##f
-studyXXV = \new Voice \relative c' {
-  \violinVoiceSettings
+studyXXV = \relative c' {
   \time 4/4
   \tempo "Allegro." 4=123
   \key f \major
@@ -1742,8 +1729,7 @@ studyXXV = \new Voice \relative c' {
 
 studyXXIVprologI = ##f
 studyXXIVprologII = ##f
-studyXXIV = \new Voice \relative c'' {
-  \violinVoiceSettings
+studyXXIV = \relative c'' {
   \time 4/4
   \tempo "Allegro assai." 4=123
   \key bes \major
@@ -1826,8 +1812,7 @@ studyXXIV = \new Voice \relative c'' {
 
 studyXXIIIprologI = ##f
 studyXXIIIprologII = ##f
-studyXXIII = \new Voice \relative c'' {
-  \violinVoiceSettings
+studyXXIII = \relative c'' {
   \time 2/4
   \tempo "Allegretto." 4=123
   \key as \major
@@ -1973,8 +1958,7 @@ studyXXIII = \new Voice \relative c'' {
 
 studyXXIIprologI = ##f
 studyXXIIprologII = ##f
-studyXXII = \new Voice \relative c'' {
-  \violinVoiceSettings
+studyXXII = \relative c'' {
   \time 4/4
   \tempo "Allegro assai." 4=123
   \key e \major
@@ -2101,8 +2085,7 @@ studyXXIprologI = \score {
 }
 
 studyXXIprologII = ##f
-studyXXI = \new Voice \relative c''' {
-  \violinVoiceSettings
+studyXXI = \relative c''' {
   \time 4/4
   \tempo "Allegro." 4=123
   \key es \major
@@ -2304,8 +2287,7 @@ studyXXI = \new Voice \relative c''' {
 
 studyXXprologI = ##f
 studyXXprologII = ##f
-studyXX = \new Voice \relative g' {
-  \violinVoiceSettings
+studyXX = \relative g' {
   \time 2/4
   \tempo "Allegretto." 4=123
   \key g \major
@@ -2440,8 +2422,7 @@ studyXIXprologI = \score {
 }
 
 studyXIXprologII = ##f
-studyXIX = \new Voice \relative c'' {
-  \violinVoiceSettings
+studyXIX = \relative c'' {
   \time 4/4
   \tempo "Allegro." 4=123
   \key d \major
@@ -2519,8 +2500,7 @@ studyXIX = \new Voice \relative c'' {
 
 studyXVIIIprologI = ##f
 studyXVIIIprologII = ##f
-studyXVIII = \new Voice \relative g' {
-  \violinVoiceSettings
+studyXVIII = \relative g' {
   \time 4/4
   \tempo "Allegretto." 4=123
   \key g \major
@@ -2662,8 +2642,7 @@ studyXVIII = \new Voice \relative g' {
 
 studyXVIIprologI = ##f
 studyXVIIprologII = ##f
-studyXVII = \new Voice \relative d' {
-  \violinVoiceSettings
+studyXVII = \relative d' {
   \time 5/4
   \tempo "Andante, quasi Allegretto." 4=101
   \key bes \major
@@ -2855,8 +2834,7 @@ studyXVIprologI = \score {
 
 studyXVIprologII = ##f
 
-studyXVI = \new Voice \relative c' {
-  \violinVoiceSettings
+studyXVI = \relative c' {
   \time 6/8
   \tempo "Allegro." 4=123
   \key f \major
@@ -2968,8 +2946,7 @@ studyXVI = \new Voice \relative c' {
 studyXVprologI = ##f
 studyXVprologII = ##f
 
-studyXV = \new Voice \relative c' {
-  \violinVoiceSettings
+studyXV = \relative c' {
   \time 4/4
   \tempo "Allegro moderato." 4=123
   \key bes \major
@@ -3153,8 +3130,7 @@ studyXV = \new Voice \relative c' {
 studyXIVprologI = ##f
 studyXIVprologII = ##f
 
-studyXIV = \new Voice \relative c'' {
-  \violinVoiceSettings
+studyXIV = \relative c'' {
   \time 4/4
   \tempo "Andante." 4=77
   \key es \major
@@ -3330,8 +3306,7 @@ studyXIV = \new Voice \relative c'' {
 studyXIIIprologI = ##f
 studyXIIIprologII = ##f
 
-studyXIII = \new Voice \relative c'' {
-  \violinVoiceSettings
+studyXIII = \relative c'' {
   \time 3/4
   \tempo "Allegretto." 4=123
   \key g \major
@@ -3449,8 +3424,7 @@ studyXIII = \new Voice \relative c'' {
 studyXIIprologI = ##f
 studyXIIprologII = ##f
 
-studyXII = \new Voice \relative g {
-  \violinVoiceSettings
+studyXII = \relative g {
   \time 4/4
   \tempo "Allegro, ma non tanto." 4=123
   \key g \major
@@ -3559,7 +3533,6 @@ studyXIprologI = \score {
     (minimum-distance . .5)
     (padding . .2))
   } \new Voice \relative c' {
-    \violinVoiceSettings
     \time 2/4
     \key es \major
 
@@ -3601,8 +3574,7 @@ studyXIprologI = \score {
 
 studyXIprologII = ##f
 
-studyXI = \new Voice \relative c' {
-  \violinVoiceSettings
+studyXI = \relative c' {
   \time 2/4
   \tempo "Allegro energico." 4=123
   \key es \major
@@ -3788,8 +3760,7 @@ studyXprologII = \markup \columns {
   }
 }
 
-studyX = \new Voice \relative c' {
-  \violinVoiceSettings
+studyX = \relative c' {
   \time 4/4
   \tempo "Allegro, ma non tanto." 4=123
   \key c \major
@@ -3878,8 +3849,7 @@ studyX = \new Voice \relative c' {
 studyIXprologI = ##f
 studyIXprologII = ##f
 
-studyIX = \new Voice \relative c' {
-  \violinVoiceSettings
+studyIX = \relative c' {
   \time 2/4
   \tempo "Allegro assai." 4=123
   \key g \major
@@ -3990,8 +3960,7 @@ studyVIIIprologI = \score {
 
 studyVIIIprologII = ##f
 
-studyVIII = \new Voice \relative c' {
-  \violinVoiceSettings
+studyVIII = \relative c' {
   \time 3/4
   \tempo "Commodo." 4=111
   \key d \major
@@ -4095,8 +4064,7 @@ studyVIII = \new Voice \relative c' {
 studyVIIprologI = ##f
 studyVIIprologII = ##f
 
-studyVII = \new Voice \relative c' {
-  \violinVoiceSettings
+studyVII = \relative c' {
   \time 4/4
   \tempo "Allegro moderato." 4=123
   \key bes \major
@@ -4167,8 +4135,7 @@ studyVII = \new Voice \relative c' {
 studyVIprologI = ##f
 studyVIprologII = ##f
 
-studyVI = \new Voice \relative c'' {
-  \violinVoiceSettings
+studyVI = \relative c'' {
   \time 4/4
   \tempo "Allegro molto." 4=123
   \key es \major
@@ -4279,8 +4246,7 @@ studyVI = \new Voice \relative c'' {
 studyVprologI = ##f
 studyVprologII = ##f
 
-studyV = \new Voice \relative c''' {
-  \violinVoiceSettings
+studyV = \relative c''' {
   \time 6/8
   \tempo "Allegro vivace." 8=136
   \key a \major
@@ -4345,8 +4311,7 @@ studyV = \new Voice \relative c''' {
 studyIVprologI = ##f
 studyIVprologII = ##f
 
-studyIV = \new Voice \relative c' {
-  \violinVoiceSettings
+studyIV = \relative c' {
   \time 4/4
   \tempo "Allegro." 4=123
   \key c \major
@@ -4425,8 +4390,7 @@ studyIV = \new Voice \relative c' {
 studyIIIprologI = ##f
 studyIIIprologII = ##f
 
-studyIII = \new Voice \relative c' {
-  \violinVoiceSettings
+studyIII = \relative c' {
   \time 2/4
   \tempo "Allegretto." 4=123
   \key f \major
@@ -4494,8 +4458,7 @@ studyIII = \new Voice \relative c' {
 studyIIprologI = ##f
 studyIIprologII = ##f
 
-studyII = \new Voice \relative c' {
-  \violinVoiceSettings
+studyII = \relative c' {
   \time 4/4
   \tempo "Andante, quasi Adagio." 4=77
   \key f \major
@@ -4565,8 +4528,7 @@ studyItheme = {
   c b a-4 g f e d-4 c |
 }
 
-studyI = \new Voice \relative c'' {
-  \violinVoiceSettings
+studyI = \relative c'' {
   \time 4/4
   \tempo "Allegro moderato." 4=123
   \key c \major
@@ -4648,15 +4610,18 @@ studyI = \new Voice \relative c'' {
 
 \include "paper.ily"
 
-#(define fileBaseName "Heinrich_Ernst_Kayser-opus_20")
-
 include(`foreach.m4')
 
 define(`EmitStudy', `
    $(if study$1prologI #{ \study$1prologI #} )
    $(if study$1prologII #{ \study$1prologII #} )
 \score {
-  \new Staff \study$1
+  \new Staff \with {
+    \override BreathingSign.text = \markup \musicglyph #"scripts.caesura.straight"
+    \accidentalStyle modern-cautionary
+  } {
+    \study$1
+  }
   \header {
     opus = \Opus
     piece = "$1."
@@ -4685,8 +4650,6 @@ define(`StudiesPartIII', `(XXVII, XXVIII, XXIX, XXX, XXXI, XXXII, XXXIII, XXXIV,
 define(`Parts', `(I, II, III)')
 
 \book {
-  \bookOutputName \fileBaseName
-
   foreach(`Item', Parts, `EmitPart(Item)')
 
   \paper {
@@ -4698,11 +4661,15 @@ define(`Parts', `(I, II, III)')
 \include "articulate.ly"
 
 define(`EmitMidi', `
-\book {
-  \bookOutputName #(string-append fileBaseName "-$1")
+  \book {
+    \bookOutputSuffix #"$1"
   \score {
     \articulate \unfoldRepeats
-    \new Staff \study$1
+    \new Staff \with {
+      midiInstrument = #"violin"
+    } {
+      \study$1
+    }
     \midi {}
   }
 }')

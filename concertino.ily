@@ -7,6 +7,8 @@
 %%% this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 %%%
 
+\include "paper.ily"
+
 include(`foreach.m4')
 
 define(`PianoMovement', `
