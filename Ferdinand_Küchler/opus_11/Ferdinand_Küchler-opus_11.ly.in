@@ -152,7 +152,7 @@ pianoDownMovementI = \relative g' {
   %% 33
   \change Staff = "up" \voiceTwo r4 <dis'' a'> <e g>2 |
   r4 <cis g'>4 <d fis>2 \oneVoice \change Staff = "down" |
-  <d b g>2 r | r <e b g> | <g e a,>2 r | <g, g,> r | d,1 | fis | g2 b |
+  <d b g>2 r | r <e b g> | <g e a,>2 r | <g, a,> r | d,1 | fis | g2 b |
   a1 | g'2. fis4 | e2 a,4 g | fis2 e | d1 | c' | b2 e, | bes'1 |
   a2 d, | g bes | d4 dis, e fis | g2 a | d4 d, r2 | b''4 b b b |
   e, e e, e | cis' cis fis fis | b,2 b, | gis' a | b2 c4 cis | d r r2 |
@@ -215,7 +215,7 @@ pianoUpMovementII = \relative g' {
   c( a e) | c'( g <d b>) | <e c> <fis c>2 | <g b,>4( <b d,> <a c,>) |
   <g b,>2\>( <gis d>4) |
   << {\voiceOne a\p( e a)} \new Voice {\voiceTwo c,2 c4} >> \oneVoice |
-  <fis c>4( d <fis c>) | <g b,> d <g b,> | <d a'> g, <d' a'> |
+  <fis c>4( d <fis c>) | <g b,> d <g b,> | <d a'> a <d a'> |
   <e gis> b <cis g'> | <f d> <a f> <b f> | <c e,> <e, c> <g e c> |
   %% 28
   <e g c> <g e c> <e c g> | <f b, g> <f c a> <f b, g> |
@@ -238,10 +238,10 @@ pianoUpMovementII = \relative g' {
   <d a'> a <d a'> | <gis d> <e c>2 | <f a>4 c <f aes> | <c g'> g <c g'> |
   <f g> b, <f' g> | <g bes>\mf c, <g' bes> | <a f> gis <a f> |
   <g c> c, <g' c> | <e c>\< a, <c e> |
-  << {\voiceOne g'2->\f( f4)}
-     \new Voice {\voiceTwo \repeat unfold 2 <c bes>4 <c a>} >> \oneVoice |
-  <e c g>4 << {\voiceOne g2~}
-              \new Voice {\voiceTwo <e a,>4 <f b,>} >> \oneVoice |
+  << {\voiceOne g'2->\f( f4) | e4 g2~}
+     \new Voice {
+       \voiceTwo \repeat unfold 2 <c, bes>4 <c a> |
+       <c g> <e a,> <f b,>} >> \oneVoice |
   <g e c>4\> g, <g' e c> | <d f> aes <aes d f> | <g c e>2.~\p |
   <g c e> \bar "|."
 }
@@ -309,9 +309,8 @@ violinMovementIII = \relative d' {
 }
 
 pianoUpMovementIII = \relative d''' {
-  \partial 8 \voiceOne d8\f | d4. d,8 |
-  << {\voiceOne d4.} \new Voice {\voiceTwo d,4.} >> \oneVoice d'8 |
-  d4. d,8 d4 r | \repeat percent 4 { r8\f b8~ <b d g>4 } |
+  \partial 8 \voiceOne d8\f | d4. d,8 | d4. \oneVoice d8 |
+  d4. d,8 d4 r | << s8\f \repeat percent 4 { r8 b8~ <b d g>4 } >> |
   r8 a( <d fis> a) | <d fis>( a <d fis> a) | r8 g( <d' g> g,) |
   <d' g>( b <d g>) r | \repeat percent 2 {r8 b~ <b d g>4} |
   r8 d~ <d g b>4 | r8 e~ <e g b>4 | r8 a,( <cis g'> a) |
@@ -345,13 +344,17 @@ pianoUpMovementIII = \relative d''' {
   <b fis d>2) |
   << {\voiceOne b8-. cis-. d4~ | d8 cis cis b}
      \new Voice {\voiceTwo e,2 | eis} >> \oneVoice | <ais fis~> |
-  <c fis,> | <fis, d b>2~\mf | <fis d b> | <g e ais,> | <fis d b> |
-  <g cis, b> | <fis ais,> | <eis b> | <fis ais,> | <fis dis a>~ |
-  <fis dis a> | <e b g>~ | <e b g> | <d b~> |
-  << {\voiceTwo b4 ais} \new Voice {\voiceOne cis2} >> \oneVoice |
+  %% 80
+  <c fis,> | <fis, d b>2~\mf | 2 | <g e ais,> | <fis d b> |
+  %% 85
+  <g cis, b> | <fis ais,> | <eis b> | <fis ais,> | <fis dis a>~ | 2 |
+  <e b g>~ | 2 |
+  %% 93
+  << {\voiceOne d2 | cis2} \new Voice {\voiceTwo b2~ | b4 ais} >> \oneVoice |
+  %% 95
   b2~ | b8\< d fis b\! | \tempo \markup {\italic "più mosso."} d4. d8 |
-  d4. d'8\f | d4. <fis, a,>8 | <fis a,>4. r8 |
-  \repeat percent 4 { r8\f b,,8~ <b d g>4 } |
+  d4. d'8\f | d4. <d, fis,>8 | 4. r8 |
+  << s8\f \repeat percent 4 { r8 b,8~ <b d g>4 } >> |
   r8 a( <d fis> a) | <d fis>( a <d fis> a) | r8 g( <d' g> g,) |
   <d' g>( b <d g>) r | \repeat percent 2 {r8 b~ <b d g>4} |
   r8 d~ <d g b>4 | r8 e~ <e g b>4 | r8 a,( <cis g'> a) |
@@ -365,8 +368,8 @@ pianoUpMovementIII = \relative d''' {
   <d b>4 <g d b>8 <g d b> | <fis d a>4\mf r | <a d,> r |
   \repeat percent 2 {<b g d> r} | \repeat percent 2 {<g e> r} |
   <fis d> r | <c' a d,> r | <b g d> r | <d g, f> r | <c a e> r |
-  <a g c,> r | <a fis c>\< r | <a fis c> r |
-  \repeat percent 4 { r8\f b,8~ <b d g>4 } | <b d g>4 d | b g |
+  <a g c,> r | << s4\< \repeat percent 2 { <a fis c> r } >> |
+  << s8\f \repeat percent 4 { r8 b,8~ <b d g>4 } >> | <b d g>4 d | b g |
   \change Staff = "down" \voiceOne  d \change Staff = "up" \oneVoice r |
   <c' d fis a> r | <b d g> r8 \bar "|."
 }
@@ -374,8 +377,8 @@ pianoUpMovementIII = \relative d''' {
 \addQuote "pianoUpMovementIII" \pianoUpMovementIII
 
 pianoDownMovementIII = \relative d'' {
-  \partial 8 \change Staff = "up" \voiceTwo d8 | d4. d,8 |
-  \change Staff = "down" \oneVoice r4 r8 d,8 | d4. d,8 | d4 r | g'2 | d | g, |
+  \partial 8 \change Staff = "up" \voiceTwo d8 | d4. d,8 | d4. \oneVoice
+  \change Staff = "down" d,8 | d4. d,8 | d4 r | g'2 | d | g, |
   g' | d | d4( c | b2) | g4 r | g'2 | d | g | e | a, | a, | d |
   d8 d'( fis a | c2 | d4 c | b2) | g4( fis | e2) | b2( | e,) |
   e'8( fis e d) | cis2 | c | b | e, | c' | e4 d, | g2 | g4 r8 g' |
@@ -383,15 +386,15 @@ pianoDownMovementIII = \relative d'' {
   d,2-5 | d' | cis | d2 | a4 e' | cis g' | fis2 | d | g | g, | a | a |
   d4 c'~-> | c8 a fis d | g2 | d | g, | g' | d | d4( c | b2) | g4 r |
   g'2 | d | g | e | a, | a, | d2~ | d4 d'' | b2( | a) | ais( | b) |
-  <b g>2~ | <b g> | <cis fis,~>2 | <ais fis> | b,2~ | b | b,~ | b | e | fis |
+  <b g>2~ | 2 | <cis fis,~>2 | <ais fis> | b,2~ | b | b,~ | b | e | fis |
   << {\voiceOne cis'2~ | cis2}
      \new Voice {\voiceTwo g2 | fis} >> \oneVoice | b2~ | b | e, | g |
-  << \new Voice {\voiceTwo e2( | eis4) fis}
-     {\voiceOne eis'2~ | eis4 e4} >> \oneVoice | <d b>2 | R2*2 |
-  r4 r8 d' | d4. <c c,>8 | <c c,>4. r8 | g2 | d | g, | g' | d |
+  << {\voiceOne eis'2~ | 4 e4}
+     \new Voice {\voiceTwo g,2( | gis4) fis} >> \oneVoice | <d' b>2 | R2*2 |
+  r4 r8 d' | d4. <c d,>8 | 4. r8 | g2 | d | g, | g' | d |
   d4( c | b2) | g4 r | g'2 | d | g | e | a, | a, | d | d4 d' |
-  \repeat unfold 2 { <d g,>2~ | <d g,> } | fis, | g | d | c' | b | g |
-  c4 b | a c | d2~ | d | <d g,>2~ | <d g,> | d4 r | fis r | g r |
+  \repeat unfold 2 { <d g,>2~ | 2 } | fis, | g | d | c' | b | g |
+  c4 b | a c | d2~ | d | <d g,>2~ | 2 | d4 r | fis r | g r |
   e r | a r | a, r | d r | d, r | g r | b r | c r | ees r | d r |
   d, r | g2 | d | g | d | g4 d' | b g | \voiceTwo d \oneVoice r |
   d' r | g, r8 \bar "|."
