@@ -152,7 +152,7 @@ pianoUpMovementI = \relative d' {
      \new Voice {\voiceTwo <fis, d>4 <g e> <fis d> fis | g2 fis4 fis8 d | <g e>2} >>
   \oneVoice <d' fis,>4 <b g d> |
   %% 38
-  << {\voiceOne e2} \new Voice {\voiceTwo <b g>4 <ais fis>} >> \oneVoice <d b fis>4~ <d b fis>8 <fis, e>\f |
+  << {\voiceOne e2} \new Voice {\voiceTwo <b g>4 <ais fis>} >> \oneVoice <d b fis>4~ 8 <fis, e>\f |
   %% 39
   << {\voiceOne b2~ b4~ b8 b}
      \new Voice {\voiceTwo <fis d>4 <g e> <fis~ d> fis8 fis} >> \oneVoice |
@@ -273,7 +273,7 @@ violinMovementII = \relative a' {
   %% 51
   g-. b-. d-. | e16( d) cis b a g | fis e fis g a-4 fis |
   %% 54
-  g fis g a\open b a | a16\open b cis d e\open fis | g fis g a-1 b cis |
+  g fis g a\open b g | a16\open b cis d e\open fis | g fis g a-1 b cis |
   %% 57
   d8-. a-. fis-. | d4 r8 | d,8-.\f fis-. a-.-4 | fis-. a-.\open d-. |
   %% 61
@@ -351,7 +351,7 @@ pianoUpMovementII = \relative a' {
   %% 25
   <a fis d>4. | <g d> | <a e> | <cis g e> | <d fis, d>4.~ |
   %% 30
-  <d fis, d>4 r8 | <fis, d>4.\f | <a fis cis> | <fis d>\p |
+  4 r8 | <fis, d>4.\f | <a fis cis> | <fis d>\p |
   %% 34
   <a fis cis> | <a fis d>\f | <a e> | <a fis d>\p |
   %% 38
@@ -363,7 +363,7 @@ pianoUpMovementII = \relative a' {
   %% 49
   <a fis cis> | <cis fis, cis> | <b g d> | <d g, d> | <a fis d> |
   %% 54
-  <g d> | <a e> | <cis g e> | <d fis, d>~ | <d fis, d>4 r8 |
+  <g d> | <a e> | <cis g e> | <d fis, d>~ | 4 r8 |
   %% 59
   <d a fis>4.\f | <a fis d> | <fis d a> | <e cis a>4 r8 | <fis a d>4.\p |
   %% 64
@@ -380,7 +380,7 @@ pianoUpMovementII = \relative a' {
   <b e, b> | <a e cis> | <a d,> | <a e> |
   %% 88
   << {\voiceOne gis4.} \new Voice {\voiceTwo e4 d8} >> \oneVoice |
-  <a' e cis>4.~ | <a e cis>4 r8 | <a fis d>4. |
+  <a' e cis>4.~ | 4 r8 | <a fis d>4. |
   %% 92
   << {\voiceOne a4.} \new Voice {\voiceTwo d,8 fis d} >> \oneVoice |
   <e a>4. |
