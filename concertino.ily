@@ -17,9 +17,10 @@ define(`PianoMovement', `
     \new Staff \with {
       \override InstrumentName.self-alignment-X = #RIGHT
       \override InstrumentName.padding = #.8
+      \override BreathingSign.text = \markup \musicglyph #"scripts.caesura.straight"
       instrumentName = #"Violino."
-      \magnifyStaff #.75
-    } { \globalMovement$1 \killCues\violinMovement$1 }
+      \magnifyStaff #.7   % .7 * 20 pt = 14 pt
+    } \keepWithTag #''`PIANO { \globalMovement$1 \killCues\violinMovement$1 }
     \new PianoStaff \with {
       \override InstrumentName.self-alignment-X = #RIGHT
       \override InstrumentName.padding = #.8
@@ -44,7 +45,8 @@ define(`ViolinMovement', `
 \score {
   \new Staff \with {
     \accidentalStyle modern-cautionary
-  } {
+    \override BreathingSign.text = \markup \musicglyph #"scripts.caesura.straight"
+  } \keepWithTag #''`VIOLIN {
     \compressFullBarRests
     \globalMovement$1 \violinMovement$1
   }
