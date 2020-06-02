@@ -10,7 +10,7 @@
 \version "2.20"
 
 \header {
-  tagline = \markup\tiny\sans #"Plate number @git_commitish@"
+  tagline = \markup\tiny\sans #"P. B. @git_commitish@"
 }
 
 %%% Local Variables:
