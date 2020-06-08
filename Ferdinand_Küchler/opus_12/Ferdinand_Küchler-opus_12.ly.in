@@ -290,7 +290,7 @@ pianoDownMovementI = \relative a, {
   %% 12
   \repeat percent 2 {a2. a8 gis} | a2. cis8 e | a2 a, |
   %% 16
-  <d d,>2~ 4 r | d2. d4 | cis2. cis4 | b2 e,4( e') | a, d cis a |
+  <d d,>2. r4 | d2. d4 | cis2. cis4 | b2 e,4( e') | a, d cis a |
   %% 21
   d,2. d'4 | cis b cis d | e e, e'2 | a,2 a, | a' g | fis d |
   %% 27
@@ -357,7 +357,7 @@ globalMovementII = {
 violinMovementII = \relative b' {
   b8._\pMaEspressivo( c16) d8-1( g fis e) | d4-3( b) r |
   %% 3
-  a8.-2\downbow( b16) a8( c b a) | b4( d-4\flageolet) r |
+  a8._2\downbow( b16) a8( c b a) | b4( d-4\flageolet) r |
   d8.-3\downbow( e16) d8\<( b' a g\!) | fis4( a) d,-1 |
   %% 7
   e \once \override Hairpin.to-barline = ##f g\>( cis,-2) |
@@ -501,17 +501,36 @@ globalMovementIII = {
   \time 6/8
 }
 
+footnoteI = \markup {
+  \score {
+    \new Staff \with {
+      \magnifyStaff #.7   % .7 * 20 pt = 14 pt
+    } \relative c'' {
+      \key d \major
+      \time 6/8
+      b16^"Schreibweise"( cis b cis b8-.) fis16( g fis g fis8-.) \bar "||"
+      b16^"Ausführung"( cis b cis b) r fis16( g fis g fis) r \bar "|."
+    }
+    \layout {
+      indent = #0
+    }
+  }
+}
+
 violinMovementIII = \relative a' {
-  a4.\mf^"g. B." d8_"Sp."( cis) b-. | a4.^"g. B." fis | e g8( fis e) |
-  d^"Sp."( e) fis-. e4.^"g. B." | a4. d8^"Sp."( cis) b-. |
+  a4.\mf^"g. B." d8_"Sp."( cis b-.) | a4.^"g. B." fis | e g8( fis e) |
+  d( e fis-.) e4.^"g. B." | a4. d8^"Sp."( cis b-.) |
   %% 6
   e4.^"g. B." cis | fis8( e fis) gis( fis gis) | a4.~ a8 r r |
-  a4.-1\f\downbow d8( cis) b-. | a4. fis-3 | e g8( fis e) |
-  d( e) fis-. e4. | a8( b a) d( cis b) | a4. fis |
+  a4.-1\f\downbow d8( cis b-.) | a4. fis-3 | e g8( fis e) |
+  d( e fis-.) e4. | a8( b a) d( cis b) | a4. fis |
   %% 15
-  e8-!^"u. H." fis-! g-! a-! b-! cis-! | d4.~ d8 r r |
+  e8-!^"u. H." fis-! g-! a-! b-! cis-! | d4.->~ d8 r r |
   %% 17
-  b,16\mf\downbow( cis b cis b8-.) fis16( g fis g fis8-.) |
+  b,16\mf\downbow( cis b cis
+  \tag #'VIOLIN { b8) - \footnote #'(.5 . 1) \footnoteI -. }
+  \tag #'PIANO  { b8-.) }
+  fis16( g fis g fis8-.) |
   b16( cis b cis b8-.) d8( cis b) |
   %% 19
   cis16( d cis d cis8-.) fis16( g fis g fis8-.) | d4. b4 r8 |
@@ -528,16 +547,17 @@ violinMovementIII = \relative a' {
   %% 44
   fis'\downbow d\< | b d8 cis^\markup{\italic "un poco rit."} b |
   e4. cis | a'--\ff a,4^\aTempo( b8-.) | cis4. e | b e |
-  a,8-!-"u. H." a'-! e-! d-! cis-! b-! | a4. r |
-  a4.\mf\downbow d8( cis) b8-. | a4. fis | e g8( fis e) |
-  d( e) fis-. e4. | a4. d8( cis) b-. | e4. cis |
+  a,8-!-"u. H." a'-! e-! d-! cis-! b-! | a4.-> r |
+  %% 52
+  a4.\mf\downbow d8( cis b8-.) | a4. fis | e g8( fis e) |
+  d( e fis-.) e4. | a4. d8( cis b-.) | e4. cis |
   fis8( e fis) gis( fis gis) | a4.~ a8 r r |
   %% 60
-  a4.-1\f d8( cis) b-. | a4. fis-3 | e g8( fis e) | d( e) fis-. e4. |
+  a4.-1\f d8( cis b-.) | a4. fis-3 | e g8( fis e) | d( e fis-.) e4. |
   %% 64
   a8( b a) d( cis b) | a4. fis-3 |
   %% 66
-  e8-!-"u. H." fis-! g-! a-! b-! cis-! | d4. r |
+  e8-!-"u. H." fis-! g-! a-! b-! cis-! | d4.-> r |
   \cueDuring #"pianoUpMovementIII" #UP   R2.*2
   \cueDuring #"pianoUpMovementIII" #DOWN R2.*2
   e,,16\mf( fis e fis e8-.) b16( cis b cis b8-.) |
@@ -548,16 +568,19 @@ violinMovementIII = \relative a' {
   a16-1( b a b a8-.) cis16( d cis d cis8-.) | d4.~ d8 r r |
   \cueDuring #"pianoUpMovementIII" #UP   R2.*2
   \cueDuring #"pianoUpMovementIII" #DOWN R2.*2
-  \bar "||" \key d \minor
-  d,,4.\mf^\aTempo f4( e8) | d4. a8( bes a) | d4. f | e2. | e4. g |
+  \bar "||" \key d \minor \tempo \markup\italic #"meno mosso."
+  %% 84
+  d,,4.\mf f4( e8) | d4. a8( bes a) | d4. f | e2. | e4. g |
   f e8( f e) | d( e d) f( g gis) | a4. r | d, f4( e8) |
   d4. d8( e d) | e4. g4( f8) | e4. e8( f e) | f8( d f) a-4( f a\open) |
-  d4. d,8( e d) | e( f e) g( f e) | d4. r |
-  a'\p\downbow^\tranquillo d8( c) bes-. | a4.-4( f8) r r |
-  a'4.-1\pp d8^\rit( c) bes-. | a4.~ a8 r r \bar "||" \key d \major
+  %% 97
+  d4. \breathe d,8( e d) | e( f e) g( f e) | d4. r |
+  a'\p\downbow^\tranquillo d8( c bes-.) | a4.-4( f8) r r |
+  a'4.-1\pp d8^\rit( c bes-.) | a4.~ a8 r r \bar "||" \key d \major
   %% 104
-  a,4.\mf^\aTempo d8( cis) b8-. | a4. fis | e g8( fis e) |
-  d( e) fis-. e4. | a d8( cis) b-. | e4. cis |
+  \tempo "Tempo 1°"
+  a,4.\mf d8( cis b8-.) | a4. fis | e g8( fis e) |
+  d( e fis-.) e4. | a d8( cis b-.) | e4. cis |
   %% 110
   fis8( e fis) gis( fis gis) | a4.~ a8 r r | c4.-3\f~ c8 b-. a-. |
   fis4.-3 dis | c'4.\>~ c8 b a | fis4.-1 b-4\! | e,,4.\f gis | b e |
@@ -569,13 +592,13 @@ violinMovementIII = \relative a' {
   b4 gis'8 b( a) gis-. | fis4. r | c'4.-3 a-1 | fis-1 a8-- g-- fis-- |
   b4. g | e g8-- fis-- e-- | a,4. cis | e g8-- fis-- e--\open |
   %% 138
-  d8-1 d'-4 a fis e d | a'4.~ a8 r r | a,4.\mf d8( cis) b-. | a4. fis |
+  d8-1 d'-4 a fis e d | a'4.~ a8 r r | a,4.\mf d8( cis b-.) | a4. fis |
   %% 142
-  e g8( fis e) | d( e) fis-. e4. | a d8( cis) b-. | e4. cis |
+  e g8( fis e) | d( e fis-.) e4. | a d8( cis b-.) | e4. cis |
   fis8( e fis) gis( fis gis) | a4.~ a8 r r |
   %% 148
-  a4.-1\downbow\f d8( cis) b-. | a4. fis-3 | e g8( fis e) |
-  d( e) fis-. e4. | a8( b a) d( cis b) | a4. fis |
+  a4.-1\downbow\f d8( cis b-.) | a4. fis-3 | e g8( fis e) |
+  d( e fis-.) e4. | a8( b a) d( cis b) | a4. fis |
   e8-! fis-! g-! a-! b-! cis-! |
   d8-.^"o. H."_\sempreF a8-. fis-. d-. a-.\open fis-. |
   d fis a\open d-1 fis a | d b fis d-1 b-1 fis | d fis b d fis b |
@@ -586,6 +609,7 @@ violinMovementIII = \relative a' {
 }
 
 pianoUpMovementIII = \relative f' {
+  \clef "alto"
   fis8\mf d a g' d b | fis' d a a' d, a | \repeat unfold 2 {e' cis a} |
   %% 4
   d a d << {\voiceOne e fis g} \new Voice {\voiceTwo cis,4.} >> \oneVoice |
@@ -598,9 +622,10 @@ pianoUpMovementIII = \relative f' {
   %% 13
   fis8 d a f' d gis, | fis' d a fis' dis a | g' e b g' cis, a |
   %% 16
-  <d fis>8^\> \change Staff = "down" \voiceOne <d fis,>8[ <d fis,> ] <d fis,>4.:8 |
+  <d fis>8\> <d fis,>8 <d fis,> <d fis,>4.:8 |
   %% 17
-  \change Staff = "up" \oneVoice <d fis>4.\mf <e cis> |
+  \clef "violin"
+  <d fis>4.\mf <e cis> |
   %% 18
   <d fis>4. <d fis b> | <cis fis ais> <cis fis cis'> |
   %% 20
@@ -638,12 +663,14 @@ pianoUpMovementIII = \relative f' {
   %% 77
   \repeat unfold 2 <g e b> | <g e a,> <a g cis,> | <a fis d>4 d,8( d'4) d8 |
   d8( e d f e d | <cis a>4) a8( a'4.) |
-  << {\voiceOne d,,8( e d f e d)}
+  %% 82
+  << {\voiceOne d,,8^\markup\italic #"un poco rall."( e d f e d)}
      \new Voice {\voiceTwo gis,2.} >> \oneVoice |
   <a cis a'>4. a \bar "||" \key d \minor
   %% 84
   \change Staff = "down" \voiceOne
   <f a>4. <g bes> | <f a> <g cis> |
+  %% 85
   \change Staff = "up" \oneVoice
   << {\voiceOne <f' a>4.( <d f>)}
      \new Voice {\voiceTwo a2.} >> \oneVoice |
@@ -668,7 +695,7 @@ pianoUpMovementIII = \relative f' {
   %% 96
   <d a' d> <d f a> | <d g d'>4. r | <e d bes> <e cis a> | <d f,>\> r |
   %% 100
-  <f a>\p <e g bes> | <f a>4.~ 8 r r | <a d f>4.\pp( <bes e> |
+  <f a>\p <e g bes> | <f a>4.~ 8 r r | <a d f>4.\ppWhiteOut( <bes e> |
   <a cis>2.) \bar "||" \key d \major
   fis8\mf d a g' d b | fis' d a a' d, a | \repeat unfold 2 {e' cis a} |
   %%
@@ -692,9 +719,11 @@ pianoUpMovementIII = \relative f' {
   %% 130
   <gis e b>4. <gis cisis,> |
   << {\voiceOne fis4.( b)} \new Voice {\voiceTwo dis,2.} >> \oneVoice |
+  \shape #'((0 . 5.2) (-1.2 . 7) (.4 . .2) (0 . 0)) Slur
   \change Staff = "down" a,8( e' fis \change Staff = "up" c' e fis) |
   c'4. <fis, e c> |
-  \change Staff = "down" g,,8( b e \change Staff = "up" b' e g |
+  \shape #'((0 . 5.4) (-1.2 . 7.6) (.6 . 0) (0 . 0)) Slur
+  \change Staff = "down" g,,8_( b e \change Staff = "up" b' e g |
   b4.) <g d b> | <a g cis,>2. | <a g cis,>4. <g cis, a> |
   <fis d a> <fis d b>-> | <cis e>8\> a b cis d e |
   %% 140
@@ -725,7 +754,7 @@ pianoDownMovementIII = \relative d {
   d2. | d,4. fis | a2. | fis4. a | d2. | cis | b4. e | a,2. | d |
   d,4. fis | a2. | fis4. a | d2. | d4. b | e a, |
   %% 16
-  d,8 \voiceTwo r8 r r4. | \oneVoice b''4.~ b | b b, | fis' ais |
+  d,8 r8 r r4. | b''4.~ b | b b, | fis' ais |
   %% 20
   b8-. b,-. d-. fis-. b-. cis-. | b4. <a b> | <gis b> gis, | cis cis |
   \repeat percent 2 {fis,8-. a-. cis-. fis4.->} | fis,4. g | gis e |
@@ -745,7 +774,9 @@ pianoDownMovementIII = \relative d {
   cis2. | b4. e | a,2. | d | d,4. fis | a2. | fis4. a | d2. | d4. b |
   %% 66
   e a, | d,4 d'8 cis4 c8 | <b a'>2. | <e g> | a,4. ais | b2. | e | e, |
+  %% 74
   b'4. dis | e8( e,) g-. b-. e-. fis-. | e4. e, | e' d | cis a |
+  %% 79
   d~ d4 r8 | <bes' d>2. | <a e'> | <d, bes> |
   <cis a> \bar "||" \key d \minor \voiceTwo d,2. | d \oneVoice |
   %% 86
