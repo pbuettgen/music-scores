@@ -1,0 +1,53 @@
+#! /usr/bin/python3
+# -*- coding: utf-8 -*-
+
+# Copyright © 2020-2020 Philipp Büttgenbach
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+from mako.lookup import TemplateLookup
+import argparse
+import sys
+import xml.etree.ElementTree as ET
+
+
+def main():
+    """main()"""
+
+    arg_parser = argparse.ArgumentParser(
+        description='Convert XML to Lilypond.')
+    arg_parser.add_argument('input_file', type=str, help='input file name')
+    arg_parser.add_argument(
+        '-I', '--include', type=str, action='append', default=[],
+        help="include directory")
+    arg_parser.add_argument(
+        '-o', '--output_file', type=argparse.FileType('w'), default=sys.stdout,
+        help='output file name')
+    arg_parser.add_argument(
+        '-t', '--template', type=str, default='', help='template file')
+    command_line_args = arg_parser.parse_args()
+
+    xml_tree = ET.parse(command_line_args.input_file)
+    xml_root = xml_tree.getroot()
+
+    template_lookup = TemplateLookup(
+        directories=[".", "./templates"]+command_line_args.include)
+
+    if '' == command_line_args.template:
+        command_line_args.template = xml_root.tag + ".mako"
+
+    template = template_lookup.get_template(command_line_args.template)
+
+    print(template.render(xml_root=xml_root),
+          file=command_line_args.output_file)
+
+
+if "__main__" == __name__:
+    main()
+
+# Local Variables:
+# coding: utf-8
+# mode: python3
+# End:
