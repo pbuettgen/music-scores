@@ -9,7 +9,17 @@
 
 @INC_AMINCLUDE@
 
-SUBDIRS = include src
+SUBDIRS = Arthur_Seybold						\
+	Charles_Dancla								\
+	Ferdinand_Küchler							\
+	Franz_Wohlfahrt								\
+	Friedrich_Seitz								\
+	Heinrich_Ernst_Kayser						\
+	Ignace_Pleyel								\
+	Jaques-Féréol_Mazas							\
+	Johann_Wenzel_Kalliwoda						\
+	Leo_Portnoff								\
+	Oskar_Rieding
 
 # Local Variables:
 # coding: utf-8

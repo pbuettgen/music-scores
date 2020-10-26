@@ -14,8 +14,8 @@ AX_AM_JOBSERVER([${CPU_COUNT}])
 
 AM_MAINTAINER_MODE([enable])
 
-LYFLAGS_EXTRA="-dmidi-extension=mid"
-LYINCLUDE="-I./ -I../ -I../../"
+LYFLAGS_EXTRA='-dmidi-extension=mid'
+LYINCLUDE='-I./ -I../ -I${top_srcdir}/include/'
 
 AC_CHECK_PROGS([LYC], [lilypond], [AC_MSG_ERROR([Lilypond required.])])
 
@@ -23,6 +23,8 @@ AM_COND_IF([MAINTAINER_MODE],
     [AC_CHECK_PROGS([ZIP], [zip], [AC_MSG_ERROR([zip required])])
     AC_CHECK_PROGS([M4], [m4], [AC_MSG_ERROR([m4 required])])
     AC_PROG_SED])
+
+AX_PYTHON_MODULE([mako], [required])
 
 AC_ARG_WITH([oll],
     [AS_HELP_STRING([--with-oll], [Open lilypond library root directory])],
@@ -58,43 +60,46 @@ AC_SUBST([LYRUN])
 
 AC_CONFIG_FILES([
     Makefile
-    Arthur_Seybold/Makefile
-    Arthur_Seybold/opus_89/Makefile
-	Charles_Dancla/Makefile
-    Charles_Dancla/opus_15/Makefile
-	Ferdinand_Küchler/Makefile
-    Ferdinand_Küchler/opus_11/Makefile
-    Ferdinand_Küchler/opus_12/Makefile
-    Ferdinand_Küchler/opus_14/Makefile
-    Ferdinand_Küchler/opus_15/Makefile
-	Franz_Wohlfahrt/Makefile
-    Franz_Wohlfahrt/opus_45/Makefile
-	Friedrich_Seitz/Makefile
-    Friedrich_Seitz/opus_12/Makefile
-    Friedrich_Seitz/opus_13/Makefile
-    Friedrich_Seitz/opus_22/Makefile
-	Heinrich_Ernst_Kayser/Makefile
-    Heinrich_Ernst_Kayser/opus_20/Makefile
-	Ignace_Pleyel/Makefile
-    Ignace_Pleyel/opus_8/Makefile
-	Jaques-Féréol_Mazas/Makefile
-    Jaques-Féréol_Mazas/opus_38/Makefile
-	Johann_Wenzel_Kalliwoda/Makefile
-    Johann_Wenzel_Kalliwoda/opus_178/Makefile
-    Johann_Wenzel_Kalliwoda/opus_179/Makefile
-    Johann_Wenzel_Kalliwoda/opus_180/Makefile
-	Leo_Portnoff/Makefile
-    Leo_Portnoff/fantasia_2/Makefile
-    Leo_Portnoff/fantasia_4/Makefile
-    Leo_Portnoff/opus_4/Makefile
-    Leo_Portnoff/opus_9/Makefile
-    Leo_Portnoff/opus_13/Makefile
-    Leo_Portnoff/opus_18/Makefile
-	Oskar_Rieding/Makefile
-    Oskar_Rieding/opus_21/Makefile
-    Oskar_Rieding/opus_34/Makefile
-    Oskar_Rieding/opus_35/Makefile
-    Oskar_Rieding/opus_36/Makefile])
+    include/Makefile
+    src/Makefile
+    src/Arthur_Seybold/Makefile
+    src/Arthur_Seybold/opus_89/Makefile
+	src/Charles_Dancla/Makefile
+    src/Charles_Dancla/opus_15/Makefile
+	src/Ferdinand_Küchler/Makefile
+    src/Ferdinand_Küchler/opus_11/Makefile
+    src/Ferdinand_Küchler/opus_12/Makefile
+    src/Ferdinand_Küchler/opus_14/Makefile
+    src/Ferdinand_Küchler/opus_15/Makefile
+	src/Franz_Wohlfahrt/Makefile
+    src/Franz_Wohlfahrt/opus_45/Makefile
+	src/Friedrich_Seitz/Makefile
+    src/Friedrich_Seitz/opus_12/Makefile
+    src/Friedrich_Seitz/opus_13/Makefile
+    src/Friedrich_Seitz/opus_22/Makefile
+	src/Heinrich_Ernst_Kayser/Makefile
+    src/Heinrich_Ernst_Kayser/opus_20/Makefile
+	src/Ignace_Pleyel/Makefile
+    src/Ignace_Pleyel/opus_8/Makefile
+	src/Jaques-Féréol_Mazas/Makefile
+    src/Jaques-Féréol_Mazas/opus_38/Makefile
+	src/Johann_Wenzel_Kalliwoda/Makefile
+    src/Johann_Wenzel_Kalliwoda/opus_178/Makefile
+    src/Johann_Wenzel_Kalliwoda/opus_179/Makefile
+    src/Johann_Wenzel_Kalliwoda/opus_180/Makefile
+	src/Leo_Portnoff/Makefile
+    src/Leo_Portnoff/fantasia_2/Makefile
+    src/Leo_Portnoff/fantasia_4/Makefile
+    src/Leo_Portnoff/opus_4/Makefile
+    src/Leo_Portnoff/opus_9/Makefile
+    src/Leo_Portnoff/opus_13/Makefile
+    src/Leo_Portnoff/opus_18/Makefile
+	src/Oskar_Rieding/Makefile
+    src/Oskar_Rieding/opus_21/Makefile
+    src/Oskar_Rieding/opus_34/Makefile
+    src/Oskar_Rieding/opus_35/Makefile
+    src/Oskar_Rieding/opus_36/Makefile])
+
 AC_OUTPUT
 
 # Local Variables:
