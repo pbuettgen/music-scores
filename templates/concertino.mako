@@ -23,7 +23,7 @@ import os
 % endif
 
 % for labeled in xml_root.findall('.//*[@label]'):
-\addquote "${labeled.attrib['label']}" {
+\addQuote "${labeled.attrib['label']}" {
   ${labeled.text}
 }
 % endfor
@@ -55,18 +55,17 @@ import os
   \score {
     <<
       \new Staff \with {
-        \time ${movement.find('time').text}
         \override InstrumentName.self-alignment-X = #RIGHT
         \override InstrumentName.padding = #.8
         instrumentName = #"Violino."
         \magnifyStaff #.75
-      } {
+      } \keepWithTag #'PIANO {
+        \time ${movement.find('time').text}
         \tempo ${movement.find('tempo').text}
         \key ${movement.find('key').text}
         \killCues ${movement.find('violin').text}
       }
       \new PianoStaff \with {
-        \time ${movement.find('time').text}
         \override InstrumentName.self-alignment-X = #RIGHT
         \override InstrumentName.padding = #.8
         instrumentName = #"Piano."
@@ -74,11 +73,13 @@ import os
         connectArpeggios = ##t
       } <<
         \new Staff = "up" {
+          \time ${movement.find('time').text}
           \tempo ${movement.find('tempo').text}
           \key ${movement.find('key').text}
           ${movement.find('piano/up').text}
         }
         \new Staff = "down" {
+          \time ${movement.find('time').text}
           \tempo ${movement.find('tempo').text}
           \key ${movement.find('key').text}
           \clef "bass"
@@ -89,7 +90,7 @@ import os
 
 % if None != movement.find('piece'):
     \header {
-      piece = ${movement.find('piece').text}
+      piece = #"${movement.find('piece').text}"
     }
 % endif
   }
@@ -102,9 +103,9 @@ import os
 % for movement in xml_root.findall("movement"):
   \score {
     \new Staff \with {
-      \time ${movement.find('time').text}
       \accidentalStyle modern-cautionary
-    } {
+    } \keepWithTag #'VIOLIN {
+      \time ${movement.find('time').text}
       \tempo ${movement.find('tempo').text}
       \key ${movement.find('key').text}
       \compressFullBarRests
@@ -113,7 +114,7 @@ import os
 
 % if None != movement.find('piece'):
     \header {
-      piece = \titleMovementI
+      piece = #"${movement.find('piece').text}"
     }
 % endif
   }
