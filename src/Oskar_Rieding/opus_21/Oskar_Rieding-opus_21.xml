@@ -1,33 +1,29 @@
-%%% -*- coding: utf-8 -*-
-%%%
-%%% Copyright © 2019-2020 Philipp Büttgenbach
-%%%
-%%% This work is licensed under the Creative Commons
-%%% Attribution-ShareAlike 4.0 International License.  To view a copy of
-%%% this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
-%%%
+<?xml version="1.0" encoding="utf-8"?>
 
-\version "2.20"
+<!--
+Copyright © 2018-2020 Philipp Büttgenbach
 
-\include "lily-snippets.ily"
+This work is licensed under the Creative Commons
+Attribution-ShareAlike 4.0 International License.  To view a copy of
+this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
+-->
 
-moltoRit = \markup {\italic #"molto rit."}
-
-titleMovementI = ##f
-
-globalMovementI = {
-  \time 4/4
-  \tempo "Andante sostenuto." 4=96
-  \key c \major
-}
-
-violinMovementI = \relative e'' {
+<concertino>
+<title>Concertino</title>
+<subtitle>in un moda ungherese.</subtitle>
+<opus>Opus 21</opus>
+<movement>
+  <time>4/4</time>
+  <tempo>"Andante sostenuto." 4=96</tempo>
+  <key>c \major</key>
+  <violin><![CDATA[
+  \relative e'' {
   \set Timing.measurePosition = #(ly:make-moment -5/16) r16 r4 | R1*2
   \cueDuring #"pianoUpMovementI" #DOWN {
-    R1 |
+  R1 |
   }
   \cueDuring #"pianoUpMovementI" #UP {
-    r4 r
+  r4 r
   }
   r8. e16\open\mf\<\upbow( fis gis a-1 b) |
   %% 5
@@ -150,14 +146,14 @@ violinMovementI = \relative e'' {
   %% 118
   f\< e f g a g a-1 b |
   \repeat volta 2 {
-    %% 119
-    c4->\f dis,,->-1 | e->-1 c'-> | d,16\open e f g a\open b c d-1 |
+  %% 119
+  c4->\f dis,,->-1 | e->-1 c'-> | d,16\open e f g a\open b c d-1 |
   }
   \alternative {
-    %% 122
-    { e f g a b c d b }
-    %% 123
-    { e, f g a b c d b }
+  %% 122
+  { e f g a b c d b }
+  %% 123
+  { e, f g a b c d b }
   }
   %% 124
   c8\f c16( e,-2) d-1( b') b( d,) | d( bes') bes( d,) c-2( a') a( c,) |
@@ -176,9 +172,9 @@ violinMovementI = \relative e'' {
   \time 4/4 c4 c,,-1\downbow r2 |
   R1*5 |
   \cueDuring #"pianoUpMovementI" #UP {
-    R1*2
-    \tempo "Andante sostenuto." 4=96
-    r2
+  R1*2
+  \tempo "Andante sostenuto." 4=96
+  r2
   }
   r8. e'16\open\mf\<\upbow( fis gis a-1 b) |
   %% 148
@@ -259,18 +255,18 @@ violinMovementI = \relative e'' {
   %% 207
   e( cis') cis\<( a\open) b( gis') gis( e\open) |
   \repeat volta 2 {
-    a4->\f c,-> |
-    a'-> cis,-> | d8->-1 d( d'->) d,( | dis->) dis( dis'->) dis( |
-    e\flageolet) e,16_\open( d') d( cis) cis( b) |
-    b( a) a( gis-2) gis( fis) fis( e\open) |
+  a4->\f c,-> |
+  a'-> cis,-> | d8->-1 d( d'->) d,( | dis->) dis( dis'->) dis( |
+  e\flageolet) e,16_\open( d') d( cis) cis( b) |
+  b( a) a( gis-2) gis( fis) fis( e\open) |
   }
   \alternative {
-    { d8 e,16( fis) gis a\open b cis | d cis b cis d e\open fis gis | }
-    { d8 b'16( a) gis fis e\open d | cis b a\open gis fis e d\open b | }
+  { d8 e,16( fis) gis a\open b cis | d cis b cis d e\open fis gis | }
+  { d8 b'16( a) gis fis e\open d | cis b a\open gis fis e d\open b | }
   }
   \repeat volta 2 {
-    a\f( cis e a\open) cis( e\open a-1 cis) | d16( cis b a) d8-> d,16( e |
-    f8->-3) d,16-2( e f8->-4) b,16 cis | d8->-4 b16( cis d8->) cis16 b |
+  a\f( cis e a\open) cis( e\open a-1 cis) | d16( cis b a) d8-> d,16( e |
+  f8->-3) d,16-2( e f8->-4) b,16 cis | d8->-4 b16( cis d8->) cis16 b |
   }
   a16( cis e a\open) cis( e-4) cis b | a b cis d e\open fis gis a |
   \repeat unfold 2 {b( a) gis a} | b( a) gis a b( a) gis a-1 |
@@ -279,9 +275,12 @@ violinMovementI = \relative e'' {
   a->\open( b a fis) e->( fis e d) | cis->( d cis b) a->( b cis b) |
   a4 <a e' cis'>\downbow | a\downbow <a e' cis' a'>\downbow |
   a2~\downbow | a4 r \bar "|."
-}
-
-pianoUpMovementI = \relative e' {
+  }
+  ]]>
+</violin>
+<piano>
+  <up label="pianoUpMovementI"><![CDATA[
+  \relative e' {
   \clef "alto"
   \set Timing.measurePosition = #(ly:make-moment -5/16)
   <e e,>16\f <fis fis,> <gis gis,> <a a,> <b b,> |
@@ -317,7 +316,7 @@ pianoUpMovementI = \relative e' {
   <e d b gis>2^\moltoRit r \bar "||"
   %% 25
   << \repeat percent 2 {r8 <e c a> r <f c a> r <e c a> r <dis c a>}
-     s8\mf >> |
+  s8\mf >> |
   %% 27
   r8 <e c a>4 <e c a>8 r <f d a>4 <f d a>8 |
   r8 <e c a>4 <a e c>8 r <a e c>4 <c a e>8 |
@@ -411,13 +410,13 @@ pianoUpMovementI = \relative e' {
   %% 116
   r8 a16( b cis8->) a-. | f'16->( e d8) r4 | d16->( c b8) r4 |
   \repeat volta 2 {
-    << \repeat unfold 2 <c a dis,>8 s8\f >> r8 <c a dis,> |
-    << \repeat unfold 2 <c g e>8 s8\> >> r <c g e> |
-    {<b f d>4\mf r}
+  << \repeat unfold 2 <c a dis,>8 s8\f >> r8 <c a dis,> |
+  << \repeat unfold 2 <c g e>8 s8\> >> r <c g e> |
+  {<b f d>4\mf r}
   }
   \alternative {
-    {<b f d>4 r}
-    {<b g f>4 r}
+  {<b f d>4 r}
+  {<b g f>4 r}
   }
   %% 123
   <c g e> <b g d> | <bes f d> <a f c> |
@@ -488,19 +487,19 @@ pianoUpMovementI = \relative e' {
   \repeat unfold 2 <a fis b,>8 r <a fis bis,> |
   <a e cis> r <gis d b> r |
   \repeat volta 2 {
-    r16\f a,( <c a'> a) r c( <f a> c) |
-    r16 cis( <g' a> cis,) r cis( <e a> cis) |
-    \repeat unfold 2 {r16 a( <d a'> a)} |
-    r16 a( <dis a'> a) r c( <dis a'> c) | <cis e a>2\> |
-    << \repeat unfold 2 {<cis e a>8 r} s8\mf >> |
+  r16\f a,( <c a'> a) r c( <f a> c) |
+  r16 cis( <g' a> cis,) r cis( <e a> cis) |
+  \repeat unfold 2 {r16 a( <d a'> a)} |
+  r16 a( <dis a'> a) r c( <dis a'> c) | <cis e a>2\> |
+  << \repeat unfold 2 {<cis e a>8 r} s8\mf >> |
   }
   \alternative {
-    { \repeat percent 2 {<gis' d b>8 r r4} }
-    { <gis d b>8 r r4 | <gis e d b>8 r r4 }
+  { \repeat percent 2 {<gis' d b>8 r r4} }
+  { <gis d b>8 r r4 | <gis e d b>8 r r4 }
   }
   \repeat volta 2 {
-    <cis cis'>4\f <e e,> | <fis fis,> <d d'> |
-    <d d'>8 <cis cis'> <b b'> r | <f' f'> <e e'> <d d'> r |
+  <cis cis'>4\f <e e,> | <fis fis,> <d d'> |
+  <d d'>8 <cis cis'> <b b'> r | <f' f'> <e e'> <d d'> r |
   }
   <cis cis'>4\f <e e,> | <a a,> <cis, a fis> | <fis d a fis> <a, fis d> |
   <a f d> <b a f d> | <cis a e cis>8\f <cis a e cis>4. |
@@ -510,260 +509,229 @@ pianoUpMovementI = \relative e' {
   \repeat unfold 3 <a e cis> \repeat unfold 2 <cis a e>
   \change Staff="up" \oneVoice <e cis a> | <a e cis a>2~ |
   <a e cis a>4 r \bar "|."
+  }
+  ]]>
+</up>
+<down><![CDATA[
+\relative e, {
+\set Timing.measurePosition = #(ly:make-moment -5/16)
+<e e,>16\sustainOn <fis fis,> <gis gis,> <a a,> <b b,>\sustainOff |
+%% 1
+<c c,>8\sustainOn <b b,> <c c,>4~ <c c,>8 <b b,>16 <c c,> <d d,> <c c,> <b b,> <a a,>\sustainOff |
+<gis gis,>4\sustainOn <d' d,>-> <c c,>-> <b b,>->\sustainOff |
+%% 3
+<a a,>16^>\sustainOn <a a,>8. <g g,>16^> <g g,>8.
+<< {<fis fis,>4 <fis' fis,>} {s8 s4 s8\sustainOff} >> |
+%% 4
+<e e,>8.\sustainOn <e e,>16 <e e,>8. <e e,>16 <e e,>4\sustainOff r4 |
+\repeat unfold 2 <a a,>2 | \repeat unfold 2 <e e,>2 |
+%% 7
+<< \repeat unfold 2 <f f,>2 {s2\sustainOn s4.. s16\sustainOff} >> |
+%% 8
+\repeat unfold 2 <c c,>2 | <b b,>4 <gis gis,> <a a,>2 |
+%% 10
+\repeat unfold 2 <d d,>2 | \repeat percent 2 \repeat unfold 2 <e e,>2 |
+%% 13
+<a, a,>4\sustainOn \repeat unfold 2 <c' a e>4 r4\sustainOff |
+<g, g,>4\sustainOn \repeat unfold 2 <d'' b g>4 r4\sustainOff |
+%% 15
+<c, c,>4 <cis cis,> <d d,> <dis dis,> | <e e,> <d d,> <c c,> <b b,> |
+%% 17
+<a a,>2\sustainOn <fis fis,>4 <fis fis'>\sustainOff |
+%% 18
+<< {<dis' dis,>2. r4} {s2\sustainOn s8 s16\sustainOff} >> |
+%% 19
+<< {\repeat unfold 2 \repeat tremolo 8 {e,32( e')} }
+{s4\sustainOn s4*2 s4\sustainOff} >> |
+%% 20
+<< {\repeat unfold 2 \repeat tremolo 8 {d,32( d')} }
+{s2\sustainOn s4.. s16\sustainOff} >> |
+%% 21
+<< {\repeat unfold 2 \repeat tremolo 8 {e,32( e')} }
+{s4\sustainOn s8\sustainOff s8 s4\sustainOn s8\sustainOff} >> |
+%% 22
+<< \repeat unfold 2 {<e e,>2. r4} {s2\sustainOn s4\sustainOff} >> |
+%% 24
+<e e,>2 r \bar "||"
+%% 25
+\repeat percent 4 {\repeat unfold 2 {a,,4 a'} } |
+%% 29
+\repeat unfold 2 {e e'} | \repeat unfold 2 {<e e,> r} |
+%% 31
+\repeat unfold 3 {a,, a'} \repeat unfold 2 fis |
+%% 33
+\repeat unfold 4 g | \repeat unfold 2 {g r} | c2 b |
+%% 36
+\repeat unfold 2 {c8 r} \repeat unfold 2 {d r} |
+%% 37
+g2 fis | g8 r c, r \repeat unfold 2 {d r} | e2 dis |
+%% 40
+e8 r \voiceTwo a, r b r b, r | e2 e | e1 | \oneVoice a4 r \voiceTwo a r |
+b r b, r | e2 e | e <g g,> |
+%% 47
+\repeat unfold 3 {<a a,>4 r} \oneVoice <a a,> r |
+%% 49
+\repeat percent 2 \repeat unfold 2
+<< \repeat tremolo 8 {d,32( d')}
+{s8\sustainOn s4 s8\sustainOff} >>
+%% 51
+<< {<ees ees,>8 <ees ees,>4. <c c,>8 <c c,>4.}
+{s2\sustainOn s4. s8\sustainOff} >> | <d d,>1 |
+r4 <d d,>2_\fermata <d d,>4_\fermata | <g g,>2 r |
+<< { \repeat unfold 2 {<d b>16( g <d b> g)}
+\repeat unfold 2 {<f d b>( g <f d b> g)} }
+{ s2\sustainOn s4. s8\sustainOff } >> |
+<< { \repeat unfold 2 {<e c>16( g <e c> g)}
+\repeat unfold 2 {<e d b>( gis <e d b> gis)} }
+{ s4\sustainOn s4 s16\sustainOff } >> |
+<< { \repeat unfold 2 {<e c>16( a <e c> a)}
+\repeat unfold 2 { <g e cis>( a <g e cis> a) } }
+{ s4\sustainOn s4 s16\sustainOff } >> |
+<< { \repeat unfold 2 {<fis d>( a <fis d> a)}
+\repeat unfold 2 {<fis d c>( a <fis d c> a)} }
+{ s2\sustainOn s4. s8\sustainOff } >> |
+<< { <a fis dis b>4 r4 <b, b,> <b' a fis dis> }
+{ s2\sustainOn s4. s8\sustainOff } >> |
+<e, e,>4\sustainOn <e g b> <g, g,> <g b e>\sustainOff |
+<a a,>\sustainOn <a c e fis> <b e g>\sustainOff <b b,> |
+<e e,> r r2 \bar "||"
+%% 63
+\repeat percent 2 {c,4 c'} | f, f' | fis, fis' |
+\repeat percent 2 {g, g} | g4~ g8 r | R2 |
+\repeat percent 2 {c,4 c'} | f, f' | fis, fis' |
+\repeat percent 2 {g, g'} | g, <g g'> |
+\repeat unfold 2 {<c c'>8 r} | \voiceTwo a8 a4 a8 |
+e r \oneVoice e' r | c8 c4 c8 | g r g' r | <b b,>4 <c c,>8 r |
+<gis gis,>4 <a a,>8 r | \repeat unfold 2 <f f,>4 |
+\repeat unfold 2 {<e e,>8 r} | \voiceTwo <a, a,>8 <a a,>4 <a a,>8 |
+<e e,>8 r \oneVoice <e e'> r | <c c'>8 <c c'>4 <c c'>8 |
+<g' g,> r <g g'> r | <e' e,>4 <d d,> | <cis cis,> <c c,> |
+<< {<b b,> <b b'>} {s8\sustainOn s4 s8\sustainOff} >> | <a a'>4 r |
+<< {\voiceOne g'8( <b d>) fis8( <a d>) | e8( <g b>) d( <fis b>) |
+c( <e g>) b( <d g>) | a( <c e>) g( <b e>) | gis( <d' f>) a( <c e>) |
+ais( <e' g>) b( <d fis>) }
+\new Voice {\voiceTwo g4 fis | e d | c b | a g | gis a | ais b } >> |
+\oneVoice <g' g,>4 <a a,> | <d d,>8 r
+<< {\voiceOne fis,8( <a d>) | g8( <b d>) fis( <a d>) |
+e( <g b>) d( <fis b>) | c( <e g>) b( <d g>) | a( <c e>) g( <b e>) }
+\new Voice {\voiceTwo fis'4 | g fis | e d | c b | a g } >> |
+\oneVoice fis4 a | b b | b r | e r | \repeat unfold 2 {<e c>8( g)} |
+\repeat unfold 2 {<e d b>( gis)} |
+%% 113
+<a e a,>4 r | <bes e, c> r | \repeat unfold 2 {<a f>8( c)} |
+%% 116
+\repeat unfold 2 {<a g e>( cis)} | <d a d,>4 r | <f d g,> r |
+\repeat volta 2 {
+%% 119
+<< \repeat unfold 2 <fis, fis,>4 {s8\sustainOn s4 s8\sustainOff} >> |
+%% 120
+\repeat unfold 2 <g g,>4 | <g g,>4 r
 }
-
-\addQuote "pianoUpMovementI" \pianoUpMovementI
-
-pianoDownMovementI = \relative e, {
-  \set Timing.measurePosition = #(ly:make-moment -5/16)
-  <e e,>16\sustainOn <fis fis,> <gis gis,> <a a,> <b b,>\sustainOff |
-  %% 1
-  <c c,>8\sustainOn <b b,> <c c,>4~ <c c,>8 <b b,>16 <c c,> <d d,> <c c,> <b b,> <a a,>\sustainOff |
-  <gis gis,>4\sustainOn <d' d,>-> <c c,>-> <b b,>->\sustainOff |
-  %% 3
-  <a a,>16^>\sustainOn <a a,>8. <g g,>16^> <g g,>8.
-  << {<fis fis,>4 <fis' fis,>} {s8 s4 s8\sustainOff} >> |
-  %% 4
-  <e e,>8.\sustainOn <e e,>16 <e e,>8. <e e,>16 <e e,>4\sustainOff r4 |
-  \repeat unfold 2 <a a,>2 | \repeat unfold 2 <e e,>2 |
-  %% 7
-  << \repeat unfold 2 <f f,>2 {s2\sustainOn s4.. s16\sustainOff} >> |
-  %% 8
-  \repeat unfold 2 <c c,>2 | <b b,>4 <gis gis,> <a a,>2 |
-  %% 10
-  \repeat unfold 2 <d d,>2 | \repeat percent 2 \repeat unfold 2 <e e,>2 |
-  %% 13
-  <a, a,>4\sustainOn \repeat unfold 2 <c' a e>4 r4\sustainOff |
-  <g, g,>4\sustainOn \repeat unfold 2 <d'' b g>4 r4\sustainOff |
-  %% 15
-  <c, c,>4 <cis cis,> <d d,> <dis dis,> | <e e,> <d d,> <c c,> <b b,> |
-  %% 17
-  <a a,>2\sustainOn <fis fis,>4 <fis fis'>\sustainOff |
-  %% 18
-  << {<dis' dis,>2. r4} {s2\sustainOn s8 s16\sustainOff} >> |
-  %% 19
-  << {\repeat unfold 2 \repeat tremolo 8 {e,32( e')} }
-     {s4\sustainOn s4*2 s4\sustainOff} >> |
-  %% 20
-  << {\repeat unfold 2 \repeat tremolo 8 {d,32( d')} }
-     {s2\sustainOn s4.. s16\sustainOff} >> |
-  %% 21
-  << {\repeat unfold 2 \repeat tremolo 8 {e,32( e')} }
-     {s4\sustainOn s8\sustainOff s8 s4\sustainOn s8\sustainOff} >> |
-  %% 22
-  << \repeat unfold 2 {<e e,>2. r4} {s2\sustainOn s4\sustainOff} >> |
-  %% 24
-  <e e,>2 r \bar "||"
-  %% 25
-  \repeat percent 4 {\repeat unfold 2 {a,,4 a'} } |
-  %% 29
-  \repeat unfold 2 {e e'} | \repeat unfold 2 {<e e,> r} |
-  %% 31
-  \repeat unfold 3 {a,, a'} \repeat unfold 2 fis |
-  %% 33
-  \repeat unfold 4 g | \repeat unfold 2 {g r} | c2 b |
-  %% 36
-  \repeat unfold 2 {c8 r} \repeat unfold 2 {d r} |
-  %% 37
-  g2 fis | g8 r c, r \repeat unfold 2 {d r} | e2 dis |
-  %% 40
-  e8 r \voiceTwo a, r b r b, r | e2 e | e1 | \oneVoice a4 r \voiceTwo a r |
-  b r b, r | e2 e | e <g g,> |
-  %% 47
-  \repeat unfold 3 {<a a,>4 r} \oneVoice <a a,> r |
-  %% 49
-  \repeat percent 2 \repeat unfold 2
-  << \repeat tremolo 8 {d,32( d')}
-     {s8\sustainOn s4 s8\sustainOff} >>
-  %% 51
-  << {<ees ees,>8 <ees ees,>4. <c c,>8 <c c,>4.}
-     {s2\sustainOn s4. s8\sustainOff} >> | <d d,>1 |
-  r4 <d d,>2_\fermata <d d,>4_\fermata | <g g,>2 r |
-  << { \repeat unfold 2 {<d b>16( g <d b> g)}
-       \repeat unfold 2 {<f d b>( g <f d b> g)} }
-     { s2\sustainOn s4. s8\sustainOff } >> |
-  << { \repeat unfold 2 {<e c>16( g <e c> g)}
-       \repeat unfold 2 {<e d b>( gis <e d b> gis)} }
-     { s4\sustainOn s4 s16\sustainOff } >> |
-  << { \repeat unfold 2 {<e c>16( a <e c> a)}
-       \repeat unfold 2 { <g e cis>( a <g e cis> a) } }
-     { s4\sustainOn s4 s16\sustainOff } >> |
-  << { \repeat unfold 2 {<fis d>( a <fis d> a)}
-       \repeat unfold 2 {<fis d c>( a <fis d c> a)} }
-     { s2\sustainOn s4. s8\sustainOff } >> |
-  << { <a fis dis b>4 r4 <b, b,> <b' a fis dis> }
-     { s2\sustainOn s4. s8\sustainOff } >> |
-  <e, e,>4\sustainOn <e g b> <g, g,> <g b e>\sustainOff |
-  <a a,>\sustainOn <a c e fis> <b e g>\sustainOff <b b,> |
-  <e e,> r r2 \bar "||"
-  %% 63
-  \repeat percent 2 {c,4 c'} | f, f' | fis, fis' |
-  \repeat percent 2 {g, g} | g4~ g8 r | R2 |
-  \repeat percent 2 {c,4 c'} | f, f' | fis, fis' |
-  \repeat percent 2 {g, g'} | g, <g g'> |
-  \repeat unfold 2 {<c c'>8 r} | \voiceTwo a8 a4 a8 |
-  e r \oneVoice e' r | c8 c4 c8 | g r g' r | <b b,>4 <c c,>8 r |
-  <gis gis,>4 <a a,>8 r | \repeat unfold 2 <f f,>4 |
-  \repeat unfold 2 {<e e,>8 r} | \voiceTwo <a, a,>8 <a a,>4 <a a,>8 |
-  <e e,>8 r \oneVoice <e e'> r | <c c'>8 <c c'>4 <c c'>8 |
-  <g' g,> r <g g'> r | <e' e,>4 <d d,> | <cis cis,> <c c,> |
-  << {<b b,> <b b'>} {s8\sustainOn s4 s8\sustainOff} >> | <a a'>4 r |
-  << {\voiceOne g'8( <b d>) fis8( <a d>) | e8( <g b>) d( <fis b>) |
-      c( <e g>) b( <d g>) | a( <c e>) g( <b e>) | gis( <d' f>) a( <c e>) |
-      ais( <e' g>) b( <d fis>) }
-     \new Voice {\voiceTwo g4 fis | e d | c b | a g | gis a | ais b } >> |
-  \oneVoice <g' g,>4 <a a,> | <d d,>8 r
-  << {\voiceOne fis,8( <a d>) | g8( <b d>) fis( <a d>) |
-      e( <g b>) d( <fis b>) | c( <e g>) b( <d g>) | a( <c e>) g( <b e>) }
-     \new Voice {\voiceTwo fis'4 | g fis | e d | c b | a g } >> |
-  \oneVoice fis4 a | b b | b r | e r | \repeat unfold 2 {<e c>8( g)} |
-  \repeat unfold 2 {<e d b>( gis)} |
-  %% 113
-  <a e a,>4 r | <bes e, c> r | \repeat unfold 2 {<a f>8( c)} |
-  %% 116
-  \repeat unfold 2 {<a g e>( cis)} | <d a d,>4 r | <f d g,> r |
-  \repeat volta 2 {
-    %% 119
-    << \repeat unfold 2 <fis, fis,>4 {s8\sustainOn s4 s8\sustainOff} >> |
-    %% 120
-    \repeat unfold 2 <g g,>4 | <g g,>4 r
-  }
-  \alternative {
-    %% 123
-    { <g g,>4 r }
-    { <g g,>4 r }
-  }
-  %% 127
-  <c c,> <g g,>8 <a a,> | <bes bes,>4 <f f,>8 <g g,> |
-  %% 129
-  <aes aes,>4 <ees ees,>8 <f f,> | \repeat unfold 2 <g g,>4 |
-  <c c,> <g g,>8 <a a,> | <bes bes,>4 <f f,>8 <g g,> |
-  <aes aes,>4 <ees ees,>8 <f f,> | <g g,>4 r |
-  %% 135
-  \repeat percent 7 {c,,4 c'} \bar "||" <c c,> <c c,>-> r2 |
-  %% 143
-  << { \repeat unfold 2 {<g' e>16( c <g e> c)}
-       \repeat unfold 2 {<bes g e>( c <bes g e> c) } }
-     { s2\sustainOn s4.. s16\sustainOff } >> |
-  %% 144
-  << { \repeat unfold 2 {<a f>16( c <a f> c)}
-       \repeat unfold 2 {<a g e>( cis <a g e> cis)} }
-     { s2\sustainOn s16\sustainOff} >> |
-  %% 145
-  << { \repeat unfold 2 {<a f>( d <a f> d)}
-       \repeat unfold 2 {<c a fis>( d <c a fis> d)} }
-     { s2\sustainOn s16\sustainOff} >> |
-  << { \repeat unfold 2 {<b g>( d <b g> d)}
-       \repeat unfold 2 {<b g f>( d <b g f> d)} }
-     { s2\sustainOn s4.. s16\sustainOff } >> |
-  <d b gis e>4\sustainOn r4 <e, e,> <gis b d e>\sustainOff |
-  <a a,>4\sustainOn <a c e> <c, c,> <c e a>\sustainOff |
-  << \repeat unfold 2 { <d d,> <d f a b> }
-     {s2..\sustainOn s8\sustainOff} >> |
-  <e e,>4\sustainOn <e a c> <e b' d>\sustainOff r |
-  \repeat unfold 2 <a a,>2 | \repeat unfold 2 <e e,> |
-  %% 153
-  << \repeat unfold 2 <f f,>2 {s2\sustainOn s4.. s16\sustainOff} >> |
-  \repeat unfold 2 <c c,>2 | <cis cis,> <d d,> |
-  \repeat unfold 2 <g, g,>2 |
-  \repeat percent 2 {<a a,>2 r4 a} \bar "||" \key f \major
-  \repeat percent 2 \repeat unfold 2 {d,4 d'} |
-  \repeat unfold 2 {a,4 a'} | \repeat unfold 2 {<a a,>4 r} |
-  \repeat unfold 3 {d,4 d'} b, bes' | \repeat unfold 2 {c,4 c'} |
-  <c c,>4 r c r |
-  %% 167
-  f2 e | \repeat unfold 2 {f8 r} \repeat unfold 2 {g r} |
-  c,2 b | c8 r f, r \repeat unfold 2 {g r} |
-  \voiceTwo a2 gis \oneVoice |
-  <e' a,>8 r <d d,> r \repeat unfold 2 {<e e,> r} |
-  \repeat unfold 2 {<a a,>4 r} | \repeat unfold 2  <e e,>2 |
-  \repeat unfold 2 {<a a,>4 r} | <g g,>4 r <c, c,> r |
-  << \repeat unfold 2 \repeat tremolo 8 {des,32( des')}
-     {s2\sustainOn s4.. s16\sustainOff} >> |
-  <des des,>4\sustainOn r4\sustainOff <des des'> r \bar "||" \key a \major
-  %% 179
-  \repeat percent 2 {a4 a'} | d, d' | dis, dis' |
-  \repeat percent 2 {e, e} | \repeat percent 2 {<e e,>4 r} |
-  \voiceTwo \repeat unfold 2 {a,,4 a'} | d, d' | dis, dis' \oneVoice |
-  \repeat percent 2 {e,4 e'} | e, <e e'> |
-  \repeat unfold 2 {<a a'>8 r} | a2 | <a a'>4 r | d2 | <d d'>4 r |
-  <cis cis'>8 r <ais ais'> r | \repeat unfold 2 {<b b'> r} |
-  << \repeat unfold 2 <d d,>4 {s4..\sustainOn s16\sustainOff} >> |
-  <cis cis,>4 r |
-  %% 203
-  \repeat unfold 3 {<fis a cis>8 r} <dis fis a b> r |
-  %% 205
-  \repeat unfold 3 {<e gis b>8 r} <cis e gis cis> r |
-  %% 207
-  <b' b,>4 <gis gis,> | <a a,>8 <gis gis,> <fis fis,> <e e,> |
-  <d d,>4 <dis dis,> | \repeat unfold 2 {<e e,>8 r} |
-  \repeat volta 2 {
-    << \repeat unfold 2 <f f,>4 {s4..\sustainOn s16\sustainOff} >> |
-    <e e,>4 <g g,> | \repeat unfold 2 <fis fis,> |
-    \repeat unfold 2 <f f,> | <e e,>2 | \repeat unfold 2 {<e e,>8 r}
-  }
-  \alternative {
-    \repeat percent 2 {<e e,>8 r r4}
-    \repeat percent 2 {<e e,>8 r r4}
-  }
-  \repeat volta 2 {
-    << \repeat unfold 2 <e cis a>4:8 {s4..\sustainOn s16\sustainOff} >> |
-    << \repeat unfold 2 <fis d a>4:8 {s4..\sustainOn s16\sustainOff} >> |
-    << \repeat unfold 2 <f d gis,>4:8 {s4..\sustainOn s16\sustainOff} >> |
-    << \repeat unfold 2 <f d b gis>4:8 {s4..\sustainOn s16\sustainOff} >> |
-  }
-  \repeat unfold 2 <e cis a>4:8 |
-  << \repeat unfold 2 <fis cis fis,>4:8 {s4..\sustainOn s16\sustainOff} >> |
-  \repeat percent 2 << \repeat tremolo 8 {d,32( d')}
-                       {s4..\sustainOn s16\sustainOff} >> |
-  << \repeat percent 3 \repeat tremolo 8 {a,32( a')}
-     {s1\sustainOn s4.. s16\sustainOff} >> |
-  << \repeat tremolo 8 {a,32( a')} s2\sustainOn >> |
-  \voiceTwo << \repeat unfold 4 \repeat tremolo 8 {a,32( a')}
-               {s2*3 s4 s\sustainOff} >> \oneVoice |
-  <a a,>2~ <a a,>4 r \bar "|."
+\alternative {
+%% 123
+{ <g g,>4 r }
+{ <g g,>4 r }
 }
-
-%%% ------------
-
-\include "composer.ily"
-
-\header {
-  title = "Concertino"
-  subtitle = "in un moda ungherese."
-  opus = "Opus 21"
-  arranger = ##f
+%% 127
+<c c,> <g g,>8 <a a,> | <bes bes,>4 <f f,>8 <g g,> |
+%% 129
+<aes aes,>4 <ees ees,>8 <f f,> | \repeat unfold 2 <g g,>4 |
+<c c,> <g g,>8 <a a,> | <bes bes,>4 <f f,>8 <g g,> |
+<aes aes,>4 <ees ees,>8 <f f,> | <g g,>4 r |
+%% 135
+\repeat percent 7 {c,,4 c'} \bar "||" <c c,> <c c,>-> r2 |
+%% 143
+<< { \repeat unfold 2 {<g' e>16( c <g e> c)}
+\repeat unfold 2 {<bes g e>( c <bes g e> c) } }
+{ s2\sustainOn s4.. s16\sustainOff } >> |
+%% 144
+<< { \repeat unfold 2 {<a f>16( c <a f> c)}
+\repeat unfold 2 {<a g e>( cis <a g e> cis)} }
+{ s2\sustainOn s16\sustainOff} >> |
+%% 145
+<< { \repeat unfold 2 {<a f>( d <a f> d)}
+\repeat unfold 2 {<c a fis>( d <c a fis> d)} }
+{ s2\sustainOn s16\sustainOff} >> |
+<< { \repeat unfold 2 {<b g>( d <b g> d)}
+\repeat unfold 2 {<b g f>( d <b g f> d)} }
+{ s2\sustainOn s4.. s16\sustainOff } >> |
+<d b gis e>4\sustainOn r4 <e, e,> <gis b d e>\sustainOff |
+<a a,>4\sustainOn <a c e> <c, c,> <c e a>\sustainOff |
+<< \repeat unfold 2 { <d d,> <d f a b> }
+{s2..\sustainOn s8\sustainOff} >> |
+<e e,>4\sustainOn <e a c> <e b' d>\sustainOff r |
+\repeat unfold 2 <a a,>2 | \repeat unfold 2 <e e,> |
+%% 153
+<< \repeat unfold 2 <f f,>2 {s2\sustainOn s4.. s16\sustainOff} >> |
+\repeat unfold 2 <c c,>2 | <cis cis,> <d d,> |
+\repeat unfold 2 <g, g,>2 |
+\repeat percent 2 {<a a,>2 r4 a} \bar "||" \key f \major
+\repeat percent 2 \repeat unfold 2 {d,4 d'} |
+\repeat unfold 2 {a,4 a'} | \repeat unfold 2 {<a a,>4 r} |
+\repeat unfold 3 {d,4 d'} b, bes' | \repeat unfold 2 {c,4 c'} |
+<c c,>4 r c r |
+%% 167
+f2 e | \repeat unfold 2 {f8 r} \repeat unfold 2 {g r} |
+c,2 b | c8 r f, r \repeat unfold 2 {g r} |
+\voiceTwo a2 gis \oneVoice |
+<e' a,>8 r <d d,> r \repeat unfold 2 {<e e,> r} |
+\repeat unfold 2 {<a a,>4 r} | \repeat unfold 2  <e e,>2 |
+\repeat unfold 2 {<a a,>4 r} | <g g,>4 r <c, c,> r |
+<< \repeat unfold 2 \repeat tremolo 8 {des,32( des')}
+{s2\sustainOn s4.. s16\sustainOff} >> |
+<des des,>4\sustainOn r4\sustainOff <des des'> r \bar "||" \key a \major
+%% 179
+\repeat percent 2 {a4 a'} | d, d' | dis, dis' |
+\repeat percent 2 {e, e} | \repeat percent 2 {<e e,>4 r} |
+\voiceTwo \repeat unfold 2 {a,,4 a'} | d, d' | dis, dis' \oneVoice |
+\repeat percent 2 {e,4 e'} | e, <e e'> |
+\repeat unfold 2 {<a a'>8 r} | a2 | <a a'>4 r | d2 | <d d'>4 r |
+<cis cis'>8 r <ais ais'> r | \repeat unfold 2 {<b b'> r} |
+<< \repeat unfold 2 <d d,>4 {s4..\sustainOn s16\sustainOff} >> |
+<cis cis,>4 r |
+%% 203
+\repeat unfold 3 {<fis a cis>8 r} <dis fis a b> r |
+%% 205
+\repeat unfold 3 {<e gis b>8 r} <cis e gis cis> r |
+%% 207
+<b' b,>4 <gis gis,> | <a a,>8 <gis gis,> <fis fis,> <e e,> |
+<d d,>4 <dis dis,> | \repeat unfold 2 {<e e,>8 r} |
+\repeat volta 2 {
+<< \repeat unfold 2 <f f,>4 {s4..\sustainOn s16\sustainOff} >> |
+<e e,>4 <g g,> | \repeat unfold 2 <fis fis,> |
+\repeat unfold 2 <f f,> | <e e,>2 | \repeat unfold 2 {<e e,>8 r}
 }
-
-define(`Movements', `(I)')
-include(`concertino.ily')
-
-\include "articulate.ly"
-
-\book {
-  \score {
-    \articulate \unfoldRepeats
-    \new StaffGroup <<
-      \new Staff \with {
-        midiInstrument = #"violin"
-      } { \globalMovementI   \killCues\violinMovementI
-        }
-      \new PianoStaff \with {
-        midiInstrument = #"acoustic grand"
-      } <<
-        \new Staff = "up" {
-          \globalMovementI \pianoUpMovementI
-        }
-        \new Staff = "down" {
-          \globalMovementI \pianoDownMovementI
-        }
-      >>
-    >>
-    \midi{}
-  }
+\alternative {
+\repeat percent 2 {<e e,>8 r r4}
+\repeat percent 2 {<e e,>8 r r4}
 }
+\repeat volta 2 {
+<< \repeat unfold 2 <e cis a>4:8 {s4..\sustainOn s16\sustainOff} >> |
+<< \repeat unfold 2 <fis d a>4:8 {s4..\sustainOn s16\sustainOff} >> |
+<< \repeat unfold 2 <f d gis,>4:8 {s4..\sustainOn s16\sustainOff} >> |
+<< \repeat unfold 2 <f d b gis>4:8 {s4..\sustainOn s16\sustainOff} >> |
+}
+\repeat unfold 2 <e cis a>4:8 |
+<< \repeat unfold 2 <fis cis fis,>4:8 {s4..\sustainOn s16\sustainOff} >> |
+\repeat percent 2 << \repeat tremolo 8 {d,32( d')}
+{s4..\sustainOn s16\sustainOff} >> |
+<< \repeat percent 3 \repeat tremolo 8 {a,32( a')}
+{s1\sustainOn s4.. s16\sustainOff} >> |
+<< \repeat tremolo 8 {a,32( a')} s2\sustainOn >> |
+\voiceTwo << \repeat unfold 4 \repeat tremolo 8 {a,32( a')}
+{s2*3 s4 s\sustainOff} >> \oneVoice |
+<a a,>2~ <a a,>4 r \bar "|."
+}
+]]>
+</down>
+</piano>
+</movement>
+</concertino>
 
-%%% Local Variables:
-%%% coding: utf-8
-%%% eval: (LilyPond-mode)
-%%% End:
+<!--
+    Local Variables:
+    coding: utf-8
+    mode: xml
+    mmm-classes: embedded-LilyPond
+    End:
+-->
