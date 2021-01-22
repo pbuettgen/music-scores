@@ -94,6 +94,7 @@ AC_CONFIG_FILES([
     src/Leo_Portnoff/opus_9/Makefile
     src/Leo_Portnoff/opus_13/Makefile
     src/Leo_Portnoff/opus_18/Makefile
+    src/Leo_Portnoff/opus_96/Makefile
 	src/Oskar_Rieding/Makefile
     src/Oskar_Rieding/opus_21/Makefile
     src/Oskar_Rieding/opus_34/Makefile

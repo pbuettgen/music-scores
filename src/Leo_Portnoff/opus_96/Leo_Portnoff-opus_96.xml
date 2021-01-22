@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Copyright © 2021-2021 Philipp Büttgenbach
+
+This work is licensed under the Creative Commons
+Attribution-ShareAlike 4.0 International License.  To view a copy of
+this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+<concertino>
+  <title>Concertino.</title>
+  <composer>Leo Portnoff</composer>
+  <opus>Opus 96</opus>
+  <movement>
+    <time>4/4</time>
+    <tempo>"Allegro moderato." 4=108</tempo>
+    <key>d \minor</key>
+    <violin><![CDATA[
+    \relative e' {
+\cueDuringWithClef #"pianoUpMvmtI" #DOWN #"mezzosoprano" R1
+\cueDuringWithClef #"pianoUpMvmtI" #UP #"mezzosoprano" R1
+\cueDuringWithClef #"pianoUpMvmtI" #DOWN #"mezzosoprano" R1
+\cueDuring #"pianoUpMvmtI" #UP R1
+\cueDuring #"pianoUpMvmtI" #DOWN R1
+\cueDuring #"pianoUpMvmtI" #UP R1
+| <d d'>2\f^\solo r8 a'\upbow f g |
+a\<( d) f8.( f16-.) <f bes, g>4\f\>( <e bes>8) r\! |
+<< {\voiceOne a,2\downbow}
+   \new Voice {\voiceTwo <e a,>4 r} >> \oneVoice r8 bes'16--\downbow bes--\< gis-- gis-- a-- a-- |
+   cis8:16-- e8:16-- bes'8:16-- a8:16-- <g a, d,>4\f\>( <f a,>8) r8 |
+   e2~\p\downbow e8 cis( a g) |
+   f2~ f8  a\<( d-2 f-4) | e2~-3\> e8\! cis-2( a g) |
+   f2~ \tuplet 3/2 4 { f8 d\<( f a d-2 f)} |
+   e4->\f\downbow(\( d8.) d16-.\) f4->(\( e8.) e16-.\) |
+   g4-2->(\( fis8.) fis16-.\) a4->(\( g8.) g16-.\) |
+   bes8->\ff g-> ees-> bes-> g-> ees-> bes-> bes''-> |
+   f8.( g16-.) a4~ a8 a,,\downbow b\downbow cis\downbow \mark \default |
+   <d d'>8\upbow cis'16\downbow\p( d) f8-. e16( f) a8-. gis16( a) f8-. e16( f) |
+   d8-. cis16( d) bes8-. a16( bes) g8-. fis16( g) bes8-. a16( bes) |
+   %% 21
+   a8-.\< gis16( a) cis8-. bis16( cis) e8-. dis16( e) bes'8-. a16( bes) |
+   a8-.\> gis16( a) f8-. e16( f) d8-. cis16( d) f8-. e16( f) |
+   %% 23
+   aes8-.\upbow\cresc g16( f) e8-. f16( g) \tuplet 3/2 4 { aes8-> g-> f-> e-> f-> g->} |
+   %% 24
+   aes8-. g16( f) e8-. f16( g) \tuplet 3/2 4 {aes8-> g-> f-> e-> f->( g->) } |
+   << \repeat unfold 5 {aes8-> g16( f)}
+      \repeat unfold 4 {s8\sfz s}
+      {s8\downbow} >> c'4~\downbow c8 a( f-3 a,\open) |
+   c8-> bes16( a) ees'4~-> ees8 d\>( bes d,) |
+   \tuplet 3/2 {a'8\p\>\downbow( g f\!)} r4 \tuplet 3/2 {a8\>\upbow( g f\!)} r4 |
+   a4~\>\downbow( \tuplet 3/2 {a8 g f\!)} d4( e) \mark \default |
+   f2\downbow\pDolce a4( c-1) | f4.-3( e16 f) d2~ |
+   d8 d\<( e f\!) g( f\> e d\!) | f4.\downbow( e16 f) c2~ |
+   %% 34
+   c8 c\<( a'\> c,\!) a4( bes4~ | bes8) bes\<( g'\> bes,\!) gis4( a~ |
+   8) c\downbow( a' a,) b2~ | 8 c( a'\flageolet a,\open) b2~-1 |
+   8 c\downbow( a' a,) b4.( f'8) | e4.( c8) e2\upbow\<~ |
+   4\> d( c bes\!) | d4\>( c~\! 8) a\<\downbow( c f\!) |
+   a4( g f e) | g\>( f~\! 8) e\upbow\p\<( f\> d\!) |
+   %% 44
+   bes2~ 8 e\<( f\> c\!) | a2~ 8 cis( d bes) |
+   cis,4\<( d\!) a'4.\>( g8\!) \mark \default |
+   f16\downbow\f( g a f) c'4-> c,16( d e c) f8-.( a-.) |
+   \time 2/4 g8-. c-. a4->\downbow | \time 4/4
+   f'16\downbow( g a f) c'4-> c,16( d e c) f8-.( a-.) |
+   \time 2/4 g8-. c-. a4->\downbow | \time 4/4 g2\downbow\ff c \bar "||"
+   %% 52
+   <f, a,>4 r r2 |
+   \cueDuringWithClef #"pianoUpMvmtI" #UP #"mezzosoprano" R1
+   \cueDuringWithClef #"pianoUpMvmtI" #DOWN #"mezzosoprano" R1
+   \cueDuring #"pianoUpMvmtI" #UP R1
+   \mark \default | g2~\p\downbow^\solo 8 e( c bes) |
+   a2~ 8 c\<( f a) | g2~\> 8\! e( c bes) | a2~ 8 a\<( c f) |
+   e2~\> 8\! cis( a g) | f2~ 8 a\<( d f\!) | e2~ 8 cis\>( a g\!) |
+   f2~ 8 a( d f) |
+   ees\p d16\<( ees) g8 fis16( g) bes8\espressivo\> a16( bes) ees,8 d16( ees\!) |
+   d8 cis16\<( d) f8 e16( f) a8\espressivo\> gis16( a) d,8 cis16( d\!) |
+   << \repeat percent 2 {
+     f8-> e16-- d-- cis8-> d16-- e-- \tuplet 3/2 4 {
+       f8-> e-> d-> cis-> d-> e->}
+   }
+      s8\f\downbow >> |
+   f8 e16( d) a'4~ 8 f\>( d a\!) |
+   f4~ \tuplet 3/2 { 8 e-- d--} b4( cis) \mark \default |
+   d16--\downbow e-- f-- d-- a'8-. d,-. <a' f'>-> d,-. <a' a'>-> d,-. |
+   %% 71
+   g,16-- a-- bes-- g-- d'8-. g,-. <d' bes'>-> g,-. <d' d'>-> g,-. |
+   a16-- b-- cis-- a-- e'8-. a,-. <e' cis'>-> a,-. <cis' a'>-> a,-. |
+   d'16--\downbow e-- f-- g-- a-- g-- f-- e-- d-- c-- bes-- a-- g-- f-- e-- d-- |
+   fis-.\p\downbow g-. a-. fis-. d8-. d'-. fis16-. g-. a-. fis-. g8-. g,-. |
+   e16-. f-. g-. e-. c8-. c'-. e16-. f-. g-. e-. f8-. c-. |
+   r8 bes,\ff\upbow <f' d'> bes, r g\upbow <e' d'> g, |
+   r8 a\upbow <f' d'> a, r a\upbow <e' cis'> a, \mark \default |
+   d16\downbow e f d a'4-> a,16 b cis a d8-.( f-.) |
+   \time 2/4 e8-. a-. f4->\downbow |
+   %% 80
+   \time 4/4 d'16\downbow e f d a'4-> a,16 b cis a d8-.( f-.) |
+   \time 2/4 e8-. a-. f4->\downbow |
+   \time 4/4 <d e>2\sfz\downbow <a' cis,>\sfz |
+   <d, d,> r8 a->\upbow f-> g-> |
+   a8->( d->) f8.( f16-.) f4( e8) r |
+   bes'4->\upbow( a8) r bes4->\downbow( a8) r |
+   <d, d,>2->\ff\upbow << \repeat unfold 2 <d d,>4-> {s4\downbow s\upbow} >> |
+   <d d,>1->\fermata\downbow \bar "|."
+ }
+]]>
+    </violin>
+    <piano>
+      <up label="pianoUpMvmtI"><![CDATA[
+      \relative d' {
+        \clef "mezzosoprano"
+        %% 1
+        <d f a d>2\f r8 a f g |
+        a d f8. f16 << {\voiceOne f4( e8)}
+                       \new Voice {\voiceTwo <d bes>4~ 8} >> \oneVoice r8 |
+        r bes g a bes d g8. 16 |
+        << {\voiceOne g4^\>( fis8\!)}
+           \new Voice {\voiceTwo <c a>4~ 8} >> \oneVoice r8
+        << {\voiceOne c'4^\>( bes8\!)}
+           \new Voice {\voiceTwo ees,4~ 8} >> \oneVoice r8 |
+        %% 5
+        r8\< <a f> <f d> <g e> <a f> <d f,> <f a,>8. 16\! |
+        <f bes, g>4->^\rit <e bes g>-> <e d a>-> <e cis a>-> |
+        %% 7
+        r8^\aTempo <a, f>\f <a d,>8. <a e>16 <a f>8 r r4 |
+        <f d a>4..\< 16\> <<
+          {\voiceOne f4( e8\!)}
+          \new Voice {\voiceTwo <d bes>4~ 8} >> \oneVoice r8 |
+        r8 <e cis> <e a,>8. <e b>16 <e cis>8 r r4 |
+        <e cis>4..\< <a d, a>16 <<
+          {\voiceOne <g c,>4\f\>( <f d>8\!) }
+          \new Voice {\voiceTwo a,4~ 8} >> \oneVoice r8 |
+        %% 11
+        << \repeat unfold 2 {
+          r8 <g' bes>( <fis dis> <e g> <cis a>) r r4 |
+          r8 <d f,>( <gis, e> <a f> <f d>) r r4
+        }
+           {s8 s\p}
+         >> |
+        r4\f <a' d, a> r <bes d, bes> |
+        r4 <c fis, d> r <d g, d> | <ees bes ees,>\ff r r2 |
+        r4 <f, d>8. <g e>16 <a fis>8 r <g e a,> r |
+        r8\p a,( fis g a d f8.) 16 |
+        << {\voiceOne f2( e8)}
+           \new Voice {\voiceTwo <bes g>2~ 8} >> \oneVoice r8 r4 |
+        r8 cis\<( a b cis e g8.) 16 |
+        << {\voiceOne g2\>( f8\!)}
+           \new Voice {\voiceTwo <d a>2~ 8} >> \oneVoice r8 r4 |
+        \repeat percent 2 {
+          r4 <aes' f aes,>8 r r4 \tuplet 3/2 \repeat unfold 3 <aes f aes,>8
+        }
+        %% 25
+        << \repeat unfold 4 {r8 <aes f aes,>} s8\f >> |
+        8 r8 r8. <c a f c>16 8 r r4 |
+        <a fis d>8 r r8. <d g, d>16\p 8 r r4 |
+        %% 28
+        r4 << {\voiceOne \tuplet 3/2 {a8\> g f\!}}
+              \new Voice {\voiceTwo des4} >> \oneVoice
+        r4 << {\voiceOne \tuplet 3/2 {a'8\> g f\!}}
+              \new Voice {\voiceTwo c4} >> \oneVoice |
+        %% 29
+        r4 <d a fis>\dim <d b g> <c bes g> |
+        <c a f>2\p <e c a> |
+        <f d a> <f d bes f> | <g d bes g> <e bes g> | <d a f> <c a e> |
+        %% 34
+        <d c a>2 << {\voiceOne <d e>4 <d bes> }
+                    \new Voice {\voiceTwo g,2} >> \oneVoice |
+        <c bes g>2 << {\voiceOne <c bes>4 <c a> }
+                    \new Voice {\voiceTwo f,2} >> |
+        \repeat percent 2 {
+          << {\voiceOne f'4.( e8)}
+             \new Voice {\voiceTwo <c a>2} >> \oneVoice <d b a>2
+        }
+        << {\voiceOne f4.( e8) d4( e8 f)}
+           \new Voice {\voiceTwo <c a>2 <b a>} >> \oneVoice |
+        <e c a>2 <e b gis> | r8 bes( c e g e c bes) |
+        r8 a( c f a f c a) | r8 a( e' g a g e a,) |
+        r8 f( bes d f) r r4 |
+        %% 44
+        r8 e'( f d bes4) r | r8 e( f c a4) r | r4 <bes, g d> r <bes e,> |
+        <c a f>4\f r r8 <c e,> <c f,> <c a> |
+        \time 2/4 <c g> <c e,> <a f>4 |
+        \time 4/4 <c' a f>4 r r8 <c e,> <c f,> <c a> |
+        \time 2/4 <c g> <c e,> <a f>4 |
+        \time 4/4 <d bes g d>2\f <e c bes g e> \bar "||"
+        %% 52
+        <f c a f>2 r8 a,,8 f g |
+        a\< c f8. 16\! << {\voiceOne f4\>( e8\!)}
+                          \new Voice {\voiceTwo <bes g>4~ 8} >> \oneVoice r8 |
+        %% 54
+        <c g e>4.\f d8 c b c e |
+        g\< bes d8. c16\! << {\voiceOne bes4\>( a8\!)}
+                             \new Voice {\voiceTwo f4~ 8} >> \oneVoice r8 |
+        %% 56 / 57 / 58 / 59
+        << \repeat unfold 2 {
+          r8 <bes d>( <a fis> <g bes> <e c>) r r4 |
+          r8 <f a,>8( <b, gis> <a c> <a f>) r r4 |
+        }
+           s8\p
+         >>
+        %% 60 / 61 / 62 / 63
+        \repeat unfold 2 {
+          r8 <g' bes>( <fis dis> <e g> <cis a>) r8 r4 |
+          r8 <d f,>( <gis, e> <a f> <f d>) r8 r4 |
+        }
+        %% 64
+        r8\p g'( ees f g bes ees-.) ees | r8 f,( d e f a d-.) d |
+        << \repeat percent 2 {r8 <f, d gis,> r <f d a>  r <f d bes> r <f d a> }
+           s8\f
+         >>
+        <f d gis,>8 r r8. <f d a>16 8 r8 r4 | r4 <a, f d> r <a g e> |
+        %% 70
+        \clef "violin"
+        d2\f <f d>4 <a d,> |
+        << {\voiceOne d4. cis16 d b2}
+           \new Voice {\voiceTwo d,2~ 2} >> \oneVoice |
+        a'2 <cis a>4 <e a,> |
+        << {\voiceOne a4. gis16 a f2}
+           \new Voice {\voiceTwo a,1} >> \oneVoice |
+        r8\p a( d fis,) fis4( g~ |
+        8) 8( c e,) e4( f) |
+        <d' f, d>8\ff r r4 <d bes e,>8 r r4 |
+        <d a f>8 r r4 <a' e cis a>8 r r4 |
+        <d a f d>4 r r8 a,,8 a a |
+        \time 2/4 a a a4 |
+        \time 4/4 <a' f d>4 r r8 a a a |
+        \time 2/4 a a a4 |
+        \clef "mezzosoprano"
+        \time 4/4 <bes e, d>2\f <a e cis> |
+        r8 <a d,>8 <f d>8. <g d>16 <a d,>8 r r4 |
+        a,8 d f8. 16-. << {\voiceOne f4^\>( e8\!)}
+                          \new Voice {\voiceTwo <bes g>4~ 8} >> \oneVoice r8 |
+        << {\voiceOne bes'4^\> a8\!}
+           \new Voice {\voiceTwo <e d>4~ 8} >> \oneVoice r8
+        << {\voiceOne bes'4^\> a8\!}
+           \new Voice {\voiceTwo <e cis>4~ 8} >> \oneVoice r8 |
+        r8\ff <c' a d,>8^\rit <b gis d> <bes g d> <a f d> <bes g d> <f d> <g e d> |
+        <a fis d>1\fermata \bar "|."
+      }
+      ]]>
+      </up>
+      <down><![CDATA[
+        \relative d {
+          <d d,>2 r8 a8 f g |
+          a d f8. 16 << {\voiceOne f4( e8)}
+                       \new Voice {\voiceTwo <bes g>4~ 8} >> \oneVoice r8 |
+          r8 bes g a bes d g8. 16 |
+          << {\voiceOne g4( fis8)}
+             \new Voice {\voiceTwo a,4~ 8} >> \oneVoice r8 <ees' g,>4. r8 |
+          \repeat percent 2 \repeat tremolo 8 {a,,16 a'} |
+          r8 <a' d,> <f d>8. <g d>16 <a d,>8 r r4 |
+          <d, f,>4.. 16 <d g,>4~ 8 r |
+          %% 9
+          r8 <e a,> <cis a>8. <d a>16 <e a,>8 r r4 |
+          <g e a,>4.. f16 e4( d8) r |
+          \repeat unfold 2 {
+            <a a,>2~ 8 r r4 | d,2~ 8 r r4
+          }
+          r4 <f' f,> r <g g,> |
+          r4 <a a,>4 r <bes bes,> | <g g,> r r2 |
+          r4 <a, a,>8. 16 8 r <a a,>8 r |
+          \repeat unfold 2 { d,1~ | <d' d,>2~ 8 r r4 } |
+          r4 <des des,>8 r r4 \tuplet 3/2 \repeat unfold 3 <c c,>8 |
+          %% 24
+          r4 <b b,>8 r r4 \tuplet 3/2 \repeat unfold 3 <c c,>8 |
+          r8 <des des,> r <c c,> r <b b,> r <c c,> |
+          <des des,> r r8. <c c,>16 <c c,>8 r r4 |
+          <c c,>8 r r8. <bes bes,>16 8 r r4 |
+          r4 <a' f b,> r <a f c> | r4 <d, d,> g, c, |
+          <c' f,>2 <c e,> | <d d,> <bes bes,> | <g g,> c, | d <a' a,>4 g |
+          fis2( g4. f8) | e2( f4. e8) |
+          \repeat percent 2 { d4.( e8) r f8\<( a\> e\!) } |
+          d4.( e8) r f( e d) | e2( e'4 d) |
+          << {c1 | f, | <cis' cis,> | <d d,>2~ 8 r r4}
+             { \repeat unfold 3 {s8\sustainOn s2. s8\sustainOff}
+             s8\sustainOn s2 s8\sustainOff } >>
+          %% 44
+          g,8\sustainOn d'( f bes d4) r4\sustainOff |
+          c,,8\sustainOn c'( f a c4) r4\sustainOff |
+          r4 <g, g,> r <c c,> | <c f,>4 r r8 <c bes>8 <c a> <c f,> |
+          \time 2/4 <c e,>8 <c c,> <c f,>4 |
+          \time 4/4 <f f,>4 r r8 <bes c>8 <c a> <c f,> |
+          \time 2/4 <c e,> <c c,> <c f,>4 |
+          \time 4/4 <g, g,>2 <c c,> \bar "||"
+          <f f,>2 r8 a, f g |
+          a c f8. 16 << {\voiceOne f4( e8)}
+                        \new Voice {\voiceTwo <bes g>4~ 8} >> \oneVoice r8 |
+          <c c,>4. d8 c b c e |
+          g bes d8. c16 << {\voiceOne bes4( a8)}
+                           \new Voice {\voiceTwo f4~ 8} >> \oneVoice r8 |
+          \repeat unfold 2 {
+            <c c,>2~ 8 r r4 | f,2~ 8 r r4
+          }
+          \repeat unfold 2 {
+            <a a,>2~ 8 r r4 | d,2~ 8 r r4
+          }
+          <ees' bes g>1 | <f d a> |
+          \repeat percent 2 { r8 <f d bes> r <f d a> r <f d gis,> r <f d a>} |
+          <f d bes>8 r r8. <f d a>16 8 r r4 |
+          \repeat unfold 2 {r4 <a, a,>} | <d d,>2 4 <d f,> | <d g,>1 |
+          %% 71
+          <cis e,>2 <e a,> | <f d> <a d,> | <c d> <d bes> |
+          %% 75
+          <c bes> <c a> | <bes bes,>8 r r4 <g g,>8 r r4 |
+          <a a,>8 r r4 <a, a,>8 r r4 | <d d,>4 r r8 g f d |
+          \time 2/4  cis8 a d4 |
+          %% 80
+          \time 4/4 <a' f d>4 r r2 | \time 2/4 R2 |
+          \time 4/4 <g g,>2 <a a,> |
+          r8 <a f>8 <a d,>8. <a e>16 <a f>8 r r4 |
+          a,8 d  f8. 16-. << {\voiceOne f4 e8}
+                             \new Voice {\voiceTwo <bes g>4~ 8} >> \oneVoice r8 |
+          << {\voiceOne bes'4 a8}
+             \new Voice {\voiceTwo <g e d>4~ 8} >> \oneVoice r8
+          << {\voiceOne bes4 a8}
+             \new Voice {\voiceTwo <e cis>4~ 8} >> \oneVoice r8 |
+          << \repeat tremolo 16 {d,32( d')}
+             {s8\sustainOn s2. s8\sustainOff} >> |
+          <d d,>1\fermata \bar "|."
+        }
+      ]]>
+      </down>
+    </piano>
+</movement>
+<movement>
+  <time>4/4</time>
+  <tempo>"Andante cantabile." 4=92</tempo>
+  <key>d \major</key>
+  <violin><![CDATA[
+  \relative d' {
+    \cueDuring #"pianoUpMvmntII" #UP R1*3 |
+ r2 r4 d8\upbow\p( e) | fis4( a-4) r d,8\upbow( fis) |
+%% 6
+e4( b) r b8( d) | cis4( a') e( g) | fis( a) r d,8\upbow( e) |
+%% 9
+fis4( d') r d,8\open( fis-2) | e4( b) r b8( d) | cis4( a') e( fis) |
+fis16( e d8~ 2) b'8\upbow\<( cis) \mark \default | d4\mf cis b fis |
+%% 14
+g2( fis4) b8( cis) |
+d8 cis e d~( d cis) b-- fis-- | g4.\>( a16 g) fis2 | d'2\p\downbow( cis4. a8) |
+b1 | e2( cis4. a8) | fis'1 | a2\downbow fis4.( d8) | b'2~ b8 g\>( e b\!) |
+cis2.~\trill\<( 8\> b16 cis\!) | d2~\upbow 8 a\upbow\<( d fis) \mark \default |
+a2~\f \tuplet 3/2 4 {8 g-- fis-- fis( e dis)} | b'2~ 8 g( e fis) |
+ g2~ \tuplet 3/2 4 {g8 fis-- e-- e( d cis)} |
+a'2~ 8 fis\upbow( d e) |
+<< \repeat unfold 2 {fis4( a) r gis8\upbow( eis) }
+   { s1 | s4-1 s-1 s s8-4} >> |
+   fis4-3\dim( a-4\flageolet) dis,-1( a'-4\flageolet) |
+   e-2( a-4\flageolet) r d,,8\open\p\upbow( e-1) \mark \default |
+   fis4( d'\flageolet) r d,8( fis) | e4( b) r b8( d) | cis4( a') e( g) |
+   fis( a) r d,8\upbow( e) | fis4( d') r d,8( fis) | e4( b) r b8( d) |
+   cis4( a') e( fis) | fis16\p\downbow( e d8~ 4 fis2) |
+   a2( b4 d) | e2 g4.( fis8) | 1\pp\fermata \bar "|."
+  }
+  ]]>
+  </violin>
+  <piano>
+    <up label="pianoUpMvmntII"><![CDATA[
+    \relative a'' {
+      \clef "violin^8"
+      <a fis d a>2\pp <b fis d b> | <cis a fis cis> <d b fis d> |
+      <e cis a e>1 | <d a'>2. r4 | \voiceOne \clef "violin"
+      %% 5
+      \change Staff="down" <d,, a fis>2 \change Staff="up" <fis' d a> |
+      \change Staff="down" <e, b g> \change Staff="up" <g' e b> |
+      \change Staff="down" <cis,, a g e> \change Staff="up" <a'' g e> |
+      \change Staff="down" <d,, a fis> \change Staff="up" <a'' fis d> |
+      \change Staff="down" <d,, a fis> \change Staff="up" <d'' a fis> |
+      %% 10
+      \change Staff="down" <e,, b g> \change Staff="up" <e'' b g> |
+      \change Staff="down" <cis,, a g> \change Staff="up" <g''' cis, a> |
+      \change Staff="down" <d,, a fis> \change Staff="up" <fis'' d a>4 \oneVoice r |
+      %% 13
+      << \repeat unfold 2 {r8 <d,, b fis> <fis d b> <b fis d>} s8\mp >> |
+      r8 <e, b g> <g e b> <b g e> <d b fis> <fis d b> <b fis d> r |
+      \repeat unfold 2 {r <d,, b fis> <fis d b> <b fis d>} |
+      %% 16
+      r8 <e, b g> <g e b> <b g e> <d fis,>4 <d d,>8\p( <e e,>) |
+      <fis fis,>4( <d' d,>) r <d, d,>8( <fis fis,>) |
+      <e e,>4( <b b,>) r <b b,>8( <d d,>) |
+      <cis cis,>4( <a' a,>) <e e,>( <g g,>) |
+      <fis fis,>4( <a a,>) r <d, d,>8( <e e,>) |
+      %% 21
+      <fis fis,>4\<( <d' d,>\!) r <d, d,>8( <fis fis,>) |
+      <e e,>4( <b b,>) r <b b,>8( <d d,>) |
+      <cis cis,>4( <a' a,>) <e e,>( <fis fis,>) |
+      <d d,>2 r4 <d d,>8( <e e,>) |
+      %% 25
+      <fis fis,>4\mf\<( <c' c,>\!) r <dis, dis,>8( <fis fis,>) |
+      <e e,>4( <b b,>) r <cis cis,>8( <d d,>) |
+      <e e,>4\<( <bes' bes,>\!) r <cis, cis,>8( <e e,>) |
+      %% 28
+      <d d,>4( <a a,>) r fis8( gis) |
+      \repeat percent 2 {cis2~ 8 d^( eis, gis)} |
+      <fis cis a>2\dim <a fis dis a> | \repeat unfold 2 <a g e a,> |
+      %% 33
+      r4\p <fis-3 d-1>8( <g e> <a fis> <d fis>) r4 |
+      r4 <g, e >8( <a fis> <b g> <e g>) r4 |
+      r4 <cis a>8( <d b> <e cis> <a cis>) r4 |
+      r4 <d, fis,>8( <e g,> <fis a,> <d a'>) r4 |
+      \clef "violin^8"
+      r4 <fis d>8( <g e> <a fis> <d fis>) r4 |
+      r4 <gis, e>8( <a fis> <b gis> <e gis>) r4 |
+      r4 <cis, a>8( <d b> <e cis> <a cis>) r4 |
+      <a fis d a>2\p <b fis d b>\dim |
+      <cis a fis cis> <d b fis d> |
+      <e cis a e>1 | <a d, a>\ppWhiteOut\fermata\arpeggio \bar "|."
+    }
+    ]]>
+    </up>
+    <down><![CDATA[
+      \relative f' {
+        \clef "alto"
+        <fis d>2 <fis d b> | <fis cis a fis> <fis d b> |
+        << {\voiceOne e2 g4.( fis8)}
+           \new Voice {\voiceTwo <cis a>1} >> \oneVoice |
+        <d fis a>2. r4 |
+        \clef "bass"
+        << {
+          \voiceTwo
+          <d, a d,>2 \change Staff="up" <fis' d a> \change Staff="down" |
+          <e, b e,> \change Staff="up" <g' e b> \change Staff="down" |
+          <cis,, a d,> \change Staff="up" <a'' g e> \change Staff="down" |
+          <d,, a d,> \change Staff="up" <a'' fis d> \change Staff="down" |
+          <d,, a d,> \change Staff="up" <d'' a fis> \change Staff="down" |
+          <e,, b d,> \change Staff="up" <e'' b g> \change Staff="down" |
+          <cis,, a d,> \change Staff="up" <g''' cis, a> \change Staff="down"|
+          <d,, a d,> \change Staff="up" <fis'' d a>4 \change Staff="down" \oneVoice r4 |
+        }
+           {
+             \repeat unfold 2 {s4\sustainOn s2 s8 s\sustainOff}
+             s4\sustainOn s2 s4\sustainOff
+             \repeat unfold 4 {s4\sustainOn s2 s8 s\sustainOff}
+             s2\sustainOn s4\sustainOff
+           }
+         >>
+        b,,,,2\mf( <b b'>) | \repeat percent 3 {b( b')} |
+        <d a d,>2\p <fis d a> | <b, g d> <g' e b> |
+        <cis, a d,> <g' e cis a> |
+        \repeat percent 2 {<d a d,> <fis d a>} | <b, g d> <g' e b> |
+        <cis, a g d> <g' cis, a> | \clef "bass_8" <d a fis d>( d,,4) r |
+        \clef "bass" <a'' fis dis>2 <fis' dis c a> |
+        <e b g> <b g e> | <bes g e cis> <e cis bes g> |
+        <d a fis> <a fis d> |
+        \repeat percent 2 {<cis a fis cis>4 <a' fis cis> <b gis eis cis>2} |
+        <fis fis,>2 <bis, bis,> | \repeat unfold 2 <cis cis,> |
+        <d a fis d>1 | <e b g d> | <cis a d,> | <d a d,> | <d a fis d> |
+        <e b gis d> | <cis a g d> |
+        \clef "alto" <fis' d>2 <fis d b> | <fis cis a fis> <fis d b> |
+        << {\voiceOne e2 g4.( fis8)}
+           \new Voice {\voiceTwo <cis a>1} >> \oneVoice |
+        <fis d a d,>1\fermata\arpeggio \bar "|."
+      }
+    ]]>
+    </down>
+  </piano>
+</movement>
+<movement>
+  <piece>Finale.</piece>
+  <time>2/4</time>
+  <tempo>"Allegretto." 4=96</tempo>
+  <key>d \minor</key>
+  <violin><![CDATA[
+  \relative a'' {
+\cueDuringWithClef #"pianoUpMvmntIII" #UP #"alto" R2*4 |
+ a8-.\p\downbow a-. e8.\sfz bes'16 | a16 gis a f d8.-> f16 |
+ e8-. e-. cis-. a-. |
+\appoggiatura e'8 d16->\< cis d e \appoggiatura g8 f16-> e f g |
+%% 9
+a8-.\mf a-. e8.-> bes'16 | \appoggiatura bes8 a16 gis a f d8.-> f16 |
+e8-. e-. cis-. a-. | d4 r8. f16\upbow\mp
+\repeat volta 2 {
+%% 13
+e8-. e-. cis8.->( a16-.) |
+\appoggiatura e'8 d16-- cis-- d-- e-- f8.( a16-.) |
+g8-. g-. e8.->( c16-.) |
+%% 16
+\appoggiatura g'8 f16--\<^\rit e-- f-- g-- gis4\fermata |
+a8-.\f\downbow^\aTempo a-. e8.->\sfz bes'16 |
+%% 18
+\appoggiatura bes8 a16 gis a f d8.-> f16 | e8-. e-. cis-. a-.
+}
+\alternative {
+%% 20
+{d4 r8. f16\upbow\mp}
+   {<d d,>4 r8. a16\upbow\ff}
+   } \bar "||"
+ %% 22
+ <d d,>4-> <f a,>-> | <a a,>-> r8 a16\upbow( g) |
+ f16-- a-- g-- f-- e-- g-- f-- e-- |
+ %% 25
+ <d d,>4 r | <g, g,>->\downbow <bes d,>-> | <d d,>-> r8 d16\upbow( c) |
+ bes16-- d-- c-- bes-- a-- c-- bes-- a-- | <g g,>4 r \bar "||" \key d \major
+ \mark \default
+ \repeat volta 2 {
+   %% 30
+   <a' a,>4->\f\downbow <e a,>-> |
+   <a a,>8\p \tuplet 3/2 {g16(\( a g} fis8-.) e-.\) |
+   <a a,>4->\f <fis a,>-> | <a a,>8-.\p \tuplet 3/2 {fis16(\( g fis} e8-.) d-.\) |
+   %% 34
+   \repeat unfold 2 {a'8-. e-.} |
+   a8-. \tuplet 3/2 {g16(\( a g} fis8-.) e-.\) |
+   \repeat unfold 2 {a8-. fis-.} |
+   a8-. \tuplet 3/2 {fis16(\( g fis} e8-.) d-.\) |
+   b'4--\ff b-- |
+   e,16\p( fis\<) g-- e-- fis8-.( b-.) | ais8-.\f ais-. b4
+ }
+ %% 41
+ <fis b,>4\f\downbow 4 |
+ << \repeat unfold 2 {fis8 \appoggiatura a8 b->} s8\p >> |
+ fis16-. g-. fis-. e-. d-. e-. d-. cis-. |
+ b\< cis d e fis4->\downbow | 4\ff\downbow 4 |
+ << \repeat unfold 2 {fis8 \appoggiatura a8 b->} s8\p >> |
+ fis16-. g-. fis-. e-. d-. e-. d-. cis-. | b8 r r4 | \mark \default
+ <a' a,>4->\f\downbow <e a,>-> | R2 | <a a,>4->\downbow <fis a,>-> | R2 |
+ << \repeat unfold 2 {<a a,>8:16 <e a,>: } s8\downbow\p\cresc >> |
+ <a a,>8:16 <g a,>: <fis a,>: <e a,>: |
+ \repeat unfold 2 {<a a,>8:16 <fis a,>: } |
+ <a a,>8:16 <fis a,>: <e a,>: d: | b'4--\ff b |
+ e,,16\mf\<\downbow fis g fis g8 b |
+ %% 59
+ <d g,>4--\ff 4-- | g,16\mf a b a b8 d | <f bes,>4--\ff 4-- |
+ bes,16\mf\< c d cis d8 f |
+ %% 63
+ << \repeat percent 2 { <a a,>8-> 8-> r4 } {s8\f\downbow s\upbow} >> |
+ \repeat percent 2 { <a a,>8-- 8-- r4 } \mark \default \bar "||" \key d \minor
+ %% 67
+ a8-.\downbow a-. e8.->\sfz bes'16 |
+ a16 gis a f d8.-> f16 | e8-. e-. cis-. a-. |
+ \appoggiatura e'8 d16->\< cis d e f-> e f g\! |
+ a8-.\downbow a-. e8.-> bes'16 | a16 gis a f d8.-> f16\p |
+ e8-. e-. cis-. a-. | d4 r8 f8\upbow | e8-. e-. cis-. a-. |
+ %% 76
+ \appoggiatura e'8 d16-- cis-- d-- e-- f8. a16 |
+ g8-. g-. e-. c-. |
+ \appoggiatura g'8 f16--^\rit\< e-- f-- g-- gis4->\fermata |
+ \tempo "Allegro" 4=108 \mark \default <a a,>4->\ff\downbow <e a,>-> |
+ <a a,>8:16 <g a,>: <f a,>: <e a,>: | <a a,>4-> <f a,>-> |
+ <a a,>8:16 <f a,>: <e a,>: d: |
+ << \repeat unfold 2 {<a' a,>8:16 <e a,>:} {s8\p\cresc s s\!} >> |
+ <a a,>8:16\sfz <g a,>: <f a,>: <e a,>: |
+ \repeat unfold 2 { <a a,>8:16 <f a,>:} |
+ <a a,>8:16\sfz <f a,>: <e a,>: d: | <bes' d,>4->\ff 4-> |
+ g,,16\downbow^\rit a bes g a8-.-1 d-.-2 |
+ cis-. e-. d4-> | <e' d g,>4->\downbow^\aTempo <a cis, e,>->\downbow |
+ <d, d,>->\downbow r \bar "|."
+}
+  ]]>
+  </violin>
+  <piano>
+    <up label="pianoUpMvmntIII"><![CDATA[
+      \relative a' {
+        \clef "mezzosoprano"
+        <a a,>8\p 8 <cis, a>4-> | <a a'>8 8 <d a>4-> |
+        <a a'>8 8 <dis a>4-> | <a a'>8 8 <e' a,>4-> |
+        <a g e>8 8 4\sfz | <a f d>8 8 4\sfz | r8 <e d bes> r <e cis a> |
+        r8\< <d a f> r <f d a> | <a g e>8\mf 8 4 | <a f d>8 8 4 |
+        r8 <e d bes> r <e cis a> | <f d a>4 r |
+        \repeat volta 2 {
+          r8\p <a cis, a>8 8 8 | <a d, a>8 8 4 | r8 <c e, c>8 8 8 |
+          << {\voiceOne c8^\rit c  d4\fermata}
+             \new Voice {\voiceTwo <f, c>8\< <f c~>16 <g c,>\! <f d>4} >> \oneVoice |
+          <a g e>8\f^\aTempo 8 4 | <a f d>8 8 4\sfz | r8 <e d bes> r <e cis a> |
+        }
+        \alternative {
+          { <f d a>4 r }
+          { <f d a>8 r r4}
+        } \bar "||"
+        %% 22
+        R2 | d4->\f f-> | a-> r8 a16 g | f16 g f e d8 r | R2 | g,4-> bes-> |
+        d-> r8 d16 c | bes c bes a g8 r \bar "||" \key d \major
+        \repeat volta 2 {
+          <a' cis,>4->\f <e cis>-> | R2 | <a d,>4-> <fis d>-> |
+          R2 | << \repeat unfold 2 {r8 <g e a,>} s8\p >> |
+          \repeat unfold 2 {r8 <g cis, a>} |
+          \repeat percent 2 \repeat unfold 2 {r8 <fis d a>} |
+          <b g e>4--\ff 4-- | r8 <b e,>\p\< <b d,>8 8 | <ais e cis>8\f 8 <b fis d>4
+        }
+        %% 41
+        << \repeat unfold 4 {r8 <fis d>} {s8\f s4. s8\p} >> |
+        r8 <e b> r <d b> | r\< <e b> r <fis cis> |
+        %% 45
+        << \repeat unfold 4 {r8 <fis d>} {s8\ff s4. s8\p} >> |
+        r8 <e b> r <fis e ais,> | <fis d b>8 r r4 | R2 |
+        <a cis,>8->\f g fis e | R2 | <a d,>8-> fis e d |
+        << \new Voice {\voiceOne \repeat unfold 2 {a'2~ a}}
+           {\voiceTwo << \repeat unfold 4 {r8 <g e a,>8} s8\p\cresc >>
+            \repeat unfold 4 {r8 <fis d a>8} } >> \oneVoice |
+        <b, g e>4--\ff 4-- | R2 | \repeat unfold 2 <d b g>4-- |
+        R2 | \repeat unfold 2<f d bes>4-- | R2 | r4 <a cis, a> |
+        %% 64
+        r4 <a d, a> | r4 <a dis, a> | r4 <a e a,> \bar "||" \key d \minor
+        %% 67
+        <a g e>8 8 4\sfz | <a f d>8 8 4\sfz | r8 <e d bes> r <g cis, a> |
+        << \repeat unfold 2 {r8 <f d a>} {s8\< s s s\!} >> |
+        <a g e>8 8 4 | <a f d>8 8 4 | r8\p <e d bes> r <g cis, a> |
+        <f d a>4 r | r8 <a cis, a>8 8 8 |
+        %% 76
+        <a d, a>8 8 4 | r8 <c e, c>8 8 8 |
+        << {\voiceOne c8\<^\rit c d4\fermata}
+           \new Voice {\voiceTwo <f, c>8 <f c~>16 <g c,> <gis f d>4} >> \oneVoice |
+        <a g e a,>4->\ff 4-> | \repeat unfold 2 {r8 <a g cis, a>} |
+        \repeat percent 2 \repeat unfold 2 {r8 <a f d a>} |
+        << \new Voice {\voiceOne \repeat unfold 2 {a2~ a} }
+           {\voiceTwo << \repeat unfold 2 {r8 <g e a,>} {s8\p\cresc} >>
+            \repeat unfold 2 {r8 <g cis, a>}
+            \repeat unfold 4 {r8 <f d a>} } >> \oneVoice |
+        <d' bes g d>4->\ff 4-> | r8^\rit <d g, d>8 8 8 |
+        <e cis a g>8 8 <d a f>4 | <e, d g,>4->^\aTempo <a e cis a>-> |
+        <d a fis d>4-> r \bar "|."
+      }
+      ]]>
+    </up>
+    <down><![CDATA[
+    \relative a, {
+      r4 <a a,> | r <bes bes,> | r <b b,> | r <c c,> |
+      <cis cis,>8 cis8 4-> | d8 d d4-> | g,8 r a r | d,8 r d' r |
+      %% 9
+      cis8 cis cis4 | d8 d d4 | g,8 r a r | d,4 r 
+      \repeat volta 2 {
+        g'2 | f8 f f4 | bes2 | a8 a <bes f bes,>4\fermata |
+        cis,8 cis cis4-> | d8 d d4-> | g,8 r a r |
+      }
+      \alternative {
+        {d,4 r}
+        {<d' d,>8 r r4}
+      } \bar "||"
+      R2 | <d d,>4-> <f f,>-> | <a a,>-> r8 a16 g |
+      %% 25
+      f16 g f e d8 r | R2 | <g, g,>4-> <bes bes,>-> |
+      <d d,>-> r8 d16 c | bes c bes a g8 r \bar "||" \key d \major
+      \repeat volta 2 {
+        <a' e a,>4-> 4-> | R2 | <a fis d>4-> 4-> |
+        R2 | cis,8 r a r | e' r a, r | d r a r | fis' r a, r |
+        <b e,>4-- 4-- | r8 g' fis fis | fis, fis b4
+      }
+      %% 41
+      << {\voiceOne b'4 ais | a gis | g fis | gis ais | b ais | a gis | g fis}
+         \new Voice {\voiceTwo \repeat unfold 7 b,2} >> \oneVoice
+      %% 48
+      <b b,>8 fis b,4 | R2 | <a'' e a,>8-> g fis e | R2 |
+      <a d,>8-> fis e d | cis8 r a r | e' r a, r | d r a r | fis' r a, r |
+      <b e,>4-- 4-- | R2 | <d g,>4-- 4-- | R2 | <f bes,>4-- 4-- | R2 |
+      r4 <a, a,> | r <bes bes,> | r <b b,> | r <c c,> \bar "||" \key d \minor
+      <cis cis,>8 8 4-> | <d d,>8 8 4-> | g,8 r a r | d r d, r |
+      <cis' cis,>8 8 4-> | <d d,>8 8 4-> | g,8 r a r | <d d,>4 r | g2 |
+      %% 76
+      f8 8 4 | bes2 | a8 <a f> <bes f bes,>4\fermata |
+      <cis, cis,>4-> 4-> | e8 r a, r | <d d,>4 4 | f8 r a, r |
+      cis8 r a r | e' r a, r | d r a r | f' r a, r | <g' d g,>4-> 4-> |
+      r8 bes8 a a | <a a,>8 8  d,4 | \clef "bass_8"
+      <bes bes,>4-> <a a,>-> | <d, d,>-> r \bar "|."
+    }
+    ]]>
+    </down>
+  </piano>
+</movement>
+</concertino>
+
+<!--
+    Local Variables:
+    coding: utf-8
+    mode: xml
+    mmm-classes: embedded-LilyPond
+    End:
+-->
