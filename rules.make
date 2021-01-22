@@ -11,7 +11,7 @@ CLEANFILES = $(target_files)
 M4FLAGS = -I /usr/share/doc/m4/examples -I ../..
 
 %.ly: %.xml $(wildcard ${top_srcdir}/templates/*.mako)
-	${top_srcdir}/bin/xml-to-ly -I ${top_srcdir}/templates -o $@ $<
+	${top_srcdir}/bin/xml-to-ly -I ${top_srcdir}/templates -C ${top_srcdir}/src/composers.xml -o $@ $<
 
 %.ly: %.ly.in ${top_srcdir}/concertino.ily ${top_srcdir}/output-duos.ily
 	${M4} ${M4FLAGS} $< > $@

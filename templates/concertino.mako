@@ -28,23 +28,35 @@ import os
 }
 % endfor
 
-\include "composer.ily"
 \include "tagline.ily"
 \include "copyright.ily"
 \include "paper.ily"
 
 \header {
-% if None != xml_root.find('./title'):
+% if xml_root.find('./title') is not None:
   title = "${xml_root.find('./title').text}"
 % endif
-% if None != xml_root.find('./subtitle'):
+% if xml_root.find('./subtitle') is not None:
   subtitle = "${xml_root.find('./subtitle').text}"
 % endif
-% if None != xml_root.find('./opus'):
+% if xml_root.find('./opus') is not None:
   opus = "${xml_root.find('./opus').text}"
 % endif
-% if None != xml_root.find('./arranger'):
+% if xml_root.find('./arranger') is not None:
   arranger = "${xml_root.find('./arranger').text}"
+% endif
+% if xml_root.find('./composer') is not None:
+<%
+  composer_name = xml_root.find('./composer').text
+  composer_db_entry = composer_db.find(
+    "./composer/[name='{}']".format(composer_name))
+  composer_born=composer_db_entry.find("born").text
+  composer_died=composer_db_entry.find("died").text
+  composer_string = "{0} ({1} – {2})".format(
+    composer_name, composer_born, composer_died)
+%>
+  composer = "${composer_string}"
+  pdfauthor = "${composer_name}"
 % endif
 }
 
@@ -88,7 +100,7 @@ import os
       >>
     >>
 
-% if None != movement.find('piece'):
+% if movement.find('piece') is not None:
     \header {
       piece = #"${movement.find('piece').text}"
     }
@@ -112,7 +124,7 @@ import os
       ${movement.find('violin').text}
     }
 
-% if None != movement.find('piece'):
+% if movement.find('piece') is not None:
     \header {
       piece = #"${movement.find('piece').text}"
     }

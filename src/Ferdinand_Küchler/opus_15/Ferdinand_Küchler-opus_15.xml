@@ -9,14 +9,15 @@ this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 -->
 
 <concertino>
-<title>Concertino.</title>
-<subtitle>Nello stile di Antonio Vivaldi.</subtitle>
-<opus>Opus 15</opus>
-<movement>
-  <time>4/4</time>
-  <tempo>"Allegro moderato." 4=96</tempo>
-  <key>d \major</key>
-  <violin><![CDATA[
+  <title>Concertino.</title>
+  <subtitle>Nello stile di Antonio Vivaldi.</subtitle>
+  <composer>Ferdinand Küchler</composer>
+  <opus>Opus 15</opus>
+  <movement>
+    <time>4/4</time>
+    <tempo>"Allegro moderato." 4=96</tempo>
+    <key>d \major</key>
+    <violin><![CDATA[
   \relative a' {
   \partial 8 a8--\f\upbow | \repeat unfold 5 d8-- cis16 b a8--\open g16 fis |
   e4-- a-- fis8-- e-- d a'-- |

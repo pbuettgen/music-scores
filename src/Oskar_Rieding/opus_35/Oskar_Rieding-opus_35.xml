@@ -9,13 +9,14 @@ this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 -->
 
 <concertino>
-<title>Concerto in B minor.</title>
-<opus>Opus 35</opus>
-<movement>
-  <time>4/4</time>
-  <tempo>"Allegro moderato." 4=116</tempo>
-  <key>b \minor</key>
-  <violin><![CDATA[
+  <title>Concerto in B minor.</title>
+  <composer>Oskar Rieding</composer>
+  <opus>Opus 35</opus>
+  <movement>
+    <time>4/4</time>
+    <tempo>"Allegro moderato." 4=116</tempo>
+    <key>b \minor</key>
+    <violin><![CDATA[
   \relative f'' {
   \cueDuring #"pianoUpMovementI" #DOWN R1*3 |
   \cueDuring #"pianoUpMovementI" #UP   R1 |

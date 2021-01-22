@@ -9,14 +9,15 @@ this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 -->
 
 <concertino>
-<title>Concertino</title>
-<subtitle>in un moda ungherese.</subtitle>
-<opus>Opus 21</opus>
-<movement>
-  <time>4/4</time>
-  <tempo>"Andante sostenuto." 4=96</tempo>
-  <key>c \major</key>
-  <violin><![CDATA[
+  <title>Concertino</title>
+  <subtitle>in un moda ungherese.</subtitle>
+  <composer>Oskar Rieding</composer>
+  <opus>Opus 21</opus>
+  <movement>
+    <time>4/4</time>
+    <tempo>"Andante sostenuto." 4=96</tempo>
+    <key>c \major</key>
+    <violin><![CDATA[
   \relative e'' {
   \set Timing.measurePosition = #(ly:make-moment -5/16) r16 r4 | R1*2
   \cueDuring #"pianoUpMovementI" #DOWN {

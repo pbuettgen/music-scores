@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Copyright © 2021-2021 Philipp Büttgenbach
+
+This work is licensed under the Creative Commons
+Attribution-ShareAlike 4.0 International License.  To view a copy of
+this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+<composers>
+  <composer>
+    <name>Arthur Seybold</name>
+    <born>1868</born>
+    <died>1948</died>
+  </composer>
+  <composer>
+    <name>Jean Baptiste Charles Dancla</name>
+    <born>1817</born>
+    <died>1907</died>
+  </composer>
+  <composer>
+    <name>Ferdinand Küchler</name>
+    <born>1867</born>
+    <died>1937</died>
+  </composer>
+  <composer>
+    <name>Franz Wohlfahrt</name>
+    <born>1833</born>
+    <died>1884</died>
+  </composer>
+  <composer>
+    <name>Friedrich Seitz</name>
+    <born>1848</born>
+    <died>1918</died>
+  </composer>
+  <composer>
+    <name>Heinrich Ernst Kayser</name>
+    <born>1815</born>
+    <died>1888</died>
+  </composer>
+  <composer>
+    <name>Ignace Pleyel</name>
+    <born>1757</born>
+    <died>1831</died>
+  </composer>
+  <composer>
+    <name>Jaques-Féréol Mazas</name>
+    <born>1782</born>
+    <died>1849</died>
+  </composer>
+  <composer>
+    <name>Johann Wenzel Kalliwoda</name>
+    <born>1801</born>
+    <died>1866</died>
+  </composer>
+  <composer>
+    <name>Leo Portnoff</name>
+    <born>1875</born>
+    <died>1940</died>
+  </composer>
+  <composer>
+    <name>Oskar Rieding</name>
+    <born>1840</born>
+    <died>1918</died>
+  </composer>
+</composers>
+
+<!--
+    Local Variables:
+    coding: utf-8
+    mode: xml
+    End:
+-->

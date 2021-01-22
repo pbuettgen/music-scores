@@ -20,6 +20,9 @@ def main():
         description='Convert XML to Lilypond.')
     arg_parser.add_argument('input_file', type=str, help='input file name')
     arg_parser.add_argument(
+        "-C", '--composer_db', type=argparse.FileType("r"),
+        help="composer database", default=None)
+    arg_parser.add_argument(
         '-I', '--include', type=str, action='append', default=[],
         help="include directory")
     arg_parser.add_argument(
@@ -32,6 +35,12 @@ def main():
     xml_tree = ET.parse(command_line_args.input_file)
     xml_root = xml_tree.getroot()
 
+    composer_root = None
+
+    if command_line_args.composer_db is not None:
+        composer_tree = ET.parse(command_line_args.composer_db)
+        composer_root = composer_tree.getroot()
+
     template_lookup = TemplateLookup(
         directories=[".", "./templates"]+command_line_args.include)
 
@@ -40,7 +49,7 @@ def main():
 
     template = template_lookup.get_template(command_line_args.template)
 
-    print(template.render(xml_root=xml_root),
+    print(template.render(xml_root=xml_root, composer_db=composer_root),
           file=command_line_args.output_file)
 
 
