@@ -15,9 +15,9 @@ opus = opus 8
 piece = $(subst $(space),_,$(composer)-$(opus))
 target_files = $(piece).pdf							\
 	$(piece)-violin_I.pdf $(piece)-violin_II.pdf	\
-	$(piece)-duo_I.mid $(piece)-duo_II.mid			\
-	$(piece)-duo_III.mid $(piece)-duo_IV.mid		\
-	$(piece)-duo_V.mid $(piece)-duo_VI.mid
+	$(piece)-duo_1.mid $(piece)-duo_2.mid			\
+	$(piece)-duo_3.mid $(piece)-duo_4.mid			\
+	$(piece)-duo_5.mid $(piece)-duo_6.mid
 archive_extra_files = ../../output-duos.ily
 
 include $(top_srcdir)/rules.make

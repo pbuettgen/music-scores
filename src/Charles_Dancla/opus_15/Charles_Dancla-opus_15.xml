@@ -1,28 +1,25 @@
-%%% -*- coding: utf-8 -*-
-%%%
-%%% Copyright © 2018-2020 Philipp Büttgenbach
-%%%
-%%% This work is licensed under the Creative Commons
-%%% Attribution-ShareAlike 4.0 International License.  To view a copy of
-%%% this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
-%%%
+<?xml version="1.0" encoding="utf-8"?>
 
-\version "2.20"
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Copyright © 2018-2021 Philipp Büttgenbach
 
-\include "lily-snippets.ily"
+This work is licensed under the Creative Commons
+Attribution-ShareAlike 4.0 International License.  To view a copy of
+this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
-espr = \markup{\italic "espressivo"}
-cantabile = \markup{\italic "cantabile"}
+<duos>
+  <title>Troi Duos.</title>
+  <composer>Jean Baptiste Charles Dancla</composer>
+  <opus>Opus 15</opus>
 
-titleduoImovementI = ##f
-
-globalduoImovementI = {
-  \time 4/4
-  \tempo "Allegro moderato." 4 = 123
-  \key c \major
-}
-
-violinIduoImovementI = \relative c'' {
+  <violinduo>
+    <movement>
+      <time>4/4</time>
+      <tempo>"Allegro moderato." 4 = 123</tempo>
+      <key>c \major</key>
+      <violin number="I"><![CDATA[
+      \relative c'' {
   \repeat volta 2 {
     c2\f e | g2. e8-.([ r16 c-.)] | g4 e8-.([ r16 c-.)] g4 <g' b> |
     %% 4
@@ -93,8 +90,10 @@ violinIduoImovementI = \relative c'' {
   c( e,\open f-1 a) c,4( b) | c e8-4( b d c b a) | g4.( a8-4) f4.( g8) |
   e4 r r2 | r4 c'( d b) | b2\>( c4\!) r \bar "|."
 }
-
-violinIIduoImovementI = \relative c' {
+]]>
+      </violin>
+      <violin number="II"><![CDATA[
+      \relative c' {
   \repeat volta 2 {
     c2\f e | g2. e8-.([ r16 c-.)] | g4 r r f' | e  <g b,> <g c,> r |
     %% 5
@@ -159,16 +158,15 @@ violinIIduoImovementI = \relative c' {
   r4 cis( d-4 b) | c e8( b d-4 c b a) | g4 <e' g,>( <f g,> <d g,>) |
   <d g,>2\>( <e g,>4\!) r \bar "|."
 }
-
-titleduoImovementII = ##f
-
-globalduoImovementII = {
-  \time 3/4
-  \tempo "Andante grazioso." 4 = 92
-  \key g \major
-}
-
-violinIduoImovementII = \relative a' {
+]]>
+      </violin>
+</movement>
+<movement>
+  <time>3/4</time>
+  <tempo>"Andante grazioso." 4 = 92</tempo>
+  <key>g \major</key>
+  <violin number="I"><![CDATA[
+  \relative a' {
   b2\p( a4) | d2. | g,4-.( g-. a-.) | b2( g4) | a2( b4) | c2( e4-4) |
   fis,4~( fis8 g d' c) | \repeat percent 2 {b2( a4)} | d2. |
   g,4-.( g-. a-.) | b2. | a2( gis4) | a\< b c | d e fis | g2.\f |
@@ -192,8 +190,9 @@ violinIduoImovementII = \relative a' {
   \repeat percent 2 {g\<( b d4.\> fis,8\!)} | g4-.( g-. g-.) |
   g r r \bar "|."
 }
-
-violinIIduoImovementII = \relative d' {
+]]>
+  </violin>
+  <violin number="II"><![CDATA[ \relative d' {
   r8 d\p( g d c d) | b( d b d b d) | b( d b d fis d) | g( d g d b d) |
   %% 5
   c( e c e gis,-1 e'-2) | a,( e' a, e' c e) | c( d c b c e) |
@@ -225,16 +224,15 @@ violinIIduoImovementII = \relative d' {
   b( g b d g b) | <c d,>2.( | <b d,>4) r r | <fis c>2. |
   \repeat percent 2 { b,8( d b d c d)} | b( d b d b d) | b4 r r \bar "|."
 }
-
-titleduoImovementIII = ##f
-
-globalduoImovementIII = {
-  \time 2/4
-  \tempo "Allegro non troppo." 4 = 123
-  \key c \major
-}
-
-violinIduoImovementIII = \relative g'' {
+]]>
+  </violin>
+</movement>
+<movement>
+  <time>2/4</time>
+  <tempo>"Allegro non troppo." 4 = 123</tempo>
+  <key>c \major</key>
+  <violin number="I"><![CDATA[
+  \relative g'' {
   \partial 8 g8-.\upbow\p
   \repeat volta 2 {
     %% 1
@@ -314,8 +312,10 @@ violinIduoImovementIII = \relative g'' {
   c8 a'16( g) g4~ | g8 a,16-4[( g)] g4~ | g8 b16( c) c8 dis16( e-4) |
   e8 fis16( g) g8 b16-2( c) | c4 r8 \bar "|."
 }
-
-violinIIduoImovementIII = \relative d' {
+]]>
+  </violin>
+  <violin number="II"><![CDATA[
+  \relative d' {
   \partial 8 r8
   \repeat volta 2 {
     r <f g,>\p\>([ <e g,>\!)] r | r <f g,>\>([ <e g,>\!)] c16( d) |
@@ -387,18 +387,17 @@ violinIIduoImovementIII = \relative d' {
   <e c> r \repeat unfold 3 {<e c'>\downbow r} |
   <e c'>4\downbow r8 \bar "|."
 }
-
-%%% ------------ Duo II ------------
-
-titleduoIImovementI = ##f
-
-globalduoIImovementI = {
-  \time 4/4
-  \tempo "Moderato cantabile." 4 = 111
-  \key f \major
-}
-
-violinIduoIImovementI = \relative c'' {
+]]>
+  </violin>
+</movement>
+</violinduo>
+<violinduo>
+  <movement>
+    <time>4/4</time>
+    <tempo>"Moderato cantabile." 4 = 111</tempo>
+    <key>f \major</key>
+    <violin number="I"><![CDATA[
+    \relative c'' {
   \repeat volta 2 {
     c2.\p( a4) | f'2.( c4) | a'2~( a16 f c a c bes g e) | g2( f4) r |
     %% 5
@@ -473,8 +472,10 @@ violinIduoIImovementI = \relative c'' {
   a( f) d8.( f16 e8. g16) | f4( a) c2 | f4( a-1) c2 |
   c( a8 f c-2 a) | f4 r r2 \bar "|."
 }
-
-violinIIduoIImovementI = \relative g {
+]]>
+    </violin>
+    <violin number="II"><![CDATA[
+    \relative g {
   \repeat volta 2 {
     a8\p( c f c a c f c) | a( c f c a c a c) | f( c f c f c e c) |
     %% 4
@@ -558,16 +559,16 @@ violinIIduoIImovementI = \relative g {
   \repeat percent 2 { a( c f c bes c e bes) } |
   a( c a c a c a c) | a4 r r2 \bar "|."
 }
-
-titleduoIImovementII = "Romance."
-
-globalduoIImovementII = {
-  \time 4/4
-  \tempo "Andante." 4 = 77
-  \key bes \major
-}
-
-violinIduoIImovementII = \relative d'' {
+]]>
+    </violin>
+</movement>
+<movement>
+  <piece>Romance.</piece>
+  <time>4/4</time>
+  <tempo>"Andante." 4 = 77</tempo>
+  <key>bes \major</key>
+  <violin number="I"><![CDATA[
+  \relative d'' {
   \repeat volta 2 {
     d2\p( bes8. f16 c'8. f,16) | d'2( bes4) r | f'2-3( ees4 d) |
     %% 4
@@ -622,8 +623,10 @@ violinIduoIImovementII = \relative d'' {
   }
   \mark \markup {\fermata}
 }
-
-violinIIduoIImovementII = \relative b' {
+]]>
+  </violin>
+  <violin number="II"><![CDATA[
+  \relative b' {
   \repeat volta 2 {
     bes8\p( f bes f d f a f) | bes( f bes f d f d f) |
     aes( bes aes bes g bes f bes) | a( f a f a f a f) |
@@ -665,16 +668,16 @@ violinIIduoIImovementII = \relative b' {
     g( bes f bes f bes ees, f) | d( f d f d4) r \mark \markup {\fermata} |
   }
 }
-
-titleduoIImovementIII = "Rondo."
-
-globalduoIImovementIII = {
-  \time 2/4
-  \tempo "Allegretto." 4 = 123
-  \key f \major
-}
-
-violinIduoIImovementIII = \relative d'' {
+]]>
+  </violin>
+</movement>
+<movement>
+  <piece>Rondo.</piece>
+  <time>2/4</time>
+  <tempo>"Allegretto." 4 = 123</tempo>
+  <key>f \major</key>
+  <violin number="I"><![CDATA[
+  \relative d'' {
   \partial 4 c16-.\p\upbow([ r c-.]) r | c8\>( f\!) d\>( f\!) |
   %% 2
   c\>( f\!) a16-.([ r a-.]) r | a8\>( bes\!) g16-.([ r e-.]) r |
@@ -758,8 +761,10 @@ violinIduoIImovementIII = \relative d'' {
   f16( a-1) a( c) c4~ | c8 a16 a f-1 f c c | a' a f f c c a a |
   f8 r <f c' a'>\downbow r | <f a,>4\downbow \bar "|."
 }
-
-violinIIduoIImovementIII = \relative b' {
+]]>
+  </violin>
+  <violin number="II"><![CDATA[
+\relative b' {
   \partial 4 r4 | a4\p( bes) | a( f) | \repeat tremolo 2 {bes,8 c} |
   %% 4
   a4 r | a'4( bes) | a( f) | g,8 c g b | c r c'16-.([ r c-.)] r |
@@ -851,24 +856,16 @@ violinIIduoIImovementIII = \relative b' {
   \repeat tremolo 8 {<f a,>16} | <f a,>8 r <a f'>\downbow r |
   <f a,>4\downbow \bar "|."
 }
+]]>
+  </violin>
+</movement>
+</violinduo>
+</duos>
 
-%%% ------------
-
-\include "composer.ily"
-
-\header {
-  title = "Troi Duos."
-  opus = "Opus 15"
-  arranger = ##f
-}
-
-define(`AllDuetts', `(I, II)')
-define(`Movements', `(I, II, III)')
-define(`AllViolins', `(I, II)')
-
-include(`output-duos.ily')
-
-%%% Local Variables:
-%%% coding: utf-8
-%%% eval: (LilyPond-mode)
-%%% End:
+<!--
+    Local Variables:
+    coding: utf-8
+    mode: xml
+    mmm-classes: embedded-LilyPond
+    End:
+-->

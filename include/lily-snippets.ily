@@ -8,6 +8,8 @@
 
 \version "2.20"
 
+espr = \markup{\italic "espressivo"}
+cantabile = \markup{\italic "cantabile"}
 cadenzaAdLib = \markup {\italic #"Cadenza ad lib."}
 solo = \markup {\italic \caps "Solo."}
 tutti = \markup {\italic \caps "Tutti."}
