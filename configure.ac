@@ -12,17 +12,10 @@ AM_INIT_AUTOMAKE
 
 AX_AM_JOBSERVER([${CPU_COUNT}])
 
-AM_MAINTAINER_MODE([enable])
-
 LYFLAGS_EXTRA='-dmidi-extension=mid'
 LYINCLUDE='-I./ -I../ -I${top_srcdir}/include/'
 
 AC_CHECK_PROGS([LYC], [lilypond], [AC_MSG_ERROR([Lilypond required.])])
-
-AM_COND_IF([MAINTAINER_MODE],
-    [AC_CHECK_PROGS([ZIP], [zip], [AC_MSG_ERROR([zip required])])
-    AC_CHECK_PROGS([M4], [m4], [AC_MSG_ERROR([m4 required])])
-    AC_PROG_SED])
 
 AX_PYTHON_MODULE([mako], [required])
 
@@ -93,6 +86,7 @@ AC_CONFIG_FILES([
     src/Leo_Portnoff/opus_4/Makefile
     src/Leo_Portnoff/opus_9/Makefile
     src/Leo_Portnoff/opus_13/Makefile
+    src/Leo_Portnoff/opus_14/Makefile
     src/Leo_Portnoff/opus_18/Makefile
     src/Leo_Portnoff/opus_96/Makefile
 	src/Oskar_Rieding/Makefile
