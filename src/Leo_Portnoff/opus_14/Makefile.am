@@ -7,8 +7,16 @@
 # this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 #
 
-SUBDIRS = fantasia_2  fantasia_4 \
-	  opus_13 opus_14 opus_18  opus_4  opus_9  opus_96
+empty:=
+space:= $(empty) $(empty)
+
+composer = Leo Portnoff
+opus = opus 14
+piece = $(subst $(space),_,$(composer)-$(opus))
+target_files = $(piece)-violin.pdf $(piece)-piano.pdf $(piece).mid
+archive_extra_files = ../../concertino.ily
+
+include $(top_srcdir)/rules.make
 
 # Local Variables:
 # coding: utf-8

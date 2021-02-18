@@ -8,6 +8,7 @@
 
 \version "2.20"
 
+tenutoTxt = \markup {\italic "tenuto"}
 espr = \markup{\italic "espressivo"}
 cantabile = \markup{\italic "cantabile"}
 cadenzaAdLib = \markup {\italic #"Cadenza ad lib."}
@@ -26,6 +27,7 @@ rall = \markup{\italic "rall."}
 aTempo = \markup{\italic "a tempo"}
 molto = \markup{\italic "molto"}
 moltoRit = \markup {\italic #"molto rit."}
+pocoRit = \markup \italic #"poco rit."
 prallNatural = \markup\left-align{\musicglyph #"scripts.prall" \super \natural}
 rf = #(make-dynamic-script "rf")
 rit = \markup { \italic "rit. " }
@@ -34,6 +36,16 @@ ritSpan = {
   \override TextSpanner.bound-details.left.text = \rit
   \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
 }
+
+pocoCresc = #(make-music 'CrescendoEvent
+              'span-direction START
+              'span-type 'text
+              'span-text "poco cresc.")
+
+pocoAPocoCresc = #(make-music 'CrescendoEvent
+                   'span-direction START
+                   'span-type 'text
+                   'span-text "poco a poco cresc.")
 
 ffWhiteOutTxt = \markup {
   \override #'(style . outline)
@@ -176,7 +188,6 @@ fingerNumberSpanner =
 #(define-music-function (parser location FingerNumber) (string?)
   #{
   \override TextSpanner.style = #'solid
-  \override TextSpanner.font-size = #-5
   \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
   \override TextSpanner.bound-details.left.text = \markup { \finger #FingerNumber }
   #})
