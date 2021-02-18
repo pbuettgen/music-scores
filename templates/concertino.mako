@@ -50,6 +50,13 @@ ${global_header_block(xml_root, composer_db)}
           \key ${movement.find('key').text}
           ${movement.find('piano/up').text}
         }
+% if movement.find('piano/dynamics') is not None:
+        \new Dynamics \with {
+          \override DynamicText.padding = #1
+        } {
+          ${movement.find('piano/dynamics').text}
+        }
+% endif
         \new Staff = "down" {
           \time ${movement.find('time').text}
           \tempo ${movement.find('tempo').text}
@@ -57,6 +64,14 @@ ${global_header_block(xml_root, composer_db)}
           \clef "bass"
           ${movement.find('piano/down').text}
         }
+% if movement.find('piano/pedal') is not None:
+        \new Dynamics \with {
+          \override DynamicText.padding = #1
+          pedalSustainStyle = #'mixed
+        } {
+          ${movement.find('piano/pedal').text}
+        }
+% endif
       >>
     >>
 
