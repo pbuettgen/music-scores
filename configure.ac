@@ -32,10 +32,6 @@ AC_CHECK_FILE([$oll_dir/oll-core/package.ily],
     [],
     [AC_MSG_ERROR([Open lilypond library required.])])
 
-AC_CHECK_FILE([$oll_dir/lalily-templates/package.ily],
-    [],
-    [AC_MSG_ERROR([lalily-templates required.])])
-
 AC_ARG_ENABLE([point-and-click],
     [AS_HELP_STRING([--enable-point-and-click], [enable point-and-click])],
     [AS_IF([test "x$enableval" = xno],
